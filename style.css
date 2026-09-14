@@ -659,3 +659,28 @@ a {
   margin: 10px 0;
   line-height: 1.5;
 }
+/* BOUTON HOME BIEN VISIBLE */
+
+.home-button {
+  display: inline-block;
+  margin-left: auto;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #7c5cff, #a855f7);
+  color: #ffffff !important;
+  border: 2px solid #c4b5fd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 18px rgba(124, 92, 255, 0.55);
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-color: #ffffff;
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.85);
+  transform: translateY(-3px) scale(1.04);
+}
