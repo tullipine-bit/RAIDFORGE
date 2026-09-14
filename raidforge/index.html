@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RAIDFORGE | Ressources PVE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+
+    <a href="index.html" class="logo">
+      RAID<span>FORGE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Accueil</a>
+      <a href="#tools">Outils</a>
+      <a href="#raids">Raids</a>
+      <a href="#gym">Gym Rerun</a>
+      <a href="#events">Events</a>
+      <a href="#farming">Farming</a>
+      <a href="#guides">Guides</a>
+    </nav>
+
+    <button class="menu-button" id="menuButton">
+      ☰
+    </button>
+
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-background"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          CENTRE DE RESSOURCES PVE
+        </div>
+
+        <h1>
+          RAID<span>FORGE</span>
+        </h1>
+
+        <p>
+          Ton portail communautaire dédié aux raids, au Gym Rerun,
+          au farming, aux événements et aux outils indispensables
+          pour ton aventure.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#tools" class="button button-primary">
+            Explorer les outils
+          </a>
+
+          <a href="#events" class="button button-secondary">
+            Voir les événements
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Le personnage apparaîtra ici si tu ajoutes l'image -->
+      <div class="hero-character-container">
+        <img
+          src="images/personnage.png"
+          alt="Personnage miniature"
+          class="hero-character"
+        >
+      </div>
+
+    </section>
+
+
+    <!-- RECHERCHE -->
+    <section class="search-section">
+
+      <div class="search-title">
+        <span>RECHERCHE RAPIDE</span>
+        <h2>Que recherches-tu ?</h2>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Raids, Gym Rerun, farming, guides..."
+        >
+
+        <button id="searchButton">
+          Rechercher
+        </button>
+      </div>
+
+      <p id="searchMessage"></p>
+
+    </section>
+
+
+    <!-- OUTILS -->
+    <section class="section" id="tools">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">RESSOURCES</span>
+          <h2>Outils populaires</h2>
+        </div>
+
+        <span class="section-description">
+          Tout ce dont tu as besoin au même endroit
+        </span>
+      </div>
+
+
+      <div class="tools-grid">
+
+        <a href="#raids" class="tool-card">
+          <div class="tool-icon">⚔</div>
+          <div class="tool-category">PVE</div>
+          <h3>Raids</h3>
+          <p>
+            Consulte les boss, les stratégies, les équipes
+            recommandées et les récompenses.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+
+        <a href="#gym" class="tool-card">
+          <div class="tool-icon">♜</div>
+          <div class="tool-category">FARMING</div>
+          <h3>Gym Rerun</h3>
+          <p>
+            Prépare tes circuits de rerun et optimise
+            tes gains contre les champions.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+
+        <a href="#events" class="tool-card">
+          <div class="tool-icon">✦</div>
+          <div class="tool-category">ACTUALITÉS</div>
+          <h3>Events</h3>
+          <p>
+            Découvre les événements actifs, leurs dates
+            et leurs récompenses.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+
+        <a href="#farming" class="tool-card">
+          <div class="tool-icon">◈</div>
+          <div class="tool-category">ÉCONOMIE</div>
+          <h3>Farming</h3>
+          <p>
+            Trouve les meilleures méthodes pour gagner
+            de l'argent et récupérer des objets.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+
+        <a href="#pokedex" class="tool-card">
+          <div class="tool-icon">◉</div>
+          <div class="tool-category">DATABASE</div>
+          <h3>Pokédex</h3>
+          <p>
+            Recherche les Pokémon, leurs types, leurs
+            capacités et leurs zones.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+
+        <a href="#guides" class="tool-card">
+          <div class="tool-icon">▤</div>
+          <div class="tool-category">GUIDES</div>
+          <h3>Guides</h3>
+          <p>
+            Retrouve des guides pratiques pour progresser
+            et améliorer ton expérience.
+          </p>
+          <span class="card-link">Accéder →</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- RAID À LA UNE -->
+    <section class="section featured-section" id="raids">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">À LA UNE</span>
+          <h2>Raid du moment</h2>
+        </div>
+      </div>
+
+      <div class="featured-card">
+
+        <div class="featured-content">
+          <span class="status-badge">ACTIVITÉ PVE</span>
+
+          <h2>Prépare ton prochain raid</h2>
+
+          <p>
+            Consulte les informations du boss, les compositions
+            d'équipe recommandées et les récompenses disponibles.
+          </p>
+
+          <a href="#tools" class="button button-primary">
+            Consulter les raids
+          </a>
+        </div>
+
+        <div class="featured-decoration">
+          ⚔
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GYM RERUN -->
+    <section class="section" id="gym">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">OPTIMISATION</span>
+          <h2>Gym Rerun</h2>
+        </div>
+      </div>
+
+      <div class="info-panel">
+        <div class="info-panel-icon">♜</div>
+
+        <div>
+          <h3>Optimise tes circuits</h3>
+          <p>
+            Compare les champions, les itinéraires et les gains
+            pour créer ton meilleur parcours de farming.
+          </p>
+        </div>
+
+        <a href="#tools" class="button button-secondary">
+          Voir les informations
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- EVENTS -->
+    <section class="section" id="events">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">CALENDRIER OFFICIEL</span>
+         <h2>Events</h2>
+        </div>
+      </div>
+
+      <div class="event-grid">
+       
+
+  <div class="event-card halloween-event">
+    <img
+  src="https://crescentschaos.github.io/pokemmo-resources/images/halloween/pumpking-3.gif"
+  alt="Petite citrouille d'Halloween"
+  class="halloween-gif"
+>
+
+    <div class="event-card-top">
+      <span class="status-badge upcoming">🎃 À VENIR</span>
+
+      <span class="event-date">
+        Du 30–31 octobre au 14–15 novembre
+      </span>
+    </div>
+
+    <h3>Halloween</h3>
+
+    <p>
+      Préparez-vous pour l’événement d’Halloween !
+      Découvrez les récompenses et les activités spéciales
+      disponibles pendant cette période.
+    </p>
+
+    <a href="halloween.html" class="card-link">>
+  Consulter →
+</a>
+
+</div>
+
+
+<!-- CARTE NOËL À AJOUTER ICI -->
+
+<div class="event-card christmas-event">
+  <img
+  src="https://play.pokemonshowdown.com/sprites/gen5ani/jirachi.gif"
+  alt="Jirachi animé"
+  class="christmas-gif"
+>
+
+  <div class="event-card-top">
+    <span class="status-badge upcoming">🎄 À VENIR</span>
+
+    <span class="event-date">
+      Du 26 décembre au 9–10 janvier
+    </span>
+  </div>
+
+  <h3>Événement Noël</h3>
+
+  <p>
+    Célébrez les fêtes de fin d’année avec l’événement de Noël !
+    Découvrez les récompenses, les activités et les surprises
+    disponibles pendant cette période.
+  </p>
+
+  <a href="noel.html" class="card-link">
+    Consulter →
+  </a>
+
+</div>
+
+<div class="event-card zodiac-event">
+  <img
+  src="https://play.pokemonshowdown.com/sprites/gen5ani/shaymin-sky.gif"
+  alt="Shaymin animé"
+  class="zodiac-gif"
+>
+  
+<div class="event-card-top">
+    <span class="status-badge upcoming">🌙 À VENIR</span>
+
+    <span class="event-date">
+      Du 17 février au 3 mars
+    </span>
+  </div>
+
+  <h3>Événement Lunaire / Zodiaque</h3>
+
+  <p>
+    Découvrez l’événement Lunaire et Zodiaque !
+    Partez à la découverte des signes du zodiaque,
+    des récompenses célestes et des activités spéciales.
+  </p>
+
+  <a href="zodiaque.html" class="card-link">
+    Consulter →
+  </a>
+
+</div>
+
+
+        <div class="event-card">
+          <div class="event-card-top">
+            <span class="status-badge">RESSOURCE</span>
+            <span class="event-date">Calendrier</span>
+          </div>
+
+          <h3>Calendrier officiel</h3>
+
+          <p>
+            Consulte régulièrement le calendrier pour ne manquer
+            aucune activité importante.
+          </p>
+
+          <a href="calendrier.html">Calendrier</a>
+            Consulter →
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FARMING -->
+    <section class="section" id="farming">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">ÉCONOMIE</span>
+          <h2>Farming et ressources</h2>
+        </div>
+      </div>
+
+      <div class="farming-grid">
+
+        <div class="farming-card">
+          <span class="farming-number">01</span>
+          <h3>Argent</h3>
+          <p>Découvre les méthodes de farming les plus rentables.</p>
+        </div>
+
+        <div class="farming-card">
+          <span class="farming-number">02</span>
+          <h3>Objets</h3>
+          <p>Identifie les zones où trouver les objets recherchés.</p>
+        </div>
+
+        <div class="farming-card">
+          <span class="farming-number">03</span>
+          <h3>Optimisation</h3>
+          <p>Améliore ton rendement et organise tes sessions.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GUIDES -->
+    <section class="section" id="guides">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">APPRENDRE</span>
+          <h2>Guides et astuces</h2>
+        </div>
+      </div>
+
+      <div class="guides-panel">
+
+        <div>
+          <h3>Besoin d'aide pour progresser ?</h3>
+          <p>
+            Retrouve des guides détaillés sur les raids,
+            le farming, les équipes et les différentes activités.
+          </p>
+        </div>
+
+        <a href="#tools" class="button button-primary">
+          Explorer les guides
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-brand">
+      <div class="logo">RAID<span>FORGE</span></div>
+      <p>
+        Le portail communautaire de ressources PVE.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Accueil</a>
+      <a href="#tools">Outils</a>
+      <a href="#events">Events</a>
+      <a href="#guides">Guides</a>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 RAIDFORGE — Projet communautaire non officiel.
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
