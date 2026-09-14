@@ -155,7 +155,7 @@ a {
       90deg,
       rgba(3, 8, 20, 0.96) 0%,
       rgba(5, 17, 36, 0.78) 50%,
-      rgba(5, 17, 36, 0.58) 100%
+      rgba(5, 17, 36, 0.58) 100%.
     ),
     url("images/fond-site.png");
 
@@ -488,7 +488,16 @@ a {
 .event-card p {
   color: var(--text-muted);
 }
-
+.event-detail-gif {
+  display: block;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto 25px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 20px rgba(150, 210, 255, 0.5));
+}
 
 /* =========================
    FOOTER
@@ -623,4 +632,30 @@ a {
   .footer {
     flex-direction: column;
   }
+}
+.halloween-gif {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+  image-rendering: pixelated;
+}
+.zodiac-gif {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+  image-rendering: pixelated;
+}
+.legendary-cycle-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.legendary-cycle-list li {
+  margin: 10px 0;
+  line-height: 1.5;
 }
