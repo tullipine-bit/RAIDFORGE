@@ -684,3 +684,351 @@ a {
   box-shadow: 0 0 28px rgba(168, 85, 247, 0.85);
   transform: translateY(-3px) scale(1.04);
 }
+/* SIGNATURE BY TULLIPINE */
+
+/* SIGNATURE BY TULLIPINE - STYLE SOMBRE */
+
+/* SIGNATURE BY TULLIPINE - DARK DEEP STYLE */
+
+/* SIGNATURE BY TULLIPINE - DARK WHITE STYLE */
+
+/* SIGNATURE BY TULLIPINE - EFFET D'APPARITION */
+
+/* SIGNATURE BY TULLIPINE - APPARITION + NUANCIER */
+
+.creator-name {
+  margin: 0 0 18px;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Nuancier sombre avec blanc */
+  background: linear-gradient(
+    90deg,
+    #24152f,
+    #5b2a86,
+    #ffffff,
+    #8b5fbf,
+    #32104f,
+    #ffffff,
+    #24152f
+  );
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(8px);
+
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.95);
+
+  animation:
+    creatorAppear 1.5s ease-out forwards,
+    creatorColors 7s ease-in-out 1.5s infinite;
+}
+
+/* Apparition du texte */
+@keyframes creatorAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+  }
+
+  60% {
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Animation du nuancier */
+@keyframes creatorColors {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+.discord-button {
+  display: block;
+  width: 180px;
+  margin: 25px auto 0;
+  padding: 16px 20px;
+
+  box-sizing: border-box;
+
+  background: #211b42;
+  color: white !important;
+
+  border: 3px solid #635bdb;
+  border-radius: 14px;
+
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  box-shadow:
+    0 0 10px #4f46a5,
+    0 0 25px rgba(59, 130, 246, 0.35);
+
+  transition: 0.3s;
+}
+
+.discord-button:hover {
+  background: #3b3275;
+  border-color: #8b5cf6;
+  box-shadow:
+    0 0 15px #6366f1,
+    0 0 35px #3b82f6;
+  transform: translateY(-3px);
+}
+/* BOUTON HOME */
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 50px;
+  margin-top: 25px;
+
+  background: linear-gradient(135deg, #5865f2, #6d28d9);
+  color: #ffffff !important;
+
+  border: 2px solid #8b7cff;
+  border-radius: 12px;
+
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none !important;
+
+  box-shadow:
+    0 0 10px rgba(88, 101, 242, 0.7),
+    0 0 22px rgba(109, 40, 217, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(135deg, #7289da, #8b5cf6);
+  border-color: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(88, 101, 242, 1),
+    0 0 35px rgba(139, 92, 246, 0.8);
+}
+/* =========================================
+   BOUTONS INFORMATION RAID/TEAM ET HOME
+   ========================================= */
+
+.event-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bouton INFORMATION RAID/TEAM à gauche */
+
+.raid-team-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 260px;
+  min-height: 52px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+
+  background: linear-gradient(135deg, #f97316, #dc2626);
+  color: #ffffff !important;
+
+  border: 2px solid #fb923c;
+  border-radius: 12px;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none !important;
+
+  box-shadow:
+    0 0 10px rgba(249, 115, 22, 0.7),
+    0 0 22px rgba(220, 38, 38, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+.raid-team-button:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(135deg, #fb923c, #ef4444);
+  border-color: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(249, 115, 22, 1),
+    0 0 35px rgba(220, 38, 38, 0.8);
+}
+
+/* Bouton HOME complètement à droite */
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+
+  background: linear-gradient(135deg, #5865f2, #6d28d9);
+  color: #ffffff !important;
+
+  border: 2px solid #8b7cff;
+  border-radius: 12px;
+
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none !important;
+
+  box-shadow:
+    0 0 10px rgba(88, 101, 242, 0.7),
+    0 0 22px rgba(109, 40, 217, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(135deg, #7289da, #8b5cf6);
+  border-color: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(88, 101, 242, 1),
+    0 0 35px rgba(139, 92, 246, 0.8);
+}
+
+/* Adaptation pour téléphone */
+
+@media (max-width: 600px) {
+  .event-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .raid-team-button,
+  .home-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-button {
+    margin-left: 0;
+  }
+}
+/* Centrer le titre RAIDS */
+
+#raids .section-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#raids .section-heading > div {
+  text-align: center;
+}
+/* BOUTON APERÇU DES RAIDS - NOUVEAU STYLE */
+
+.raids-preview-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0 25px;
+}
+
+.raids-preview-button .button-raids {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 38px;
+  border: 1px solid #a78bfa;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 0 10px rgba(124, 58, 237, 0.5),
+    0 0 25px rgba(79, 70, 229, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.raids-preview-button .button-raids::before {
+  content: "⚔";
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.raids-preview-button .button-raids:hover {
+  transform: translateY(-5px) scale(1.03);
+
+  background: linear-gradient(135deg, #9333ea, #6366f1);
+
+  box-shadow:
+    0 0 15px rgba(167, 139, 250, 0.8),
+    0 0 35px rgba(124, 58, 237, 0.6),
+    0 0 60px rgba(79, 70, 229, 0.3);
+}
+
+.raids-preview-button .button-raids:active {
+  transform: translateY(-1px) scale(0.98);
+}
