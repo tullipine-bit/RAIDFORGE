@@ -24,32 +24,32 @@ const tools = [
   {
     name: "Raids",
     keywords: ["raid", "boss", "pve"],
-    url: "pages/raids.html"
+    url: "raids.html"
   },
   {
     name: "Gym Rerun",
     keywords: ["gym", "rerun", "champion"],
-    url: "pages/gym-rerun.html"
+    url: "gym-rerun.html"
   },
   {
     name: "Events",
     keywords: ["event", "événement", "calendrier"],
-    url: "pages/events.html"
+    url: "events.html"
   },
   {
     name: "Farming",
     keywords: ["farming", "argent", "farm", "gains"],
-    url: "pages/farming.html"
+    url: "farming.html"
   },
   {
     name: "Pokédex",
     keywords: ["pokedex", "pokemon", "pokémon"],
-    url: "pages/pokedex.html"
+    url: "#pokedex"
   },
   {
     name: "Guides",
     keywords: ["guide", "astuce", "aide"],
-    url: "pages/guides.html"
+    url: "guides.html"
   }
 ];
 

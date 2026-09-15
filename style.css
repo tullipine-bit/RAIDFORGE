@@ -1294,3 +1294,892 @@ a {
     grid-template-columns: 125px 1fr;
   }
 }
+/* =========================================
+   PALETTE RAIDFORGE
+========================================= */
+
+:root {
+  --rf-bg: #080f1a;
+  --rf-bg-secondary: #0d1b2e;
+  --rf-card: #12263d;
+  --rf-card-hover: #183a59;
+
+  --rf-border: #245174;
+  --rf-border-light: #347ba5;
+
+  --rf-cyan: #00c8ff;
+  --rf-cyan-light: #62d9ff;
+
+  --rf-title: #eaf6ff;
+  --rf-text: #b5c9dc;
+  --rf-muted: #7894af;
+
+  --rf-purple: #8b7cff;
+}
+/* =========================================
+   PAGES GUIDES GYM RERUN
+   STYLE RAIDFORGE
+========================================= */
+
+/* PAGE DU GUIDE */
+
+.rerun-page {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 40px 25px 80px;
+}
+
+/* EN-TÊTE */
+
+.rerun-hero {
+  padding: 35px 0 30px;
+  border-bottom: 1px solid rgba(36, 81, 116, 0.6);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 25px;
+
+  color: #7894af;
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #00c8ff;
+}
+
+.rerun-category {
+  margin: 0 0 10px;
+
+  color: #00c8ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.rerun-hero h1 {
+  margin: 0 0 12px;
+
+  color: #eaf6ff;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.rerun-subtitle {
+  margin: 0;
+
+  color: #7894af;
+  font-size: 16px;
+}
+
+/* NAVIGATION INTERNE */
+
+.rerun-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin: 25px 0 40px;
+  padding: 12px;
+
+  background: rgba(13, 27, 46, 0.85);
+  border: 1px solid #245174;
+  border-radius: 10px;
+}
+
+.rerun-navigation a {
+  padding: 9px 14px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  color: #7894af;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.rerun-navigation a:hover {
+  background: rgba(0, 200, 255, 0.08);
+  border-color: #347ba5;
+  color: #62d9ff;
+}
+
+/* SECTIONS */
+
+.rerun-section {
+  margin-bottom: 35px;
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 38, 61, 0.96),
+      rgba(10, 24, 41, 0.98)
+    );
+
+  border: 1px solid #245174;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.rerun-section h2 {
+  margin: 0 0 20px;
+
+  color: #eaf6ff;
+  font-size: 24px;
+  font-weight: 800;
+
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+}
+
+.rerun-section h3 {
+  color: #eaf6ff;
+}
+
+.rerun-section p {
+  color: #b5c9dc;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section-intro {
+  margin-bottom: 25px;
+}
+
+/* STATISTIQUES */
+
+.rerun-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.rerun-stat {
+  padding: 18px;
+
+  background: rgba(8, 15, 26, 0.5);
+  border: 1px solid #245174;
+  border-radius: 8px;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #7894af;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rerun-stat strong {
+  color: #62d9ff;
+  font-size: 16px;
+}
+
+/* LISTES */
+
+.rerun-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.rerun-list li {
+  margin: 12px 0;
+  color: #b5c9dc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.rerun-list li::marker {
+  color: #00c8ff;
+}
+
+/* GRILLE POKÉMON */
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* CARTE POKÉMON */
+
+.pokemon-card {
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 34, 56, 0.95),
+      rgba(8, 20, 35, 0.98)
+    );
+
+  border: 1px solid #245174;
+  border-radius: 10px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  border-color: #00c8ff;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(0, 200, 255, 0.1);
+}
+
+.pokemon-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 130px;
+  margin-bottom: 15px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 200, 255, 0.1),
+      transparent 65%
+    );
+
+  border-radius: 8px;
+}
+
+.pokemon-image img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.pokemon-image span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px dashed #347ba5;
+  border-radius: 50%;
+
+  color: #7894af;
+  font-size: 24px;
+}
+
+.pokemon-card h3 {
+  margin: 0 0 6px;
+
+  color: #eaf6ff;
+  font-size: 18px;
+}
+
+.pokemon-role {
+  margin: 0 0 18px !important;
+
+  color: #00c8ff !important;
+  font-size: 12px !important;
+  font-weight: 700;
+}
+
+.pokemon-details {
+  padding-top: 14px;
+  border-top: 1px solid rgba(36, 81, 116, 0.5);
+}
+
+.pokemon-details p {
+  margin: 8px 0 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+.pokemon-details strong {
+  color: #7894af;
+}
+
+/* ATTAQUES */
+
+.moves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  margin-top: 18px;
+}
+
+.moves span {
+  padding: 6px 8px;
+
+  background: rgba(0, 200, 255, 0.07);
+  border: 1px solid rgba(52, 123, 165, 0.6);
+  border-radius: 5px;
+
+  color: #9acbe2;
+  font-size: 11px;
+}
+
+/* OBJETS */
+
+.items-box {
+  padding: 18px;
+
+  background: rgba(0, 200, 255, 0.04);
+  border-left: 3px solid #00c8ff;
+  border-radius: 6px;
+}
+
+/* PARCOURS */
+
+.route-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.route-step {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 16px;
+
+  background: rgba(8, 15, 26, 0.45);
+  border: 1px solid #245174;
+  border-radius: 8px;
+}
+
+.route-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  background: rgba(0, 200, 255, 0.1);
+  border: 1px solid #347ba5;
+  border-radius: 50%;
+
+  color: #62d9ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.route-step h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.route-step p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* CONSEILS */
+
+.tip-box {
+  padding: 18px;
+
+  background: rgba(139, 124, 255, 0.06);
+  border-left: 3px solid #8b7cff;
+  border-radius: 6px;
+}
+
+.tip-box p {
+  margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .rerun-page {
+    padding: 25px 15px 60px;
+  }
+
+  .rerun-hero h1 {
+    font-size: 34px;
+  }
+
+  .rerun-section {
+    padding: 20px;
+  }
+
+  .rerun-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rerun-navigation {
+    gap: 6px;
+  }
+
+  .rerun-navigation a {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}/* =========================================
+   ROUTE TECHNIQUE GYM RERUN
+========================================= */
+
+/* TITRE DE SECTION */
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading p:not(.rerun-category) {
+  max-width: 750px;
+  margin-bottom: 0;
+}
+
+/* RÉGION */
+
+.region-block {
+  margin-top: 45px;
+}
+
+.region-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+}
+
+.region-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  background: rgba(0, 200, 255, 0.1);
+  border: 1px solid #347ba5;
+  border-radius: 8px;
+
+  color: #62d9ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.region-label {
+  margin: 0 0 4px !important;
+
+  color: #00c8ff !important;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.region-title h3 {
+  margin: 0;
+
+  color: #eaf6ff;
+  font-size: 26px;
+}
+
+/* CARTE D'UNE ARÈNE */
+
+.gym-route-card {
+  overflow: hidden;
+  margin-bottom: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 38, 61, 0.98),
+      rgba(8, 20, 35, 0.98)
+    );
+
+  border: 1px solid #245174;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2);
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gym-route-card:hover {
+  border-color: #347ba5;
+  transform: translateY(-2px);
+}
+
+/* EN-TÊTE DE L'ARÈNE */
+
+.gym-route-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  background: rgba(0, 200, 255, 0.04);
+  border-bottom: 1px solid rgba(36, 81, 116, 0.6);
+}
+
+.gym-route-header > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gym-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: #0d1b2e;
+  border: 1px solid #347ba5;
+  border-radius: 6px;
+
+  color: #62d9ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.gym-route-header h3 {
+  margin: 0;
+
+  color: #eaf6ff;
+  font-size: 19px;
+}
+
+.gym-leader {
+  margin: 0 !important;
+
+  color: #7894af !important;
+  font-size: 13px !important;
+}
+
+.gym-type {
+  padding: 7px 11px;
+
+  background: rgba(139, 124, 255, 0.08);
+  border: 1px solid rgba(139, 124, 255, 0.4);
+  border-radius: 5px;
+
+  color: #aaa2ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* CONTENU DE L'ARÈNE */
+
+.gym-route-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 25px;
+
+  padding: 24px;
+}
+
+/* IMAGE DE LA VILLE */
+
+.gym-location-image {
+  min-height: 180px;
+}
+
+.location-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 200, 255, 0.12),
+      transparent 65%
+    ),
+    #0a1829;
+
+  border: 1px dashed #347ba5;
+  border-radius: 8px;
+
+  color: #7894af;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*
+Pour mettre une vraie image plus tard :
+
+<div class="gym-location-image">
+  <img src="images/lavandia.png" alt="Lavandia">
+</div>
+*/
+
+.gym-location-image img {
+  display: block;
+
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* INSTRUCTIONS */
+
+.gym-instructions h4 {
+  margin: 0 0 12px;
+
+  color: #62d9ff;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gym-instructions h4:not(:first-child) {
+  margin-top: 25px;
+}
+
+.lead-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lead-pokemon span {
+  padding: 8px 12px;
+
+  background: rgba(0, 200, 255, 0.07);
+  border: 1px solid #347ba5;
+  border-radius: 6px;
+
+  color: #b5e8ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-instructions {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.route-instructions li {
+  margin: 9px 0;
+
+  color: #b5c9dc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.route-instructions li::marker {
+  color: #00c8ff;
+}
+
+/* PAUSE SOIN */
+
+.heal-break {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin: 35px 0;
+  padding: 18px 20px;
+
+  background: rgba(139, 124, 255, 0.06);
+  border: 1px solid rgba(139, 124, 255, 0.3);
+  border-left: 3px solid #8b7cff;
+  border-radius: 8px;
+}
+
+.heal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  background: rgba(139, 124, 255, 0.12);
+  border-radius: 50%;
+
+  color: #aaa2ff;
+  font-size: 18px;
+}
+
+.heal-break strong {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #d5d1ff;
+  font-size: 14px;
+}
+
+.heal-break p {
+  margin: 0 !important;
+  color: #938dbb !important;
+  font-size: 12px !important;
+}
+
+/* CONSEILS FINAUX */
+
+.final-tips-section {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 30, 50, 0.98),
+      rgba(8, 18, 32, 0.98)
+    );
+}
+
+.final-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.final-tip-card {
+  padding: 20px;
+
+  background: rgba(8, 15, 26, 0.45);
+  border: 1px solid #245174;
+  border-radius: 8px;
+}
+
+.final-tip-icon {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #00c8ff;
+  font-size: 24px;
+}
+
+.final-tip-card h3 {
+  margin: 0 0 10px;
+
+  color: #eaf6ff;
+  font-size: 16px;
+}
+
+.final-tip-card p {
+  margin: 0 !important;
+
+  color: #7894af !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .gym-route-content {
+    grid-template-columns: 1fr;
+  }
+
+  .gym-location-image,
+  .location-placeholder {
+    min-height: 140px;
+  }
+
+  .gym-location-image img {
+    height: 180px;
+  }
+
+  .final-tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .gym-route-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gym-route-header > div {
+    align-items: flex-start;
+  }
+
+  .gym-route-content {
+    padding: 18px;
+  }
+}
+/* Alignement horizontal des 6 Pokémon */
+.pokemon-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 15px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Chaque carte prend une largeur égale */
+.pokemon-row .pokemon-square {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+/* Sur les petits écrans */
+@media (max-width: 1000px) {
+    .pokemon-row {
+        flex-wrap: wrap !important;
+    }
+
+    .pokemon-row .pokemon-square {
+        flex: 1 1 calc(33.333% - 15px) !important;
+        width: auto !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .pokemon-row .pokemon-square {
+        flex: 1 1 calc(50% - 15px) !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .pokemon-row .pokemon-square {
+        flex: 1 1 100% !important;
+    }
+}

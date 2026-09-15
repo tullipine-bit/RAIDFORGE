@@ -1,0 +1,4540 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAIDFORGE — 6 Pillars</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+
+            background:
+                radial-gradient(
+                    circle at 15% 0%,
+                    rgba(35, 101, 166, 0.35),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(32, 64, 130, 0.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #060d1b,
+                    #0c1b33 55%,
+                    #07101f
+                );
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 6%;
+            background: rgba(5, 13, 27, 0.95);
+            border-bottom: 1px solid #29466c;
+        }
+
+        .logo {
+            color: #62d5ff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #b9c8df;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #62d5ff;
+        }
+
+        /* =========================
+           CONTENU PRINCIPAL
+        ========================= */
+
+        main {
+            width: 92%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 55px 0 90px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #62d5ff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2.3rem, 6vw, 4.8rem);
+            letter-spacing: 3px;
+            line-height: 1;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #aebdd7;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           CARTES INTRODUCTION
+        ========================= */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 55px;
+        }
+
+        .intro-card {
+            padding: 25px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #142b4c,
+                    #0b172d
+                );
+            border: 1px solid #31527e;
+            border-radius: 16px;
+        }
+
+        .intro-card .small-title {
+            margin-bottom: 10px;
+            color: #62d5ff;
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .intro-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .intro-card p {
+            margin: 0;
+            color: #aebdd7;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           TITRES DE SECTION
+        ========================= */
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            font-size: 1.7rem;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: #8096b6;
+            font-size: 0.8rem;
+        }
+
+        /* =========================
+           ÉQUIPE POKÉMON
+        ========================= */
+
+        .team-section {
+            margin-bottom: 70px;
+        }
+
+        .pokemon-row {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            width: 100%;
+        }
+
+        .pokemon-card {
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    160deg,
+                    #142849,
+                    #0d172c
+                );
+            border: 1px solid #31527e;
+            border-radius: 15px;
+            transition: 0.25s ease;
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-8px);
+            border-color: #62d5ff;
+            box-shadow:
+                0 10px 25px rgba(50, 170, 255, 0.2);
+        }
+
+        .pokemon-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            padding: 12px;
+        }
+
+        .pokemon-number {
+            color: #62d5ff;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .pokemon-role {
+            color: #aebdd7;
+            font-size: 0.65rem;
+            text-align: right;
+        }
+
+        .pokemon-picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background:
+                radial-gradient(
+                    circle,
+                    #254b78 0%,
+                    #0b1428 75%
+                );
+        }
+
+        .pokemon-picture img {
+            display: block;
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        .pokemon-content {
+            padding: 15px;
+        }
+
+        .pokemon-content h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .pokemon-type {
+            margin: 5px 0 12px;
+            color: #62d5ff;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .pokemon-info {
+            min-height: 65px;
+            margin: 0;
+            color: #b9c8e1;
+            font-size: 0.7rem;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           BLOC TECHRUN
+        ========================= */
+
+        .techrun-section {
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        .techrun-header {
+            margin-bottom: 35px;
+            padding: 30px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20, 48, 82, 0.95),
+                    rgba(9, 21, 40, 0.98)
+                );
+            border: 1px solid #31527e;
+            border-radius: 18px;
+        }
+
+        .techrun-header h2 {
+            margin: 0 0 12px;
+            font-size: 1.8rem;
+        }
+
+        .techrun-header p {
+            max-width: 850px;
+            margin: 0;
+            color: #b9c8e1;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           RÉGIONS
+        ========================= */
+
+        .route-region {
+            margin-bottom: 45px;
+        }
+
+        .route-region-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 20px;
+            padding-bottom: 14px;
+            color: #62d5ff;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #29466c;
+        }
+
+        /* =========================
+           CARTE D'UNE ARÈNE
+        ========================= */
+
+        .route-card {
+            display: grid;
+            grid-template-columns: 65px 1fr;
+            gap: 20px;
+            margin-bottom: 18px;
+            padding: 22px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20, 43, 76, 0.98),
+                    rgba(9, 21, 40, 0.98)
+                );
+            border: 1px solid #31527e;
+            border-radius: 18px;
+            transition: 0.25s ease;
+        }
+
+        .route-card:hover {
+            border-color: #62d5ff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .route-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            color: #06101f;
+            background: #62d5ff;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .route-content {
+            min-width: 0;
+        }
+
+        .route-title-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .route-content h4 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 1.25rem;
+        }
+
+        .route-location {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #62d5ff;
+            font-size: 0.78rem;
+            font-weight: bold;
+        }
+
+        .route-description {
+            margin: 0 0 20px;
+            color: #aebdd7;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           BLOCS VISUELS RAIDFORGE
+        ========================= */
+
+        .gym-visuals {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin: 25px 0;
+            clear: both;
+        }
+
+        .gym-visual {
+            position: relative;
+            display: block;
+            min-height: 230px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            background: #172033;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .gym-visual img {
+            display: block !important;
+            width: 100% !important;
+            height: 230px !important;
+            min-height: 230px;
+            object-fit: cover;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .gym-visual-caption {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.95),
+                transparent
+            );
+        }
+
+        /* =========================
+           DEUX POKÉMON DU COMBAT
+        ========================= */
+
+        .battle-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 18px;
+            border-top: 1px solid #29466c;
+        }
+
+        .battle-label {
+            align-self: flex-start;
+            min-width: 90px;
+            padding-top: 12px;
+            color: #8096b6;
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .battle-pokemon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+            padding: 8px 12px 8px 8px;
+            background: rgba(5, 15, 31, 0.65);
+            border: 1px solid #31527e;
+            border-radius: 12px;
+        }
+
+        .battle-pokemon-picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 62px;
+            height: 62px;
+            flex-shrink: 0;
+            background:
+                radial-gradient(
+                    circle,
+                    #254b78 0%,
+                    #0b1428 75%
+                );
+            border-radius: 10px;
+        }
+
+        .battle-pokemon-picture img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        .battle-pokemon-info {
+            min-width: 0;
+        }
+
+        .battle-pokemon-info strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+            font-size: 0.85rem;
+        }
+
+        .battle-pokemon-info span {
+            color: #62d5ff;
+            font-size: 0.7rem;
+        }
+
+        .battle-plus {
+            color: #62d5ff;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* =========================
+           BLOC ACTION
+        ========================= */
+
+        .route-action {
+            margin-top: 18px;
+            padding: 15px 18px;
+            background: rgba(98, 213, 255, 0.06);
+            border-left: 3px solid #62d5ff;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .route-action strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #62d5ff;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .route-action p {
+            margin: 0;
+            color: #d1e1f5;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           NOTE / CONDITION
+        ========================= */
+
+        .route-note {
+            margin-top: 15px;
+            padding: 13px 16px;
+            color: #aebdd7;
+            background: rgba(5, 15, 31, 0.5);
+            border: 1px dashed #31527e;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            line-height: 1.6;
+        }
+
+        .route-note strong {
+            color: #f4c95d;
+        }
+
+        /* =========================
+           AVERTISSEMENT
+        ========================= */
+
+        .route-warning {
+            margin-top: 35px;
+            padding: 20px;
+            color: #f5d98b;
+            background: rgba(116, 84, 20, 0.2);
+            border: 1px solid rgba(202, 157, 52, 0.5);
+            border-radius: 14px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           STRATÉGIE
+        ========================= */
+
+        .strategy-section {
+            margin-top: 70px;
+            margin-bottom: 55px;
+        }
+
+        .strategy-box {
+            padding: 30px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20, 48, 82, 0.95),
+                    rgba(9, 21, 40, 0.98)
+                );
+            border: 1px solid #31527e;
+            border-radius: 18px;
+        }
+
+        .strategy-box h2 {
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+        }
+
+        .strategy-box > p {
+            margin: 0;
+            color: #b9c8e1;
+            line-height: 1.8;
+        }
+
+        .strategy-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .strategy-item {
+            padding: 18px;
+            background: rgba(5, 15, 31, 0.5);
+            border: 1px solid #28476d;
+            border-radius: 12px;
+        }
+
+        .strategy-item h3 {
+            margin: 0 0 8px;
+            color: #62d5ff;
+            font-size: 0.95rem;
+        }
+
+        .strategy-item p {
+            margin: 0;
+            color: #aebdd7;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           INFORMATIONS BAS DE PAGE
+        ========================= */
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .bottom-box {
+            padding: 28px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #122744,
+                    #0b172c
+                );
+            border: 1px solid #31527e;
+            border-radius: 16px;
+        }
+
+        .bottom-box h2 {
+            margin: 0 0 15px;
+            color: #62d5ff;
+            font-size: 1.2rem;
+        }
+
+        .bottom-box p {
+            margin: 0;
+            color: #aebdd7;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .type-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .type-tag {
+            padding: 8px 12px;
+            color: #dcecff;
+            background: #1a365b;
+            border: 1px solid #38618e;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        /* =========================
+           BOUTON
+        ========================= */
+
+        .button-area {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .main-button {
+            display: inline-block;
+            padding: 14px 28px;
+            color: #06101f;
+            background: #62d5ff;
+            border: 1px solid #62d5ff;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .main-button:hover {
+            color: #ffffff;
+            background: transparent;
+            box-shadow:
+                0 0 20px rgba(98, 213, 255, 0.25);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 28px 20px;
+            color: #7187a6;
+            background: rgba(4, 11, 23, 0.8);
+            border-top: 1px solid #28476d;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        footer strong {
+            color: #62d5ff;
+        }
+
+        /* =========================
+           RESPONSIVE TABLETTE
+        ========================= */
+
+        /* =========================
+           RESPONSIVE MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .back-link {
+                font-size: 0.75rem;
+            }
+
+            main {
+                width: 90%;
+                padding-top: 35px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pokemon-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .strategy-list,
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 8px;
+            }
+
+            .route-card {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 18px;
+            }
+
+            .route-number {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+
+            .route-title-line {
+                display: block;
+            }
+
+            .battle-box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .battle-label {
+                grid-column: 1 / -1;
+                padding-top: 0;
+            }
+
+            .battle-plus {
+                display: none;
+            }
+
+            .battle-pokemon {
+                display: block;
+                padding: 8px;
+                text-align: center;
+            }
+
+            .battle-pokemon-picture {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                margin-bottom: 8px;
+            }
+
+            .battle-pokemon-info strong {
+                font-size: 0.75rem;
+            }
+
+            .battle-pokemon-info span {
+                font-size: 0.65rem;
+            }
+
+            .techrun-header,
+            .strategy-box,
+            .bottom-box {
+                padding: 22px;
+            }
+
+            .gym-visuals {
+                grid-template-columns: 1fr !important;
+            }
+
+            .gym-visual,
+            .gym-visual img {
+                min-height: 200px;
+                height: 200px !important;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .pokemon-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .pokemon-top {
+                display: block;
+            }
+
+            .pokemon-role {
+                display: block;
+                margin-top: 5px;
+                text-align: left;
+            }
+
+            .pokemon-content {
+                padding: 12px;
+            }
+
+            .pokemon-content h3 {
+                font-size: 0.85rem;
+            }
+
+            .pokemon-info {
+                font-size: 0.65rem;
+            }
+
+            .route-region-title {
+                font-size: 1.25rem;
+            }
+        }
+        .gym-visuals .gym-visual:first-child {
+    display: none;
+}
+/* Zone des onglets sous le champion */
+.gym-tabs {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* Boutons des onglets */
+.gym-tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.gym-tab-button {
+    border: 1px solid #555;
+    background: #20232a;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: 0.2s ease;
+}
+
+.gym-tab-button:hover {
+    background: #343943;
+}
+
+.gym-tab-button.active {
+    background: #d6a928;
+    color: #111;
+    border-color: #f0c94b;
+}
+
+/* Contenu des onglets */
+.gym-tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.gym-tab-content.active {
+    display: block;
+}
+
+/* Liste des Pokémon et attaques */
+.gym-pokemon-list,
+.gym-attacks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gym-pokemon-list li,
+.gym-attacks-list li {
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.08);
+}
+/* ========================================
+   ONGLET POKÉMON / ATTAQUES
+======================================== */
+
+.battle-tabs {
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.battle-tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.battle-tab-button {
+    padding: 7px 15px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #20232a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.battle-tab-button:hover {
+    background: #343943;
+}
+
+.battle-tab-button.active {
+    background: #d6a928;
+    color: #111;
+    border-color: #f0c94b;
+}
+
+.battle-tab-content {
+    display: none;
+    width: 100%;
+}
+
+.battle-tab-content.active {
+    display: block;
+}
+
+.battle-pokemon-item,
+.battle-attack-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 5px 0;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.battle-pokemon-item {
+    justify-content: center;
+}
+
+.battle-attack-item strong {
+    color: #f0c94b;
+}
+
+.battle-attack-item span {
+    color: #fff;
+    text-align: right;
+}/* Agrandir les deux cases Pokémon */
+.battle-box > div:not(.battle-plus) {
+    min-width: 180px;
+    min-height: 180px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Agrandir les images dans les cases */
+.battle-box > div:not(.battle-plus) img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}/* Empêcher le contenu des cases Pokémon de déborder */
+.battle-box .pokemon-card {
+    width: 165px;
+    height: 165px;
+    min-width: 0;
+    min-height: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image adaptée à la case */
+.battle-box .pokemon-card img {
+    width: 105px;
+    height: 105px;
+    max-width: 100%;
+    max-height: 105px;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+/* Nom du Pokémon contenu dans la case */
+.battle-box .pokemon-card strong,
+.battle-box .pokemon-card span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* ========================================
+   TAILLE ET CADRAGE DES CASES POKÉMON
+======================================== */
+
+/* Les deux cases Pokémon */
+.battle-box .battle-pokemon {
+    width: 165px;
+    height: 165px;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 8px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Zone contenant l'image */
+.battle-box .battle-pokemon-picture {
+    width: 115px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image du Pokémon */
+.battle-box .battle-pokemon-picture img {
+    width: 115px;
+    height: 115px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Zone du nom et de l'attaque */
+.battle-box .battle-pokemon-info {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Nom du Pokémon */
+.battle-box .battle-pokemon-info strong {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Attaque du Pokémon */
+.battle-box .battle-pokemon-info span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* ========================================
+   CARTES ÉQUIPE — ESPACE POUR LES INFORMATIONS
+======================================== */
+
+.team-section .pokemon-card {
+    min-height: 560px;
+    padding: 35px 30px;
+}
+
+/* Zone réservée aux futures informations */
+.team-section .pokemon-content {
+    width: 100%;
+}
+/* ========================================
+   AGRANDIR L'ESPACE INTÉRIEUR DES CARTES
+======================================== */
+
+/* Agrandit uniquement la hauteur des cartes de l'équipe */
+.team-section .pokemon-card {
+    min-height: 560px;
+    padding: 28px 24px;
+}
+
+/* Agrandit la zone réservée à l'image */
+.team-section .pokemon-picture {
+    min-height: 170px;
+    margin-bottom: 15px;
+}
+
+/* Agrandit et libère la zone de contenu */
+.team-section .pokemon-content {
+    width: 100%;
+    flex: 1;
+}
+
+/* Description plus espacée */
+.team-section .pokemon-info {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+/* Zone des attaques, IV, EV et talent */
+.pokemon-details {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Espacement entre chaque catégorie */
+.detail-block {
+    margin-bottom: 16px;
+}
+
+/* Titres : Attaques, Statistiques, Talent */
+.detail-block h4 {
+    margin: 0 0 8px;
+    color: #62d5ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Attaques en deux colonnes */
+.attack-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+}
+
+.attack-list span {
+    padding: 7px 9px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e6f1ff;
+    font-size: 0.8rem;
+}
+
+/* Lignes IV / EV / Talent */
+.stat-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 7px 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.stat-line strong {
+    min-width: 48px;
+    color: #62d5ff;
+}
+
+.stat-line span {
+    color: #c8d5e8;
+}
+/* ========================================
+   COULEURS DES INFORMATIONS POKÉMON
+======================================== */
+
+/* Bloc général des détails */
+.pokemon-details {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Titres des catégories */
+.detail-block h4 {
+    margin: 0 0 8px;
+    color: #62d5ff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Liste des attaques */
+.attack-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+}
+
+.attack-list span {
+    padding: 7px 9px;
+    border: 1px solid rgba(98, 213, 255, 0.25);
+    border-radius: 6px;
+    background: rgba(98, 213, 255, 0.08);
+    color: #dff7ff;
+    font-size: 0.8rem;
+    transition: 0.2s ease;
+}
+
+.attack-list span:hover {
+    background: rgba(98, 213, 255, 0.2);
+    border-color: #62d5ff;
+}
+
+/* Lignes IV / EV / Talent */
+.stat-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 7px 0;
+    padding: 6px 8px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.stat-line strong {
+    min-width: 48px;
+    color: #62d5ff;
+}
+
+.stat-line span {
+    color: #e4edf8;
+}
+
+/* Couleur spécifique IV */
+.detail-block:nth-child(2) .stat-line:nth-child(2) strong {
+    color: #8be28b;
+}
+
+/* Couleur spécifique EV */
+.detail-block:nth-child(2) .stat-line:nth-child(3) strong {
+    color: #ffcc66;
+}
+
+/* Couleur du talent */
+.detail-block:nth-child(3) .stat-line strong {
+    color: #d99cff;
+}
+
+.detail-block:nth-child(3) .stat-line {
+    background: rgba(217, 156, 255, 0.08);
+    border: 1px solid rgba(217, 156, 255, 0.2);
+}
+/* ========================================
+   CADRES DES ATTAQUES
+======================================== */
+
+.attack-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.attack-list span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 16px;
+}
+/* ========================================
+   ZOOM UNIQUEMENT SUR LE TEXTE
+======================================== */
+
+.attack-list span {
+    transition: font-size 0.25s ease,
+                color 0.25s ease;
+}
+
+.attack-list span:hover {
+    font-size: 1rem;
+    color: #ffffff;
+}
+/* ========================================
+   IV — STATISTIQUES INDIVIDUELLES
+======================================== */
+
+.iv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 5px;
+}
+
+.iv-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 7px 5px;
+    min-height: 28px;
+    border: 1px solid rgba(139, 226, 139, 0.25);
+    border-radius: 4px;
+    background: rgba(139, 226, 139, 0.07);
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.iv-stat span {
+    color: #b8c8d8;
+    font-size: 0.62rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.iv-stat strong {
+    color: #8be28b;
+    font-size: 0.72rem;
+}
+
+.iv-stat:hover {
+    transform: scale(1.05);
+    background: rgba(139, 226, 139, 0.15);
+    border-color: #8be28b;
+}
+
+.iv-stat span {
+    color: #b8c8d8;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.iv-stat strong {
+    color: #8be28b;
+    font-size: 0.8rem;
+}
+
+.iv-stat:hover {
+    transform: scale(1.06);
+    background: rgba(139, 226, 139, 0.16);
+    border-color: #8be28b;
+}
+/* Attaques compactes */
+.attack-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.attack-list span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 5px 6px;
+    font-size: 0.68rem;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.attack-list span:hover {
+    transform: scale(1.05);
+    position: relative;
+    z-index: 2;
+}
+
+/* IV compacts */
+.iv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.iv-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 3px 2px;
+    border: 1px solid rgba(139, 226, 139, 0.2);
+    border-radius: 3px;
+    background: rgba(139, 226, 139, 0.05);
+}
+
+.iv-stat span {
+    color: #b8c8d8;
+    font-size: 0.52rem;
+    white-space: nowrap;
+}
+
+.iv-stat strong {
+    color: #8be28b;
+    font-size: 0.6rem;
+}
+
+.iv-stat:hover {
+    transform: scale(1.03);
+    background: rgba(139, 226, 139, 0.12);
+}
+.iv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 4px;
+}
+
+.iv-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px 3px;
+    min-height: 22px;
+    border: 1px solid rgba(139, 226, 139, 0.2);
+    border-radius: 3px;
+    background: rgba(139, 226, 139, 0.05);
+}
+
+.iv-stat span {
+    color: #b8c8d8;
+    font-size: 0.55rem;
+    white-space: nowrap;
+}
+
+.iv-stat strong {
+    color: #8be28b;
+    font-size: 0.62rem;
+}
+.iv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.iv-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+    min-height: 34px;
+    padding: 6px 3px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid rgba(139, 226, 139, 0.25);
+    border-radius: 4px;
+    background: rgba(139, 226, 139, 0.07);
+}
+
+.iv-stat span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.6rem;
+}
+
+.iv-stat strong {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+}
+.iv-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.iv-stat {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 4px;
+    min-width: 0;
+    min-height: 34px;
+    padding: 6px 6px;
+    box-sizing: border-box;
+    border: 1px solid rgba(139, 226, 139, 0.3);
+    border-radius: 4px;
+    background: rgba(139, 226, 139, 0.08);
+}
+
+.iv-stat span {
+    display: inline-block !important;
+    flex: 1;
+    min-width: 0;
+    color: #b8c8d8;
+    font-size: 0.62rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.iv-stat strong {
+    flex-shrink: 0;
+    color: #8be28b;
+    font-size: 0.68rem;
+    white-space: nowrap;
+}
+.iv-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.iv-stat {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 5px 6px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(139, 226, 139, 0.3);
+    border-radius: 4px;
+    background: rgba(139, 226, 139, 0.08);
+}
+
+.iv-stat span {
+    display: block !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    color: #b8c8d8;
+    font-size: 0.58rem !important;
+    font-weight: 600;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.iv-stat strong {
+    display: block !important;
+    flex: 0 0 auto !important;
+    color: #8be28b;
+    font-size: 0.65rem !important;
+    white-space: nowrap !important;
+}
+.ev-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ev-stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    min-width: 0;
+    min-height: 34px;
+    padding: 5px 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid rgba(190, 120, 255, 0.35);
+    border-radius: 4px;
+    background: rgba(150, 70, 220, 0.1);
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.ev-stat span {
+    display: block;
+    color: #d5c2e8;
+    font-size: 0.58rem;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: normal;
+}
+
+.ev-stat strong {
+    flex-shrink: 0;
+    color: #c084fc;
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+
+.ev-stat:hover {
+    transform: scale(1.04);
+    background: rgba(150, 70, 220, 0.2);
+    border-color: #c084fc;
+}
+
+.ev-stat span {
+    display: block;
+    color: #b8c8d8;
+    font-size: 0.58rem;
+    font-weight: 600;
+    line-height: 1.1;
+    white-space: normal;
+}
+
+.ev-stat strong {
+    flex-shrink: 0;
+    color: #72bfff;
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+.attack-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.attack-list span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 30px;
+    padding: 5px 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid rgba(255, 170, 70, 0.35);
+    border-radius: 4px;
+    background: rgba(255, 140, 40, 0.1);
+    color: #ffc078;
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.attack-list span:hover {
+    transform: scale(1.05);
+    background: rgba(255, 140, 40, 0.2);
+    border-color: #ffb45c;
+}
+.pokemon-info {
+    color: #ff3333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.pokemon-details {
+    margin-top: -30px;
+}
+.pokemon-details {
+    row-gap: 14px !important;
+}
+.tortank-card .ev-block {
+    margin-top: -10px !important;
+    margin-bottom: 0 !important;
+}
+.tortank-talent {
+    margin-top: 14px !important;
+}
+.tortank-talent {
+    margin-top: 14px !important;
+}
+.pokemon-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    align-items: start !important;
+}
+.pokemon-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.pokemon-card {
+    min-width: 0;
+    height: fit-content;
+}
+.pokemon-grid,
+.pokemon-container,
+.pokemon-list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+.pokemon-grid > .pokemon-card,
+.pokemon-container > .pokemon-card,
+.pokemon-list > .pokemon-card {
+    flex: 0 0 calc(16.666% - 10px) !important;
+    width: calc(16.666% - 10px) !important;
+    min-width: 0 !important;
+}
+/* FORCE LES 6 POKEMON SUR UNE SEULE LIGNE */
+
+.team-section .pokemon-row {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 15px !important;
+    width: 100% !important;
+    align-items: start !important;
+}
+
+.team-section .pokemon-row > .pokemon-card {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+}
+/* DISPOSITION DES SIX CARTES */
+
+.pokemon-row {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 15px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: start !important;
+    overflow: visible !important;
+}
+
+.pokemon-row > .pokemon-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+/* TEST RADICAL : 6 CARTES STRICTEMENT IDENTIQUES */
+.team-section .pokemon-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.team-section .pokemon-row > .pokemon-card {
+    flex: 0 0 calc((100% - 50px) / 6) !important;
+    width: calc((100% - 50px) / 6) !important;
+    min-width: calc((100% - 50px) / 6) !important;
+    max-width: calc((100% - 50px) / 6) !important;
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+    margin: 0 !important;
+    padding: 15px 8px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+/* CARTES ENCORE PLUS HAUTES */
+.team-section .pokemon-row > .pokemon-card {
+    min-height: 850px !important;
+    height: 850px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.team-section .pokemon-row > .pokemon-card .pokemon-content {
+    flex: 1 !important;
+}
+/* =========================
+   IV À 0 EN ROUGE
+========================= */
+
+.team-section .iv-stat strong.iv-zero {
+    color: #ff5555 !important;
+}
+/* =========================
+   SÉPARATION IV / EV
+========================= */
+
+.team-section .pokemon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.team-section .detail-block {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Bloc IV */
+.team-section .iv-block {
+    margin-bottom: 12px;
+}
+
+/* Bloc EV */
+.team-section .ev-block {
+    margin-top: 0 !important;
+}
+
+
+/* Chaque statistique reste dans sa propre case */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 6px 4px;
+    box-sizing: border-box;
+}
+
+/* Seuls les IV à 0 sont rouges */
+.team-section .iv-stat strong.iv-zero {
+    color: #ff5555 !important;
+}
+/* Grilles IV et EV en 2 colonnes */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Cases qui restent dans leur colonne */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 3px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Texte qui ne déborde pas */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    display: block !important;
+    font-size: 9px !important;
+    line-height: 10px !important;
+    white-space: nowrap !important;
+}
+
+.team-section .iv-stat strong,
+.team-section .ev-stat strong {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 13px !important;
+    white-space: nowrap !important;
+}
+
+/* Éviter que les mots longs agrandissent les colonnes */
+.team-section .iv-grid *,
+.team-section .ev-grid * {
+    min-width: 0 !important;
+}
+/* IV et EV très compacts pour laisser voir le Talent */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    gap: 3px !important;
+    margin: 2px 0 !important;
+}
+
+/* Cases plus basses */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 2px !important;
+    border-radius: 4px !important;
+}
+
+/* Texte des cases */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    font-size: 8px !important;
+    line-height: 8px !important;
+}
+
+.team-section .iv-stat strong,
+.team-section .ev-stat strong {
+    font-size: 10px !important;
+    line-height: 10px !important;
+}
+
+/* Titres IV et EV moins hauts */
+.team-section .detail-block h4 {
+    margin: 2px 0 !important;
+    font-size: 10px !important;
+}
+
+/* Blocs IV et EV moins espacés */
+.team-section .detail-block {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    padding: 3px !important;
+}
+/* IV et EV : format 2 colonnes × 3 lignes */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    gap: 4px !important;
+    margin: 3px 0 !important;
+}
+
+/* Cases légèrement agrandies */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    height: 35px !important;
+    min-height: 35px !important;
+    padding: 3px !important;
+    border-radius: 5px !important;
+}
+
+/* Texte des cases */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    font-size: 9px !important;
+    line-height: 10px !important;
+}
+
+.team-section .iv-stat strong,
+.team-section .ev-stat strong {
+    font-size: 11px !important;
+    line-height: 12px !important;
+}
+
+/* Titres IV et EV */
+.team-section .detail-block h4 {
+    margin: 3px 0 !important;
+    font-size: 11px !important;
+}
+
+/* Espacement des blocs */
+.team-section .detail-block {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    padding: 4px !important;
+}
+/* Grilles IV et EV */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Cases taille intermédiaire */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Libellés */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    display: block !important;
+    font-size: 8px !important;
+    line-height: 9px !important;
+    white-space: normal !important;
+}
+
+/* Valeurs */
+.team-section .iv-stat strong,
+.team-section .ev-stat strong {
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 11px !important;
+    white-space: nowrap !important;
+}
+
+/* Titres */
+.team-section .detail-block h4 {
+    margin: 2px 0 !important;
+    font-size: 10px !important;
+}/* Faire tenir ATK Spé et DEF Spé sur deux lignes */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    font-size: 8px !important;
+    line-height: 8px !important;
+    letter-spacing: -0.3px !important;
+}
+
+/* Éviter que les libellés dépassent */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    overflow: hidden !important;
+}
+/* Même rendu IV/EV pour Tortank et Sorbouboul */
+.tortank-card .iv-grid,
+.tortank-card .ev-grid,
+.sorbouboul-card .iv-grid,
+.sorbouboul-card .ev-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.tortank-card .iv-stat,
+.tortank-card .ev-stat,
+.sorbouboul-card .iv-stat,
+.sorbouboul-card .ev-stat {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.tortank-card .iv-stat span,
+.tortank-card .ev-stat span,
+.sorbouboul-card .iv-stat span,
+.sorbouboul-card .ev-stat span {
+    display: block !important;
+    font-size: 8px !important;
+    line-height: 8px !important;
+    letter-spacing: -0.3px !important;
+    white-space: normal !important;
+}
+
+.tortank-card .iv-stat strong,
+.tortank-card .ev-stat strong,
+.sorbouboul-card .iv-stat strong,
+.sorbouboul-card .ev-stat strong {
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 11px !important;
+    white-space: nowrap !important;
+}
+/* Même taille pour les blocs IV et EV de toutes les cartes */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Cases compactes et identiques */
+.team-section .iv-stat,
+.team-section .ev-stat {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Texte des cases */
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    display: block !important;
+    font-size: 8px !important;
+    line-height: 8px !important;
+    letter-spacing: -0.3px !important;
+    white-space: normal !important;
+}
+
+.team-section .iv-stat strong,
+.team-section .ev-stat strong {
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 11px !important;
+    white-space: nowrap !important;
+}
+.pokemon-card .iv-grid,
+.pokemon-card .ev-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.pokemon-card .iv-stat,
+.pokemon-card .ev-stat {
+    min-height: 34px !important;
+    height: 34px !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+}.tortank-talent {
+    position: relative !important;
+    z-index: 10 !important;
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* CORRECTION TAILLE DES CARTES — annule l'ancien forçage à 850px */
+.team-section .pokemon-row > .pokemon-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+}
+
+/* CORRECTION FINALE — espacement IV / EV / Talent */
+.team-section .pokemon-details {
+    gap: 4px !important;
+}
+
+.team-section .iv-block,
+.team-section .ev-block {
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+}
+
+.tortank-card .ev-block {
+    position: static !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+}
+
+.tortank-card .tortank-talent {
+    margin-top: 0 !important;
+}
+
+/* ALIGNEMENT FINAL DES 6 CARTES SUR TYPHLOSION */
+.team-section .six-pokemon-row > .pokemon-card {
+    align-self: start !important;
+}
+
+.team-section .six-pokemon-row .pokemon-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.team-section .six-pokemon-row .pokemon-info {
+    height: 65px !important;
+    min-height: 65px !important;
+    margin-bottom: 18px !important;
+}
+
+.team-section .six-pokemon-row .pokemon-details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    margin-top: -30px !important;
+}
+
+.team-section .six-pokemon-row .detail-block,
+.team-section .six-pokemon-row .iv-block,
+.team-section .six-pokemon-row .ev-block,
+.team-section .six-pokemon-row .tortank-talent {
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+    position: static !important;
+    top: auto !important;
+}
+
+.team-section .six-pokemon-row .iv-grid,
+.team-section .six-pokemon-row .ev-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3px !important;
+}
+
+.team-section .six-pokemon-row .iv-stat,
+.team-section .six-pokemon-row .ev-stat {
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 2px !important;
+}
+
+    
+/* ========================================
+   RAIDFORGE — ALIGNEMENT PROPRE DES POKÉMON DANS LES ARÈNES
+   Label | Pokémon 1 | + | Pokémon 2 | Onglets
+======================================== */
+.route-card .battle-box {
+    display: grid !important;
+    grid-template-columns: 160px 180px 24px 180px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    margin-top: 18px !important;
+    padding-top: 26px !important;
+    border-top: 1px solid #29466c !important;
+}
+
+.route-card .battle-label {
+    align-self: center !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.route-card .battle-box .battle-pokemon {
+    width: 180px !important;
+    min-width: 180px !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+}
+
+.route-card .battle-plus {
+    width: 24px !important;
+    text-align: center !important;
+}
+
+.route-card .battle-tabs {
+    grid-column: 1 / -1 !important;
+    align-self: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 10px 0 0 !important;
+    padding: 18px 0 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* La zone détaillée peut grandir librement pour les stratégies longues */
+.route-card .battle-tab-content.active {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 16px !important;
+}
+
+.route-card .battle-pokemon-item,
+.route-card .battle-attack-item {
+    white-space: normal !important;
+    overflow: visible !important;
+}
+
+.route-card .route-action,
+.route-card .route-note {
+    clear: both !important;
+    width: 100% !important;
+}
+
+.route-card .battle-tab-buttons {
+    justify-content: center !important;
+    margin: 0 0 10px !important;
+}
+
+.route-card .battle-tab-content {
+    width: 100% !important;
+}
+
+@media (max-width: 1050px) {
+    .route-card .battle-box {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .route-card .battle-label,
+    .route-card .battle-tabs {
+        grid-column: 1 / -1 !important;
+    }
+    .route-card .battle-plus { display: none !important; }
+    .route-card .battle-box .battle-pokemon {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* CAS SPÉCIAL — DÉMOLOSSE + ARCANIN : format compact */
+.special-encounter {
+    width: min(100%, 430px);
+    margin: 18px auto 0;
+    padding: 14px 18px 16px;
+    border: 1px solid rgba(214, 169, 40, 0.35);
+    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.78);
+    text-align: center;
+}
+.special-encounter-title {
+    margin-bottom: 10px;
+    color: #ff3b30;
+    font-size: .88rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-transform: none;
+}
+.special-enemy-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.special-enemy-row .battle-plus {
+    display: none !important;
+}
+.special-enemy-row .battle-pokemon {
+    width: 105px !important;
+    height: 105px !important;
+    min-width: 105px !important;
+    min-height: 105px !important;
+    padding: 3px !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+.special-enemy-row .battle-pokemon-picture {
+    width: 82px !important;
+    height: 72px !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+.special-enemy-row .battle-pokemon-picture img {
+    width: 78px !important;
+    height: 78px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+}
+.special-enemy-row .battle-pokemon-info strong {
+    font-size: .76rem !important;
+}
+.special-enemy-row .battle-pokemon-info span {
+    display: none !important;
+}
+.special-instructions {
+    margin: 4px 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #dcecff;
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+.special-instructions strong { color: #62a8ff; }
+
+
+/* ===== LAVARIDGE — FORMAT COMPACT COMME LA RÉFÉRENCE ===== */
+.reference-layout .battle-box {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: min(100%, 290px) !important;
+    margin: 18px auto 0 !important;
+    padding: 12px 12px 14px !important;
+    gap: 4px !important;
+    border: 1px solid rgba(214,169,40,.35) !important;
+    border-radius: 12px !important;
+    background: rgba(20,20,20,.78) !important;
+}
+.reference-layout .battle-label {
+    width: 100% !important;
+    min-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 0 6px !important;
+    color: #c8c8c8 !important;
+    font-size: .84rem !important;
+    text-align: center !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+.reference-layout .battle-label::before { content: "Commence avec "; }
+.reference-layout .battle-label { font-size: 0 !important; }
+.reference-layout .battle-label::before {
+    font-size: .84rem !important;
+    font-weight: 700 !important;
+}
+.reference-layout .battle-label::after {
+    content: "Tortank et Togekiss.";
+    font-size: .84rem !important;
+    font-weight: 700 !important;
+    color: #62a8ff !important;
+}
+.reference-layout .battle-box > .battle-pokemon {
+    width: 88px !important;
+    height: 82px !important;
+    min-width: 88px !important;
+    min-height: 82px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture {
+    width: 72px !important;
+    height: 58px !important;
+    background: transparent !important;
+    overflow: visible !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture img {
+    width: 66px !important;
+    height: 66px !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-info strong { display: none !important; }
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-info span { display: none !important; }
+.reference-layout .battle-box > .battle-plus { display: none !important; }
+.reference-layout .battle-box::after {
+    content: "Giclédo + Coup d’Main";
+    flex: 0 0 100%;
+    margin-top: 3px;
+    color: #62a8ff;
+    font-size: .96rem;
+    font-weight: 800;
+    text-align: center;
+}
+.reference-layout .battle-tabs { display: none !important; }
+
+.reference-layout .special-encounter {
+    width: min(100%, 290px) !important;
+    margin: 16px auto 0 !important;
+    padding: 12px 12px 14px !important;
+    border: 1px solid rgba(214,169,40,.35) !important;
+    border-radius: 12px !important;
+    background: rgba(20,20,20,.78) !important;
+}
+.reference-layout .special-encounter-title {
+    margin-bottom: 6px !important;
+    color: #ff3b30 !important;
+    font-size: .82rem !important;
+    font-weight: 800 !important;
+    text-decoration: underline !important;
+}
+.reference-layout .special-enemy-row { gap: 4px !important; margin-bottom: 3px !important; }
+.reference-layout .special-enemy-row .battle-pokemon {
+    width: 88px !important;
+    height: 82px !important;
+    min-width: 88px !important;
+    min-height: 82px !important;
+    padding: 0 !important;
+}
+.reference-layout .special-enemy-row .battle-pokemon-picture {
+    width: 72px !important;
+    height: 58px !important;
+}
+.reference-layout .special-enemy-row .battle-pokemon-picture img {
+    width: 66px !important;
+    height: 66px !important;
+}
+.reference-layout .special-enemy-row .battle-pokemon-info { display: none !important; }
+.reference-layout .special-instructions {
+    margin: 3px 0 0 !important;
+    font-size: 0 !important;
+}
+.reference-layout .special-instructions::after {
+    content: "Giclédo + Mégaphone";
+    color: #62a8ff;
+    font-size: .96rem;
+    font-weight: 800;
+}
+
+
+/* LAVARIDGE — remonter le bloc combat spécial */
+.route-card:first-of-type .battle-box {
+    margin-top: -10px !important;
+}
+.route-card:first-of-type .battle-tabs {
+    margin-top: 4px !important;
+}
+
+/* LAVARIDGE — Tortank + Togekiss plus grands */
+.reference-layout .battle-box > .battle-pokemon {
+    width: 125px !important;
+    height: 120px !important;
+    min-width: 125px !important;
+    min-height: 120px !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture {
+    width: 110px !important;
+    height: 92px !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture img {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+}
+
+/* LAVARIDGE — bloc plus LARGE horizontalement et moins HAUT */
+.reference-layout .battle-box {
+    width: min(100%, 520px) !important;
+    min-height: 0 !important;
+    padding: 5px 22px 7px !important;
+    gap: 26px !important;
+    align-content: center !important;
+}
+.reference-layout .battle-label {
+    margin: 0 0 1px !important;
+    line-height: 1.05 !important;
+}
+.reference-layout .battle-box > .battle-pokemon {
+    width: 145px !important;
+    height: 88px !important;
+    min-width: 145px !important;
+    min-height: 88px !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture {
+    width: 120px !important;
+    height: 82px !important;
+}
+.reference-layout .battle-box > .battle-pokemon .battle-pokemon-picture img {
+    width: 100px !important;
+    height: 100px !important;
+}
+.reference-layout .battle-box::after {
+    margin-top: 0 !important;
+    line-height: 1.05 !important;
+}
+
+/* =========================================================
+   LAVARIDGE — MAQUETTE EXACTE (override final)
+   ========================================================= */
+.reference-layout .route-title-line { margin-bottom: 4px !important; }
+.reference-layout .route-description { margin: 4px 0 10px !important; text-align:center; }
+
+.reference-layout .battle-box,
+.reference-layout .special-encounter,
+.reference-layout .route-action,
+.reference-layout .route-note { display:none !important; }
+
+.lavaridge-mockup {
+    width: min(100%, 610px);
+    margin: 10px auto 4px;
+    text-align: center;
+}
+.lavaridge-mockup-card {
+    width: 100%;
+    margin: 0 auto 36px;
+    padding: 28px 34px 24px;
+    border: 2px solid rgba(95,119,143,.52);
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(16,25,34,.96), rgba(10,18,27,.98));
+    box-shadow: 0 10px 24px rgba(0,0,0,.20);
+}
+.lavaridge-mockup-lead {
+    margin: 0 0 12px;
+    color: #d8dde5;
+    font-size: 1.28rem;
+    font-weight: 800;
+}
+.lavaridge-mockup-lead .blue { color:#4c91ff; }
+.lavaridge-mockup-lead .pink { color:#ec75bc; }
+.lavaridge-sprites {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:38px;
+    min-height:145px;
+    margin: 2px 0 8px;
+}
+.lavaridge-sprites img {
+    display:block;
+    width:145px;
+    height:145px;
+    object-fit:contain;
+    image-rendering:auto;
+}
+.lavaridge-move {
+    margin: 4px 0 0;
+    font-size: 1.28rem;
+    font-weight: 900;
+}
+.lavaridge-move .water { color:#4c91ff; }
+.lavaridge-move .support { color:#ec75bc; }
+.lavaridge-condition {
+    margin: 0 0 14px;
+    color:#ff2929;
+    font-size:1.22rem;
+    font-weight:900;
+    text-decoration:underline;
+}
+.lavaridge-mockup-card.special { padding-top:24px; }
+.lavaridge-mockup-card.special .lavaridge-sprites { gap:20px; min-height:130px; }
+.lavaridge-mockup-card.special .lavaridge-sprites img { width:120px; height:120px; }
+.lavaridge-mockup-card.special .lavaridge-sprites img.trainer { width:105px; }
+.lavaridge-note {
+    margin: -8px 0 0;
+    color:#d89e00;
+    font-size:1.05rem;
+    font-weight:800;
+    text-align:left;
+}
+.lavaridge-note .note-word { text-decoration:underline; }
+.lavaridge-note .heal { color:#28db69; }
+.lavaridge-note .blastoise { color:#4c91ff; }
+@media (max-width:700px){
+    .lavaridge-mockup { width:100%; }
+    .lavaridge-mockup-card { padding:20px 14px; margin-bottom:22px; }
+    .lavaridge-mockup-lead,.lavaridge-move,.lavaridge-condition { font-size:1rem; }
+    .lavaridge-sprites { gap:16px; min-height:105px; }
+    .lavaridge-sprites img { width:105px; height:105px; }
+    .lavaridge-mockup-card.special .lavaridge-sprites { gap:8px; }
+    .lavaridge-mockup-card.special .lavaridge-sprites img { width:82px; height:82px; }
+    .lavaridge-mockup-card.special .lavaridge-sprites img.trainer { width:70px; }
+    .lavaridge-note { font-size:.85rem; }
+}
+
+
+/* Typhlosion — Nature mise en avant */
+.pokemon-card .typhlosion-nature-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 8px 0 14px;
+    padding: 7px 13px;
+    border: 1px solid rgba(255, 165, 55, .55);
+    border-radius: 9px;
+    background: rgba(255, 120, 25, .10);
+    font-weight: 800;
+    box-shadow: 0 0 14px rgba(255, 120, 25, .08);
+}
+.pokemon-card .typhlosion-nature-badge span {
+    color: #f2f4f7;
+    font-weight: 800;
+}
+.pokemon-card .typhlosion-nature-badge strong {
+    color: #ff9f32;
+    font-size: 1.05rem;
+    font-weight: 900;
+}
+
+
+/* ===== CARTES POKÉMON — STYLE DE L'IMAGE DE RÉFÉRENCE ===== */
+.team-section .pokemon-info { display:none !important; }
+.team-section .iv-stat strong.iv-zero { color:#eef3fb !important; }
+
+.team-section .pokemon-type{
+    display:flex !important;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:8px 0 10px !important;
+    color:inherit !important;
+    font-size:0 !important;
+}
+.team-section .pokemon-type .type-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:58px;
+    padding:5px 12px;
+    border-radius:999px;
+    color:#fff;
+    font-size:.72rem;
+    line-height:1;
+    font-weight:900;
+    text-transform:uppercase;
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 4px 10px rgba(0,0,0,.18);
+}
+.type-feu{background:linear-gradient(180deg,#ff6a2a,#c9310c)}
+.type-eau{background:linear-gradient(180deg,#4e9dff,#1762c9)}
+.type-glace{background:linear-gradient(180deg,#58e4ef,#1697ad)}
+.type-dragon{background:linear-gradient(180deg,#8258f3,#4b25b7)}
+.type-sol{background:linear-gradient(180deg,#e7a34b,#a96720)}
+.type-poison{background:linear-gradient(180deg,#d14fd0,#7d1e85)}
+.type-normal{background:linear-gradient(180deg,#aaa,#656565)}
+.type-vol{background:linear-gradient(180deg,#76bdff,#367ec6)}
+
+.team-section .attack-list{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+    width:100% !important;
+}
+.team-section .attack-list span{
+    position:relative;
+    display:flex !important;
+    align-items:center !important;
+    min-height:34px;
+    padding:7px 12px 7px 34px !important;
+    border:1px solid rgba(103,143,180,.45) !important;
+    border-radius:8px !important;
+    background:linear-gradient(180deg,rgba(25,39,52,.92),rgba(12,24,34,.94)) !important;
+    color:#f4f7fb !important;
+    font-size:.76rem !important;
+    font-weight:800 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+.team-section .attack-list span::before{
+    content:'✦';
+    position:absolute;
+    left:11px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:.8rem;
+    color:#72baff;
+}
+.team-section .attack-list span[data-type]::after{
+    content:attr(data-type);
+    margin-left:auto;
+    padding:3px 7px;
+    border-radius:999px;
+    background:rgba(255,255,255,.10);
+    color:#dfe8f3;
+    font-size:.56rem;
+    font-weight:900;
+}
+
+.team-section .pokemon-item-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:12px;
+    padding:9px 11px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#e9eef5;
+    font-size:.72rem;
+    font-weight:700;
+}
+.team-section .pokemon-item-row .item-label{color:#aebbc9;font-weight:900}
+.team-section .pokemon-item-row .item-icon{font-size:1.25rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+.team-section .pokemon-item-row strong{color:#fff;font-weight:900}
+
+/* Nature assortie à chaque carte, comme sur la référence */
+.team-section .pokemon-card:nth-child(1) .typhlosion-nature-badge{border-color:#e7651d;background:rgba(231,101,29,.09)}
+.team-section .pokemon-card:nth-child(1) .typhlosion-nature-badge strong{color:#ff7b2d}
+.team-section .pokemon-card:nth-child(2) .typhlosion-nature-badge{border-color:#428cff;background:rgba(66,140,255,.09)}
+.team-section .pokemon-card:nth-child(2) .typhlosion-nature-badge strong{color:#62a5ff}
+.team-section .pokemon-card:nth-child(3) .typhlosion-nature-badge{border-color:#35d7df;background:rgba(53,215,223,.09)}
+.team-section .pokemon-card:nth-child(3) .typhlosion-nature-badge strong{color:#5ce4e9}
+.team-section .pokemon-card:nth-child(4) .typhlosion-nature-badge{border-color:#b06bea;background:rgba(176,107,234,.09)}
+.team-section .pokemon-card:nth-child(4) .typhlosion-nature-badge strong{color:#c783f3}
+.team-section .pokemon-card:nth-child(5) .typhlosion-nature-badge{border-color:#d45ac8;background:rgba(212,90,200,.09)}
+.team-section .pokemon-card:nth-child(5) .typhlosion-nature-badge strong{color:#e478d9}
+.team-section .pokemon-card:nth-child(6) .typhlosion-nature-badge{border-color:#e06ba9;background:rgba(224,107,169,.09)}
+.team-section .pokemon-card:nth-child(6) .typhlosion-nature-badge strong{color:#ef8fc1}
+
+
+
+/* ===== COULEURS DES TYPES — BADGES + ATTAQUES ===== */
+.type-feu{background:linear-gradient(180deg,#ff6a2a,#c9310c)!important}
+.type-eau{background:linear-gradient(180deg,#4e9dff,#1762c9)!important}
+.type-glace{background:linear-gradient(180deg,#58e4ef,#1697ad)!important}
+.type-dragon{background:linear-gradient(180deg,#8258f3,#4b25b7)!important}
+.type-sol{background:linear-gradient(180deg,#e7a34b,#a96720)!important}
+.type-poison{background:linear-gradient(180deg,#d14fd0,#7d1e85)!important}
+.type-normal{background:linear-gradient(180deg,#aaa,#656565)!important}
+.type-vol{background:linear-gradient(180deg,#76bdff,#367ec6)!important}
+.type-combat{background:linear-gradient(180deg,#df5b4f,#9e2820)!important}
+.type-psy{background:linear-gradient(180deg,#ff6fa8,#c33170)!important}
+.type-electrik{background:linear-gradient(180deg,#ffd84d,#c99a00)!important;color:#171717!important}
+.type-tenebres{background:linear-gradient(180deg,#6f6670,#332e34)!important}
+.type-plante{background:linear-gradient(180deg,#70c95a,#368c2d)!important}
+.type-acier{background:linear-gradient(180deg,#aab9c4,#637580)!important}
+.type-roche{background:linear-gradient(180deg,#c9b65a,#87752d)!important}
+.type-insecte{background:linear-gradient(180deg,#a8c83c,#637d14)!important}
+.type-fee{background:linear-gradient(180deg,#ef9bd8,#bc55a5)!important}
+.type-spectre{background:linear-gradient(180deg,#8068b8,#493a75)!important}
+
+.team-section .attack-list span[data-type]::after{color:#fff!important;border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+.team-section .attack-list span[data-type="FEU"]::after{background:linear-gradient(180deg,#ff6a2a,#c9310c)!important}
+.team-section .attack-list span[data-type="EAU"]::after{background:linear-gradient(180deg,#4e9dff,#1762c9)!important}
+.team-section .attack-list span[data-type="GLACE"]::after{background:linear-gradient(180deg,#58e4ef,#1697ad)!important}
+.team-section .attack-list span[data-type="DRAGON"]::after{background:linear-gradient(180deg,#8258f3,#4b25b7)!important}
+.team-section .attack-list span[data-type="SOL"]::after{background:linear-gradient(180deg,#e7a34b,#a96720)!important}
+.team-section .attack-list span[data-type="POISON"]::after{background:linear-gradient(180deg,#d14fd0,#7d1e85)!important}
+.team-section .attack-list span[data-type="NORMAL"]::after{background:linear-gradient(180deg,#aaa,#656565)!important}
+.team-section .attack-list span[data-type="VOL"]::after{background:linear-gradient(180deg,#76bdff,#367ec6)!important}
+.team-section .attack-list span[data-type="COMBAT"]::after{background:linear-gradient(180deg,#df5b4f,#9e2820)!important}
+.team-section .attack-list span[data-type="PSY"]::after{background:linear-gradient(180deg,#ff6fa8,#c33170)!important}
+.team-section .attack-list span[data-type="ÉLECTRIK"]::after,.team-section .attack-list span[data-type="ELECTRIK"]::after{background:linear-gradient(180deg,#ffd84d,#c99a00)!important;color:#171717!important}
+.team-section .attack-list span[data-type="TÉNÈBRES"]::after,.team-section .attack-list span[data-type="TENEBRES"]::after{background:linear-gradient(180deg,#6f6670,#332e34)!important}
+.team-section .attack-list span[data-type="PLANTE"]::after{background:linear-gradient(180deg,#70c95a,#368c2d)!important}
+.team-section .attack-list span[data-type="ACIER"]::after{background:linear-gradient(180deg,#aab9c4,#637580)!important}
+.team-section .attack-list span[data-type="ROCHE"]::after{background:linear-gradient(180deg,#c9b65a,#87752d)!important}
+.team-section .attack-list span[data-type="INSECTE"]::after{background:linear-gradient(180deg,#a8c83c,#637d14)!important}
+.team-section .attack-list span[data-type="FÉE"]::after,.team-section .attack-list span[data-type="FEE"]::after{background:linear-gradient(180deg,#ef9bd8,#bc55a5)!important}
+.team-section .attack-list span[data-type="SPECTRE"]::after{background:linear-gradient(180deg,#8068b8,#493a75)!important}
+
+.team-section .attack-list span[data-type="FEU"]::before{color:#ff6a2a!important}
+.team-section .attack-list span[data-type="EAU"]::before{color:#4e9dff!important}
+.team-section .attack-list span[data-type="GLACE"]::before{color:#58e4ef!important}
+.team-section .attack-list span[data-type="DRAGON"]::before{color:#9b77ff!important}
+.team-section .attack-list span[data-type="SOL"]::before{color:#e7a34b!important}
+.team-section .attack-list span[data-type="POISON"]::before{color:#d14fd0!important}
+.team-section .attack-list span[data-type="NORMAL"]::before{color:#aaa!important}
+.team-section .attack-list span[data-type="VOL"]::before{color:#76bdff!important}
+.team-section .attack-list span[data-type="COMBAT"]::before{color:#df5b4f!important}
+.team-section .attack-list span[data-type="PSY"]::before{color:#ff6fa8!important}
+
+/* ===== IV / EV — STYLE PREMIUM RAIDFORGE ===== */
+.team-section .iv-grid,
+.team-section .ev-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+}
+.team-section .iv-stat,
+.team-section .ev-stat {
+    position: relative;
+    min-height: 40px !important;
+    padding: 7px 8px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+.team-section .iv-stat {
+    background: linear-gradient(135deg, rgba(54,205,139,.12), rgba(18,61,52,.20)) !important;
+    border: 1px solid rgba(75,224,158,.38) !important;
+}
+.team-section .ev-stat {
+    background: linear-gradient(135deg, rgba(89,158,255,.13), rgba(39,67,135,.20)) !important;
+    border: 1px solid rgba(103,174,255,.40) !important;
+}
+.team-section .iv-stat::before,
+.team-section .ev-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 8px 0 0 8px;
+}
+.team-section .iv-stat::before { background: #52e6a1; }
+.team-section .ev-stat::before { background: #69aaff; }
+.team-section .iv-stat span,
+.team-section .ev-stat span {
+    font-size: .60rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .02em;
+    color: #c9d6e7 !important;
+}
+.team-section .iv-stat strong {
+    color: #79f0b6 !important;
+    font-size: .72rem !important;
+    text-shadow: 0 0 9px rgba(82,230,161,.22);
+}
+.team-section .ev-stat strong {
+    color: #82b9ff !important;
+    font-size: .72rem !important;
+    text-shadow: 0 0 9px rgba(105,170,255,.22);
+}
+.team-section .iv-block h4,
+.team-section .ev-block h4 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 9px !important;
+    font-size: .72rem !important;
+    letter-spacing: .10em !important;
+}
+.team-section .iv-block h4 { color: #79f0b6 !important; }
+.team-section .ev-block h4 { color: #82b9ff !important; }
+.team-section .iv-block h4::before,
+.team-section .ev-block h4::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px currentColor;
+    background: currentColor;
+}
+.team-section .iv-stat:hover,
+.team-section .ev-stat:hover {
+    transform: translateY(-2px) !important;
+}
+
+/* =========================================================
+   IV + TALENT — FINITION PREMIUM RAIDFORGE
+   ========================================================= */
+.team-section .iv-block > h4 {
+    color: #72f5a0 !important;
+    text-shadow: 0 0 10px rgba(114,245,160,.42);
+}
+
+.team-section .talent-block {
+    margin-top: 2px !important;
+    padding: 10px 11px !important;
+    border: 1px solid rgba(210,145,255,.38) !important;
+    border-left: 3px solid #d291ff !important;
+    border-radius: 9px !important;
+    background: linear-gradient(135deg, rgba(174,84,255,.13), rgba(89,49,142,.08)) !important;
+    box-shadow: inset 0 0 18px rgba(187,107,255,.045), 0 0 12px rgba(187,107,255,.05);
+}
+.team-section .talent-block > h4 {
+    margin: 0 0 7px !important;
+    color: #dca6ff !important;
+    font-size: .70rem !important;
+    font-weight: 900 !important;
+    letter-spacing: .12em !important;
+    text-shadow: 0 0 9px rgba(220,166,255,.35);
+}
+.team-section .talent-block > p {
+    margin: 0 !important;
+    padding: 7px 9px !important;
+    color: #f2ddff !important;
+    background: rgba(214,154,255,.08) !important;
+    border: 1px solid rgba(214,154,255,.20) !important;
+    border-radius: 6px !important;
+    font-size: .72rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    letter-spacing: .03em !important;
+}
+
+/* TALENTS — carré BRASIER / TORRENT violet renforcé */
+.team-section .talent-block > p,
+.team-section .tortank-talent > p {
+    color: #f7eaff !important;
+    background: linear-gradient(135deg, rgba(176, 72, 255, .34), rgba(104, 43, 180, .28)) !important;
+    border: 1px solid rgba(218, 155, 255, .72) !important;
+    box-shadow: inset 0 0 14px rgba(206, 128, 255, .13), 0 0 10px rgba(180, 80, 255, .18) !important;
+    text-shadow: 0 0 8px rgba(236, 201, 255, .35) !important;
+}
+
+/* CORRECTION TORTANK — Talent identique aux autres cartes */
+.team-section .tortank-talent {
+    width: 100% !important;
+    margin: 0 0 4px !important;
+    padding: 9px !important;
+    border: 1px solid rgba(196,120,255,.32) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(145deg, rgba(83,35,122,.18), rgba(40,20,68,.16)) !important;
+    box-sizing: border-box !important;
+}
+.team-section .tortank-talent > h4 {
+    margin: 0 0 7px !important;
+    color: #dca6ff !important;
+    font-size: .70rem !important;
+    font-weight: 900 !important;
+    letter-spacing: .12em !important;
+    text-shadow: 0 0 9px rgba(220,166,255,.35) !important;
+}
+.team-section .tortank-talent > p {
+    margin: 0 !important;
+    padding: 7px 9px !important;
+    color: #f7eaff !important;
+    background: linear-gradient(135deg, rgba(176,72,255,.34), rgba(104,43,180,.28)) !important;
+    border: 1px solid rgba(218,155,255,.72) !important;
+    border-radius: 6px !important;
+    box-shadow: inset 0 0 14px rgba(206,128,255,.13), 0 0 10px rgba(180,80,255,.18) !important;
+    text-shadow: 0 0 8px rgba(236,201,255,.35) !important;
+    font-size: .72rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+
+/* ===== OBJETS — CARTE PREMIUM RAIDFORGE ===== */
+.team-section .pokemon-item-row{
+    position:relative;
+    display:grid !important;
+    grid-template-columns:38px 1fr !important;
+    grid-template-rows:auto auto !important;
+    column-gap:10px !important;
+    row-gap:2px !important;
+    align-items:center !important;
+    margin-top:14px !important;
+    padding:10px 12px !important;
+    border:1px solid rgba(244,201,93,.42) !important;
+    border-radius:9px !important;
+    background:linear-gradient(135deg,rgba(244,201,93,.13),rgba(244,201,93,.035)) !important;
+    box-shadow:inset 0 0 18px rgba(244,201,93,.035),0 4px 12px rgba(0,0,0,.16) !important;
+    overflow:hidden;
+}
+.team-section .pokemon-item-row::before{
+    content:""; position:absolute; left:0; top:8px; bottom:8px; width:3px;
+    border-radius:0 4px 4px 0; background:#f4c95d; box-shadow:0 0 9px rgba(244,201,93,.55);
+}
+.team-section .pokemon-item-row .item-icon{
+    grid-column:1; grid-row:1 / 3; display:flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border-radius:8px; font-size:1.25rem !important;
+    background:rgba(244,201,93,.13); border:1px solid rgba(244,201,93,.28);
+}
+.team-section .pokemon-item-row .item-label{
+    grid-column:2; grid-row:1; color:#f4c95d !important; font-size:.58rem !important;
+    font-weight:900 !important; letter-spacing:.12em; text-transform:uppercase;
+}
+.team-section .pokemon-item-row strong{
+    grid-column:2; grid-row:2; color:#fff3c4 !important; font-size:.72rem !important;
+    font-weight:900 !important; line-height:1.15; text-shadow:0 0 8px rgba(244,201,93,.16);
+}
+
+/* Icônes objets Pokémon Showdown */
+.team-section .pokemon-item-row .item-icon img{
+    display:block;
+    width:34px;
+    height:34px;
+    object-fit:contain;
+    image-rendering:auto;
+    filter:drop-shadow(0 2px 5px rgba(0,0,0,.45));
+}
+
+
+/* ===== INFOS IMPORTANTES — EGG MOVE / PP MAX ===== */
+.team-section .move-note {
+    display:flex; align-items:center; justify-content:center; gap:6px;
+    margin:7px 0 10px; padding:7px 9px; border-radius:8px;
+    font-size:.68rem; font-weight:900; text-align:center;
+}
+.team-section .egg-move-note {
+    color:#ffd36a; background:rgba(255,184,60,.10);
+    border:1px solid rgba(255,184,60,.42);
+    box-shadow:0 0 12px rgba(255,184,60,.08);
+}
+.team-section .pp-max-note {
+    color:#71e8ff; background:rgba(62,201,255,.09);
+    border:1px solid rgba(62,201,255,.38);
+    box-shadow:0 0 12px rgba(62,201,255,.07);
+}
+
+/* TORTANK — colonne calée sur la structure de Typhlosion */
+.team-section .tortank-card .tortank-move-note {
+    min-height: 34px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    color: #ffd36a !important;
+    background: linear-gradient(90deg, rgba(255,184,60,.09), rgba(62,201,255,.09)) !important;
+    border: 1px solid rgba(129,211,255,.38) !important;
+}
+.team-section .tortank-card .tortank-move-note span:last-child {
+    color: #71e8ff !important;
+}
+
+
+/* ===== ALIGNEMENT DEMANDÉ : TYPHLOSION / TORTANK / SORBOUBOUL ===== */
+/* Tortank garde Egg Move et PP MAX dans deux cases séparées.
+   Les trois colonnes ont maintenant exactement la même hauteur. */
+.team-section .six-pokemon-row > .typhlosion-card,
+.team-section .six-pokemon-row > .tortank-card,
+.team-section .six-pokemon-row > .sorbouboul-card {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Les 3 premières cartes gardent leur contenu complet et leur bas s’aligne. */
+.team-section .six-pokemon-row > .typhlosion-card .pokemon-content,
+.team-section .six-pokemon-row > .tortank-card .pokemon-content,
+.team-section .six-pokemon-row > .sorbouboul-card .pokemon-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.team-section .six-pokemon-row > .typhlosion-card .pokemon-details,
+.team-section .six-pokemon-row > .tortank-card .pokemon-details,
+.team-section .six-pokemon-row > .sorbouboul-card .pokemon-details {
+    flex: 1 1 auto !important;
+}
+
+</style>
+
+<style>
+/* Icône PP Max dans les notes PP MAX */
+.team-section .pp-max-note {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+}
+.team-section .pp-max-note .pp-max-icon {
+    width: 28px !important;
+    height: 28px !important;
+    object-fit: contain !important;
+    image-rendering: auto;
+    flex: 0 0 28px;
+}
+</style>
+
+<style>
+/* RAIDFORGE — boutons RETOUR / HOME dans le header, à droite */
+.header-nav-actions{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.header-nav-btn{height:40px;padding:0 15px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(168,85,247,.72);border-radius:11px;background:linear-gradient(180deg,rgba(91,33,182,.82),rgba(37,20,72,.94));box-shadow:0 0 16px rgba(139,92,246,.18),inset 0 1px 0 rgba(255,255,255,.08);color:#f4edff!important;font:800 12px/1 system-ui,-apple-system,Segoe UI,sans-serif;letter-spacing:.07em;text-decoration:none;cursor:pointer;transition:.18s ease;}
+.header-nav-btn:hover{color:#fff!important;transform:translateY(-1px);border-color:#c084fc;box-shadow:0 0 22px rgba(168,85,247,.42),inset 0 1px 0 rgba(255,255,255,.12);}
+.header-home-btn{background:linear-gradient(180deg,rgba(76,29,149,.92),rgba(24,15,48,.96));}
+@media(max-width:650px){.header-nav-actions{gap:6px}.header-nav-btn{height:36px;padding:0 10px;font-size:10px;letter-spacing:.04em}}
+</style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header>
+        <a href="index.html" class="logo">RAIDFORGE</a>
+
+        <div class="header-nav-actions">
+            <button type="button" class="back-link header-nav-btn" onclick="history.back()">← RETOUR</button>
+            <a href="index.html" class="back-link header-nav-btn header-home-btn">⌂ HOME</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             INTRODUCTION
+        ========================= -->
+
+        <section class="hero">
+            <span class="hero-label">
+                Guide stratégique PokéMMO
+            </span>
+
+            <h1>6 PILLARS</h1>
+
+            <p>
+                Une équipe conçue pour réaliser les parcours de
+                Gym Rerun et TechRun dans PokéMMO.
+                Découvre les six Pokémon, leurs rôles et l'ordre
+                des arènes à effectuer.
+            </p>
+        </section>
+
+        <!-- =========================
+             CARTES INTRODUCTION
+        ========================= -->
+
+        <section class="intro-grid">
+
+            <article class="intro-card">
+                <div class="small-title">Concept</div>
+                <h2>Une équipe équilibrée</h2>
+                <p>
+                    Chaque Pokémon possède une fonction précise
+                    pour assurer la stabilité de l'équipe.
+                </p>
+            </article>
+
+            <article class="intro-card">
+                <div class="small-title">Objectif</div>
+                <h2>Contrôler le combat</h2>
+                <p>
+                    Alterner entre attaque, défense et soutien
+                    permet de garder l'avantage pendant le combat.
+                </p>
+            </article>
+
+            <article class="intro-card">
+                <div class="small-title">Approche</div>
+                <h2>Jouer sur la complémentarité</h2>
+                <p>
+                    Les types et les rôles des six Pokémon
+                    sont pensés pour couvrir différentes situations.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- =========================
+             ÉQUIPE POKÉMON
+        ========================= -->
+
+        <section class="team-section">
+
+            <div class="section-heading">
+                <h2>Équipe 6 Pillars</h2>
+                <p>
+                    Les six membres principaux de la stratégie
+                </p>
+            </div>
+
+            <div class="pokemon-row six-pokemon-row">
+
+                <article class="pokemon-card typhlosion-card">
+                    <div class="pokemon-top">
+                        <span class="pokemon-number">#1</span>
+                        <span class="pokemon-role">Spécial</span>
+                    </div>
+
+                    <div class="pokemon-picture">
+    <img
+        src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"
+        alt="Typhlosion"
+    >
+</div>
+
+<div class="pokemon-content">
+    <h3>Typhlosion</h3>
+    <p class="pokemon-type"><span class="type-pill type-feu">Feu</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
+    <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Éruption</span></div>
+
+    <div class="pokemon-details">
+
+        <div class="detail-block">
+            <h4>Attaques</h4>
+            <div class="attack-list">
+                <span data-type="FEU">Eruption</span>
+                <span data-type="FEU">Lance-Flammes</span>
+                <span data-type="COMBAT">Exploforce</span>
+                <span data-type="PSY">Extrasenseur</span>
+            </div>
+        </div>
+
+        <div class="detail-block iv-block">
+            <h4>IV</h4>
+
+<div class="iv-grid">
+
+    <div class="iv-stat">
+        <span>PV</span>
+        <strong>10-31</strong>
+    </div>
+
+    <div class="iv-stat">
+        <span>ATK</span>
+        <strong class="iv-zero">0</strong>
+    </div>
+
+    <div class="iv-stat">
+        <span>DEF</span>
+        <strong>10-31</strong>
+    </div>
+
+    <div class="iv-stat">
+        <span>ATK<br>Spé</span>
+        <strong>31</strong>
+    </div>
+
+    <div class="iv-stat">
+        <span>DEF<br>Spé</span>
+        <strong>31</strong>
+    </div>
+
+    <div class="iv-stat">
+        <span>Speed</span>
+        <strong>31</strong>
+    </div>
+
+</div>
+        </div>
+
+        <div class="detail-block ev-block">
+            <h4>EV</h4>
+            <div class="ev-grid">
+                <div class="ev-stat"><span>PV</span><strong>0</strong></div>
+                <div class="ev-stat"><span>ATK</span><strong>0</strong></div>
+                <div class="ev-stat"><span>DEF</span><strong>0</strong></div>
+                <div class="ev-stat"><span>ATK<br>Spé</span><strong>252</strong></div>
+                <div class="ev-stat"><span>DEF<br>Spé</span><strong>6</strong></div>
+                <div class="ev-stat"><span>Speed</span><strong>252</strong></div>
+            </div>
+        </div>
+
+        <div class="detail-block talent-block">
+    <h4>Talent</h4>
+    <p>BRASIER</p>
+</div>
+<div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix"></span><strong>Lunettes Choix</strong></div>
+
+    </div>
+</div>
+</article>
+
+                <article class="pokemon-card tortank-card">
+                    <div class="pokemon-top">
+                        <span class="pokemon-number">#2</span>
+                        <span class="pokemon-role">Spécial</span>
+                    </div>
+
+                    <div class="pokemon-picture">
+                        <img
+                            src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"
+                            alt="Tortank"
+                        >
+                    </div>
+
+        <div class="pokemon-content">
+    <h3>Tortank</h3>
+    <p class="pokemon-type"><span class="type-pill type-eau">Eau</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Doux</strong></div>
+    <div class="move-note egg-move-note">🥚 Giclédo : Egg Move</div>
+    <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Giclédo</span></div>
+
+    <div class="pokemon-details">
+
+        <div class="detail-block">
+            <h4>Attaques</h4>
+
+            <div class="attack-list">
+                <span data-type="EAU">Giclédo</span>
+                <span data-type="NORMAL">Bluff</span>
+                <span data-type="NORMAL">Coup d'Main</span>
+                <span data-type="NORMAL">Abri</span>
+            </div>
+        </div>
+
+        <div class="detail-block iv-block">
+            <h4>IV</h4>
+
+            <div class="iv-grid">
+                <div class="iv-stat">
+                    <span>PV</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>ATK</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>DEF</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>ATK<br>Spé</span>
+                    <strong>31</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>DEF<br>Spé</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>VIT</span>
+                    <strong>31</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-block ev-block">
+            <h4>EV</h4>
+
+            <div class="ev-grid">
+                <div class="ev-stat">
+                    <span>PV</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>ATK</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>DEF</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>ATK<br>Spé</span>
+                    <strong>252</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>DEF<br>Spé</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>Speed</span>
+                    <strong>252</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-block talent-block">
+            <h4>Talent</h4>
+            <p>Torrent</p>
+        </div>
+        <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix"></span><strong>Mouchoir Choix</strong></div>
+
+    </div>
+</div>
+    
+                </article>
+
+                <article class="pokemon-card sorbouboul-card">
+                    <div class="pokemon-top">
+                        <span class="pokemon-number">#3</span>
+                        <span class="pokemon-role">Spécial</span>
+                    </div>
+
+                    <div class="pokemon-picture">
+                        <img
+                            src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif"
+                            alt="Sorbouboul"
+                        >
+                    </div>
+
+                    <div class="pokemon-content">
+    <h3>Sorbouboul</h3>
+    <p class="pokemon-type"><span class="type-pill type-glace">Glace</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
+    <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Blizzard</span></div>
+
+    <p class="pokemon-info">
+        Pokémon utilisant Blizzard et
+        profitant de la neige.
+    </p>
+
+    <div class="pokemon-details">
+
+        <div class="detail-block">
+            <h4>Attaques</h4>
+
+            <div class="attack-list">
+                <span data-type="GLACE">Blizzard</span>
+                <span data-type="GLACE">Laser Glace</span>
+                <span data-type="FÉE">Éclat Magique</span>
+                <span data-type="NORMAL">Abri</span>
+            </div>
+        </div>
+
+        <div class="detail-block iv-block">
+            <h4>IV</h4>
+
+            <div class="iv-grid">
+                <div class="iv-stat">
+                    <span>PV</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>ATK</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>DEF</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>ATK<br>Spé</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>DEF<br>Spé</span>
+                    <strong>0–25</strong>
+                </div>
+
+                <div class="iv-stat">
+                    <span>VIT</span>
+                    <strong>0–25</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-block ev-block">
+            <h4>EV</h4>
+
+            <div class="ev-grid">
+                <div class="ev-stat">
+                    <span>PV</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>ATK</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>DEF</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>ATK<br>Spé</span>
+                    <strong>252</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>DEF<br>Spé</span>
+                    <strong>0</strong>
+                </div>
+
+                <div class="ev-stat">
+                    <span>Speed</span>
+                    <strong>252</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-block talent-block">
+            <h4>Talent</h4>
+            <p>Rideau Neige</p>
+               </div>
+        <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix"></span><strong>Mouchoir Choix</strong></div>
+
+    </div>
+</div>
+</article>
+
+<article class="pokemon-card">
+    <div class="pokemon-top">
+        <span class="pokemon-number">#4</span>
+        <span class="pokemon-role">Physique</span>
+    </div>
+
+    <div class="pokemon-picture">
+        <img
+            src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif"
+            alt="Garchomp"
+        >
+    </div>
+
+    <div class="pokemon-content">
+        <h3>Carchacrok</h3>
+        <p class="pokemon-type"><span class="type-pill type-dragon">Dragon</span><span class="type-pill type-sol">Sol</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Solo</strong></div>
+        <div class="pokemon-details">
+            <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="SOL">Séisme</span>
+<span data-type="DRAGON">Draco-Griffe</span>
+<span data-type="FEU">Journée Ensoleillée</span>
+<span data-type="NORMAL">Coup d'Main</span></div></div>
+            <div class="detail-block talent-block"><h4>Talent</h4><p>Voile Sable</p></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
+        </div>
+    </div>
+</article>
+
+                <article class="pokemon-card">
+                    <div class="pokemon-top">
+                        <span class="pokemon-number">#5</span>
+                        <span class="pokemon-role">Physique</span>
+                    </div>
+
+                    <div class="pokemon-picture">
+                        <img
+                            src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
+                            alt="Weezing"
+                        >
+                    </div>
+
+                    <div class="pokemon-content">
+                        <h3>Smogogo</h3>
+                        <p class="pokemon-type"><span class="type-pill type-poison">Poison</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Rigide</strong></div>
+        <div class="pokemon-details">
+            <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="TÉNÈBRES">Assurance</span>
+<span data-type="NORMAL">Explosion</span>
+<span data-type="FEU">Incinération</span>
+<span data-type="EAU">Danse Pluie</span></div></div>
+            <div class="detail-block talent-block"><h4>Talent</h4><p>Gaz Réactif</p></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
+        </div>
+                    </div>
+                </article>
+
+                <article class="pokemon-card">
+                    <div class="pokemon-top">
+                        <span class="pokemon-number">#6</span>
+                        <span class="pokemon-role">Spécial</span>
+                    </div>
+
+                    <div class="pokemon-picture">
+                        <img
+                            src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif"
+                            alt="Togekiss"
+                        >
+                    </div>
+
+                    <div class="pokemon-content">
+                        <h3>Togekiss</h3>
+                        <p class="pokemon-type"><span class="type-pill type-normal">Normal</span><span class="type-pill type-vol">Vol</span></p>
+    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
+        <div class="pokemon-details">
+            <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="NORMAL">Mégaphone</span>
+<span data-type="NORMAL">Coup d'Main</span>
+<span data-type="ÉLECTRIK">Onde de Choc</span>
+<span data-type="VOL">Vol</span></div></div>
+            <div class="detail-block talent-block"><h4>Talent</h4><p>Sérénité</p></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🕶️</span><strong>Lunettes Choix</strong></div>
+        </div>
+                    </div>
+                </article>
+
+            </div>
+            
+        </section>
+
+        <!-- =========================
+             PARCOURS TECHRUN
+        ========================= -->
+
+        <section class="techrun-section" id="parcours">
+
+            <div class="techrun-header">
+                <h2>Parcours TechRun</h2>
+
+                <p>
+                    Suis cet ordre pour réaliser le parcours avec
+                    l'équipe 6 Pillars. Chaque étape présente
+                    l'arène, le champion, les deux Pokémon à
+                    envoyer en premier et l'action principale
+                    à effectuer.
+                </p>
+            </div>
+
+            <div id="routes-container"></div>
+
+            <div class="route-warning">
+                ⚠️ Vérifie toujours les attaques, les PP, les objets
+                et les PV de ton équipe avant de passer à l'arène suivante.
+            </div>
+
+        </section>
+
+        <!-- =========================
+             SECTION STRATÉGIE
+        ========================= -->
+
+        <section class="strategy-section">
+
+            <div class="strategy-box">
+
+                <h2>La stratégie des 6 Pillars</h2>
+
+                <p>
+                    Une bonne équipe ne repose pas uniquement sur la puissance
+                    individuelle de ses Pokémon. Elle doit également pouvoir
+                    répondre aux différentes menaces rencontrées en combat.
+                    Les 6 Pillars s'appuient donc sur la complémentarité
+                    des types, des statistiques et des rôles.
+                </p>
+
+                <div class="strategy-list">
+
+                    <article class="strategy-item">
+                        <h3>Attaque</h3>
+                        <p>
+                            Utiliser des Pokémon capables d'infliger
+                            rapidement des dégâts importants.
+                        </p>
+                    </article>
+
+                    <article class="strategy-item">
+                        <h3>Défense</h3>
+                        <p>
+                            Préserver des Pokémon résistants pour
+                            encaisser les attaques adverses.
+                        </p>
+                    </article>
+
+                    <article class="strategy-item">
+                        <h3>Vitesse</h3>
+                        <p>
+                            Profiter de Pokémon rapides pour prendre
+                            l'initiative pendant le combat.
+                        </p>
+                    </article>
+
+                    <article class="strategy-item">
+                        <h3>Complémentarité</h3>
+                        <p>
+                            Combiner les types et les rôles afin de
+                            couvrir les faiblesses de l'équipe.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             INFORMATIONS COMPLÉMENTAIRES
+        ========================= -->
+
+        <section class="bottom-grid">
+
+            <article class="bottom-box">
+
+                <h2>Types représentés</h2>
+
+                <p>
+                    Les différents types permettent de varier les attaques
+                    et de mieux répondre aux Pokémon adverses.
+                </p>
+
+                <div class="type-tags">
+                    <span class="type-tag">Feu</span>
+                    <span class="type-tag">Eau</span>
+                    <span class="type-tag">Glace</span>
+                    <span class="type-tag">Dragon</span>
+                    <span class="type-tag">Sol</span>
+                    <span class="type-tag">Poison</span>
+                    <span class="type-tag">Vol</span>
+                </div>
+
+            </article>
+
+            <article class="bottom-box">
+
+                <h2>Conseil de combat</h2>
+
+                <p>
+                    Avant chaque combat, identifie les menaces principales
+                    de l'adversaire. Choisis le Pokémon adapté à la situation
+                    et évite de garder toujours le même Pokémon actif.
+                    Les changements bien anticipés peuvent faire la différence.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- =========================
+             BOUTON RETOUR
+        ========================= -->
+
+        <div class="button-area">
+            <a href="index.html" class="main-button">
+                ← Retour à la page principale
+            </a>
+        </div>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+        <strong>RAIDFORGE</strong> — Guide stratégique PokéMMO
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT UNIQUE ET CORRIGÉ
+    ========================= -->
+
+    <script>
+        /* ========================================
+           CONFIGURATION DES IMAGES
+        ======================================== */
+
+        const arenaImages = {
+            "Lavaridge Town": "images/arenas/lavaridge.jpg",
+            "Dewford Town": "images/arenas/dewford.jpg",
+            "Fortree City": "images/arenas/fortree.jpg",
+            "Mauville City": "images/arenas/mauville.jpg",
+            "Rustboro City": "images/arenas/rustboro.jpg",
+
+            "Vermilion City": "images/arenas/vermilion.jpg",
+            "Cinnabar Island": "images/arenas/cinnabar.jpg",
+            "Celadon City": "images/arenas/celadon.jpg",
+            "Saffron City": "images/arenas/saffron.jpg",
+            "Pewter City": "images/arenas/pewter.jpg",
+
+            "Eterna City": "images/arenas/eterna.jpg",
+            "Veilstone City": "images/arenas/veilstone.jpg",
+            "Oreburgh City": "images/arenas/oreburgh.jpg",
+            "Pastoria City": "images/arenas/pastoria.jpg",
+
+            "Cianwood City": "images/arenas/cianwood.jpg",
+            "Goldenrod City": "images/arenas/goldenrod.jpg",
+            "Olivine City": "images/arenas/olivine.jpg",
+            "Violet City": "images/arenas/violet.jpg",
+            "Blackthorn City": "images/arenas/blackthorn.jpg",
+            "Mahogany Town": "images/arenas/mahogany.jpg",
+
+            "Castelia City": "images/arenas/castelia.jpg",
+            "Striaton City": "images/arenas/striaton.jpg",
+            "Opelucid City": "images/arenas/opelucid.jpg",
+            "Driftveil City": "images/arenas/driftveil.jpg",
+            "Nacrene City": "images/arenas/nacrene.jpg"
+        };
+
+        const leaderImages = {
+            "Flannery": "images/leaders/flannery.png",
+            "Brawly": "images/leaders/brawly.png",
+            "Winona": "images/leaders/winona.png",
+            "Wattson": "images/leaders/wattson.png",
+            "Roxanne": "images/leaders/roxanne.png",
+
+            "Lt. Surge": "images/leaders/lt-surge.png",
+            "Blaine": "images/leaders/blaine.png",
+            "Erika": "images/leaders/erika.png",
+            "Sabrina": "images/leaders/sabrina.png",
+            "Brock": "images/leaders/brock.png",
+
+            "Gardenia": "images/leaders/gardenia.png",
+            "Maylene": "images/leaders/maylene.png",
+            "Roark": "images/leaders/roark.png",
+            "Crasher Wake": "images/leaders/crasher-wake.png",
+
+            "Chuck": "images/leaders/chuck.png",
+            "Whitney": "images/leaders/whitney.png",
+            "Jasmine": "images/leaders/jasmine.png",
+            "Falkner": "images/leaders/falkner.png",
+            "Clair": "images/leaders/clair.png",
+            "Pryce": "images/leaders/pryce.png",
+
+            "Burgh": "images/leaders/burgh.png",
+            "Chili": "images/leaders/chili.png",
+            "Cilan": "images/leaders/cilan.png",
+            "Cress": "images/leaders/cress.png",
+            "Iris": "images/leaders/iris.png",
+            "Clay": "images/leaders/clay.png",
+            "Lenora": "images/leaders/lenora.png"
+        };
+
+        const defaultArenaImage = "images/arenas/default.jpg";
+        const defaultLeaderImage = "images/leaders/default.png";
+
+        /* ========================================
+           DONNÉES DU PARCOURS
+        ======================================== */
+
+        const routes = [
+            {
+                region: "🌊 Hoenn",
+                city: "Lavaridge Town",
+                leader: "Flannery",
+                number: 1,
+                description: "Commence le parcours par l'arène de Lavaridge Town.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Togekiss", "Helping Hand", "togekiss"],
+                action: "Utilise Water Spout avec Blastoise et Helping Hand avec Togekiss.",
+                note: "Si Blastoise est trop endommagé, pense à le soigner avant la prochaine arène.",
+                specialEnemies: [["Démolosse", "Niv. 85", "houndoom"], ["Arcanin", "Niv. 85", "arcanine"]],
+                specialAction: "Utilise Giclédo + Mégaphone. Sinon, utilise Giclédo + Coup d’Main. Soigne Tortank s’il est trop blessé."
+            },
+            {
+                region: "🌊 Hoenn",
+                city: "Dewford Town",
+                leader: "Brawly",
+                number: 2,
+                description: "Continue ensuite vers l'arène de Dewford.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
+                action: "Utilise Water Spout et Blizzard pour terminer rapidement le combat."
+            },
+            {
+                region: "🌊 Hoenn",
+                city: "Fortree City",
+                leader: "Winona",
+                number: 3,
+                description: "Poursuis avec l'arène de Fortree.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Explosion", "weezing"],
+                action: "Utilise Water Spout avec Blastoise, puis Explosion avec Weezing. Envoie ensuite Typhlosion et Togekiss."
+            },
+            {
+                region: "🌊 Hoenn",
+                city: "Mauville City",
+                leader: "Wattson",
+                number: 4,
+                description: "Continue vers l'arène électrique de Mauville.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
+                action: "Utilise Eruption avec Typhlosion et Dragon Claw avec Garchomp."
+            },
+            {
+                region: "🌊 Hoenn",
+                city: "Rustboro City",
+                leader: "Roxanne",
+                number: 5,
+                description: "Termine les arènes de Hoenn à Rustboro.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Assurance", "weezing"],
+                action: "Utilise Water Spout avec Blastoise et Assurance avec Weezing."
+            },
+
+            {
+                region: "🔥 Kanto",
+                city: "Vermilion City",
+                leader: "Lt. Surge",
+                number: 6,
+                description: "Première étape du parcours à Kanto.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
+                action: "Utilise Eruption et Dragon Claw."
+            },
+            {
+                region: "🔥 Kanto",
+                city: "Cinnabar Island",
+                leader: "Blaine",
+                number: 7,
+                description: "Continue vers l'arène de Cinnabar.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Rain Dance", "weezing"],
+                action: "Utilise Water Spout. Selon l'équipe adverse, remplace Weezing par Vanilluxe si nécessaire."
+            },
+            {
+                region: "🔥 Kanto",
+                city: "Celadon City",
+                leader: "Erika",
+                number: 8,
+                description: "Enchaîne avec l'arène de Celadon.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Explosion", "weezing"],
+                action: "Utilise Water Spout puis Explosion. Envoie ensuite Typhlosion et Togekiss."
+            },
+            {
+                region: "🔥 Kanto",
+                city: "Saffron City",
+                leader: "Sabrina",
+                number: 9,
+                description: "Continue vers l'arène de Saffron.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
+                action: "Utilise Eruption et Earthquake."
+            },
+            {
+                region: "🔥 Kanto",
+                city: "Pewter City",
+                leader: "Brock",
+                number: 10,
+                description: "Termine la partie Kanto à Pewter.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Assurance", "weezing"],
+                action: "Utilise Water Spout et Assurance.",
+                optional: true
+            },
+
+            {
+                region: "⛰️ Sinnoh",
+                city: "Eterna City",
+                leader: "Gardenia",
+                number: 11,
+                description: "Commence Sinnoh avec l'arène d'Eterna.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
+                action: "Utilise Eruption et Hyper Voice."
+            },
+            {
+                region: "⛰️ Sinnoh",
+                city: "Veilstone City",
+                leader: "Maylene",
+                number: 12,
+                description: "Continue vers l'arène de Veilstone.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Helping Hand", "togekiss"],
+                action: "Utilise Eruption avec Typhlosion et Helping Hand avec Togekiss."
+            },
+            {
+                region: "⛰️ Sinnoh",
+                city: "Oreburgh City",
+                leader: "Roark",
+                number: 13,
+                description: "Continue vers l'arène d'Oreburgh.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Assurance", "weezing"],
+                action: "Utilise Water Spout et Assurance."
+            },
+            {
+                region: "⛰️ Sinnoh",
+                city: "Pastoria City",
+                leader: "Crasher Wake",
+                number: 14,
+                description: "Termine cette partie de Sinnoh à Pastoria.",
+                pokemon1: ["Blastoise", "Fake Out", "blastoise"],
+                pokemon2: ["Weezing", "Explosion", "weezing"],
+                action: "Utilise Fake Out puis Explosion. Envoie ensuite Togekiss et Garchomp."
+            },
+
+            {
+                region: "🌸 Johto",
+                city: "Cianwood City",
+                leader: "Chuck",
+                number: 15,
+                description: "Commence Johto à Cianwood.",
+                pokemon1: ["Togekiss", "Hyper Voice", "togekiss"],
+                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
+                action: "Utilise Hyper Voice et Earthquake."
+            },
+            {
+                region: "🌸 Johto",
+                city: "Goldenrod City",
+                leader: "Whitney",
+                number: 16,
+                description: "Continue vers Goldenrod.",
+                pokemon1: ["Garchomp", "Earthquake", "garchomp"],
+                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
+                action: "Utilise Earthquake et Hyper Voice."
+            },
+            {
+                region: "🌸 Johto",
+                city: "Olivine City",
+                leader: "Jasmine",
+                number: 17,
+                description: "Continue vers Olivine.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Weezing", "Assurance", "weezing"],
+                action: "Utilise Eruption et Assurance."
+            },
+            {
+                region: "🌸 Johto",
+                city: "Violet City",
+                leader: "Falkner",
+                number: 18,
+                description: "Continue vers Violet City.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
+                action: "Utilise Water Spout et Blizzard."
+            },
+            {
+                region: "🌸 Johto",
+                city: "Blackthorn City",
+                leader: "Clair",
+                number: 19,
+                description: "Termine la route principale de Johto.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Explosion", "weezing"],
+                action: "Utilise Water Spout puis Explosion. Envoie ensuite Togekiss et Vanilluxe."
+            },
+            {
+                region: "🌸 Johto",
+                city: "Mahogany Town",
+                leader: "Pryce",
+                number: 20,
+                description: "Étape optionnelle selon le temps disponible.",
+                pokemon1: ["Weezing", "Explosion", "weezing"],
+                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
+                action: "Utilise Explosion et Dragon Claw.",
+                note: "Effectue cette arène uniquement si ton temps et l'état de ton équipe le permettent.",
+                optional: true
+            },
+
+            {
+                region: "⚡ Unys",
+                city: "Castelia City",
+                leader: "Burgh",
+                number: 21,
+                description: "Commence Unys à Castelia.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
+                action: "Utilise Water Spout et Blizzard."
+            },
+            {
+                region: "⚡ Unys",
+                city: "Striaton City",
+                leader: "Chili",
+                number: 22,
+                description: "Le champion dépend de l'arène affrontée.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
+                action: "Utilise Eruption et Hyper Voice."
+            },
+            {
+                region: "⚡ Unys",
+                city: "Opelucid City",
+                leader: "Iris",
+                number: 23,
+                description: "Continue vers Opelucid.",
+                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
+                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
+                action: "Utilise Eruption et Blizzard."
+            },
+            {
+                region: "⚡ Unys",
+                city: "Driftveil City",
+                leader: "Clay",
+                number: 24,
+                description: "Continue vers Driftveil.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Weezing", "Rain Dance", "weezing"],
+                action: "Utilise Water Spout et Rain Dance."
+            },
+            {
+                region: "⚡ Unys",
+                city: "Nacrene City",
+                leader: "Lenora",
+                number: 25,
+                description: "Étape optionnelle selon ton temps et ta stratégie.",
+                pokemon1: ["Weezing", "Explosion", "weezing"],
+                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
+                action: "Utilise Explosion puis Earthquake. Envoie ensuite Typhlosion et Togekiss.",
+                note: "Cette étape peut être ignorée si le temps restant est insuffisant.",
+                optional: true
+            }
+        ];
+
+        /* ========================================
+           FONCTIONS UTILITAIRES
+        ======================================== */
+
+        function createPokemonHTML(pokemon) {
+            const [name, move, sprite] = pokemon;
+
+            return `
+                <div class="battle-pokemon">
+                    <div class="battle-pokemon-picture">
+                        <img
+                            src="${sprite === 'blastoise' ? 'https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif' : sprite === 'togekiss' ? 'https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif' : `https://img.pokemondb.net/sprites/home/normal/${sprite}.png`}"
+                            alt="${name}"
+                        >
+                    </div>
+
+                    <div class="battle-pokemon-info">
+                        <strong>${name}</strong>
+                        <span>${move}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createVisualBlock(city, leader) {
+            const visuals = document.createElement("div");
+            visuals.className = "gym-visuals";
+
+            const arenaBox = document.createElement("div");
+            arenaBox.className = "gym-visual";
+
+            const arenaImage = document.createElement("img");
+            arenaImage.src = arenaImages[city] || defaultArenaImage;
+            arenaImage.alt = "Arène de " + city;
+            arenaImage.loading = "lazy";
+
+            arenaImage.addEventListener("error", function () {
+                if (!this.dataset.fallbackUsed) {
+                    this.dataset.fallbackUsed = "true";
+                    this.src = defaultArenaImage;
+                }
+            });
+
+            const arenaCaption = document.createElement("div");
+            arenaCaption.className = "gym-visual-caption";
+            arenaCaption.innerHTML = `
+                <strong>Arène</strong><br>
+                ${city}
+            `;
+
+            arenaBox.appendChild(arenaImage);
+            arenaBox.appendChild(arenaCaption);
+
+            const leaderBox = document.createElement("div");
+            leaderBox.className = "gym-visual";
+
+            const leaderImage = document.createElement("img");
+            leaderImage.src = leaderImages[leader] || defaultLeaderImage;
+            leaderImage.alt = "Champion : " + leader;
+            leaderImage.loading = "lazy";
+
+            leaderImage.addEventListener("error", function () {
+                if (!this.dataset.fallbackUsed) {
+                    this.dataset.fallbackUsed = "true";
+                    this.src = defaultLeaderImage;
+                }
+            });
+
+            const leaderCaption = document.createElement("div");
+            leaderCaption.className = "gym-visual-caption";
+            leaderCaption.innerHTML = `
+                <strong>Champion</strong><br>
+                ${leader || "Champion de l'arène"}
+            `;
+
+            leaderBox.appendChild(leaderImage);
+            leaderBox.appendChild(leaderCaption);
+
+            visuals.appendChild(arenaBox);
+            visuals.appendChild(leaderBox);
+
+            return visuals;
+        }
+function createBattleTabs(route) {
+    const tabsWrapper = document.createElement("div");
+    tabsWrapper.className = "battle-tabs";
+
+    // Conteneur des boutons
+    const tabButtons = document.createElement("div");
+    tabButtons.className = "battle-tab-buttons";
+
+    const pokemonButton = document.createElement("button");
+    pokemonButton.type = "button";
+    pokemonButton.className = "battle-tab-button active";
+    pokemonButton.textContent = "Pokémon";
+
+    const attacksButton = document.createElement("button");
+    attacksButton.type = "button";
+    attacksButton.className = "battle-tab-button";
+    attacksButton.textContent = "Attaques";
+
+    tabButtons.appendChild(pokemonButton);
+    tabButtons.appendChild(attacksButton);
+
+    // Onglet Pokémon
+    const pokemonContent = document.createElement("div");
+    pokemonContent.className = "battle-tab-content active";
+
+    pokemonContent.innerHTML = `
+        <div class="battle-pokemon-item">
+            <strong>${route.pokemon1[0]}</strong>
+        </div>
+
+        <div class="battle-pokemon-item">
+            <strong>${route.pokemon2[0]}</strong>
+        </div>
+    `;
+
+    // Onglet Attaques
+    const attacksContent = document.createElement("div");
+    attacksContent.className = "battle-tab-content";
+
+    attacksContent.innerHTML = `
+        <div class="battle-attack-item">
+            <strong>${route.pokemon1[0]}</strong>
+            <span>${route.pokemon1[1]}</span>
+        </div>
+
+        <div class="battle-attack-item">
+            <strong>${route.pokemon2[0]}</strong>
+            <span>${route.pokemon2[1]}</span>
+        </div>
+    `;
+
+    // Affichage de l'onglet Pokémon
+    pokemonButton.addEventListener("click", function () {
+        pokemonButton.classList.add("active");
+        attacksButton.classList.remove("active");
+
+        pokemonContent.classList.add("active");
+        attacksContent.classList.remove("active");
+    });
+
+    // Affichage de l'onglet Attaques
+    attacksButton.addEventListener("click", function () {
+        attacksButton.classList.add("active");
+        pokemonButton.classList.remove("active");
+
+        attacksContent.classList.add("active");
+        pokemonContent.classList.remove("active");
+    });
+
+    tabsWrapper.appendChild(tabButtons);
+    tabsWrapper.appendChild(pokemonContent);
+    tabsWrapper.appendChild(attacksContent);
+
+    return tabsWrapper;
+}
+        function createRouteCard(route) {
+            const card = document.createElement("article");
+            card.className = route.specialEnemies ? "route-card reference-layout" : "route-card";
+
+            const optionalLabel = route.optional
+                ? " — optionnel"
+                : "";
+
+            const noteHTML = route.note
+                ? `
+                    <div class="route-note">
+                        <strong>${route.optional ? "Optionnel :" : "Note :"}</strong>
+                        ${route.note}
+                    </div>
+                `
+                : "";
+
+            card.innerHTML = `
+                <div class="route-number">${route.number}</div>
+
+                <div class="route-content">
+
+                    <div class="route-title-line">
+                        <h4>${route.city}</h4>
+                    </div>
+
+                    ${!route.specialEnemies ? `
+                    <span class="route-location">
+                        ${route.leader ? "Champion : " + route.leader : ""}
+                        ${optionalLabel}
+                    </span>
+
+                    <div class="visual-placeholder"></div>` : ""}
+
+                    <p class="route-description">
+                        ${route.description}
+                    </p>
+
+                    <div class="battle-box">
+
+                        <div class="battle-label">
+                            Pokémon de départ
+                        </div>
+
+                        ${createPokemonHTML(route.pokemon1)}
+
+                        <div class="battle-plus">+</div>
+
+                        ${createPokemonHTML(route.pokemon2)}
+
+                    </div>
+
+                    ${route.specialEnemies ? `
+                    <div class="special-encounter">
+                        <div class="special-encounter-title">Si Démolosse + Arcanin apparaissent :</div>
+                        <div class="special-enemy-row">
+                            ${createPokemonHTML(route.specialEnemies[0])}
+                            <div class="battle-plus">+</div>
+                            ${createPokemonHTML(route.specialEnemies[1])}
+                        </div>
+                        <p class="special-instructions">${route.specialAction}</p>
+                    </div>` : ""}
+
+                    ${route.specialEnemies ? `
+                    <div class="lavaridge-mockup">
+                        <div class="lavaridge-mockup-card">
+                            <p class="lavaridge-mockup-lead">Commence avec <span class="blue">Tortank</span> et <span class="pink">Togekiss</span>.</p>
+                            <div class="lavaridge-sprites">
+                                <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                                <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                            </div>
+                            <p class="lavaridge-move"><span class="water">Giclédo</span> + <span class="support">Coup d'Main</span></p>
+                        </div>
+
+                        <div class="lavaridge-mockup-card special">
+                            <p class="lavaridge-condition">Si face à Démolosse / Arcanin Niv. 85 :</p>
+                            <div class="lavaridge-sprites">
+                                <img class="trainer" src="https://play.pokemonshowdown.com/sprites/trainers/flannery.png" alt="Flannery">
+                                <img src="https://play.pokemonshowdown.com/sprites/gen5ani/houndoom.gif" alt="Démolosse">
+                                <img src="https://play.pokemonshowdown.com/sprites/gen5ani/arcanine.gif" alt="Arcanin">
+                            </div>
+                            <p class="lavaridge-move"><span class="water">Giclédo</span> + <span class="support">Mégaphone</span></p>
+                        </div>
+
+                        <p class="lavaridge-note"><span class="note-word">Note :</span> Faible chance de finir en 4 tours. <span class="heal">Soigne</span> <span class="blastoise">Tortank</span> s’il est blessé.</p>
+                    </div>` : ""}
+
+                    <div class="route-action">
+                        <strong>Action principale</strong>
+                        <p>${route.action}</p>
+                    </div>
+
+                    ${noteHTML}
+
+                </div>
+            `;
+
+            const visualBlock = createVisualBlock(
+    route.city,
+    route.leader
+);
+
+const placeholder = card.querySelector(".visual-placeholder");
+
+if (placeholder) {
+    placeholder.replaceWith(visualBlock);
+}
+
+// Ajout des onglets Pokémon / Attaques
+const battleTabs = createBattleTabs(route);
+
+const battleBox = card.querySelector(".battle-box");
+
+if (battleBox) {
+    battleBox.appendChild(battleTabs);
+}
+
+return card;
+        }
+
+        /* ========================================
+           AFFICHAGE DU PARCOURS
+        ======================================== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const routesContainer =
+                document.getElementById("routes-container");
+
+            if (!routesContainer) {
+                console.warn(
+                    "RAIDFORGE : conteneur des parcours introuvable."
+                );
+                return;
+            }
+
+            let currentRegion = "";
+
+            routes.forEach(function (route) {
+                if (route.region !== currentRegion) {
+                    currentRegion = route.region;
+
+                    const region = document.createElement("div");
+                    region.className = "route-region";
+
+                    region.innerHTML = `
+                        <h3 class="route-region-title">
+                            ${route.region}
+                        </h3>
+                    `;
+
+                    const card = createRouteCard(route);
+                    region.appendChild(card);
+
+                    routesContainer.appendChild(region);
+                } else {
+                    const regions =
+                        routesContainer.querySelectorAll(".route-region");
+
+                    const currentRegionElement =
+                        regions[regions.length - 1];
+
+                    currentRegionElement.appendChild(
+                        createRouteCard(route)
+                    );
+                }
+            });
+
+            console.log(
+                "RAIDFORGE :",
+                routes.length,
+                "cartes de parcours chargées."
+            );
+        });
+        
+    </script>
+
+
+<script>
+(function () {
+    function alignMainPokemonCards() {
+        const cards = [
+            document.querySelector('.team-section .typhlosion-card'),
+            document.querySelector('.team-section .tortank-card'),
+            document.querySelector('.team-section .sorbouboul-card')
+        ].filter(Boolean);
+        if (!cards.length) return;
+
+        cards.forEach(card => {
+            card.style.setProperty('height', 'auto', 'important');
+            card.style.setProperty('min-height', '0', 'important');
+            card.style.setProperty('max-height', 'none', 'important');
+        });
+
+        const tallest = Math.max(...cards.map(card => card.scrollHeight));
+        cards.forEach(card => {
+            card.style.setProperty('height', tallest + 'px', 'important');
+            card.style.setProperty('min-height', tallest + 'px', 'important');
+            card.style.setProperty('max-height', 'none', 'important');
+            card.style.setProperty('overflow', 'visible', 'important');
+        });
+    }
+
+    window.addEventListener('load', alignMainPokemonCards);
+    window.addEventListener('resize', alignMainPokemonCards);
+})();
+</script>
+
+
+
+
+</body>
+</html>
