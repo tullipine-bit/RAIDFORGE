@@ -3147,6 +3147,455 @@
     flex: 1 1 auto !important;
 }
 
+
+/* ===== DEWFORD — STRUCTURE VALIDÉE ===== */
+.dewford-reference { display:block !important; padding:26px !important; }
+.dewford-reference .dewford-title { margin:0 0 18px; color:#ffe52f; font-size:1.7rem; font-weight:900; text-align:center; }
+.dewford-reference .dewford-line { height:1px; margin:0 0 20px; background:linear-gradient(90deg,transparent,#ffe52f,transparent); }
+.dewford-reference .dewford-battle { max-width:760px; margin:0 auto; padding:18px 22px 14px; border:1px solid #328cff; border-radius:12px; background:rgba(3,12,25,.72); text-align:center; }
+.dewford-reference .dewford-lead { margin:0 0 10px; font-size:1rem; color:#fff; }
+.dewford-reference .dewford-lead .water { color:#318cff; font-weight:800; }
+.dewford-reference .dewford-lead .ice { color:#37e7ed; font-weight:800; }
+.dewford-reference .dewford-sprites { display:flex; justify-content:center; align-items:flex-end; gap:12px; min-height:105px; }
+.dewford-reference .dewford-sprites img { width:92px; height:92px; object-fit:contain; }
+.dewford-reference .dewford-sprites img.leader { width:100px; height:130px; margin-right:-4px; }
+.dewford-reference .dewford-move { margin:8px 0 0; font-weight:900; font-size:1rem; }
+.dewford-reference .dewford-move .water { color:#318cff; }
+.dewford-reference .dewford-move .ice { color:#37e7ed; }
+.dewford-reference .dewford-note { max-width:620px; margin:14px auto 0; padding:10px 16px; border:1px solid rgba(244,201,93,.35); border-radius:8px; background:rgba(5,15,31,.65); text-align:center; color:#cdd8e8; font-size:.82rem; }
+.dewford-reference .dewford-note strong { color:#f4c95d; text-decoration:underline; }
+.dewford-reference .dewford-note .heal { color:#36e39a; font-weight:800; }
+@media(max-width:600px){.dewford-reference{padding:18px 10px!important}.dewford-reference .dewford-title{font-size:1.35rem}.dewford-reference .dewford-sprites{gap:4px}.dewford-reference .dewford-sprites img{width:76px;height:76px}.dewford-reference .dewford-sprites img.leader{width:55px;height:82px}}
+
+/* ===== FORTREE TOWN / CLEMENTI-VILLE : CARTE PERSONNALISÉE ===== */
+.fortree-reference{padding:0!important;overflow:hidden}
+.fortree-title{margin:0;padding:22px 24px 16px;font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500;letter-spacing:.5px}
+.fortree-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.fortree-wrap{padding:30px 20px;display:grid;gap:18px;justify-items:center}
+.fortree-battle,.fortree-variant{width:min(100%,620px);box-sizing:border-box;background:rgba(22,22,26,.92);border:1px solid rgba(255,214,0,.24);border-radius:13px;padding:20px 18px;text-align:center}
+.fortree-lead,.fortree-send,.fortree-turn{margin:6px 0;font-weight:800;line-height:1.35}
+.fortree-sprites{min-height:88px;display:flex;align-items:flex-end;justify-content:center;gap:14px;margin:7px 0 10px}
+.fortree-sprites img{width:auto;height:76px;object-fit:contain;image-rendering:auto}
+.fortree-sprites img.leader{height:130px;margin-right:3px}
+.fortree-variant-title{margin:0 0 7px;color:#ff2a16;font-weight:1000;font-size:18px}
+.fortree-water{color:#398cff}.fortree-poison{color:#ed65f2}.fortree-fire{color:#ff4a0b}
+.fortree-fairy{color:#f078c6}.fortree-ice{color:#42d8ff}.fortree-normal{color:#f078c6}
+@media(max-width:650px){
+ .fortree-wrap{padding:20px 10px}
+ .fortree-battle,.fortree-variant{padding:16px 10px}
+ .fortree-sprites{gap:8px}
+ .fortree-sprites img{height:64px}
+ .fortree-sprites img.leader{height:110px}
+}
+
+
+/* Centrage Fortree */
+.fortree-reference{
+    text-align:center !important;
+}
+.fortree-title{
+    text-align:center !important;
+}
+.fortree-wrap{
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+.fortree-battle,
+.fortree-variant{
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+}
+.fortree-sprites{
+    width:100% !important;
+    justify-content:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+
+/* FIX : centre réellement les CASES Fortree dans toute la largeur de la carte */
+.fortree-reference .fortree-wrap{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  max-width:none !important;
+  box-sizing:border-box !important;
+}
+.fortree-reference .fortree-battle,
+.fortree-reference .fortree-variant{
+  width:min(620px, calc(100% - 40px)) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  align-self:center !important;
+}
+
+/* ===== 4. LAVANDIA : CARTE PERSONNALISÉE ===== */
+.lavandia-reference{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    max-width:none !important;
+    text-align:center !important;
+    padding:0 !important;
+    overflow:hidden;
+}
+.lavandia-title{
+    margin:0;
+    padding:22px 24px 16px;
+    text-align:center;
+    font-size:clamp(25px,3vw,38px);
+    font-weight:1000;
+    color:#fff500;
+}
+.lavandia-line{
+    height:1px;
+    background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1));
+}
+.lavandia-wrap{
+    width:100%;
+    box-sizing:border-box;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+.lavandia-battle,.lavandia-variant{
+    width:min(620px,calc(100% - 20px));
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:20px 18px;
+    text-align:center;
+    background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);
+    border-radius:13px;
+}
+.lavandia-lead,.lavandia-action,.lavandia-send{
+    margin:7px 0;
+    font-weight:800;
+    line-height:1.4;
+}
+.lavandia-sprites{
+    width:100%;
+    min-height:88px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:14px;
+    margin:8px auto 10px;
+}
+.lavandia-sprites img{
+    width:auto;
+    height:78px;
+    object-fit:contain;
+}
+.lavandia-sprites img.leader{
+    height:130px;
+}
+.lavandia-variant-title{
+    margin:0 0 8px;
+    color:#ff2a16;
+    font-size:18px;
+    font-weight:1000;
+}
+.lav-fire{color:#ff4a0b}.lav-dragon{color:#c985ff}.lav-fairy{color:#ef79d0}
+@media(max-width:650px){
+    .lavandia-wrap{padding:20px 8px}
+    .lavandia-battle,.lavandia-variant{width:calc(100% - 12px);padding:16px 9px}
+    .lavandia-sprites{gap:8px}
+    .lavandia-sprites img{height:64px}
+    .lavandia-sprites img.leader{height:110px}
+}
+
+
+/* ===== 5. MEROUVILLE : CARTE PERSONNALISÉE ===== */
+.merouville-reference{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    max-width:none !important;
+    justify-self:stretch !important;
+    padding:0 !important;
+    overflow:hidden;
+    text-align:center !important;
+}
+.merouville-title{
+    margin:0;
+    padding:22px 24px 16px;
+    text-align:center;
+    font-size:clamp(25px,3vw,38px);
+    font-weight:1000;
+    color:#fff500;
+}
+.merouville-line{
+    height:1px;
+    background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1));
+}
+.merouville-wrap{
+    width:100%;
+    box-sizing:border-box;
+    padding:30px 20px;
+    display:flex !important;
+    flex-direction:column;
+    align-items:center !important;
+    justify-content:center !important;
+}
+.merouville-battle{
+    width:min(620px,calc(100% - 20px)) !important;
+    box-sizing:border-box;
+    margin:0 auto !important;
+    padding:20px 18px;
+    text-align:center;
+    background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);
+    border-radius:13px;
+}
+.merouville-lead,.merouville-action{
+    margin:7px 0;
+    font-weight:800;
+    line-height:1.4;
+}
+.merouville-sprites{
+    width:100%;
+    min-height:90px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:14px;
+    margin:8px auto 10px;
+}
+.merouville-sprites img{
+    width:auto;
+    height:78px;
+    object-fit:contain;
+}
+.merouville-sprites img.leader{
+    height:130px;
+}
+.mer-water{color:#398cff}
+.mer-poison{color:#ed65f2}
+@media(max-width:650px){
+    .merouville-wrap{padding:20px 8px}
+    .merouville-battle{width:calc(100% - 12px)!important;padding:16px 9px}
+    .merouville-sprites img{height:64px}
+    .merouville-sprites img.leader{height:110px}
+}
+
+
+/* ===== KANTO 1. CARMIN SUR MER ===== */
+.carmin-reference{
+    grid-column:1 / -1 !important;
+    display:block !important;
+    width:min(100%,980px) !important;
+    max-width:980px !important;
+    margin:28px auto !important;
+    padding:0 !important;
+    justify-self:center !important;
+    box-sizing:border-box !important;
+    overflow:hidden;
+    text-align:center !important;
+}
+.carmin-title{
+    margin:0;
+    padding:22px 24px 16px;
+    text-align:center;
+    font-size:clamp(25px,3vw,38px);
+    font-weight:1000;
+    color:#fff500;
+}
+.carmin-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.carmin-wrap{
+    width:100%;
+    box-sizing:border-box;
+    padding:30px 20px;
+    display:flex !important;
+    flex-direction:column;
+    align-items:center !important;
+    gap:18px;
+}
+.carmin-battle,.carmin-variant,.carmin-note{
+    width:min(100%,620px) !important;
+    max-width:620px !important;
+    box-sizing:border-box;
+    margin:0 auto !important;
+    padding:20px 18px;
+    text-align:center;
+    background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);
+    border-radius:13px;
+}
+.carmin-sprites{
+    width:100%;
+    min-height:90px;
+    display:flex !important;
+    align-items:flex-end;
+    justify-content:center !important;
+    gap:14px;
+    margin:8px auto 10px;
+}
+.carmin-sprites img{width:auto;height:78px;object-fit:contain}
+.carmin-sprites img.leader{height:130px}
+.carmin-variant-title{margin:0 0 8px;color:#ff2a16;font-size:18px;font-weight:1000}
+.carmin-text{margin:7px 0;font-weight:800;line-height:1.4}
+.carmin-fire{color:#ff4a0b}.carmin-dragon{color:#c985ff}.carmin-ice{color:#42d8ff}.carmin-ground{color:#d9a441}.carmin-normal{color:#e8e8e8}
+.carmin-heal{color:#39ff63;font-weight:1000;text-shadow:0 0 10px rgba(57,255,99,.45)}
+@media(max-width:650px){
+ .carmin-reference{width:100%!important}
+ .carmin-wrap{padding:20px 8px}
+ .carmin-battle,.carmin-variant,.carmin-note{width:calc(100% - 12px)!important;padding:16px 9px}
+ .carmin-sprites img{height:64px}
+ .carmin-sprites img.leader{height:110px}
+}
+
+
+/* ===== KANTO 2. CRAMOIS'ÎLE ===== */
+.cramoisile-reference{
+    grid-column:1 / -1 !important;
+    display:block !important;
+    width:min(100%,980px) !important;
+    max-width:980px !important;
+    margin:28px auto !important;
+    padding:0 !important;
+    justify-self:center !important;
+    box-sizing:border-box !important;
+    overflow:hidden;
+    text-align:center !important;
+}
+.cramoisile-title{
+    margin:0;padding:22px 24px 16px;text-align:center;
+    font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500;
+}
+.cramoisile-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.cramoisile-wrap{
+    width:100%;box-sizing:border-box;padding:30px 20px;
+    display:flex!important;flex-direction:column;align-items:center!important;gap:18px;
+}
+.cramoisile-battle,.cramoisile-variant{
+    width:min(100%,620px)!important;max-width:620px!important;
+    box-sizing:border-box;margin:0 auto!important;padding:20px 18px;
+    text-align:center;background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);border-radius:13px;
+}
+.cramoisile-variants{
+    width:min(100%,980px);display:flex;justify-content:center;align-items:stretch;
+    gap:14px;flex-wrap:wrap;
+}
+.cramoisile-variants .cramoisile-variant{width:min(100%,300px)!important;margin:0!important}
+.cramoisile-sprites{
+    width:100%;min-height:88px;display:flex!important;align-items:flex-end;
+    justify-content:center!important;gap:12px;margin:8px auto 10px;
+}
+.cramoisile-sprites img{width:auto;height:76px;object-fit:contain}
+.cramoisile-sprites img.leader{height:130px}
+.cramoisile-text{margin:7px 0;font-weight:800;line-height:1.4}
+.cramoisile-variant-title{margin:0 0 8px;color:#ff2a16;font-size:17px;font-weight:1000}
+.cram-water{color:#398cff}.cram-poison{color:#ed65f2}.cram-ice{color:#42d8ff}.cram-rain{color:#8a9cff}
+@media(max-width:650px){
+ .cramoisile-reference{width:100%!important}
+ .cramoisile-wrap{padding:20px 8px}
+ .cramoisile-battle,.cramoisile-variant{width:calc(100% - 12px)!important;padding:16px 9px}
+ .cramoisile-variants{flex-direction:column;align-items:center}
+ .cramoisile-variants .cramoisile-variant{width:calc(100% - 12px)!important}
+ .cramoisile-sprites img{height:62px}
+ .cramoisile-sprites img.leader{height:110px}
+}
+
+
+/* ===== KANTO 3. CÉLADOPOLE ===== */
+.celadopole-reference{
+    grid-column:1 / -1 !important;
+    display:block !important;
+    width:min(100%,980px) !important;
+    max-width:980px !important;
+    margin:28px auto !important;
+    padding:0 !important;
+    justify-self:center !important;
+    box-sizing:border-box !important;
+    overflow:hidden;
+    text-align:center !important;
+}
+.celadopole-title{
+    margin:0;padding:22px 24px 16px;text-align:center;
+    font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500;
+}
+.celadopole-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.celadopole-wrap{
+    width:100%;box-sizing:border-box;padding:30px 20px;
+    display:flex!important;flex-direction:column;align-items:center!important;gap:18px;
+}
+.celadopole-battle,.celadopole-variant{
+    width:min(100%,620px)!important;max-width:620px!important;
+    box-sizing:border-box;margin:0 auto!important;padding:20px 18px;
+    text-align:center;background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);border-radius:13px;
+}
+.celadopole-sprites{
+    width:100%;min-height:88px;display:flex!important;
+    align-items:flex-end;justify-content:center!important;gap:14px;
+    margin:8px auto 10px;flex-wrap:wrap;
+}
+.celadopole-sprites img{width:auto;height:76px;max-width:110px;object-fit:contain}
+.celadopole-sprites img.leader{height:130px;max-width:100px}
+.celadopole-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.celadopole-variant-title{margin:0 0 8px;color:#ff2a16;font-size:18px;font-weight:1000}
+.cel-water{color:#398cff}.cel-poison{color:#ed65f2}.cel-fire{color:#ff4a0b}.cel-fairy{color:#ef79d0}.cel-dragon{color:#c985ff}
+@media(max-width:650px){
+ .celadopole-reference{width:100%!important}
+ .celadopole-wrap{padding:20px 8px}
+ .celadopole-battle,.celadopole-variant{width:calc(100% - 12px)!important;padding:16px 9px}
+ .celadopole-sprites img{height:62px;max-width:85px}
+ .celadopole-sprites img.leader{height:105px}
+}
+
+
+/* ===== KANTO 4. SAFRANIA ===== */
+.safrania-reference{
+    grid-column:1 / -1 !important;
+    display:block !important;
+    width:min(100%,980px) !important;
+    max-width:980px !important;
+    margin:28px auto !important;
+    padding:0 !important;
+    justify-self:center !important;
+    box-sizing:border-box !important;
+    overflow:hidden;
+    text-align:center !important;
+}
+.safrania-title{
+    margin:0;padding:22px 24px 16px;text-align:center;
+    font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500;
+}
+.safrania-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.safrania-wrap{
+    width:100%;box-sizing:border-box;padding:30px 20px;
+    display:flex!important;flex-direction:column;align-items:center!important;gap:18px;
+}
+.safrania-puzzle,.safrania-battle,.safrania-variant{
+    width:min(100%,620px)!important;max-width:620px!important;
+    box-sizing:border-box;margin:0 auto!important;padding:20px 18px;
+    text-align:center;background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);border-radius:13px;
+}
+.safrania-puzzle{padding:14px 18px;color:#fff;font-weight:900}
+.safrania-sprites{
+    width:100%;min-height:88px;display:flex!important;align-items:flex-end;
+    justify-content:center!important;gap:14px;margin:8px auto 10px;flex-wrap:wrap;
+}
+.safrania-sprites img{width:auto;height:76px;max-width:110px;object-fit:contain}
+.safrania-sprites img.leader{height:130px;max-width:100px}
+.safrania-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.safrania-variant-title{margin:0 0 8px;color:#ff2a16;font-size:18px;font-weight:1000}
+.saf-fire{color:#ff4a0b}.saf-dragon{color:#c985ff}.saf-fairy{color:#ef79d0}.saf-ground{color:#d7a85a}
+@media(max-width:650px){
+ .safrania-reference{width:100%!important}
+ .safrania-wrap{padding:20px 8px}
+ .safrania-puzzle,.safrania-battle,.safrania-variant{width:calc(100% - 12px)!important;padding:16px 9px}
+ .safrania-sprites img{height:62px;max-width:85px}
+ .safrania-sprites img.leader{height:105px}
+}
+
 </style>
 
 <style>
@@ -3173,7 +3622,942 @@
 .header-nav-btn:hover{color:#fff!important;transform:translateY(-1px);border-color:#c084fc;box-shadow:0 0 22px rgba(168,85,247,.42),inset 0 1px 0 rgba(255,255,255,.12);}
 .header-home-btn{background:linear-gradient(180deg,rgba(76,29,149,.92),rgba(24,15,48,.96));}
 @media(max-width:650px){.header-nav-actions{gap:6px}.header-nav-btn{height:36px;padding:0 10px;font-size:10px;letter-spacing:.04em}}
+
+/* Fortree — centrage final dans toute la largeur de la section */
+.route-card.fortree-reference{
+  width:min(100%, 980px) !important;
+  max-width:980px !important;
+  margin:28px auto !important;
+  justify-self:center !important;
+  grid-column:1 / -1 !important;
+}
+.route-card.fortree-reference .fortree-title{
+  width:100% !important;
+  box-sizing:border-box !important;
+  text-align:center !important;
+}
+.route-card.fortree-reference .fortree-wrap{
+  width:100% !important;
+  max-width:760px !important;
+  margin:0 auto !important;
+  box-sizing:border-box !important;
+}
+.route-card.fortree-reference .fortree-battle,
+.route-card.fortree-reference .fortree-variant{
+  width:100% !important;
+  max-width:620px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
 </style>
+
+<style>
+/* FORTREE — correction du bug de mise en page : annule la grille 65px/1fr des cartes génériques */
+.route-card.fortree-reference{
+  display:block !important;
+  width:100% !important;
+  max-width:980px !important;
+  margin:28px auto !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+}
+.route-card.fortree-reference .fortree-title{
+  display:block !important;
+  width:100% !important;
+  text-align:center !important;
+}
+.route-card.fortree-reference .fortree-wrap{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 auto !important;
+  box-sizing:border-box !important;
+}
+.route-card.fortree-reference .fortree-battle,
+.route-card.fortree-reference .fortree-variant{
+  width:min(620px, calc(100% - 40px)) !important;
+  max-width:620px !important;
+  margin:0 auto !important;
+}
+.route-card.fortree-reference .fortree-variant{margin-top:18px !important;}
+@media(max-width:650px){
+  .route-card.fortree-reference .fortree-battle,
+  .route-card.fortree-reference .fortree-variant{width:calc(100% - 20px) !important;}
+}
+</style>
+
+<style>
+/* LAVANDIA — correction finale : annule la grille générique et centre réellement la case */
+.route-card.lavandia-reference{
+  display:block !important;
+  width:min(100%, 980px) !important;
+  max-width:980px !important;
+  margin:28px auto !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  grid-template-columns:none !important;
+}
+.route-card.lavandia-reference .lavandia-title{
+  display:block !important; width:100% !important; box-sizing:border-box !important; text-align:center !important;
+}
+.route-card.lavandia-reference .lavandia-wrap{
+  display:flex !important; flex-direction:column !important; align-items:center !important;
+  width:100% !important; max-width:760px !important; margin:0 auto !important; box-sizing:border-box !important;
+}
+.route-card.lavandia-reference .lavandia-battle,
+.route-card.lavandia-reference .lavandia-variant{
+  display:block !important; width:min(100%,620px) !important; max-width:620px !important;
+  margin-left:auto !important; margin-right:auto !important; box-sizing:border-box !important; text-align:center !important;
+}
+.route-card.lavandia-reference .lavandia-sprites{
+  display:flex !important; justify-content:center !important; align-items:flex-end !important; width:100% !important; margin-left:auto !important; margin-right:auto !important;
+}
+@media(max-width:650px){
+ .route-card.lavandia-reference{width:100% !important; margin:18px auto !important;}
+ .route-card.lavandia-reference .lavandia-wrap{padding:20px 8px !important;}
+ .route-card.lavandia-reference .lavandia-battle,.route-card.lavandia-reference .lavandia-variant{width:calc(100% - 12px) !important;}
+}
+</style>
+
+<style>
+/* MÉROUVILLE — correction du bug + centrage réel de la case */
+.route-card.merouville-reference{
+    display:block !important;
+    grid-column:1 / -1 !important;
+    grid-template-columns:none !important;
+    width:min(100%,980px) !important;
+    max-width:980px !important;
+    margin:28px auto !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    justify-self:center !important;
+    text-align:center !important;
+}
+.route-card.merouville-reference .merouville-title{
+    display:block !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    text-align:center !important;
+}
+.route-card.merouville-reference .merouville-wrap{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    max-width:760px !important;
+    margin:0 auto !important;
+    box-sizing:border-box !important;
+}
+.route-card.merouville-reference .merouville-battle{
+    display:block !important;
+    width:min(100%,620px) !important;
+    max-width:620px !important;
+    margin:0 auto !important;
+    box-sizing:border-box !important;
+    text-align:center !important;
+}
+.route-card.merouville-reference .merouville-sprites{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:flex-end !important;
+    width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+@media(max-width:650px){
+    .route-card.merouville-reference{
+        width:100% !important;
+        margin:18px auto !important;
+    }
+    .route-card.merouville-reference .merouville-wrap{
+        padding:20px 8px !important;
+    }
+    .route-card.merouville-reference .merouville-battle{
+        width:calc(100% - 12px) !important;
+    }
+}
+</style>
+
+
+<style>
+/* HEAL ENTRE LAVANDIA ET MÉROUVILLE */
+.between-gym-heal{
+    grid-column:1 / -1 !important;
+    display:block !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:18px auto !important;
+    padding:18px 20px !important;
+    justify-self:center !important;
+    text-align:center !important;
+    border:1px solid rgba(255,214,0,.24);
+    border-radius:12px;
+    background:rgba(22,22,26,.92);
+    color:#24f04b;
+    font-size:28px;
+    font-weight:1000;
+    letter-spacing:.5px;
+}
+</style>
+
+
+<style>
+/* ===== HEAL ANIMÉ ENTRE LAVANDIA ET MÉROUVILLE ===== */
+.between-gym-heal{
+    position:relative !important;
+    overflow:hidden !important;
+    color:#39ff63 !important;
+    text-shadow:
+        0 0 6px rgba(57,255,99,.9),
+        0 0 16px rgba(57,255,99,.65),
+        0 0 30px rgba(57,255,99,.35) !important;
+    border-color:rgba(57,255,99,.42) !important;
+    box-shadow:
+        0 0 12px rgba(57,255,99,.12),
+        inset 0 0 18px rgba(57,255,99,.06) !important;
+    animation:
+        healFloat 2.2s ease-in-out infinite,
+        healPulse 1.5s ease-in-out infinite !important;
+}
+
+/* halo lumineux derrière le texte */
+.between-gym-heal::before{
+    content:"";
+    position:absolute;
+    inset:-50%;
+    pointer-events:none;
+    background:radial-gradient(circle,
+        rgba(57,255,99,.16) 0%,
+        rgba(57,255,99,.05) 30%,
+        transparent 65%);
+    animation:healAura 2.8s ease-in-out infinite;
+}
+
+/* balayage lumineux */
+.between-gym-heal::after{
+    content:"";
+    position:absolute;
+    top:-30%;
+    left:-25%;
+    width:18%;
+    height:160%;
+    pointer-events:none;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        rgba(105,255,135,.42),
+        rgba(255,255,255,.08),
+        transparent
+    );
+    transform:skewX(-20deg);
+    animation:healSweep 2.7s linear infinite;
+}
+
+@keyframes healFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-5px)}
+}
+@keyframes healPulse{
+    0%,100%{
+        filter:brightness(1);
+        letter-spacing:.5px;
+    }
+    50%{
+        filter:brightness(1.3);
+        letter-spacing:2px;
+    }
+}
+@keyframes healAura{
+    0%,100%{transform:scale(.85);opacity:.45}
+    50%{transform:scale(1.12);opacity:1}
+}
+@keyframes healSweep{
+    0%{left:-30%}
+    100%{left:125%}
+}
+
+/* Respecte le réglage système si les animations sont désactivées */
+@media (prefers-reduced-motion: reduce){
+    .between-gym-heal,
+    .between-gym-heal::before,
+    .between-gym-heal::after{
+        animation:none !important;
+    }
+}
+</style>
+
+
+<style>
+/* ===== KANTO — TITRE DE RÉGION PLUS VISIBLE ===== */
+.kanto-region-highlight{
+    grid-column:1 / -1 !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:55px auto 22px !important;
+    padding:26px 30px !important;
+    text-align:center !important;
+    border:2px solid rgba(67,190,255,.75) !important;
+    border-radius:18px !important;
+    background:
+        radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+        linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97)) !important;
+    box-shadow:
+        0 0 22px rgba(40,175,255,.25),
+        inset 0 0 28px rgba(40,175,255,.09) !important;
+    color:#fff !important;
+    font-size:clamp(34px,5vw,58px) !important;
+    font-weight:1000 !important;
+    letter-spacing:5px !important;
+    text-transform:uppercase !important;
+    text-shadow:
+        0 0 8px rgba(255,255,255,.35),
+        0 0 18px rgba(48,185,255,.8),
+        0 0 36px rgba(48,185,255,.45) !important;
+    animation:kantoRegionPulse 2.4s ease-in-out infinite;
+}
+.kanto-region-highlight::before{
+    content:"◆ ";
+    color:#43c6ff;
+}
+.kanto-region-highlight::after{
+    content:" ◆";
+    color:#43c6ff;
+}
+@keyframes kantoRegionPulse{
+    0%,100%{transform:scale(1);filter:brightness(1)}
+    50%{transform:scale(1.015);filter:brightness(1.16)}
+}
+@media(prefers-reduced-motion:reduce){
+    .kanto-region-highlight{animation:none!important}
+}
+</style>
+
+
+<style>
+/* ===== HOENN — MÊME BANNIÈRE BLEU/CYAN QUE KANTO ===== */
+.hoenn-region-highlight{
+    grid-column:1 / -1 !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:30px auto 22px !important;
+    padding:26px 30px !important;
+    text-align:center !important;
+    border:2px solid rgba(67,190,255,.75) !important;
+    border-radius:18px !important;
+    background:
+        radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+        linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97)) !important;
+    box-shadow:
+        0 0 22px rgba(40,175,255,.25),
+        inset 0 0 28px rgba(40,175,255,.09) !important;
+    color:#fff !important;
+    font-size:clamp(34px,5vw,58px) !important;
+    font-weight:1000 !important;
+    letter-spacing:5px !important;
+    text-transform:uppercase !important;
+    text-shadow:
+        0 0 8px rgba(255,255,255,.35),
+        0 0 18px rgba(48,185,255,.8),
+        0 0 36px rgba(48,185,255,.45) !important;
+    animation:hoennRegionPulse 2.4s ease-in-out infinite;
+}
+.hoenn-region-highlight::before{content:"◆ ";color:#43c6ff}
+.hoenn-region-highlight::after{content:" ◆";color:#43c6ff}
+@keyframes hoennRegionPulse{
+    0%,100%{transform:scale(1);filter:brightness(1)}
+    50%{transform:scale(1.015);filter:brightness(1.16)}
+}
+@media(prefers-reduced-motion:reduce){
+    .hoenn-region-highlight{animation:none!important}
+}
+</style>
+
+
+<style>
+/* ===== CRAMOIS'ÎLE — CORRECTION : TOUT RESTE DANS LES CASES ===== */
+.route-card.cramoisile-reference{
+    width:min(100%,1100px) !important;
+    max-width:1100px !important;
+}
+
+.cramoisile-wrap{
+    padding:28px 16px !important;
+    overflow:hidden !important;
+}
+
+.cramoisile-battle{
+    width:min(100%,680px) !important;
+    max-width:680px !important;
+}
+
+.cramoisile-variants{
+    width:100% !important;
+    max-width:1000px !important;
+    box-sizing:border-box !important;
+    display:grid !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:14px !important;
+    align-items:stretch !important;
+    margin:0 auto !important;
+}
+
+.cramoisile-variants .cramoisile-variant{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    box-sizing:border-box !important;
+    padding:18px 12px !important;
+    overflow:hidden !important;
+}
+
+.cramoisile-variant-title,
+.cramoisile-text{
+    max-width:100% !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+}
+
+.cramoisile-sprites{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+    gap:8px !important;
+    flex-wrap:wrap !important;
+}
+
+.cramoisile-variants .cramoisile-sprites img{
+    height:62px !important;
+    max-width:82px !important;
+    object-fit:contain !important;
+}
+
+.cramoisile-variants .cramoisile-sprites img.leader{
+    height:100px !important;
+    max-width:90px !important;
+}
+
+/* La première variante contient 4 sprites : taille légèrement réduite */
+.cramoisile-variants .cramoisile-variant:first-child .cramoisile-sprites:first-of-type img{
+    height:56px !important;
+    max-width:68px !important;
+}
+.cramoisile-variants .cramoisile-variant:first-child .cramoisile-sprites:first-of-type img.leader{
+    height:92px !important;
+    max-width:76px !important;
+}
+
+@media(max-width:900px){
+    .cramoisile-variants{
+        grid-template-columns:1fr !important;
+        max-width:620px !important;
+    }
+    .cramoisile-variants .cramoisile-variant{
+        width:100% !important;
+    }
+    .cramoisile-variants .cramoisile-sprites img{
+        height:72px !important;
+        max-width:95px !important;
+    }
+    .cramoisile-variants .cramoisile-sprites img.leader{
+        height:115px !important;
+    }
+}
+
+@media(max-width:500px){
+    .cramoisile-wrap{padding:18px 6px !important}
+    .cramoisile-battle,
+    .cramoisile-variants{width:100% !important}
+    .cramoisile-variants .cramoisile-variant{padding:14px 7px !important}
+    .cramoisile-text{font-size:13px !important}
+    .cramoisile-variant-title{font-size:14px !important}
+}
+</style>
+
+
+<style>
+/* ===== KANTO 5. ARGENTA (OPTIONNELLE) ===== */
+.argenta-reference{
+  grid-column:1/-1!important;display:block!important;width:min(100%,1100px)!important;
+  max-width:1100px!important;margin:28px auto!important;padding:0!important;
+  justify-self:center!important;box-sizing:border-box!important;overflow:hidden;text-align:center!important;
+}
+.argenta-title{margin:0;padding:22px 24px 16px;text-align:center;font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500}
+.argenta-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.argenta-wrap{width:100%;box-sizing:border-box;padding:28px 16px;display:flex!important;flex-direction:column;align-items:center!important;gap:18px}
+.argenta-battle,.argenta-variant{
+  box-sizing:border-box;text-align:center;background:rgba(22,22,26,.92);
+  border:1px solid rgba(255,214,0,.24);border-radius:13px;padding:18px 12px;
+}
+.argenta-battle{width:min(100%,620px)!important;margin:0 auto!important}
+.argenta-variants{width:100%;max-width:1000px;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px}
+.argenta-variant{width:100%!important;min-width:0!important;margin:0!important;overflow:hidden}
+.argenta-sprites{width:100%;min-height:82px;display:flex!important;align-items:flex-end;justify-content:center!important;gap:9px;margin:8px auto 10px;flex-wrap:wrap}
+.argenta-sprites img{width:auto;height:66px;max-width:88px;object-fit:contain}
+.argenta-sprites img.leader{height:105px;max-width:82px}
+.argenta-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.argenta-variant-title{margin:0 0 8px;color:#ff2a16;font-size:16px;font-weight:1000}
+.arg-water{color:#398cff}.arg-poison{color:#ed65f2}.arg-fairy{color:#ef79d0}.arg-ground{color:#d7a85a}.arg-fire{color:#ff4a0b}
+.argenta-heal{
+  grid-column:1/-1!important;width:min(100%,1100px)!important;box-sizing:border-box!important;
+  margin:18px auto!important;padding:18px 20px!important;justify-self:center!important;text-align:center!important;
+  border:1px solid rgba(57,255,99,.38);border-radius:12px;background:rgba(22,22,26,.92);
+  color:#39ff63;font-size:27px;font-weight:1000;text-shadow:0 0 12px rgba(57,255,99,.6);
+  animation:argHealPulse 1.7s ease-in-out infinite;
+}
+@keyframes argHealPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.35);transform:translateY(-3px)}}
+@media(max-width:900px){.argenta-variants{grid-template-columns:1fr!important;max-width:620px}.argenta-variant{width:100%!important}}
+@media(max-width:650px){
+ .argenta-reference{width:100%!important}.argenta-wrap{padding:18px 6px}.argenta-battle,.argenta-variants{width:100%!important}
+ .argenta-sprites img{height:60px;max-width:80px}.argenta-sprites img.leader{height:100px}
+}
+</style>
+
+
+<style>
+/* ===== SINNOH — BANNIÈRE ===== */
+.sinnoh-region-highlight{
+    grid-column:1/-1!important;width:min(100%,1100px)!important;box-sizing:border-box!important;
+    margin:55px auto 22px!important;padding:26px 30px!important;text-align:center!important;
+    border:2px solid rgba(67,190,255,.75)!important;border-radius:18px!important;
+    background:radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+               linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97))!important;
+    box-shadow:0 0 22px rgba(40,175,255,.25),inset 0 0 28px rgba(40,175,255,.09)!important;
+    color:#fff!important;font-size:clamp(34px,5vw,58px)!important;font-weight:1000!important;
+    letter-spacing:5px!important;text-transform:uppercase!important;
+    text-shadow:0 0 8px rgba(255,255,255,.35),0 0 18px rgba(48,185,255,.8),0 0 36px rgba(48,185,255,.45)!important;
+    animation:sinnohPulse 2.4s ease-in-out infinite;
+}
+.sinnoh-region-highlight::before{content:"◆ ";color:#43c6ff}
+.sinnoh-region-highlight::after{content:" ◆";color:#43c6ff}
+@keyframes sinnohPulse{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.015);filter:brightness(1.16)}}
+
+/* ===== SINNOH 1. VESTIGION ===== */
+.vestigion-reference{
+    grid-column:1/-1!important;display:block!important;width:min(100%,1100px)!important;max-width:1100px!important;
+    margin:28px auto!important;padding:0!important;justify-self:center!important;box-sizing:border-box!important;
+    overflow:hidden;text-align:center!important;
+}
+.vestigion-title{margin:0;padding:22px 24px 16px;text-align:center;font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500}
+.vestigion-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.vestigion-wrap{width:100%;box-sizing:border-box;padding:28px 16px;display:flex!important;flex-direction:column;align-items:center!important;gap:18px}
+.vestigion-battle,.vestigion-variant{
+    box-sizing:border-box;text-align:center;background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);border-radius:13px;padding:18px 12px;
+}
+.vestigion-battle{width:min(100%,620px)!important;margin:0 auto!important}
+.vestigion-variants{width:100%;max-width:1000px;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px;align-items:stretch}
+.vestigion-variant{width:100%!important;min-width:0!important;margin:0!important;overflow:hidden}
+.vestigion-sprites{width:100%;min-height:82px;display:flex!important;align-items:flex-end;justify-content:center!important;gap:9px;margin:8px auto 10px;flex-wrap:wrap}
+.vestigion-sprites img{width:auto;height:66px;max-width:88px;object-fit:contain}
+.vestigion-sprites img.leader{height:105px;max-width:82px}
+.vestigion-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.vestigion-variant-title{margin:0 0 8px;color:#ff2a16;font-size:16px;font-weight:1000}
+.ves-fire{color:#ff4a0b}.ves-fairy{color:#ef79d0}.ves-poison{color:#ed65f2}
+.ves-note{color:#ffd52a;font-size:13px;font-weight:800}
+@media(max-width:900px){.vestigion-variants{grid-template-columns:1fr!important;max-width:620px}}
+@media(max-width:650px){
+ .vestigion-reference{width:100%!important}.vestigion-wrap{padding:18px 6px}
+ .vestigion-battle,.vestigion-variants{width:100%!important}
+ .vestigion-sprites img{height:60px;max-width:80px}.vestigion-sprites img.leader{height:100px}
+}
+</style>
+
+
+<style>
+/* ===== SINNOH 2. VOILAROC ===== */
+.voilaroc-reference{
+    grid-column:1/-1!important;display:block!important;width:min(100%,1000px)!important;
+    max-width:1000px!important;margin:28px auto!important;padding:0!important;
+    justify-self:center!important;box-sizing:border-box!important;overflow:hidden;text-align:center!important;
+}
+.voilaroc-title{
+    margin:0;padding:22px 24px 16px;text-align:center;
+    font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500;
+}
+.voilaroc-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.voilaroc-wrap{
+    width:100%;box-sizing:border-box;padding:28px 16px;
+    display:flex!important;flex-direction:column;align-items:center!important;gap:18px;
+}
+.voilaroc-battle,.voilaroc-variant{
+    box-sizing:border-box;text-align:center;background:rgba(22,22,26,.92);
+    border:1px solid rgba(255,214,0,.24);border-radius:13px;padding:18px 14px;
+}
+.voilaroc-battle{width:min(100%,620px)!important;margin:0 auto!important}
+.voilaroc-variants{
+    width:min(100%,720px)!important;display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px;margin:0 auto!important;
+}
+.voilaroc-variant{width:100%!important;min-width:0!important;margin:0!important;overflow:hidden}
+.voilaroc-sprites{
+    width:100%;min-height:82px;display:flex!important;align-items:flex-end;
+    justify-content:center!important;gap:10px;margin:8px auto 10px;flex-wrap:wrap;
+}
+.voilaroc-sprites img{width:auto;height:68px;max-width:92px;object-fit:contain}
+.voilaroc-sprites img.leader{height:110px;max-width:85px}
+.voilaroc-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.voilaroc-variant-title{margin:0 0 8px;color:#ff2a16;font-size:17px;font-weight:1000}
+.voi-fire{color:#ff4a0b}.voi-fairy{color:#ef79d0}
+.voilaroc-note{color:#ffd52a;font-size:13px;font-weight:800}
+@media(max-width:700px){
+    .voilaroc-variants{grid-template-columns:1fr!important;max-width:620px}
+    .voilaroc-reference{width:100%!important}.voilaroc-wrap{padding:18px 6px}
+}
+</style>
+
+
+<style>
+/* ===== SINNOH 3. CHARBOURG ===== */
+.charbourg-reference{
+ grid-column:1/-1!important;display:block!important;width:min(100%,1100px)!important;max-width:1100px!important;
+ margin:28px auto!important;padding:0!important;justify-self:center!important;box-sizing:border-box!important;
+ overflow:hidden;text-align:center!important
+}
+.charbourg-title{margin:0;padding:22px 24px 16px;text-align:center;font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500}
+.charbourg-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.charbourg-wrap{width:100%;box-sizing:border-box;padding:28px 16px;display:flex!important;flex-direction:column;align-items:center!important;gap:18px}
+.charbourg-battle,.charbourg-variant{
+ box-sizing:border-box;text-align:center;background:rgba(22,22,26,.92);border:1px solid rgba(255,214,0,.24);
+ border-radius:13px;padding:18px 12px;overflow:hidden
+}
+.charbourg-battle{width:min(100%,620px)!important;margin:0 auto!important}
+.charbourg-variants{width:100%;max-width:1000px;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px;align-items:stretch}
+.charbourg-variant{width:100%!important;min-width:0!important;margin:0!important}
+.charbourg-variant:last-child{grid-column:1/-1!important;width:min(100%,620px)!important;justify-self:center!important}
+.charbourg-sprites{width:100%;min-height:82px;display:flex!important;align-items:flex-end;justify-content:center!important;gap:9px;margin:8px auto 10px;flex-wrap:wrap}
+.charbourg-sprites img{width:auto;height:66px;max-width:88px;object-fit:contain}
+.charbourg-sprites img.leader{height:105px;max-width:82px}
+.charbourg-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.charbourg-variant-title{margin:0 0 8px;color:#ff2a16;font-size:16px;font-weight:1000}
+.cha-water{color:#398cff}.cha-poison{color:#ed65f2}.cha-ice{color:#42d8ff}
+@media(max-width:800px){
+ .charbourg-variants{grid-template-columns:1fr!important;max-width:620px}
+ .charbourg-variant:last-child{grid-column:auto!important;width:100%!important}
+}
+</style>
+
+
+<style>
+/* ===== SINNOH 4. VERCHAMPS ===== */
+.verchamps-reference{
+ grid-column:1/-1!important;display:block!important;width:min(100%,1000px)!important;max-width:1000px!important;
+ margin:28px auto!important;padding:0!important;justify-self:center!important;box-sizing:border-box!important;
+ overflow:hidden;text-align:center!important
+}
+.verchamps-title{margin:0;padding:22px 24px 16px;text-align:center;font-size:clamp(25px,3vw,38px);font-weight:1000;color:#fff500}
+.verchamps-line{height:1px;background:linear-gradient(90deg,rgba(255,224,0,.1),rgba(255,224,0,.8),rgba(255,224,0,.1))}
+.verchamps-wrap{width:100%;box-sizing:border-box;padding:28px 16px;display:flex!important;flex-direction:column;align-items:center!important;gap:16px}
+.verchamps-battle{
+ width:min(100%,620px)!important;box-sizing:border-box;margin:0 auto!important;padding:20px 18px;
+ text-align:center;background:rgba(22,22,26,.92);border:1px solid rgba(255,214,0,.24);border-radius:13px
+}
+.verchamps-sprites{width:100%;min-height:84px;display:flex!important;align-items:flex-end;justify-content:center!important;gap:12px;margin:8px auto 10px;flex-wrap:wrap}
+.verchamps-sprites img{width:auto;height:70px;max-width:95px;object-fit:contain}
+.verchamps-sprites img.leader{height:115px;max-width:90px}
+.verchamps-text{margin:7px 0;font-weight:800;line-height:1.4;overflow-wrap:anywhere}
+.ver-water{color:#398cff}.ver-poison{color:#ed65f2}.ver-fairy{color:#ef79d0}.ver-ground{color:#d7a85a}
+.verchamps-note{color:#ffd52a;font-size:13px;font-weight:800}
+@media(max-width:650px){.verchamps-reference{width:100%!important}.verchamps-wrap{padding:18px 6px}.verchamps-battle{width:100%!important}}
+
+/* ===== JOHTO — BANNIÈRE BLEU/CYAN ===== */
+.johto-region-highlight{
+ grid-column:1/-1!important;width:min(100%,1100px)!important;box-sizing:border-box!important;
+ margin:55px auto 22px!important;padding:26px 30px!important;text-align:center!important;
+ border:2px solid rgba(67,190,255,.75)!important;border-radius:18px!important;
+ background:radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+ linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97))!important;
+ box-shadow:0 0 22px rgba(40,175,255,.25),inset 0 0 28px rgba(40,175,255,.09)!important;
+ color:#fff!important;font-size:clamp(34px,5vw,58px)!important;font-weight:1000!important;
+ letter-spacing:5px!important;text-transform:uppercase!important;
+ text-shadow:0 0 8px rgba(255,255,255,.35),0 0 18px rgba(48,185,255,.8),0 0 36px rgba(48,185,255,.45)!important;
+ animation:johtoPulse 2.4s ease-in-out infinite
+}
+.johto-region-highlight::before{content:"◆ ";color:#43c6ff}.johto-region-highlight::after{content:" ◆";color:#43c6ff}
+@keyframes johtoPulse{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.015);filter:brightness(1.16)}}
+</style>
+
+
+<style>
+/* ===== JOHTO — MÊME STYLE QUE KANTO / HOENN ===== */
+.route-region-title.johto-region-highlight,
+.johto-region-highlight{
+    grid-column:1 / -1 !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:30px auto 22px !important;
+    padding:26px 30px !important;
+    text-align:center !important;
+    border:2px solid rgba(67,190,255,.75) !important;
+    border-radius:18px !important;
+    background:radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97)) !important;
+    box-shadow:0 0 22px rgba(40,175,255,.25),inset 0 0 28px rgba(40,175,255,.09) !important;
+    color:#fff !important;
+    font-size:clamp(34px,5vw,58px) !important;
+    font-weight:1000 !important;
+    letter-spacing:5px !important;
+    text-transform:uppercase !important;
+    text-shadow:0 0 8px rgba(255,255,255,.35),0 0 18px rgba(48,185,255,.8),0 0 36px rgba(48,185,255,.45) !important;
+    animation:johtoRegionPulse 2.4s ease-in-out infinite !important;
+}
+.route-region-title.johto-region-highlight::before,.johto-region-highlight::before{content:"◆ ";color:#43c6ff}
+.route-region-title.johto-region-highlight::after,.johto-region-highlight::after{content:" ◆";color:#43c6ff}
+@keyframes johtoRegionPulse{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.015);filter:brightness(1.16)}}
+@media(prefers-reduced-motion:reduce){.johto-region-highlight{animation:none!important}}
+</style>
+
+
+<style>
+/* JOHTO — centré dans sa barre */
+.region-title.johto,
+.johto-title,
+[data-region="Johto"],
+[data-region="johto"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const els = [...document.querySelectorAll("h1,h2,h3,h4,div,section")];
+    const johto = els.find(el => {
+        const t = el.textContent.trim().replace(/[🌸◆]/g, "").trim().toUpperCase();
+        return el.children.length === 0 && t === "JOHTO";
+    });
+    if (johto) {
+        johto.style.setProperty("width", "100%", "important");
+        johto.style.setProperty("box-sizing", "border-box", "important");
+        johto.style.setProperty("text-align", "center", "important");
+        johto.style.setProperty("margin-left", "auto", "important");
+        johto.style.setProperty("margin-right", "auto", "important");
+        johto.style.setProperty("justify-content", "center", "important");
+    }
+});
+</script>
+
+
+<style>
+/* ===== ACAJOU : blocs plus serrés ===== */
+.route-card.acajou-compact{
+    max-width:980px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+.acajou-compact .dewford-battle{
+    margin-bottom:10px !important;
+}
+.acajou-compact .acajou-variants{
+    width:min(100%,760px) !important;
+    margin:8px auto 0 !important;
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+    align-items:start !important;
+}
+.acajou-compact .acajou-variants .dewford-note{
+    margin:0 !important;
+    padding:12px 10px !important;
+    min-height:0 !important;
+}
+.acajou-compact .dewford-sprites{
+    margin:5px auto !important;
+    gap:5px !important;
+}
+.acajou-compact .dewford-sprites img{
+    max-width:62px !important;
+    max-height:62px !important;
+}
+.acajou-compact p{
+    margin:4px auto !important;
+}
+@media(max-width:720px){
+    .acajou-compact .acajou-variants{
+        grid-template-columns:1fr !important;
+        width:100% !important;
+    }
+}
+</style>
+
+
+<style>
+/* ===== ACAJOU ULTRA COMPACT ===== */
+.acajou-compact{
+    max-width:860px !important;
+    margin:0 auto 16px !important;
+}
+.acajou-compact .dewford-title{
+    margin-bottom:8px !important;
+    padding:11px 14px !important;
+}
+.acajou-compact .dewford-line{
+    margin:0 auto 6px !important;
+}
+.acajou-compact .dewford-battle{
+    width:min(100%,520px) !important;
+    padding:8px 10px !important;
+    margin:0 auto 6px !important;
+}
+.acajou-compact .acajou-variants{
+    width:min(100%,650px) !important;
+    margin:4px auto 0 !important;
+    gap:5px !important;
+}
+.acajou-compact .acajou-variants .dewford-note{
+    padding:7px 7px !important;
+    margin:0 !important;
+    line-height:1.15 !important;
+}
+.acajou-compact .dewford-sprites{
+    margin:2px auto !important;
+    gap:2px !important;
+}
+.acajou-compact .dewford-sprites img{
+    max-width:50px !important;
+    max-height:50px !important;
+}
+.acajou-compact .dewford-sprites img.leader{
+    max-width:45px !important;
+    max-height:45px !important;
+}
+.acajou-compact p{
+    margin:2px auto !important;
+    line-height:1.15 !important;
+}
+.acajou-compact .dewford-note strong{
+    line-height:1.1 !important;
+}
+@media(max-width:720px){
+    .acajou-compact{max-width:100% !important}
+    .acajou-compact .acajou-variants{
+        width:calc(100% - 12px) !important;
+        gap:4px !important;
+    }
+}
+</style>
+
+
+<style>
+/* ACAJOU : cases plus petites, écritures normales */
+.acajou-compact{
+    max-width:780px !important;
+}
+.acajou-compact .dewford-battle{
+    width:min(100%,480px) !important;
+    padding:8px 10px !important;
+    font-size:14px !important;
+}
+.acajou-compact .acajou-variants{
+    width:min(100%,590px) !important;
+    gap:5px !important;
+}
+.acajou-compact .acajou-variants .dewford-note{
+    padding:6px 8px !important;
+    font-size:14px !important;
+    line-height:1.3 !important;
+}
+.acajou-compact p,
+.acajou-compact .dewford-lead,
+.acajou-compact .dewford-move,
+.acajou-compact .dewford-note{
+    font-size:14px !important;
+    line-height:1.3 !important;
+}
+.acajou-compact .dewford-sprites img{
+    max-width:48px !important;
+    max-height:48px !important;
+}
+.acajou-compact .dewford-sprites img.leader{
+    max-width:44px !important;
+    max-height:44px !important;
+}
+</style>
+
+
+<style>
+/* ACAJOU : texte exactement comme les arènes au-dessus */
+.acajou-compact .dewford-battle,
+.acajou-compact .acajou-variants .dewford-note,
+.acajou-compact p,
+.acajou-compact .dewford-lead,
+.acajou-compact .dewford-move,
+.acajou-compact .dewford-note,
+.acajou-compact .dewford-note strong{
+    font-size:inherit !important;
+    line-height:inherit !important;
+}
+</style>
+
+
+<style>
+/* ACAJOU : remettre les écritures en gras */
+.acajou-compact p,
+.acajou-compact .dewford-lead,
+.acajou-compact .dewford-move,
+.acajou-compact .dewford-note {
+    font-weight: 700 !important;
+}
+.acajou-compact .dewford-note strong {
+    font-weight: 900 !important;
+}
+</style>
+
+
+<style>
+/* OGOESSE — écritures en gras comme les sections précédentes */
+.route-card.ogoesse-bold p,
+.route-card.ogoesse-bold .dewford-lead,
+.route-card.ogoesse-bold .dewford-move,
+.route-card.ogoesse-bold .dewford-note {
+    font-weight: 700 !important;
+}
+.route-card.ogoesse-bold strong {
+    font-weight: 900 !important;
+}
+</style>
+
+
+<style>
+.route-card.mistralton-bold p,
+.route-card.mistralton-bold .dewford-lead,
+.route-card.mistralton-bold .dewford-move,
+.route-card.mistralton-bold .dewford-note{
+    font-weight:700 !important;
+}
+.route-card.mistralton-bold strong{
+    font-weight:900 !important;
+}
+</style>
+
+
+<style>
+.mistralton-bold,
+.mistralton-bold p,
+.mistralton-bold span,
+.mistralton-bold .dewford-note,
+.mistralton-bold .dewford-lead,
+.mistralton-bold .dewford-move {
+    font-weight: 800 !important;
+}
+.mistralton-bold strong {
+    font-weight: 900 !important;
+}
+</style>
+
+
+<style>
+.unys-bold p,.unys-bold .dewford-lead,.unys-bold .dewford-note{font-weight:700 !important}
+.unys-bold strong{font-weight:900 !important}
+</style>
+
 </head>
 
 <body>
@@ -3278,7 +4662,6 @@
 <div class="pokemon-content">
     <h3>Typhlosion</h3>
     <p class="pokemon-type"><span class="type-pill type-feu">Feu</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
     <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Éruption</span></div>
 
     <div class="pokemon-details">
@@ -3342,6 +4725,7 @@
                 <div class="ev-stat"><span>Speed</span><strong>252</strong></div>
             </div>
         </div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
 
         <div class="detail-block talent-block">
     <h4>Talent</h4>
@@ -3369,7 +4753,6 @@
         <div class="pokemon-content">
     <h3>Tortank</h3>
     <p class="pokemon-type"><span class="type-pill type-eau">Eau</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Doux</strong></div>
     <div class="move-note egg-move-note">🥚 Giclédo : Egg Move</div>
     <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Giclédo</span></div>
 
@@ -3457,6 +4840,7 @@
                 </div>
             </div>
         </div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Doux</strong></div>
 
         <div class="detail-block talent-block">
             <h4>Talent</h4>
@@ -3485,7 +4869,6 @@
                     <div class="pokemon-content">
     <h3>Sorbouboul</h3>
     <p class="pokemon-type"><span class="type-pill type-glace">Glace</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
     <div class="move-note pp-max-note"><img class="pp-max-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/pp-max.png" alt="PP Max"> <span>PP MAX : Blizzard</span></div>
 
     <p class="pokemon-info">
@@ -3577,6 +4960,7 @@
                 </div>
             </div>
         </div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
 
         <div class="detail-block talent-block">
             <h4>Talent</h4>
@@ -3597,19 +4981,21 @@
     <div class="pokemon-picture">
         <img
             src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif"
-            alt="Garchomp"
+            alt="Carchacrok"
         >
     </div>
 
     <div class="pokemon-content">
         <h3>Carchacrok</h3>
         <p class="pokemon-type"><span class="type-pill type-dragon">Dragon</span><span class="type-pill type-sol">Sol</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Solo</strong></div>
         <div class="pokemon-details">
             <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="SOL">Séisme</span>
 <span data-type="DRAGON">Draco-Griffe</span>
 <span data-type="FEU">Journée Ensoleillée</span>
 <span data-type="NORMAL">Coup d'Main</span></div></div>
+            <div class="detail-block iv-block"><h4>IV</h4><div class="iv-grid"><div class="iv-stat"><span>PV</span><strong>0–8</strong></div><div class="iv-stat"><span>ATK</span><strong>31</strong></div><div class="iv-stat"><span>DEF</span><strong>0–8</strong></div><div class="iv-stat"><span>ATK<br>Spé</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>DEF<br>Spé</span><strong>25–31</strong></div><div class="iv-stat"><span>Speed</span><strong>31</strong></div></div></div>
+            <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>252</strong></div><div class="ev-stat"><span>DEF</span><strong>0</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>26</strong></div><div class="ev-stat"><span>Speed</span><strong>232</strong></div></div></div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Solo</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Voile Sable</p></div>
             <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
         </div>
@@ -3625,19 +5011,21 @@
                     <div class="pokemon-picture">
                         <img
                             src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
-                            alt="Weezing"
+                            alt="Smogogo"
                         >
                     </div>
 
                     <div class="pokemon-content">
                         <h3>Smogogo</h3>
                         <p class="pokemon-type"><span class="type-pill type-poison">Poison</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Rigide</strong></div>
         <div class="pokemon-details">
             <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="TÉNÈBRES">Assurance</span>
 <span data-type="NORMAL">Explosion</span>
 <span data-type="FEU">Incinération</span>
 <span data-type="EAU">Danse Pluie</span></div></div>
+            <div class="detail-block iv-block"><h4>IV</h4><div class="iv-grid"><div class="iv-stat"><span>PV</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>ATK</span><strong>31</strong></div><div class="iv-stat"><span>DEF</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>ATK<br>Spé</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>DEF<br>Spé</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>Speed</span><strong>31</strong></div></div></div>
+            <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>252</strong></div><div class="ev-stat"><span>DEF</span><strong>6</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>Speed</span><strong>252</strong></div></div></div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Rigide</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Gaz Réactif</p></div>
             <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
         </div>
@@ -3660,12 +5048,14 @@
                     <div class="pokemon-content">
                         <h3>Togekiss</h3>
                         <p class="pokemon-type"><span class="type-pill type-normal">Normal</span><span class="type-pill type-vol">Vol</span></p>
-    <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
         <div class="pokemon-details">
             <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="NORMAL">Mégaphone</span>
 <span data-type="NORMAL">Coup d'Main</span>
 <span data-type="ÉLECTRIK">Onde de Choc</span>
 <span data-type="VOL">Vol</span></div></div>
+            <div class="detail-block iv-block"><h4>IV</h4><div class="iv-grid"><div class="iv-stat"><span>PV</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>ATK</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>DEF</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>ATK<br>Spé</span><strong>31</strong></div><div class="iv-stat"><span>DEF<br>Spé</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>Speed</span><strong>31</strong></div></div></div>
+            <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>0</strong></div><div class="ev-stat"><span>DEF</span><strong>0</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>252</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>6</strong></div><div class="ev-stat"><span>Speed</span><strong>252</strong></div></div></div>
+            <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Sérénité</p></div>
             <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🕶️</span><strong>Lunettes Choix</strong></div>
         </div>
@@ -3831,35 +5221,35 @@
         ======================================== */
 
         const arenaImages = {
-            "Lavaridge Town": "images/arenas/lavaridge.jpg",
-            "Dewford Town": "images/arenas/dewford.jpg",
-            "Fortree City": "images/arenas/fortree.jpg",
-            "Mauville City": "images/arenas/mauville.jpg",
-            "Rustboro City": "images/arenas/rustboro.jpg",
+            "Vermilava": "images/arenas/lavaridge.jpg",
+            "Myokara": "images/arenas/dewford.jpg",
+            "Cimetronelle": "images/arenas/fortree.jpg",
+            "Lavandia": "images/arenas/mauville.jpg",
+            "Mérouville": "images/arenas/rustboro.jpg",
 
-            "Vermilion City": "images/arenas/vermilion.jpg",
-            "Cinnabar Island": "images/arenas/cinnabar.jpg",
-            "Celadon City": "images/arenas/celadon.jpg",
-            "Saffron City": "images/arenas/saffron.jpg",
-            "Pewter City": "images/arenas/pewter.jpg",
+            "Carmin sur Mer": "images/arenas/vermilion.jpg",
+            "Cramois’Île": "images/arenas/cinnabar.jpg",
+            "Céladopole": "images/arenas/celadon.jpg",
+            "Safrania": "images/arenas/saffron.jpg",
+            "Argenta": "images/arenas/pewter.jpg",
 
-            "Eterna City": "images/arenas/eterna.jpg",
-            "Veilstone City": "images/arenas/veilstone.jpg",
-            "Oreburgh City": "images/arenas/oreburgh.jpg",
-            "Pastoria City": "images/arenas/pastoria.jpg",
+            "Vestigion": "images/arenas/eterna.jpg",
+            "Voilaroc": "images/arenas/veilstone.jpg",
+            "Charbourg": "images/arenas/oreburgh.jpg",
+            "Verchamps": "images/arenas/pastoria.jpg",
 
-            "Cianwood City": "images/arenas/cianwood.jpg",
-            "Goldenrod City": "images/arenas/goldenrod.jpg",
-            "Olivine City": "images/arenas/olivine.jpg",
-            "Violet City": "images/arenas/violet.jpg",
-            "Blackthorn City": "images/arenas/blackthorn.jpg",
-            "Mahogany Town": "images/arenas/mahogany.jpg",
+            "Irisia": "images/arenas/cianwood.jpg",
+            "Doublonville": "images/arenas/goldenrod.jpg",
+            "Oliville": "images/arenas/olivine.jpg",
+            "Mauville": "images/arenas/violet.jpg",
+            "Ébènelle": "images/arenas/blackthorn.jpg",
+            "Acajou": "images/arenas/mahogany.jpg",
 
-            "Castelia City": "images/arenas/castelia.jpg",
-            "Striaton City": "images/arenas/striaton.jpg",
-            "Opelucid City": "images/arenas/opelucid.jpg",
-            "Driftveil City": "images/arenas/driftveil.jpg",
-            "Nacrene City": "images/arenas/nacrene.jpg"
+            "Volucité": "images/arenas/castelia.jpg",
+            "Ogoesse": "images/arenas/striaton.jpg",
+            "Janusia": "images/arenas/opelucid.jpg",
+            "Port Yoneuve": "images/arenas/driftveil.jpg",
+            "Maillard": "images/arenas/nacrene.jpg"
         };
 
         const leaderImages = {
@@ -3906,263 +5296,275 @@
         const routes = [
             {
                 region: "🌊 Hoenn",
-                city: "Lavaridge Town",
+                city: "Vermilava",
                 leader: "Flannery",
                 number: 1,
-                description: "Commence le parcours par l'arène de Lavaridge Town.",
+                description: "Commence le parcours par l'arène de Vermilava.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Togekiss", "Helping Hand", "togekiss"],
-                action: "Utilise Water Spout avec Blastoise et Helping Hand avec Togekiss.",
-                note: "Si Blastoise est trop endommagé, pense à le soigner avant la prochaine arène.",
+                pokemon2: ["Togekiss", "Coup d’Main", "togekiss"],
+                action: "Utilise Giclédo avec Tortank et Coup d’Main avec Togekiss.",
+                note: "Si Tortank est trop endommagé, pense à le soigner avant la prochaine arène.",
                 specialEnemies: [["Démolosse", "Niv. 85", "houndoom"], ["Arcanin", "Niv. 85", "arcanine"]],
                 specialAction: "Utilise Giclédo + Mégaphone. Sinon, utilise Giclédo + Coup d’Main. Soigne Tortank s’il est trop blessé."
             },
             {
                 region: "🌊 Hoenn",
-                city: "Dewford Town",
+                city: "Myokara",
                 leader: "Brawly",
                 number: 2,
                 description: "Continue ensuite vers l'arène de Dewford.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
-                action: "Utilise Water Spout et Blizzard pour terminer rapidement le combat."
+                pokemon2: ["Sorbouboul", "Blizzard", "vanilluxe"],
+                action: "Utilise Giclédo et Blizzard pour terminer rapidement le combat."
             },
             {
                 region: "🌊 Hoenn",
-                city: "Fortree City",
+                city: "Cimetronelle",
                 leader: "Winona",
                 number: 3,
                 description: "Poursuis avec l'arène de Fortree.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Explosion", "weezing"],
-                action: "Utilise Water Spout avec Blastoise, puis Explosion avec Weezing. Envoie ensuite Typhlosion et Togekiss."
+                pokemon2: ["Smogogo", "Explosion", "weezing"],
+                action: "Utilise Giclédo avec Tortank, puis Explosion avec Smogogo. Envoie ensuite Typhlosion et Togekiss."
             },
             {
                 region: "🌊 Hoenn",
-                city: "Mauville City",
+                city: "Lavandia",
                 leader: "Wattson",
                 number: 4,
                 description: "Continue vers l'arène électrique de Mauville.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
-                action: "Utilise Eruption avec Typhlosion et Dragon Claw avec Garchomp."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Carchacrok", "Draco-Griffe", "garchomp"],
+                action: "Utilise Éruption avec Typhlosion et Draco-Griffe avec Carchacrok."
             },
             {
                 region: "🌊 Hoenn",
-                city: "Rustboro City",
+                city: "Mérouville",
                 leader: "Roxanne",
                 number: 5,
                 description: "Termine les arènes de Hoenn à Rustboro.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Assurance", "weezing"],
-                action: "Utilise Water Spout avec Blastoise et Assurance avec Weezing."
+                pokemon2: ["Smogogo", "Assurance", "weezing"],
+                action: "Utilise Giclédo avec Tortank et Assurance avec Smogogo."
             },
 
             {
                 region: "🔥 Kanto",
-                city: "Vermilion City",
+                city: "Carmin sur Mer",
                 leader: "Lt. Surge",
                 number: 6,
                 description: "Première étape du parcours à Kanto.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
-                action: "Utilise Eruption et Dragon Claw."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Carchacrok", "Draco-Griffe", "garchomp"],
+                action: "Utilise Éruption et Draco-Griffe."
             },
             {
                 region: "🔥 Kanto",
-                city: "Cinnabar Island",
+                city: "Cramois’Île",
                 leader: "Blaine",
                 number: 7,
                 description: "Continue vers l'arène de Cinnabar.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Rain Dance", "weezing"],
-                action: "Utilise Water Spout. Selon l'équipe adverse, remplace Weezing par Vanilluxe si nécessaire."
+                pokemon2: ["Smogogo", "Danse Pluie", "weezing"],
+                action: "Utilise Giclédo. Selon l'équipe adverse, remplace Smogogo par Sorbouboul si nécessaire."
             },
             {
                 region: "🔥 Kanto",
-                city: "Celadon City",
+                city: "Céladopole",
                 leader: "Erika",
                 number: 8,
                 description: "Enchaîne avec l'arène de Celadon.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Explosion", "weezing"],
-                action: "Utilise Water Spout puis Explosion. Envoie ensuite Typhlosion et Togekiss."
+                pokemon2: ["Smogogo", "Explosion", "weezing"],
+                action: "Utilise Giclédo puis Explosion. Envoie ensuite Typhlosion et Togekiss."
             },
             {
                 region: "🔥 Kanto",
-                city: "Saffron City",
+                city: "Safrania",
                 leader: "Sabrina",
                 number: 9,
                 description: "Continue vers l'arène de Saffron.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
-                action: "Utilise Eruption et Earthquake."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Carchacrok", "Séisme", "garchomp"],
+                action: "Utilise Éruption et Séisme."
             },
             {
                 region: "🔥 Kanto",
-                city: "Pewter City",
+                city: "Argenta",
                 leader: "Brock",
                 number: 10,
                 description: "Termine la partie Kanto à Pewter.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Assurance", "weezing"],
-                action: "Utilise Water Spout et Assurance.",
+                pokemon2: ["Smogogo", "Assurance", "weezing"],
+                action: "Utilise Giclédo et Assurance.",
                 optional: true
             },
 
             {
                 region: "⛰️ Sinnoh",
-                city: "Eterna City",
+                city: "Vestigion",
                 leader: "Gardenia",
                 number: 11,
                 description: "Commence Sinnoh avec l'arène d'Eterna.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
-                action: "Utilise Eruption et Hyper Voice."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Mégaphone", "togekiss"],
+                action: "Utilise Éruption et Mégaphone."
             },
             {
                 region: "⛰️ Sinnoh",
-                city: "Veilstone City",
+                city: "Voilaroc",
                 leader: "Maylene",
                 number: 12,
                 description: "Continue vers l'arène de Veilstone.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Togekiss", "Helping Hand", "togekiss"],
-                action: "Utilise Eruption avec Typhlosion et Helping Hand avec Togekiss."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Coup d’Main", "togekiss"],
+                action: "Utilise Éruption avec Typhlosion et Coup d’Main avec Togekiss."
             },
             {
                 region: "⛰️ Sinnoh",
-                city: "Oreburgh City",
+                city: "Charbourg",
                 leader: "Roark",
                 number: 13,
                 description: "Continue vers l'arène d'Oreburgh.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Assurance", "weezing"],
-                action: "Utilise Water Spout et Assurance."
+                pokemon2: ["Smogogo", "Assurance", "weezing"],
+                action: "Utilise Giclédo et Assurance."
             },
             {
                 region: "⛰️ Sinnoh",
-                city: "Pastoria City",
+                city: "Verchamps",
                 leader: "Crasher Wake",
                 number: 14,
                 description: "Termine cette partie de Sinnoh à Pastoria.",
-                pokemon1: ["Blastoise", "Fake Out", "blastoise"],
-                pokemon2: ["Weezing", "Explosion", "weezing"],
-                action: "Utilise Fake Out puis Explosion. Envoie ensuite Togekiss et Garchomp."
+                pokemon1: ["Tortank", "Bluff", "blastoise"],
+                pokemon2: ["Smogogo", "Explosion", "weezing"],
+                action: "Utilise Bluff puis Explosion. Envoie ensuite Togekiss et Carchacrok."
             },
 
             {
                 region: "🌸 Johto",
-                city: "Cianwood City",
+                city: "Irisia",
                 leader: "Chuck",
                 number: 15,
                 description: "Commence Johto à Cianwood.",
-                pokemon1: ["Togekiss", "Hyper Voice", "togekiss"],
-                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
-                action: "Utilise Hyper Voice et Earthquake."
+                pokemon1: ["Togekiss", "Mégaphone", "togekiss"],
+                pokemon2: ["Carchacrok", "Séisme", "garchomp"],
+                action: "Utilise Mégaphone et Séisme."
             },
             {
                 region: "🌸 Johto",
-                city: "Goldenrod City",
+                city: "Doublonville",
                 leader: "Whitney",
                 number: 16,
                 description: "Continue vers Goldenrod.",
-                pokemon1: ["Garchomp", "Earthquake", "garchomp"],
-                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
-                action: "Utilise Earthquake et Hyper Voice."
+                pokemon1: ["Carchacrok", "Séisme", "garchomp"],
+                pokemon2: ["Togekiss", "Mégaphone", "togekiss"],
+                action: "Utilise Séisme et Mégaphone."
             },
             {
                 region: "🌸 Johto",
-                city: "Olivine City",
+                city: "Oliville",
                 leader: "Jasmine",
                 number: 17,
                 description: "Continue vers Olivine.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Weezing", "Assurance", "weezing"],
-                action: "Utilise Eruption et Assurance."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Smogogo", "Assurance", "weezing"],
+                action: "Utilise Éruption et Assurance."
             },
             {
                 region: "🌸 Johto",
-                city: "Violet City",
+                city: "Mauville",
                 leader: "Falkner",
                 number: 18,
-                description: "Continue vers Violet City.",
+                description: "Continue vers Mauville.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
-                action: "Utilise Water Spout et Blizzard."
+                pokemon2: ["Sorbouboul", "Blizzard", "vanilluxe"],
+                action: "Utilise Giclédo et Blizzard."
             },
             {
                 region: "🌸 Johto",
-                city: "Blackthorn City",
+                city: "Ébènelle",
                 leader: "Clair",
                 number: 19,
                 description: "Termine la route principale de Johto.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Explosion", "weezing"],
-                action: "Utilise Water Spout puis Explosion. Envoie ensuite Togekiss et Vanilluxe."
+                pokemon2: ["Smogogo", "Explosion", "weezing"],
+                action: "Utilise Giclédo puis Explosion. Envoie ensuite Togekiss et Sorbouboul."
             },
             {
                 region: "🌸 Johto",
-                city: "Mahogany Town",
+                city: "Acajou",
                 leader: "Pryce",
                 number: 20,
                 description: "Étape optionnelle selon le temps disponible.",
-                pokemon1: ["Weezing", "Explosion", "weezing"],
-                pokemon2: ["Garchomp", "Dragon Claw", "garchomp"],
-                action: "Utilise Explosion et Dragon Claw.",
+                pokemon1: ["Smogogo", "Explosion", "weezing"],
+                pokemon2: ["Carchacrok", "Draco-Griffe", "garchomp"],
+                action: "Utilise Explosion et Draco-Griffe.",
                 note: "Effectue cette arène uniquement si ton temps et l'état de ton équipe le permettent.",
                 optional: true
             },
 
             {
                 region: "⚡ Unys",
-                city: "Castelia City",
+                city: "Volucité",
                 leader: "Burgh",
                 number: 21,
                 description: "Commence Unys à Castelia.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
-                action: "Utilise Water Spout et Blizzard."
+                pokemon2: ["Sorbouboul", "Blizzard", "vanilluxe"],
+                action: "Utilise Giclédo et Blizzard."
             },
             {
                 region: "⚡ Unys",
-                city: "Striaton City",
+                city: "Ogoesse",
                 leader: "Chili",
                 number: 22,
                 description: "Le champion dépend de l'arène affrontée.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Togekiss", "Hyper Voice", "togekiss"],
-                action: "Utilise Eruption et Hyper Voice."
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Togekiss", "Mégaphone", "togekiss"],
+                action: "Utilise Éruption et Mégaphone."
             },
+            {
+                region: "⚡ Unys",
+                city: "Nimbasa City",
+                leader: "Elesa",
+                number: 24,
+                description: "Méanville.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Smogogo", "Explosion", "weezing"],
+                action: "Giclédo + Explosion."
+            },
+            { type: "heal", label: "HEAL" },
             {
                 region: "⚡ Unys",
                 city: "Opelucid City",
                 leader: "Iris",
-                number: 23,
-                description: "Continue vers Opelucid.",
-                pokemon1: ["Typhlosion", "Eruption", "typhlosion"],
-                pokemon2: ["Vanilluxe", "Blizzard", "vanilluxe"],
-                action: "Utilise Eruption et Blizzard."
+                number: 25,
+                description: "Janusia.",
+                pokemon1: ["Typhlosion", "Éruption", "typhlosion"],
+                pokemon2: ["Sorbouboul", "Blizzard", "vanilluxe"],
+                action: "Éruption + Blizzard."
             },
+            { type: "heal", label: "HEAL" },
             {
                 region: "⚡ Unys",
                 city: "Driftveil City",
                 leader: "Clay",
-                number: 24,
+                number: 26,
                 description: "Continue vers Driftveil.",
                 pokemon1: ["Tortank", "Giclédo", "blastoise"],
-                pokemon2: ["Weezing", "Rain Dance", "weezing"],
-                action: "Utilise Water Spout et Rain Dance."
+                pokemon2: ["Smogogo", "Danse Pluie", "weezing"],
+                action: "Utilise Giclédo et Danse Pluie."
             },
             {
                 region: "⚡ Unys",
-                city: "Nacrene City",
+                city: "Maillard",
                 leader: "Lenora",
                 number: 25,
                 description: "Étape optionnelle selon ton temps et ta stratégie.",
-                pokemon1: ["Weezing", "Explosion", "weezing"],
-                pokemon2: ["Garchomp", "Earthquake", "garchomp"],
-                action: "Utilise Explosion puis Earthquake. Envoie ensuite Typhlosion et Togekiss.",
+                pokemon1: ["Smogogo", "Explosion", "weezing"],
+                pokemon2: ["Carchacrok", "Séisme", "garchomp"],
+                action: "Utilise Explosion puis Séisme. Envoie ensuite Typhlosion et Togekiss.",
                 note: "Cette étape peut être ignorée si le temps restant est insuffisant.",
                 optional: true
             }
@@ -4327,6 +5729,1138 @@ function createBattleTabs(route) {
     return tabsWrapper;
 }
         function createRouteCard(route) {
+    /* UNYS 6 — PORT YONEUVE / DRIFTVEIL CITY */
+    if (route.city === "Driftveil City" || route.city === "Port Yoneuve") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference unys-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">6. Port Yoneuve :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clay.png" alt="Bardane">
+                </div>
+                <p class="dewford-lead">Bardane — Arène de Port Yoneuve</p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 4 — MÉANVILLE / NIMBASA CITY */
+    if (route.city === "Nimbasa City" || route.city === "Méanville" || route.city === "Meanville") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference unys-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">4. Méanville :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="purple">Smogogo</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/elesa.png" alt="Inezia">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+                <p><strong>T1 :</strong> <span class="water">Giclédo</span> + <span class="purple">Explosion</span></p>
+                <p><strong>Note :</strong> Bluff sur Emolga ou Mygavolt.</p>
+                <p>Envoie <span class="fire">Typhlosion</span> et <span class="pink">Togekiss</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Éruption</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+            <div class="dewford-note">
+                <strong>Si Mygavolt :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/elesa.png" alt="Inezia">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/galvantula.gif" alt="Mygavolt">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Météores</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 5 — JANUSIA / OPELUCID CITY */
+    if (route.city === "Opelucid City" || route.city === "Janusia") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference unys-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">5. Janusia :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="fire">Typhlosion</span> et <span class="ice">Sorbouboul</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/iris.png" alt="Iris">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+                <p><span class="fire">Éruption</span> + <span class="ice">Blizzard</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Tranchodon survit et K.O. Sorbouboul :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/iris.png" alt="Iris">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/haxorus.gif" alt="Tranchodon">
+                </div>
+                <p>Envoie <span class="water">Tortank</span>.</p>
+                <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank"></div>
+                <p><span class="ice">Blizzard</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Lokhlass survit et K.O. Typhlosion :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/iris.png" alt="Iris">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/lapras.gif" alt="Lokhlass">
+                </div>
+                <p>Envoie <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok"></div>
+                <p><span class="purple">Séisme</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Clamiral survit et K.O. Typhlosion :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/iris.png" alt="Iris">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/samurott.gif" alt="Clamiral">
+                </div>
+                <p>Envoie <span class="pink">Togekiss</span>.</p>
+                <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss"></div>
+                <p><span class="pink">Mégaphone</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 3 — PARSEMILLE / MISTRALTON CITY */
+    if (route.city === "Mistralton City" || route.city === "Parsemille") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference mistralton-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">3. Parsemille :</h4>
+            <div class="dewford-line"></div>
+
+            <div class="dewford-battle">
+                <p class="dewford-lead"><strong>Commence avec <span class="water">Tortank</span> et <span class="ice">Sorbouboul</span>.</strong></p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/skyla.png" alt="Carolina">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Gueriaigle / Vaututrice :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/skyla.png" alt="Carolina">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/braviary.gif" alt="Gueriaigle">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/mandibuzz.gif" alt="Vaututrice">
+                </div>
+                <p><strong><span class="water">Giclédo</span> + <span class="ice">Blizzard</span></strong></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Lakmécygne / Farfaduvet :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/skyla.png" alt="Carolina">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/swanna.gif" alt="Lakmécygne">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/whimsicott.gif" alt="Farfaduvet">
+                </div>
+                <p><strong><span class="ice">Blizzard</span> + <span class="ice">Blizzard</span></strong></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Déflaisan :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/skyla.png" alt="Carolina">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/unfezant.gif" alt="Déflaisan">
+                </div>
+                <p><strong>T1 : <span class="ice">Blizzard</span></strong></p>
+                <p><strong>Retire Tortank.</strong></p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                </div>
+                <p><strong>Envoie <span class="purple">Smogogo</span>.</strong></p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+                <p><strong>T2 : <span class="purple">Assurance</span> + <span class="ice">Blizzard</span></strong></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 2 — OGOESSE / STRIATON CITY */
+    if (route.city === "Striaton City" || route.city === "Ogoesse") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference ogoesse-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">2. Ogoesse :</h4>
+            <div class="dewford-line"></div>
+
+            <div class="dewford-battle">
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/chili.png" alt="Armando">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/cilan.png" alt="Rachid">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/cress.png" alt="Noa">
+                </div>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Contre Armando :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/chili.png" alt="Armando">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p>Commence avec <span class="purple">Carchacrok</span> et <span class="pink">Togekiss</span>.</p>
+                <p><span class="purple">Séisme</span> + <span class="pink">Mégaphone</span></p>
+                <p><strong>Si Feunard / Solaroc :</strong> <span class="purple">Coup d’Main</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Contre Rachid :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/cilan.png" alt="Rachid">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p>Commence avec <span class="fire">Typhlosion</span> et <span class="pink">Togekiss</span>.</p>
+                <p><span class="fire">Calcination</span> + <span class="pink">Mégaphone</span></p>
+                <p><strong>Si Phyllali :</strong> <span class="fire">Éruption</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Contre Noa :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/cress.png" alt="Noa">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p>Commence avec <span class="fire">Typhlosion</span> et <span class="pink">Togekiss</span>.</p>
+                <p><span class="fire">Éruption</span> + <span class="pink">Mégaphone</span></p>
+                <p><strong>Si Mustéflott :</strong> retire Typhlosion, envoie <span class="ice">Sorbouboul</span>.</p>
+                <p><span class="ice">Mégaphone</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 1 — VOLUCITÉ / CASTELIA CITY */
+    if (route.city === "Castelia City" || route.city === "Volucité" || route.city === "Volucite") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">1. Volucité :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="ice">Sorbouboul</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/burgh.png" alt="Artie">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+                <p class="dewford-move"><span class="water">Giclédo</span> + <span class="ice">Blizzard</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* JOHTO 6 — ACAJOU / MAHOGANY TOWN (OPTIONNEL) */
+    if (route.city === "Mahogany Town" || route.city === "Acajou") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference acajou-compact";
+        card.innerHTML = `
+            <h4 class="dewford-title">6. Acajou (optionnel) :</h4>
+            <div class="dewford-line"></div>
+
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="purple">Smogogo</span> et <span class="purple">Carchacrok</span> (Carchacrok doit tomber K.O., sinon passe cette arène).</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png" alt="Frédo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+            </div>
+
+            <div class="acajou-variants">
+            <div class="dewford-note">
+                <strong>Si Artikodin / Kaimorse :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png" alt="Frédo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/articuno.gif" alt="Artikodin">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/walrein.gif" alt="Kaimorse">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span> + <span class="purple">Draco-Griffe</span> (sur Artikodin/Kaimorse)</p>
+                <p>Envoie <span class="fire">Typhlosion</span> et <span class="pink">Togekiss</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Éruption</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Momartik :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png" alt="Frédo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/froslass.gif" alt="Momartik">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span> + <span class="sun">Zénith</span></p>
+                <p>Envoie <span class="fire">Typhlosion</span> et <span class="water">Tortank</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Éruption</span> + <span class="water">Giclédo</span></p>
+                <p><strong>Note :</strong> Il peut être nécessaire de restaurer les PP d'Éruption de Typhlosion après.</p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Oniglali :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png" alt="Frédo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/glalie.gif" alt="Oniglali">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span></p>
+                <p>Retire Carchacrok → envoie <span class="water">Tortank</span> (pour le sacrifier).</p>
+                <p>Envoie <span class="fire">Typhlosion</span> et <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Éruption</span> + <span class="purple">Séisme</span></p>
+                <p>Envoie <span class="pink">Togekiss</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p><strong>T3 :</strong> <span class="pink">Mégaphone</span> + <span class="purple">Séisme</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Mammochon :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png" alt="Frédo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/mamoswine.gif" alt="Mammochon">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span> + <span class="purple">Draco-Griffe</span> (sur Mammochon)</p>
+                <p>Envoie <span class="water">Tortank</span> et <span class="fire">Typhlosion</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                </div>
+                <p><strong>T2 :</strong> <span class="water">Giclédo</span> + <span class="fire">Éruption</span></p>
+            </div>
+            </div>
+        `;
+        return card;
+    }
+
+    /* JOHTO 4 — MAUVILLE / VIOLET CITY */
+    if (route.city === "Violet City" || route.city === "Mauville") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">4. Mauville :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="ice">Sorbouboul</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/falkner.png" alt="Albert">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+                <p class="dewford-move"><strong>T1 :</strong> <span class="water">Giclédo</span> + <span class="ice">Blizzard</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Électhor / Bekipan :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/falkner.png" alt="Albert">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/zapdos.gif" alt="Électhor">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/pelipper.gif" alt="Bekipan">
+                </div>
+                <p><strong>T1 :</strong> <span class="water">Giclédo</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Note :</strong> Il peut être nécessaire de <span class="heal">HEAL</span> si Oliville s'est terminée via Explosion.
+            </div>
+        `;
+        return card;
+    }
+
+    /* JOHTO 5 — ÉBÈNELLE / BLACKTHORN CITY */
+    if (route.city === "Blackthorn City" || route.city === "Ébènelle" || route.city === "Ebenelle") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">5. Ébènelle :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="purple">Smogogo</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clair.png" alt="Sandra">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+                <p><strong>T1 :</strong> <span class="water">Giclédo</span> + <span class="purple">Explosion</span></p>
+                <p>Envoie <span class="pink">Togekiss</span> et <span class="ice">Sorbouboul</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+                <p class="dewford-move"><strong>T2 :</strong> <span class="pink">Mégaphone</span> + <span class="ice">Blizzard</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Tortank :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clair.png" alt="Sandra">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                </div>
+                <p><strong>T1 :</strong> <span class="water">Bluff</span> (sur Tortank) + <span class="purple">Explosion</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* JOHTO 3 — OLIVILLE : même style que les arènes au-dessus */
+    if (route.city === "Olivine City" || route.city === "Oliville") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">3. Oliville :</h4>
+            <div class="dewford-line"></div>
+
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="fire">Typhlosion</span> et <span class="purple">Smogogo</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/jasmine.png" alt="Jasmine">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+                <p class="dewford-move"><strong>T1 :</strong> <span class="fire">Éruption</span> + <span class="purple">Assurance</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Magnézone :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/jasmine.png" alt="Jasmine">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/magnezone.gif" alt="Magnézone">
+                </div>
+                <p><strong>T1 :</strong> <span class="fire">Éruption</span> + <span class="purple">Explosion</span></p>
+                <p>Envoie <span class="pink">Togekiss</span> et <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p><strong>T2 :</strong> <span class="pink">Mégaphone</span> + <span class="purple">Séisme</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* JOHTO — mêmes classes / même style que les arènes précédentes */
+    if (route.city === "Cianwood City" || route.city === "Irisia") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">1. Irisia :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="pink">Togekiss</span> et <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/chuck.png" alt="Chuck">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p class="dewford-move"><strong>T1 :</strong> <span class="pink">Mégaphone</span> + <span class="purple">Séisme</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    if (route.city === "Goldenrod City" || route.city === "Doublonville") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference";
+        card.innerHTML = `
+            <h4 class="dewford-title">2. Doublonville :</h4>
+            <div class="dewford-line"></div>
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="purple">Carchacrok</span> (Slot 1) et <span class="pink">Togekiss</span> (Slot 2).</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/whitney.png" alt="Blanche">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p class="dewford-move"><strong>T1 :</strong> <span class="purple">Séisme</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+            <div class="dewford-note"><strong>Note :</strong> Envoie <span class="fire">Typhlosion</span> si Carchacrok tombe K.O.</div>
+        `;
+        return card;
+    }
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+if (route.city === "Verchamps" || route.city === "Pastoria City") {
+    const card = document.createElement("article");
+    card.className = "route-card verchamps-reference";
+    card.innerHTML = `
+      <h4 class="verchamps-title">4. Verchamps :</h4>
+      <div class="verchamps-line"></div>
+      <div class="verchamps-wrap">
+        <div class="verchamps-battle">
+          <p class="verchamps-text">Commence avec <span class="ver-water">Tortank</span> et <span class="ver-poison">Smogogo</span>.</p>
+          <div class="verchamps-sprites">
+            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/crasherwake.png" alt="Lovis">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+          </div>
+
+          <p class="verchamps-text">T1 : <span class="ver-water">Bluff</span> <small>(sur Sharpedo)</small> + <span class="ver-poison">Explosion</span></p>
+          <p class="verchamps-text">Envoie <span class="ver-fairy">Togekiss</span> et <span class="ver-ground">Carchacrok</span>.</p>
+
+          <div class="verchamps-sprites">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+          </div>
+
+          <p class="verchamps-text">T2 : <span class="ver-fairy">Mégaphone</span> + <span class="ver-ground">Séisme</span></p>
+        </div>
+
+        <p class="verchamps-note">Note : il peut être nécessaire de soigner Carchacrok s'il est affaibli.</p>
+      </div>
+    `;
+    return card;
+}
+
+if (route.city === "Charbourg" || route.city === "Oreburgh City") {
+    const card = document.createElement("article");
+    card.className = "route-card charbourg-reference";
+    card.innerHTML = `
+      <h4 class="charbourg-title">3. Charbourg :</h4>
+      <div class="charbourg-line"></div>
+      <div class="charbourg-wrap">
+
+        <div class="charbourg-battle">
+          <p class="charbourg-text">Commence avec <span class="cha-water">Tortank</span> et <span class="cha-poison">Smogogo</span>.</p>
+          <div class="charbourg-sprites">
+            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/roark.png" alt="Pierrick">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+          </div>
+          <p class="charbourg-text"><span class="cha-water">Giclédo</span> + <span class="cha-poison">Assurance</span></p>
+        </div>
+
+        <div class="charbourg-variants">
+          <div class="charbourg-variant">
+            <p class="charbourg-variant-title">Si vous affrontez Tarinorme :</p>
+            <div class="charbourg-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/roark.png" alt="Pierrick">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/probopass.gif" alt="Tarinorme">
+            </div>
+            <p class="charbourg-text">T1 : <span class="cha-water">Giclédo</span></p>
+            <p class="charbourg-text">Retire <span class="cha-poison">Smogogo</span>.</p>
+            <div class="charbourg-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+            </div>
+            <p class="charbourg-text">Envoie <span class="cha-ice">Sorbouboul</span>.</p>
+            <div class="charbourg-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+            </div>
+            <p class="charbourg-text">T2 : <span class="cha-water">Giclédo</span> + <span class="cha-ice">Blizzard</span></p>
+          </div>
+
+          <div class="charbourg-variant">
+            <p class="charbourg-variant-title">Si vous affrontez Tyranocif / Minotaupe :</p>
+            <div class="charbourg-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/roark.png" alt="Pierrick">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/tyranitar.gif" alt="Tyranocif">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/excadrill.gif" alt="Minotaupe">
+            </div>
+            <p class="charbourg-text">T1 : <span class="cha-water">Giclédo</span> + <span class="cha-poison">Assurance</span> <small>(surtout sur Vacilys)</small></p>
+          </div>
+
+          <div class="charbourg-variant">
+            <p class="charbourg-variant-title">Si Vacilys et Roigada sont envoyés ensemble au tour 2 :</p>
+            <div class="charbourg-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/roark.png" alt="Pierrick">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/cradily.gif" alt="Vacilys">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/slowbro.gif" alt="Flagadoss">
+            </div>
+            <p class="charbourg-text">Si <span class="cha-poison">Smogogo</span> est mis K.O. par Psyko :</p>
+            <p class="charbourg-text">Envoie <span class="cha-ice">Sorbouboul</span>.</p>
+            <div class="charbourg-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+            </div>
+            <p class="charbourg-text"><span class="cha-water">Giclédo</span> + <span class="cha-ice">Blizzard</span></p>
+          </div>
+        </div>
+      </div>
+    `;
+    return card;
+}
+
+if (route.city === "Voilaroc" || route.city === "Veilstone City") {
+    const card = document.createElement("article");
+    card.className = "route-card voilaroc-reference";
+    card.innerHTML = `
+      <h4 class="voilaroc-title">2. Voilaroc :</h4>
+      <div class="voilaroc-line"></div>
+      <div class="voilaroc-wrap">
+
+        <div class="voilaroc-battle">
+          <p class="voilaroc-text">Commence avec <span class="voi-fire">Typhlosion</span> et <span class="voi-fairy">Togekiss</span>.</p>
+          <div class="voilaroc-sprites">
+            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/maylene.png" alt="Mélina">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+          </div>
+          <p class="voilaroc-text"><span class="voi-fire">Éruption</span> + <span class="voi-fairy">Coup d’Main</span></p>
+        </div>
+
+        <div class="voilaroc-variants">
+          <div class="voilaroc-variant">
+            <p class="voilaroc-variant-title">Si vous affrontez Simiabraz :</p>
+            <div class="voilaroc-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/maylene.png" alt="Mélina">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/infernape.gif" alt="Simiabraz">
+            </div>
+            <p class="voilaroc-text">T1 : <span class="voi-fire">Éruption</span> + <span class="voi-fairy">Mégaphone</span></p>
+          </div>
+
+          <div class="voilaroc-variant">
+            <p class="voilaroc-variant-title">Si vous affrontez Shaofouine :</p>
+            <div class="voilaroc-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/maylene.png" alt="Mélina">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/mienshao.gif" alt="Shaofouine">
+            </div>
+            <p class="voilaroc-text">T1 : <span class="voi-fire">Calcination</span> + <span class="voi-fairy">Mégaphone</span></p>
+          </div>
+        </div>
+
+        <p class="voilaroc-note">Note : il peut être nécessaire de soigner Typhlosion s'il est affaibli.</p>
+      </div>
+    `;
+    return card;
+}
+
+if (route.city === "Vestigion") {
+    const fragment = document.createDocumentFragment();
+
+    const sinnohTitle = document.createElement("div");
+    sinnohTitle.className = "sinnoh-region-highlight";
+    sinnohTitle.textContent = "SINNOH";
+    fragment.appendChild(sinnohTitle);
+
+    const card = document.createElement("article");
+    card.className = "route-card vestigion-reference";
+    card.innerHTML = `
+      <h4 class="vestigion-title">1. Vestigion :</h4>
+      <div class="vestigion-line"></div>
+      <div class="vestigion-wrap">
+
+        <div class="vestigion-battle">
+          <p class="vestigion-text">Commence avec <span class="ves-fire">Typhlosion</span> et <span class="ves-fairy">Togekiss</span>.</p>
+          <div class="vestigion-sprites">
+            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/gardenia.png" alt="Flo">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+          </div>
+          <p class="vestigion-text"><span class="ves-fire">Météores</span> + <span class="ves-fairy">Mégaphone</span></p>
+        </div>
+
+        <div class="vestigion-variants">
+          <div class="vestigion-variant">
+            <p class="vestigion-variant-title">Si vous affrontez Feunard :</p>
+            <div class="vestigion-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/gardenia.png" alt="Flo">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/ninetales.gif" alt="Feunard">
+            </div>
+            <p class="vestigion-text">T1 : <span class="ves-fire">Calcination</span> + <span class="ves-fairy">Mégaphone</span></p>
+            <p class="vestigion-text">T2 : <span class="ves-fire">Calcination</span></p>
+            <p class="vestigion-text">Retire Togekiss.</p>
+            <div class="vestigion-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+            </div>
+            <p class="vestigion-text">Envoie <span class="ves-poison">Smogogo</span>.</p>
+            <div class="vestigion-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+            </div>
+            <p class="vestigion-text">T3 : <span class="ves-fire">Calcination</span> + <span class="ves-poison">Assurance</span></p>
+            <p class="ves-note">Note : il peut être nécessaire de soigner Typhlosion s'il est affaibli.</p>
+          </div>
+
+          <div class="vestigion-variant">
+            <p class="vestigion-variant-title">Si vous affrontez Farfaduvet :</p>
+            <div class="vestigion-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/gardenia.png" alt="Flo">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/whimsicott.gif" alt="Farfaduvet">
+            </div>
+            <p class="vestigion-text">T1 : <span class="ves-fire">Éruption</span></p>
+            <p class="vestigion-text">Retire Togekiss.</p>
+            <div class="vestigion-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+            </div>
+            <p class="vestigion-text">Envoie <span class="ves-poison">Smogogo</span>.</p>
+            <div class="vestigion-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+            </div>
+            <p class="vestigion-text">T2 : <span class="ves-fire">Éruption</span> + <span class="ves-fire">Calcination</span></p>
+          </div>
+
+          <div class="vestigion-variant">
+            <p class="vestigion-variant-title">Si vous affrontez Roserade :</p>
+            <div class="vestigion-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/gardenia.png" alt="Flo">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/roserade.gif" alt="Roserade">
+            </div>
+            <p class="vestigion-text"><span class="ves-fire">Éruption</span> + <span class="ves-fairy">Mégaphone</span></p>
+          </div>
+        </div>
+      </div>
+    `;
+    fragment.appendChild(card);
+    return fragment;
+}
+
+if (route.city === "Argenta" || route.city === "Pewter City") {
+    const fragment = document.createDocumentFragment();
+
+    const healBefore = document.createElement("div");
+    healBefore.className = "argenta-heal";
+    healBefore.textContent = "HEAL";
+    fragment.appendChild(healBefore);
+
+    const card = document.createElement("article");
+    card.className = "route-card argenta-reference";
+    card.innerHTML = `
+      <h4 class="argenta-title">5. Argenta (optionnelle) :</h4>
+      <div class="argenta-line"></div>
+      <div class="argenta-wrap">
+        <div class="argenta-battle">
+          <p class="argenta-text">Commence avec <span class="arg-water">Tortank</span> et <span class="arg-poison">Smogogo</span>.</p>
+          <div class="argenta-sprites">
+            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/brock.png" alt="Pierre">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+          </div>
+        </div>
+
+        <div class="argenta-variants">
+          <div class="argenta-variant">
+            <p class="argenta-variant-title">Si vous affrontez Grolem / Coatox :</p>
+            <div class="argenta-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/brock.png" alt="Pierre">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/golem.gif" alt="Grolem">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/toxicroak.gif" alt="Coatox">
+            </div>
+            <p class="argenta-text"><span class="arg-water">Giclédo</span> + <span class="arg-poison">Assurance</span></p>
+          </div>
+
+          <div class="argenta-variant">
+            <p class="argenta-variant-title">Si vous affrontez Ludicolo / Ptéra :</p>
+            <div class="argenta-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/brock.png" alt="Pierre">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/ludicolo.gif" alt="Ludicolo">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/aerodactyl.gif" alt="Ptéra">
+            </div>
+            <p class="argenta-text">T1 : <span class="arg-water">Giclédo</span> + <span class="arg-poison">Explosion</span></p>
+            <p class="argenta-text">Envoie <span class="arg-fairy">Togekiss</span> et <span class="arg-ground">Carchacrok</span>.</p>
+            <div class="argenta-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+            </div>
+            <p class="argenta-text">T2 : <span class="arg-fairy">Mégaphone</span> + <span class="arg-ground">Séisme</span></p>
+          </div>
+
+          <div class="argenta-variant">
+            <p class="argenta-variant-title">Si vous affrontez Laggron :</p>
+            <div class="argenta-sprites">
+              <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/brock.png" alt="Pierre">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/swampert.gif" alt="Laggron">
+            </div>
+            <p class="argenta-text">T1 : <span class="arg-water">Giclédo</span> + <span class="arg-poison">Explosion</span></p>
+            <p class="argenta-text">Envoie <span class="arg-fire">Typhlosion</span> et <span class="arg-fairy">Togekiss</span>.</p>
+            <div class="argenta-sprites">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+              <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+            </div>
+            <p class="argenta-text">T2 : <span class="arg-fire">Éruption</span> + <span class="arg-fairy">Mégaphone</span></p>
+          </div>
+        </div>
+      </div>
+    `;
+    fragment.appendChild(card);
+
+    const healAfter = document.createElement("div");
+    healAfter.className = "argenta-heal";
+    healAfter.textContent = "HEAL si nécessaire.";
+    fragment.appendChild(healAfter);
+
+    return fragment;
+}
+
+if (route.city === "Safrania" || route.city === "Saffron City") {
+    const card = document.createElement("article");
+    card.className = "route-card safrania-reference";
+    card.innerHTML = `
+        <h4 class="safrania-title">4. Safrania :</h4>
+        <div class="safrania-line"></div>
+        <div class="safrania-wrap">
+
+            <div class="safrania-puzzle">Puzzle : Gauche &gt; Bas &gt; Gauche &gt; Gauche</div>
+
+            <div class="safrania-battle">
+                <p class="safrania-text">Commence avec <span class="saf-fire">Typhlosion</span> et <span class="saf-dragon">Carchacrok</span>.</p>
+                <div class="safrania-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/sabrina.png" alt="Morgane">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p class="safrania-text"><span class="saf-fire">Éruption</span> + <span class="saf-dragon">Draco-Griffe</span></p>
+            </div>
+
+            <div class="safrania-variant">
+                <p class="safrania-variant-title">Si vous affrontez Mentali / Qulbutoké :</p>
+                <div class="safrania-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/sabrina.png" alt="Morgane">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/espeon.gif" alt="Mentali">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/wobbuffet.gif" alt="Qulbutoké">
+                </div>
+                <p class="safrania-text">T1 : <span class="saf-fire">Éruption</span> + <span class="saf-ground">Séisme</span></p>
+                <p class="safrania-text">Envoie <span class="saf-fairy">Togekiss</span>.</p>
+                <div class="safrania-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p class="safrania-text">T2 : <span class="saf-fairy">Mégaphone</span> + <span class="saf-ground">Séisme</span></p>
+            </div>
+
+        </div>
+    `;
+    return card;
+}
+
+if (route.city === "Céladopole" || route.city === "Celadon City") {
+    const card = document.createElement("article");
+    card.className = "route-card celadopole-reference";
+    card.innerHTML = `
+        <h4 class="celadopole-title">3. Céladopole :</h4>
+        <div class="celadopole-line"></div>
+        <div class="celadopole-wrap">
+
+            <div class="celadopole-battle">
+                <p class="celadopole-text">Commence avec <span class="cel-water">Tortank</span> et <span class="cel-poison">Smogogo</span>.</p>
+                <div class="celadopole-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/erika.png" alt="Erika">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+
+                <p class="celadopole-text">T1 : <span class="cel-water">Giclédo</span> + <span class="cel-poison">Explosion</span></p>
+                <p class="celadopole-text">Envoie ensuite <span class="cel-fire">Typhlosion</span> et <span class="cel-fairy">Togekiss</span>.</p>
+
+                <div class="celadopole-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+
+                <p class="celadopole-text">T2 : <span class="cel-fire">Éruption</span> + <span class="cel-fairy">Mégaphone</span></p>
+            </div>
+
+            <div class="celadopole-variant">
+                <p class="celadopole-variant-title">Si Empiflor était présent au départ :</p>
+
+                <div class="celadopole-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/erika.png" alt="Erika">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/victreebel.gif" alt="Empiflor">
+                </div>
+
+                <p class="celadopole-text">Envoie <span class="cel-fire">Typhlosion</span> et <span class="cel-dragon">Carchacrok</span>.</p>
+
+                <div class="celadopole-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+
+                <p class="celadopole-text">T2 : <span class="cel-fire">Éruption</span> + <span class="cel-dragon">Draco-Griffe</span></p>
+            </div>
+
+        </div>
+    `;
+    return card;
+}
+
+if (route.city === "Cramois’Île" || route.city === "Cinnabar Island") {
+    const card = document.createElement("article");
+    card.className = "route-card cramoisile-reference";
+    card.innerHTML = `
+        <h4 class="cramoisile-title">2. Cramois’Île :</h4>
+        <div class="cramoisile-line"></div>
+        <div class="cramoisile-wrap">
+
+            <div class="cramoisile-battle">
+                <p class="cramoisile-text">Commence avec <span class="cram-water">Tortank</span> et <span class="cram-poison">Smogogo</span>.</p>
+                <div class="cramoisile-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/blaine.png" alt="Auguste">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+            </div>
+
+            <div class="cramoisile-variants">
+                <div class="cramoisile-variant">
+                    <p class="cramoisile-variant-title">Si vous affrontez Arcanin / Dracaufeu / Typhlosion :</p>
+                    <div class="cramoisile-sprites">
+                        <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/blaine.png" alt="Auguste">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/arcanine.gif" alt="Arcanin">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/charizard.gif" alt="Dracaufeu">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    </div>
+                    <p class="cramoisile-text">T1 : <span class="cram-water">Giclédo</span></p>
+                    <p class="cramoisile-text">Retire <span class="cram-poison">Smogogo</span>.</p>
+                    <div class="cramoisile-sprites">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                    </div>
+                    <p class="cramoisile-text">Envoie <span class="cram-ice">Sorbouboul</span>.</p>
+                    <div class="cramoisile-sprites">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                    </div>
+                    <p class="cramoisile-text">T2 : <span class="cram-water">Giclédo</span> + <span class="cram-ice">Blizzard</span></p>
+                </div>
+
+                <div class="cramoisile-variant">
+                    <p class="cramoisile-variant-title">Si vous affrontez Pyroli :</p>
+                    <div class="cramoisile-sprites">
+                        <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/blaine.png" alt="Auguste">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/flareon.gif" alt="Pyroli">
+                    </div>
+                    <p class="cramoisile-text"><span class="cram-water">Giclédo</span> + <span class="cram-rain">Danse Pluie</span></p>
+                </div>
+
+                <div class="cramoisile-variant">
+                    <p class="cramoisile-variant-title">Si vous affrontez Sulfura (avec Leuphorie) :</p>
+                    <div class="cramoisile-sprites">
+                        <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/blaine.png" alt="Auguste">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/moltres.gif" alt="Sulfura">
+                        <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blissey.gif" alt="Leuphorie">
+                    </div>
+                    <p class="cramoisile-text"><span class="cram-water">Giclédo</span> + <span class="cram-poison">Assurance</span></p>
+                    <p class="cramoisile-text">(surtout sur Leuphorie)</p>
+                </div>
+            </div>
+
+        </div>
+    `;
+    return card;
+}
+
+if (route.city === "Carmin sur Mer") {
+    const fragment = document.createDocumentFragment();
+
+    const kantoTitle = document.createElement("div");
+    kantoTitle.className = "kanto-region-highlight";
+    kantoTitle.textContent = "KANTO";
+    fragment.appendChild(kantoTitle);
+
+    const card = document.createElement("article");
+    card.className = "route-card carmin-reference";
+    card.innerHTML = `
+        <h4 class="carmin-title">1. Carmin sur Mer :</h4>
+        <div class="carmin-line"></div>
+        <div class="carmin-wrap">
+
+            <div class="carmin-battle">
+                <p class="carmin-text">Commence avec <span class="carmin-fire">Typhlosion</span> et <span class="carmin-dragon">Carchacrok</span>.</p>
+                <div class="carmin-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/ltsurge.png" alt="Major Bob">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p class="carmin-text"><span class="carmin-fire">Éruption</span> + <span class="carmin-dragon">Draco-Griffe</span></p>
+            </div>
+
+            <div class="carmin-variant">
+                <p class="carmin-variant-title">Si vous affrontez Tarpaud :</p>
+                <div class="carmin-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/ltsurge.png" alt="Major Bob">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/politoed.gif" alt="Tarpaud">
+                </div>
+                <p class="carmin-text">T1 : <span class="carmin-normal">Météores</span> + <span class="carmin-ground">Séisme</span></p>
+                <p class="carmin-text">Envoie ensuite <span class="carmin-ice">Sorbouboul</span>.</p>
+                <div class="carmin-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                </div>
+                <p class="carmin-text">T2 : <span class="carmin-ice">Blizzard</span> + <span class="carmin-ground">Séisme</span></p>
+                <p class="carmin-text">Si Sorbouboul tombe K.O. sur un coup critique de Séisme, envoie Togekiss et utilise Mégaphone.</p>
+            </div>
+
+            <div class="carmin-note">
+                <span class="carmin-heal">⚠ HEAL :</span>
+                soigne Typhlosion et Sorbouboul après ce combat.
+            </div>
+
+        </div>
+    `;
+    fragment.appendChild(card);
+    return fragment;
+}
+
+if (route.city === "Mérouville") {
+    const fragment = document.createDocumentFragment();
+
+    const heal = document.createElement("div");
+    heal.className = "between-gym-heal";
+    heal.textContent = "HEAL";
+    fragment.appendChild(heal);
+
+    const card = document.createElement("article");
+    card.className = "route-card merouville-reference";
+    card.innerHTML = `
+        <h4 class="merouville-title">5. Mérouville :</h4>
+        <div class="merouville-line"></div>
+        <div class="merouville-wrap">
+            <div class="merouville-battle">
+                <p class="merouville-lead">Commence avec <span class="mer-water">Tortank</span> et <span class="mer-poison">Smogogo</span>.</p>
+                <div class="merouville-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/roxanne.png" alt="Roxanne">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+                <p class="merouville-action"><span class="mer-water">Giclédo</span> + <span class="mer-poison">Assurance</span></p>
+            </div>
+        </div>
+    `;
+    fragment.appendChild(card);
+    return fragment;
+}
+
+
+if (route.city === "Lavandia") {
+    const card = document.createElement("article");
+    card.className = "route-card lavandia-reference";
+    card.innerHTML = `
+        <h4 class="lavandia-title">4. Lavandia :</h4>
+        <div class="lavandia-line"></div>
+        <div class="lavandia-wrap">
+
+            <div class="lavandia-battle">
+                <p class="lavandia-lead">Commence avec <span class="lav-fire">Typhlosion</span> et <span class="lav-dragon">Carchacrok</span>.</p>
+                <div class="lavandia-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/wattson.png" alt="Voltère">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p class="lavandia-action"><span class="lav-fire">Éruption</span> + <span class="lav-dragon">Draco-Griffe</span></p>
+            </div>
+
+            <div class="lavandia-variant">
+                <p class="lavandia-variant-title">Si vous affrontez Zéblitz (Ballon) :</p>
+                <div class="lavandia-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/wattson.png" alt="Voltère">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/zebstrika.gif" alt="Zéblitz">
+                </div>
+                <p class="lavandia-send">Retire <span class="lav-dragon">Carchacrok</span>.</p>
+                <div class="lavandia-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p class="lavandia-send">Envoie <span class="lav-fairy">Togekiss</span>.</p>
+                <div class="lavandia-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p class="lavandia-action"><span class="lav-fire">Éruption</span> + <span class="lav-fairy">Mégaphone</span></p>
+            </div>
+
+        </div>
+    `;
+    return card;
+}
+
+if (route.city === "Cimetronelle") {
+    const card = document.createElement("article");
+    card.className = "route-card fortree-reference";
+    card.innerHTML = `
+        <h4 class="fortree-title">3. Cimetronelle :</h4>
+        <div class="fortree-line"></div>
+        <div class="fortree-wrap">
+
+            <div class="fortree-battle">
+                <p class="fortree-lead">Commence avec <span class="fortree-water">Tortank</span> et <span class="fortree-poison">Smogogo</span>.</p>
+
+                <div class="fortree-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/winona.png" alt="Alizée">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                </div>
+
+                <p class="fortree-turn">T1 : <span class="fortree-water">Giclédo</span> + <span class="fortree-poison">Explosion</span></p>
+                <p class="fortree-send">Envoie ensuite <span class="fortree-fire">Typhlosion</span> et <span class="fortree-fairy">Togekiss</span>.</p>
+
+                <div class="fortree-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+
+                <p class="fortree-turn">T2 : <span class="fortree-fire">Éruption</span> + <span class="fortree-fairy">Mégaphone</span></p>
+            </div>
+
+            <div class="fortree-variant">
+                <p class="fortree-variant-title">Si vous affrontez Hélédelle :</p>
+
+                <div class="fortree-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/winona.png" alt="Alizée">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/swellow.gif" alt="Hélédelle">
+                </div>
+
+                <p class="fortree-turn">T1 : <span class="fortree-water">Bluff</span> (sur Hélédelle) + <span class="fortree-poison">Explosion</span></p>
+                <p class="fortree-send">Envoie ensuite <span class="fortree-ice">Sorbouboul</span> et <span class="fortree-fairy">Togekiss</span>.</p>
+
+                <div class="fortree-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+
+                <p class="fortree-turn">T2 : <span class="fortree-ice">Blizzard</span> + <span class="fortree-fairy">Mégaphone</span></p>
+            </div>
+
+        </div>
+    `;
+    return card;
+}
+
+if (route.city === "Myokara") {
+                const card = document.createElement("article");
+                card.className = "route-card dewford-reference";
+                card.innerHTML = `
+                    <h4 class="dewford-title">2. Myokara:</h4>
+                    <div class="dewford-line"></div>
+                    <div class="dewford-battle">
+                        <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="ice">Sorbouboul</span>.</p>
+                        <div class="dewford-sprites">
+                            <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/brawly.png" alt="Brawly">
+                            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                            <img src="https://play.pokemonshowdown.com/sprites/gen5ani/vanilluxe.gif" alt="Sorbouboul">
+                        </div>
+                        <p class="dewford-move"><span class="water">Giclédo</span> + <span class="ice">Blizzard</span></p>
+                    </div>
+                    <div class="dewford-note"><strong>⚠ Note :</strong> <span class="heal">Soigne</span> Sorbouboul s’il est K.O.</div>
+                `;
+                return card;
+            }
             const card = document.createElement("article");
             card.className = route.specialEnemies ? "route-card reference-layout" : "route-card";
 
@@ -4535,6 +7069,156 @@ return card;
 
 
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = [...document.querySelectorAll(".route-card")];
+    const firstHoenn = cards.find(c => /Vermilava|Lavaridge/i.test(c.textContent));
+    if(firstHoenn && !document.querySelector(".hoenn-region-highlight")){
+        const h=document.createElement("div");
+        h.className="hoenn-region-highlight";
+        h.textContent="HOENN";
+        firstHoenn.parentNode.insertBefore(h, firstHoenn);
+    }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const candidates = [...document.querySelectorAll("h1,h2,h3,h4,div,section")];
+  const johto = candidates.find(el => el.children.length === 0 && el.textContent.trim().toUpperCase() === "JOHTO");
+});
+</script>
+
+
+
+
+
+<style>
+/* ===== JOHTO PETIT — VRAIMENT CENTRÉ DANS LA BARRE ===== */
+.route-region-title.johto-small-centered{
+    display:flex !important;
+    width:100% !important;
+    min-height:58px !important;
+    box-sizing:border-box !important;
+    margin:0 0 20px !important;
+    padding:0 20px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    gap:0 !important;
+}
+.route-region-title.johto-small-centered .johto-label{
+    display:block !important;
+    width:auto !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    text-align:center !important;
+    line-height:1 !important;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".route-region-title").forEach(el => {
+        if (/johto/i.test(el.textContent)) {
+            el.classList.remove("johto-region-highlight");
+            el.classList.add("johto-small-centered");
+            el.innerHTML = '<span class="johto-label">🌸 Johto</span>';
+        }
+    });
+});
+</script>
+
+
+<style>
+/* JOHTO utilise exactement le rendu de la bannière KANTO */
+.route-region-title.johto-as-kanto{
+    grid-column:1 / -1 !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:55px auto 22px !important;
+    padding:26px 30px !important;
+    display:block !important;
+    text-align:center !important;
+    border:2px solid rgba(67,190,255,.75) !important;
+    border-radius:18px !important;
+    background:
+        radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+        linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97)) !important;
+    box-shadow:
+        0 0 22px rgba(40,175,255,.25),
+        inset 0 0 28px rgba(40,175,255,.09) !important;
+    color:#fff !important;
+    font-size:clamp(34px,5vw,58px) !important;
+    font-weight:1000 !important;
+    letter-spacing:5px !important;
+    text-transform:uppercase !important;
+    text-shadow:
+        0 0 8px rgba(255,255,255,.35),
+        0 0 18px rgba(48,185,255,.8),
+        0 0 36px rgba(48,185,255,.45) !important;
+    animation:kantoRegionPulse 2.4s ease-in-out infinite !important;
+}
+.route-region-title.johto-as-kanto::before{
+    content:"◆ " !important;
+    color:#43c6ff !important;
+}
+.route-region-title.johto-as-kanto::after{
+    content:" ◆" !important;
+    color:#43c6ff !important;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".route-region-title").forEach(el => {
+        if (/johto/i.test(el.textContent)) {
+            el.classList.remove("johto-small-centered","johto-region-highlight");
+            el.classList.add("johto-as-kanto");
+            el.textContent = "JOHTO";
+        }
+    });
+});
+</script>
+
+
+<style>
+.route-region-title.unova-as-kanto{
+    grid-column:1 / -1 !important;
+    width:min(100%,980px) !important;
+    box-sizing:border-box !important;
+    margin:55px auto 22px !important;
+    padding:26px 30px !important;
+    display:block !important;
+    text-align:center !important;
+    border:2px solid rgba(67,190,255,.75) !important;
+    border-radius:18px !important;
+    background:
+        radial-gradient(circle at 50% 50%,rgba(48,180,255,.18),transparent 60%),
+        linear-gradient(135deg,rgba(7,31,61,.96),rgba(10,17,38,.97)) !important;
+    box-shadow:0 0 22px rgba(40,175,255,.25), inset 0 0 28px rgba(40,175,255,.09) !important;
+    color:#fff !important;
+    font-size:clamp(34px,5vw,58px) !important;
+    font-weight:1000 !important;
+    letter-spacing:5px !important;
+    text-transform:uppercase !important;
+    text-shadow:0 0 8px rgba(255,255,255,.35),0 0 18px rgba(48,185,255,.8),0 0 36px rgba(48,185,255,.45) !important;
+    animation:kantoRegionPulse 2.4s ease-in-out infinite !important;
+}
+.route-region-title.unova-as-kanto::before{content:"◆ " !important;color:#43c6ff !important}
+.route-region-title.unova-as-kanto::after{content:" ◆" !important;color:#43c6ff !important}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".route-region-title").forEach(el => {
+        if (/unova|unys/i.test(el.textContent)) {
+            el.classList.add("unova-as-kanto");
+            el.textContent = "UNYS";
+        }
+    });
+});
+</script>
 
 </body>
 </html>
