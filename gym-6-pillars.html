@@ -4558,6 +4558,28 @@ document.addEventListener("DOMContentLoaded", () => {
 .unys-bold strong{font-weight:900 !important}
 </style>
 
+
+<style>
+/* Parsemille : conserver les 3 colonnes comme avant, réduire seulement la hauteur des 2 premières cartes du bas */
+.mistralton-bold .dewford-note:nth-of-type(2),
+.mistralton-bold .dewford-note:nth-of-type(3) {
+    align-self: start !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.mistralton-bold .dewford-note:nth-of-type(2) .dewford-sprites,
+.mistralton-bold .dewford-note:nth-of-type(3) .dewford-sprites {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+.mistralton-bold .dewford-note:nth-of-type(2) p,
+.mistralton-bold .dewford-note:nth-of-type(3) p {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+</style>
 </head>
 
 <body>
@@ -4589,11 +4611,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h1>6 PILLARS</h1>
 
             <p>
-                Une équipe conçue pour réaliser les parcours de
-                Gym Rerun et TechRun dans PokéMMO.
-                Découvre les six Pokémon, leurs rôles et l'ordre
-                des arènes à effectuer.
-            </p>
+                Prépare ton équipe et lance-toi dans le Gym Rerun ! Retrouve les six Pokémon indispensables, leurs rôles et le parcours complet des arènes pour enchaîner ta run efficacement.</p>
         </section>
 
         <!-- =========================
@@ -4604,28 +4622,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <article class="intro-card">
                 <div class="small-title">Concept</div>
-                <h2>Une équipe équilibrée</h2>
+                <h2>Une équipe prête à tout</h2>
                 <p>
-                    Chaque Pokémon possède une fonction précise
-                    pour assurer la stabilité de l'équipe.
+                    Six Pokémon, six rôles précis. Chaque membre a sa place pour rendre le parcours rapide, stable et efficace.
                 </p>
             </article>
 
             <article class="intro-card">
                 <div class="small-title">Objectif</div>
-                <h2>Contrôler le combat</h2>
+                <h2>Enchaîne les arènes</h2>
                 <p>
-                    Alterner entre attaque, défense et soutien
-                    permet de garder l'avantage pendant le combat.
+                    Suis l’ordre du parcours et les actions indiquées pour éliminer les champions sans perdre de temps.
                 </p>
             </article>
 
             <article class="intro-card">
                 <div class="small-title">Approche</div>
-                <h2>Jouer sur la complémentarité</h2>
+                <h2>Optimise ta run</h2>
                 <p>
-                    Les types et les rôles des six Pokémon
-                    sont pensés pour couvrir différentes situations.
+                    Maîtrise les variantes, adapte-toi aux équipes adverses et transforme chaque Gym Rerun en run maîtrisée.
                 </p>
             </article>
 
@@ -4991,13 +5006,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="pokemon-details">
             <div class="detail-block"><h4>Attaques</h4><div class="attack-list"><span data-type="SOL">Séisme</span>
 <span data-type="DRAGON">Draco-Griffe</span>
-<span data-type="FEU">Journée Ensoleillée</span>
+<span data-type="FEU">Zénith</span>
 <span data-type="NORMAL">Coup d'Main</span></div></div>
             <div class="detail-block iv-block"><h4>IV</h4><div class="iv-grid"><div class="iv-stat"><span>PV</span><strong>0–8</strong></div><div class="iv-stat"><span>ATK</span><strong>31</strong></div><div class="iv-stat"><span>DEF</span><strong>0–8</strong></div><div class="iv-stat"><span>ATK<br>Spé</span><strong class="iv-zero">0</strong></div><div class="iv-stat"><span>DEF<br>Spé</span><strong>25–31</strong></div><div class="iv-stat"><span>Speed</span><strong>31</strong></div></div></div>
             <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>252</strong></div><div class="ev-stat"><span>DEF</span><strong>0</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>26</strong></div><div class="ev-stat"><span>Speed</span><strong>232</strong></div></div></div>
             <div class="typhlosion-nature-badge"><span>Nature</span><strong>Solo</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Voile Sable</p></div>
-            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-band.png" alt="Bandeau Choix"></span><strong>Bandeau Choix</strong></div>
         </div>
     </div>
 </article>
@@ -5027,7 +5042,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>252</strong></div><div class="ev-stat"><span>DEF</span><strong>6</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>0</strong></div><div class="ev-stat"><span>Speed</span><strong>252</strong></div></div></div>
             <div class="typhlosion-nature-badge"><span>Nature</span><strong>Rigide</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Gaz Réactif</p></div>
-            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🥋</span><strong>Bandeau Choix</strong></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-band.png" alt="Bandeau Choix"></span><strong>Bandeau Choix</strong></div>
         </div>
                     </div>
                 </article>
@@ -5057,7 +5072,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="detail-block ev-block"><h4>EV</h4><div class="ev-grid"><div class="ev-stat"><span>PV</span><strong>0</strong></div><div class="ev-stat"><span>ATK</span><strong>0</strong></div><div class="ev-stat"><span>DEF</span><strong>0</strong></div><div class="ev-stat"><span>ATK<br>Spé</span><strong>252</strong></div><div class="ev-stat"><span>DEF<br>Spé</span><strong>6</strong></div><div class="ev-stat"><span>Speed</span><strong>252</strong></div></div></div>
             <div class="typhlosion-nature-badge"><span>Nature</span><strong>Modeste</strong></div>
             <div class="detail-block talent-block"><h4>Talent</h4><p>Sérénité</p></div>
-            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon">🕶️</span><strong>Lunettes Choix</strong></div>
+            <div class="pokemon-item-row"><span class="item-label">Objet :</span><span class="item-icon"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix"></span><strong>Lunettes Choix</strong></div>
         </div>
                     </div>
                 </article>
@@ -5076,12 +5091,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h2>Parcours TechRun</h2>
 
                 <p>
-                    Suis cet ordre pour réaliser le parcours avec
-                    l'équipe 6 Pillars. Chaque étape présente
-                    l'arène, le champion, les deux Pokémon à
-                    envoyer en premier et l'action principale
-                    à effectuer.
+                    <strong>⚔️ Prêt pour le Gym Rerun ?</strong><br>
+                    Parcours les régions, enchaîne les arènes et suis chaque stratégie étape par étape.
+                    Utilise la recherche pour retrouver rapidement une région ou une arène.
+                    <strong>Bonne run, Dresseur ! 🔥</strong>
                 </p>
+            </div>
+
+            <div class="arena-search" role="search" aria-label="Recherche des arènes et régions">
+                <label for="arena-search-input">RECHERCHE ARÈNE / RÉGION</label>
+                <div class="arena-search-box">
+                    <span class="arena-search-icon" aria-hidden="true">⌕</span>
+                    <input id="arena-search-input" type="search" placeholder="Ex. Méanville, Unys, Janusia..." autocomplete="off">
+                    <button id="arena-search-clear" type="button" aria-label="Effacer la recherche">×</button>
+                </div>
+                <p id="arena-search-empty" class="arena-search-empty" hidden>Aucune arène ou région trouvée.</p>
             </div>
 
             <div id="routes-container"></div>
@@ -5526,6 +5550,16 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             {
                 region: "⚡ Unys",
+                city: "Mistralton City",
+                leader: "Skyla",
+                number: 23,
+                description: "Parsemille.",
+                pokemon1: ["Tortank", "Giclédo", "blastoise"],
+                pokemon2: ["Sorbouboul", "Blizzard", "vanilluxe"],
+                action: "Giclédo + Blizzard."
+            },
+            {
+                region: "⚡ Unys",
                 city: "Nimbasa City",
                 leader: "Elesa",
                 number: 24,
@@ -5736,11 +5770,86 @@ function createBattleTabs(route) {
         card.innerHTML = `
             <h4 class="dewford-title">6. Port Yoneuve :</h4>
             <div class="dewford-line"></div>
+
             <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="water">Tortank</span> et <span class="purple">Smogogo</span>.</p>
                 <div class="dewford-sprites">
                     <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clay.png" alt="Bardane">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
                 </div>
-                <p class="dewford-lead">Bardane — Arène de Port Yoneuve</p>
+                <p><span class="water">Giclédo</span> + <span class="purple">Danse Pluie</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Escargaume :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clay.png" alt="Bardane">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/shelmet.gif" alt="Escargaume">
+                </div>
+                <p><strong>T1 :</strong> <span class="water">Giclédo</span> + <span class="purple">Explosion</span></p>
+                <p>Envoie <span class="pink">Togekiss</span> et n'importe quel Pokémon.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p><strong>T2 :</strong> <span class="pink">Mégaphone</span> + <span class="ice">Blizzard</span>/<span class="fire">Éruption</span>/<span class="purple">Séisme</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Torterra :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/clay.png" alt="Bardane">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/torterra.gif" alt="Torterra">
+                </div>
+                <p><span class="water">Giclédo</span> + <span class="purple">Assurance</span></p>
+            </div>
+        `;
+        return card;
+    }
+
+    /* UNYS 7 — MAILLARD / NACRENE CITY */
+    if (route.city === "Maillard" || route.city === "Nacrene City") {
+        const card = document.createElement("article");
+        card.className = "route-card dewford-reference unys-bold";
+        card.innerHTML = `
+            <h4 class="dewford-title">7. Maillard :</h4>
+            <div class="dewford-line"></div>
+
+            <p class="dewford-lead"><strong>Note :</strong> s'il reste environ 2 min 45. Carchacrok doit être K.O. ; Smogogo et Typhlosion doivent être encore en vie.</p>
+
+            <div class="dewford-battle">
+                <p class="dewford-lead">Commence avec <span class="purple">Smogogo</span> et <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/lenora.png" alt="Aloé">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span> + <span class="purple">Zénith</span></p>
+                <p>Envoie <span class="fire">Typhlosion</span> et <span class="pink">Togekiss</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                </div>
+                <p><strong>T2 :</strong> <span class="fire">Éruption</span> + <span class="pink">Mégaphone</span></p>
+            </div>
+
+            <div class="dewford-note">
+                <strong>Si Cerfrousse :</strong>
+                <div class="dewford-sprites">
+                    <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/lenora.png" alt="Aloé">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/stantler.gif" alt="Cerfrousse">
+                </div>
+                <p><strong>T1 :</strong> <span class="purple">Explosion</span></p>
+                <p>Retire <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok"></div>
+                <p>Envoie <span class="fire">Typhlosion</span> (sacrifice).</p>
+                <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion"></div>
+                <p>Envoie <span class="pink">Togekiss</span> et <span class="purple">Carchacrok</span>.</p>
+                <div class="dewford-sprites">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/togekiss.gif" alt="Togekiss">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif" alt="Carchacrok">
+                </div>
+                <p><strong>T2 :</strong> <span class="pink">Mégaphone</span> + <span class="purple">Séisme</span></p>
             </div>
         `;
         return card;
@@ -5799,10 +5908,10 @@ function createBattleTabs(route) {
             </div>
 
             <div class="dewford-note">
-                <strong>Si Tranchodon survit et K.O. Sorbouboul :</strong>
+                <strong>Si Roitiflam survit et K.O. Sorbouboul :</strong>
                 <div class="dewford-sprites">
                     <img class="leader" src="https://play.pokemonshowdown.com/sprites/trainers/iris.png" alt="Iris">
-                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/haxorus.gif" alt="Tranchodon">
+                    <img src="https://play.pokemonshowdown.com/sprites/gen5ani/emboar.gif" alt="Roitiflam">
                 </div>
                 <p>Envoie <span class="water">Tortank</span>.</p>
                 <div class="dewford-sprites"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank"></div>
@@ -5851,6 +5960,7 @@ function createBattleTabs(route) {
                 </div>
             </div>
 
+            <div class="parsemille-variants">
             <div class="dewford-note">
                 <strong>Si Gueriaigle / Vaututrice :</strong>
                 <div class="dewford-sprites">
@@ -5887,6 +5997,7 @@ function createBattleTabs(route) {
                     <img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo">
                 </div>
                 <p><strong>T2 : <span class="purple">Assurance</span> + <span class="ice">Blizzard</span></strong></p>
+            </div>
             </div>
         `;
         return card;
@@ -6998,6 +7109,21 @@ return card;
             let currentRegion = "";
 
             routes.forEach(function (route) {
+                /* Les séparateurs HEAL restent dans la région courante.
+                   Cela évite de casser UNYS entre Méanville et Janusia. */
+                if (route.type === "heal") {
+                    const regions = routesContainer.querySelectorAll(".route-region");
+                    const currentRegionElement = regions[regions.length - 1];
+
+                    if (currentRegionElement) {
+                        const heal = document.createElement("div");
+                        heal.className = "between-gym-heal";
+                        heal.textContent = route.label || "HEAL";
+                        currentRegionElement.appendChild(heal);
+                    }
+                    return;
+                }
+
                 if (route.region !== currentRegion) {
                     currentRegion = route.region;
 
@@ -7208,6 +7334,48 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 .route-region-title.unova-as-kanto::before{content:"◆ " !important;color:#43c6ff !important}
 .route-region-title.unova-as-kanto::after{content:" ◆" !important;color:#43c6ff !important}
+
+        /* PARSEMILLE — mise en page compacte sur 2 lignes */
+        .route-card.mistralton-bold .dewford-battle {
+            max-width: 520px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .route-card.mistralton-bold .parsemille-variants {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px !important;
+            width: min(900px, 100%);
+            margin: 8px auto 0 !important;
+            align-items: stretch;
+        }
+        .route-card.mistralton-bold .parsemille-variants .dewford-note {
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: none !important;
+            min-width: 0;
+        }
+        /* Parsemille — Gueriaigle/Vaututrice : hauteur resserrée uniquement */
+        .route-card.mistralton-bold .parsemille-variants .dewford-note:first-child {
+            align-self: start !important;
+            min-height: 0 !important;
+            height: auto !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+        .route-card.mistralton-bold .parsemille-variants .dewford-note:first-child .dewford-sprites {
+            margin-top: 3px !important;
+            margin-bottom: 3px !important;
+        }
+        .route-card.mistralton-bold .parsemille-variants .dewford-note:first-child p {
+            margin-top: 3px !important;
+            margin-bottom: 0 !important;
+        }
+        @media (max-width: 760px) {
+            .route-card.mistralton-bold .parsemille-variants {
+                grid-template-columns: 1fr !important;
+            }
+        }
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -7217,6 +7385,67 @@ document.addEventListener("DOMContentLoaded", () => {
             el.textContent = "UNYS";
         }
     });
+});
+</script>
+
+<!-- RAIDFORGE: Janusia -> HEAL -> Port Yoneuve section confirmed from reference -->
+
+<style>
+/* RAIDFORGE — Recherche arènes / régions */
+.arena-search{max-width:760px;margin:0 auto 28px;padding:16px 18px;background:linear-gradient(145deg,rgba(13,31,57,.96),rgba(6,17,33,.98));border:1px solid rgba(67,198,255,.38);border-radius:14px;box-shadow:0 0 24px rgba(67,198,255,.08)}
+.arena-search>label{display:block;margin-bottom:9px;color:#62d5ff;font-size:.72rem;font-weight:900;letter-spacing:2px;text-align:center}
+.arena-search-box{display:flex;align-items:center;gap:10px;padding:0 12px;background:rgba(3,10,22,.78);border:1px solid #31527e;border-radius:10px;transition:.2s ease}
+.arena-search-box:focus-within{border-color:#62d5ff;box-shadow:0 0 18px rgba(98,213,255,.16)}
+.arena-search-icon{color:#62d5ff;font-size:1.25rem;font-weight:900}
+#arena-search-input{width:100%;padding:12px 0;color:#fff;background:transparent;border:0;outline:0;font:700 .9rem Arial,Helvetica,sans-serif}
+#arena-search-input::placeholder{color:#7187a6;font-weight:600}
+#arena-search-clear{display:none;padding:2px 7px;color:#9fb7d7;background:transparent;border:0;border-radius:6px;cursor:pointer;font-size:1.35rem;line-height:1}
+#arena-search-clear:hover{color:#fff;background:rgba(98,213,255,.1)}
+.arena-search-empty{margin:12px 0 0;color:#ffcf66;font-size:.8rem;font-weight:700;text-align:center}
+.route-card.arena-search-hidden,.between-gym-heal.arena-search-hidden{display:none!important}
+.route-region.arena-search-hidden{display:none!important}
+@media(max-width:750px){.arena-search{padding:13px 14px}.arena-search>label{font-size:.65rem}#arena-search-input{font-size:.82rem}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('arena-search-input');
+    const clear = document.getElementById('arena-search-clear');
+    const empty = document.getElementById('arena-search-empty');
+    const container = document.getElementById('routes-container');
+    if (!input || !container) return;
+
+    const normalize = value => (value || '').toLocaleLowerCase('fr-FR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    function filterArenas() {
+        const query = normalize(input.value.trim());
+        let totalVisible = 0;
+        clear.style.display = query ? 'block' : 'none';
+
+        container.querySelectorAll('.route-region').forEach(region => {
+            const regionTitle = region.querySelector('.route-region-title');
+            const regionMatches = query && normalize(regionTitle ? regionTitle.textContent : '').includes(query);
+            let visibleCards = 0;
+
+            region.querySelectorAll(':scope > .route-card').forEach(card => {
+                const match = !query || regionMatches || normalize(card.textContent).includes(query);
+                card.classList.toggle('arena-search-hidden', !match);
+                if (match) visibleCards++;
+            });
+
+            region.querySelectorAll(':scope > .between-gym-heal').forEach(heal => {
+                heal.classList.toggle('arena-search-hidden', !!query);
+            });
+
+            const showRegion = !query || regionMatches || visibleCards > 0;
+            region.classList.toggle('arena-search-hidden', !showRegion);
+            if (showRegion) totalVisible += visibleCards;
+        });
+
+        empty.hidden = !query || totalVisible > 0;
+    }
+
+    input.addEventListener('input', filterArenas);
+    clear.addEventListener('click', function () { input.value = ''; filterArenas(); input.focus(); });
 });
 </script>
 
