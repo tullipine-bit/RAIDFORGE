@@ -3596,7 +3596,58 @@
  .safrania-sprites img.leader{height:105px}
 }
 
-</style>
+
+        /* =========================
+           BOUTON RETOUR EN HAUT
+        ========================= */
+        #backToTop {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 9999;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(98, 213, 255, 0.7);
+            border-radius: 14px;
+            background: rgba(7, 16, 31, 0.92);
+            color: #62d5ff;
+            font-size: 1.45rem;
+            font-weight: 900;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            box-shadow: 0 0 22px rgba(98, 213, 255, 0.18);
+            transition: opacity .25s ease, visibility .25s ease,
+                        transform .25s ease, background .25s ease,
+                        box-shadow .25s ease;
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #backToTop:hover {
+            background: rgba(98, 213, 255, 0.16);
+            box-shadow: 0 0 28px rgba(98, 213, 255, 0.38);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 750px) {
+            #backToTop {
+                right: 14px;
+                bottom: 14px;
+                width: 46px;
+                height: 46px;
+            }
+        }
+
+    </style>
 
 <style>
 /* Icône PP Max dans les notes PP MAX */
@@ -7448,6 +7499,27 @@ document.addEventListener('DOMContentLoaded', function () {
     clear.addEventListener('click', function () { input.value = ''; filterArenas(); input.focus(); });
 });
 </script>
+
+
+    <button id="backToTop" type="button" aria-label="Revenir en haut de la page" title="Retour en haut">↑</button>
+
+    <script>
+        (() => {
+            const backToTop = document.getElementById("backToTop");
+            if (!backToTop) return;
+
+            const updateBackToTop = () => {
+                backToTop.classList.toggle("visible", window.scrollY > 450);
+            };
+
+            window.addEventListener("scroll", updateBackToTop, { passive: true });
+            updateBackToTop();
+
+            backToTop.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        })();
+    </script>
 
 </body>
 </html>
