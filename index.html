@@ -2192,6 +2192,48 @@ Pour mettre une vraie image plus tard :
         flex: 1 1 100% !important;
     }
 }
+
+/* ===== RAIDFORGE : JOUEURS EN LIGNE ===== */
+.rf-online-counter {
+  position: fixed;
+  top: 16px;
+  right: 28px;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 174, 255, .65);
+  border-radius: 999px;
+  background: rgba(2, 12, 32, .88);
+  color: #eaf8ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  box-shadow: 0 0 18px rgba(0, 174, 255, .16);
+  backdrop-filter: blur(8px);
+}
+.rf-online-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: #00f28a;
+  box-shadow: 0 0 6px #00f28a, 0 0 14px rgba(0,242,138,.8);
+}
+#onlineCount { min-width: 1ch; text-align: center; }
+@media (max-width: 700px) {
+  .rf-online-counter {
+    top: 11px;
+    right: 58px;
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 10px;
+  }
+}
+
 </style>
 
 <style>
@@ -2249,10 +2291,776 @@ Pour mettre une vraie image plus tard :
 .online-dot { width:9px; height:9px; border-radius:50%; background:#16c784; box-shadow:0 0 10px rgba(22,199,132,.85); }
 #onlineCount { min-width:1ch; text-align:center; }
 @media(max-width:700px){ .online-counter{ margin-left:auto; margin-right:8px; padding:8px 10px; font-size:.7rem; } }
+
+
+/* =========================================================
+   RAIDFORGE — FOND CINÉMATIQUE DU HERO
+   Image : images/fond-raidforge.png
+========================================================= */
+.hero#home,
+section.hero#home {
+  min-height: 650px !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(1, 7, 20, .20) 0%,
+      rgba(1, 8, 24, .10) 50%,
+      rgba(1, 7, 20, .06) 100%
+    ),
+    url("images/fond-raidforge.png") center center / cover no-repeat !important;
+  background-attachment: scroll !important;
+}
+
+/* voile discret pour garder les vrais textes/boutons HTML lisibles */
+.hero#home::before,
+section.hero#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(0, 5, 16, .24) 0%,
+      rgba(0, 5, 16, .10) 48%,
+      transparent 76%) !important;
+}
+
+.hero#home > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .hero#home,
+  section.hero#home {
+    min-height: 620px !important;
+    background-position: 50% center !important;
+  }
+}
+
+
+
+/* RAIDFORGE — retrait du personnage HTML au premier plan */
+.hero .hero-character,
+.hero .hero-character-container,
+.hero#home .hero-character,
+.hero#home .hero-character-container {
+  display: none !important;
+}
+
+
+
+/* RAIDFORGE — retrait du gros titre HTML dans le hero */
+.hero#home .hero-content > h1,
+section.hero#home .hero-content > h1 {
+  display: none !important;
+}
+
+
+
+/* RAIDFORGE — hero propre : retrait des textes et boutons au premier plan */
+.hero#home .hero-content,
+section.hero#home .hero-content {
+  display: none !important;
+}
+
+
+
+/* =========================================================
+   RAIDFORGE — ZONES CLIQUABLES SUR LES BOUTONS DU FOND HERO
+========================================================= */
+.hero#home .rf-bg-links {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.hero#home .rf-bg-link {
+  position: absolute;
+  display: block;
+  pointer-events: auto;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Positions adaptées au visuel 16:9 RAIDFORGE */
+.hero#home .rf-link-outils  { left: 13.7%; top: 18.5%; width: 9.6%; height: 48%; }
+.hero#home .rf-link-raids   { left: 26.6%; top: 18.5%; width: 9.3%; height: 48%; }
+.hero#home .rf-link-gym     { left: 39.5%; top: 18.5%; width: 9.5%; height: 48%; }
+.hero#home .rf-link-events  { left: 53.3%; top: 18.5%; width: 9.3%; height: 48%; }
+.hero#home .rf-link-farming { left: 66.1%; top: 18.5%; width: 9.5%; height: 48%; }
+.hero#home .rf-link-guides  { left: 79.2%; top: 18.5%; width: 9.5%; height: 48%; }
+
+/* Panneau Discord à gauche */
+.hero#home .rf-link-discord  { left: 2.0%; top: 57%; width: 15%; height: 24%; }
+
+.hero#home .rf-bg-link:focus-visible {
+  outline: 3px solid #36c5e8;
+  outline-offset: 3px;
+}
+
+/* Sur petit écran, le fond est recadré : on désactive ces hotspots
+   pour éviter des clics décalés. La navigation mobile reste disponible. */
+@media (max-width: 700px) {
+  .hero#home .rf-bg-links {
+    display: none;
+  }
+}
+
+
+
+/* =========================================================
+   RAIDFORGE — NAVBAR BLEU NUIT / CYAN NÉON
+========================================================= */
+.navbar {
+  min-height: 72px !important;
+  padding: 0 5% !important;
+  background:
+    linear-gradient(90deg,
+      rgba(3, 9, 24, .97) 0%,
+      rgba(5, 18, 42, .95) 48%,
+      rgba(4, 12, 31, .97) 100%) !important;
+  border-bottom: 1px solid rgba(42, 210, 255, .48) !important;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, .45),
+    0 1px 16px rgba(0, 200, 255, .16) !important;
+  backdrop-filter: blur(14px);
+}
+
+.navbar .logo {
+  color: #f4fbff !important;
+  font-size: 1.9rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+  text-shadow:
+    0 0 8px rgba(255,255,255,.22),
+    0 0 18px rgba(0,200,255,.32);
+}
+
+.navbar .logo span {
+  color: #35d9ff !important;
+  text-shadow: 0 0 14px rgba(53,217,255,.55);
+}
+
+.navbar .nav-links {
+  gap: 6px !important;
+}
+
+.navbar .nav-links a {
+  color: #9fb8d2 !important;
+  padding: 10px 15px !important;
+  border: 1px solid transparent;
+  border-radius: 9px !important;
+  font-weight: 700 !important;
+  transition: all .22s ease !important;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffffff !important;
+  background: rgba(0, 200, 255, .08) !important;
+  border-color: rgba(0, 200, 255, .30);
+  box-shadow: inset 0 0 16px rgba(0,200,255,.06);
+  transform: translateY(-1px);
+}
+
+.navbar .nav-links a.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #087bb8, #1556a6) !important;
+  border-color: rgba(87, 221, 255, .65) !important;
+  box-shadow:
+    0 0 10px rgba(0,200,255,.28),
+    0 0 24px rgba(39,104,220,.18) !important;
+}
+
+.navbar .online-counter,
+.navbar [class*="online"] {
+  color: #bcefff !important;
+}
+
+.navbar .menu-button {
+  color: #72e5ff !important;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    min-height: 64px !important;
+  }
+
+  .navbar .nav-links {
+    top: 64px !important;
+    background: rgba(3, 10, 27, .98) !important;
+    border-bottom: 1px solid rgba(0, 200, 255, .35);
+    box-shadow: 0 18px 35px rgba(0,0,0,.45);
+  }
+}
+
+
+
+/* RAIDFORGE — affiche complète dans l'accueil */
+.hero#home, section.hero#home {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  padding: 0 !important;
+  position: relative !important;
+  background: url("images/fond-raidforge-complet.png") center center / 100% 100% no-repeat !important;
+}
+
+/* Retire les anciens éléments superposés : ils sont déjà dessinés sur l'affiche */
+.hero#home .hero-content,
+.hero#home .hero-character,
+.hero#home .hero-character-container {
+  display: none !important;
+}
+
+/* Hotspots invisibles sur les 6 cartes de l'affiche */
+.hero#home .rf-poster-links {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+.hero#home .rf-poster-link {
+  position: absolute;
+  display: block;
+  pointer-events: auto;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* coordonnées relatives au visuel complet 16:9 */
+.hero#home .rf-outils  { left: 20.9%; top: 40.7%; width: 8.6%; height: 22.7%; }
+.hero#home .rf-raids   { left: 30.4%; top: 40.7%; width: 8.6%; height: 22.7%; }
+.hero#home .rf-gym     { left: 40.1%; top: 40.7%; width: 8.7%; height: 22.7%; }
+.hero#home .rf-events  { left: 50.0%; top: 40.7%; width: 8.7%; height: 22.7%; }
+.hero#home .rf-farming { left: 59.8%; top: 40.7%; width: 8.7%; height: 22.7%; }
+.hero#home .rf-guides  { left: 69.7%; top: 40.7%; width: 8.7%; height: 22.7%; }
+.hero#home .rf-discord { left: 3.0%;  top: 66.5%; width: 16.5%; height: 12.5%; }
+
+.hero#home .rf-poster-link:focus-visible {
+  outline: 3px solid #35d9ff;
+  outline-offset: 2px;
+}
+
+/* L'image reste entière même sur mobile */
+@media (max-width: 700px) {
+  .hero#home, section.hero#home {
+    aspect-ratio: 16 / 9 !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+  }
+}
+
+
+
+/* RAIDFORGE — retrait complet de la barre de navigation supérieure */
+.navbar {
+  display: none !important;
+}
+
+
+
+
+
+/* RAIDFORGE — HOTSPOTS CLIQUABLES CORRIGÉS */
+.hero#home { position: relative !important; }
+
+#rfImageLinks {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  pointer-events: none !important;
+}
+
+#rfImageLinks a {
+  position: absolute !important;
+  display: block !important;
+  z-index: 100000 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  background: rgba(0,0,0,0.001) !important;
+}
+
+/* petit menu en haut à gauche de l'affiche */
+#rfImageLinks .community { left: 1%; top: 4%; width: 10%; height: 4%; }
+#rfImageLinks .raidsTop  { left: 1%; top: 8%; width: 8%; height: 4%; }
+#rfImageLinks .eventsTop { left: 1%; top: 12%; width: 10%; height: 4%; }
+#rfImageLinks .toolsTop  { left: 1%; top: 16%; width: 8%; height: 4%; }
+
+/* 6 cartes centrales : zones volontairement larges */
+#rfImageLinks .tools   { left: 26.8%; top: 38%; width: 8.2%; height: 22%; }
+#rfImageLinks .raids   { left: 34.4%; top: 38%; width: 8.2%; height: 22%; }
+#rfImageLinks .gym     { left: 42.0%; top: 38%; width: 8.2%; height: 22%; }
+#rfImageLinks .events  { left: 49.7%; top: 38%; width: 8.2%; height: 22%; }
+#rfImageLinks .farming { left: 57.4%; top: 38%; width: 8.2%; height: 22%; }
+#rfImageLinks .guides  { left: 65.1%; top: 38%; width: 8.2%; height: 22%; }
+
+/* panneau Discord en bas à gauche */
+#rfImageLinks .discord { left: 2.5%; top: 62%; width: 18%; height: 18%; }
+
+/* petit halo au survol pour confirmer que la zone est bien active */
+#rfImageLinks a:hover {
+  box-shadow: inset 0 0 0 2px rgba(54,197,232,.55),
+              0 0 18px rgba(54,197,232,.30);
+  border-radius: 10px;
+}
+
+
+
+/* RAIDFORGE — menu horizontal dessiné EN HAUT de l'affiche */
+
+
+
+
+/* Positions basées sur le menu visible de ta capture */
+
+
+
+
+
+
+
+
+
+
+
+/* CORRECTION FINALE : UN CARRÉ PAR BOUTON */
+
+
+
+/* 1 carré / rectangle PAR zone */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Correction ciblée du bouton RAIDS */
+
+
+
+
+/* RAIDS — zone encore plus petite */
+
+
+
+
+/* RAIDFORGE — correction finale de la zone RAIDS */
+
+
+
+
+
+
+/* RAIDFORGE — RAIDS : rectangle resserré autour de l'icône + du mot */
+
+
+
+
+
+
+/* RAIDFORGE — RAIDS exactement au même format que OUTILS */
+
+
+
+
+
+
+/* RAIDFORGE — RAIDS : carré de survol plus petit */
+
+
+
+
+
+
+/* CORRECTION : une seule zone active pour le menu du haut */
+.hero#home .rf-bg-links {
+  display: none !important;
+}
+
+
+
+
+
+
+
+/* ===== MENU IMAGE — CORRECTION RAIDS NETTE ===== */
+
+
+/* aucun ancien pseudo-cadre */
+
+
+/* Le cadre visible est désormais exactement la zone RAIDS ci-dessus */
+
+
+
+
+/* RAIDFORGE — RAIDS : cadre serré uniquement autour de l'icône + texte */
+
+
+
+
+
+
+/* RAIDFORGE — RAIDS : hover propre validé */
+
+
+
+
+
+
+
+
+/* ===== RAIDS : CADRE RÉDUIT ET CENTRÉ ===== */
+
+
+
+
+
+
+/* ===== RAIDFORGE — HOTSPOTS DU MENU IMAGE ===== */
+#rfTopMenuLinks {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 9999999 !important;
+  pointer-events: none !important;
+}
+
+#rfTopMenuLinks > a {
+  position: absolute !important;
+  display: block !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  background: rgba(0,0,0,.001) !important;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  box-sizing: border-box !important;
+}
+
+/* RAIDS : coordonnées du bouton visible sur la capture */
+#rfTopMenuLinks > a.raids {
+  left: 41.15% !important;
+  top: 0.55% !important;
+  width: 5.35% !important;
+  height: 7.2% !important;
+  z-index: 10000000 !important;
+}
+
+#rfTopMenuLinks > a.raids:hover {
+  border-color: #20d9ff !important;
+  background: rgba(15,73,125,.14) !important;
+  box-shadow: 0 0 7px rgba(32,217,255,.22) !important;
+}
+
+/* Aucun pseudo-élément ne peut modifier la taille */
+#rfTopMenuLinks > a.raids::before,
+#rfTopMenuLinks > a.raids::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+
+/* ===== RAIDFORGE — TOUS LES BOUTONS DU MENU CLIQUABLES ===== */
+#rfTopMenuLinks > a.accueil {
+  left: 26.15% !important; top: .55% !important;
+  width: 7.15% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.outils {
+  left: 34.65% !important; top: .55% !important;
+  width: 5.25% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.raids {
+  left: 41.15% !important; top: .55% !important;
+  width: 5.35% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.gym {
+  left: 47.55% !important; top: .55% !important;
+  width: 8.10% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.events {
+  left: 56.45% !important; top: .55% !important;
+  width: 6.15% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.farming {
+  left: 63.20% !important; top: .55% !important;
+  width: 6.45% !important; height: 7.2% !important;
+}
+#rfTopMenuLinks > a.guides {
+  left: 70.05% !important; top: .55% !important;
+  width: 6.05% !important; height: 7.2% !important;
+}
+
+#rfTopMenuLinks > a:hover {
+  border-color: #20d9ff !important;
+  background: rgba(15,73,125,.14) !important;
+  box-shadow: 0 0 7px rgba(32,217,255,.22) !important;
+}
+
+
+
+
+
+/* ===== RAIDFORGE — NOUVEAU FOND COMPLET ===== */
+.hero#home,
+section.hero#home {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  padding: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-image: url("images/fond-raidforge-complet.png") !important;
+  background-position: center center !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Aucun cache / rectangle ajouté sur l'image */
+.hero#home::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Discord reste cliquable sur le panneau de l'image */
+#rfDiscordLink {
+  position: absolute !important;
+  left: 5.4% !important;
+  top: 65.0% !important;
+  width: 14.8% !important;
+  height: 10.5% !important;
+  z-index: 10000001 !important;
+  display: block !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  background: transparent !important;
+}
+
+
+
+/* ===== RAIDFORGE — BORDURE SOUS LA BANNIÈRE PRINCIPALE ===== */
+.hero#home,
+section.hero#home {
+  border-bottom: 2px solid #19d8ff !important;
+  box-shadow:
+    0 4px 12px rgba(25, 216, 255, .32),
+    0 8px 28px rgba(45, 103, 255, .16) !important;
+}
+
+
+
+/* ===== RAIDFORGE — SÉPARATEUR PREMIUM SOUS LA BANNIÈRE ===== */
+.hero#home,
+section.hero#home {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Grande barre lumineuse sous le hero */
+.hero#home::before,
+section.hero#home::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 7px !important;
+  z-index: 100 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0,115,255,.45) 8%,
+      #00bfff 25%,
+      #76efff 50%,
+      #00bfff 75%,
+      rgba(0,115,255,.45) 92%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 8px rgba(0,210,255,.95),
+    0 0 18px rgba(0,174,255,.75),
+    0 0 38px rgba(36,92,255,.48) !important;
+}
+
+/* Petit diamant central pour donner un vrai effet de séparation */
+.hero#home .rf-bottom-separator {
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 15px;
+  height: 15px;
+  z-index: 101;
+  transform: translateX(-50%) rotate(45deg);
+  border: 2px solid #83f3ff;
+  background: #0579d8;
+  box-shadow:
+    0 0 8px #00d9ff,
+    0 0 20px rgba(0,157,255,.9);
+  pointer-events: none;
+}
+
+
+
+/* ===== RAIDFORGE — BANNIÈRE SOUS L'IMAGE ===== */
+.rf-after-hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 18px 5%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0,180,255,.17), transparent 55%),
+    linear-gradient(180deg, #061426 0%, #020915 100%);
+  border-top: 1px solid rgba(80,225,255,.75);
+  border-bottom: 1px solid rgba(31,117,255,.48);
+  box-shadow:
+    inset 0 8px 28px rgba(0,160,255,.08),
+    0 10px 35px rgba(0,0,0,.42);
+}
+
+.rf-after-hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(36,218,255,.05), transparent);
+}
+
+.rf-banner-core {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+.rf-banner-text {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #f4fbff;
+  text-shadow: 0 0 12px rgba(72,218,255,.55);
+}
+
+.rf-banner-sub {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(.66rem, .85vw, .82rem);
+  font-weight: 700;
+  letter-spacing: .26em;
+  color: #38dcff;
+  text-shadow: 0 0 10px rgba(0,190,255,.45);
+}
+
+.rf-banner-line {
+  position: relative;
+  z-index: 2;
+  width: min(240px, 15vw);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1ad9ff);
+  box-shadow: 0 0 10px rgba(26,217,255,.75);
+}
+.rf-banner-line:last-child {
+  background: linear-gradient(90deg, #1ad9ff, transparent);
+}
+
+.rf-banner-diamond {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  transform: rotate(45deg);
+  border: 1px solid #8cf4ff;
+  background: #087dcc;
+  box-shadow: 0 0 10px #00d8ff;
+}
+
+@media (max-width: 800px) {
+  .rf-after-hero-banner {
+    min-height: 78px;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+  .rf-banner-core {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .rf-banner-sub {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.6;
+  }
+  .rf-banner-line {
+    display: none;
+  }
+}
+
+
+
+/* ===== RAIDFORGE — IMAGE DE FERMETURE DU HERO ===== */
+.rf-hero-closing-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(105px, 11vw, 205px);
+  overflow: hidden;
+  background: #020916;
+  border-top: 2px solid rgba(46,220,255,.9);
+  border-bottom: 2px solid rgba(20,133,255,.7);
+  box-shadow:
+    0 -5px 22px rgba(0,207,255,.25),
+    0 10px 28px rgba(0,0,0,.45);
+}
+
+.rf-hero-closing-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* On privilégie la partie centrale/basse contenant la bordure futuriste. */
+  object-position: center 58%;
+}
+
+@media (max-width: 800px) {
+  .rf-hero-closing-banner {
+    height: 105px;
+  }
+
+  .rf-hero-closing-banner img {
+    object-position: center 56%;
+  }
+}
+
 </style>
 </head>
 
 <body>
+
+<div class="rf-online-counter" id="rfOnlineCounter" title="Joueurs actuellement connectés">
+  <span class="rf-online-dot" aria-hidden="true"></span>
+  <span id="onlineCount">0</span>
+  <span>EN LIGNE</span>
+</div>
+
   <nav class="top-menu">
   
 </nav>
@@ -2291,7 +3099,31 @@ Pour mettre une vraie image plus tard :
 
     <section class="hero" id="home">
 
-      <div class="hero-background"></div>
+<a id="rfDiscordLink"
+   href="https://discord.gg/ZuuTNbX9J"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Rejoindre le Discord RAIDFORGE"
+   aria-label="Rejoindre le Discord RAIDFORGE"></a>
+
+<div id="rfTopMenuLinks" aria-label="Menu principal RAIDFORGE">
+  <a class="accueil" href="index.html" title="Accueil" aria-label="Accueil"></a>
+  <a class="outils" href="outils.html" title="Outils" aria-label="Outils"></a>
+  <a class="raids" href="raids.html" title="Raids" aria-label="Raids"></a>
+  <a class="gym" href="gym-rerun.html" title="Gym Rerun" aria-label="Gym Rerun"></a>
+  <a class="events" href="events.html" title="Events" aria-label="Events"></a>
+  <a class="farming" href="farming.html" title="Farming" aria-label="Farming"></a>
+  <a class="guides" href="guides.html" title="Guides" aria-label="Guides"></a>
+</div>
+
+
+
+
+
+
+
+  <!-- Zones cliquables invisibles correspondant aux boutons dessinés dans le fond -->
+<div class="hero-background"></div>
 
       <div class="hero-content">
 
@@ -2344,6 +3176,10 @@ Pour mettre une vraie image plus tard :
 </div>
 
     </section>
+
+<div class="rf-hero-closing-banner" aria-hidden="true">
+  </div>
+
 
 
     <!-- RECHERCHE -->
@@ -2882,6 +3718,90 @@ if (searchInput) {
     console.error("RAIDFORGE connexion anonyme :", error);
     if (counter) counter.textContent = "--";
   });
+</script>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = {
+    accueil: "index.html",
+    outils: "outils.html",
+    raids: "raids.html",
+    gym: "gym-rerun.html",
+    events: "events.html",
+    farming: "farming.html",
+    guides: "guides.html"
+  };
+
+  Object.entries(menuLinks).forEach(([name, url]) => {
+    const link = document.querySelector("#rfTopMenuLinks > a." + name);
+    if (!link) return;
+    link.href = url;
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = url;
+    });
+  });
+});
+</script>
+
+
+<!-- RAIDFORGE : compteur réel de joueurs en ligne -->
+<script type="module" id="raidforge-online-presence">
+  import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+  import { getDatabase, ref, onValue, onDisconnect, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDOEDkQt8RkLmUo_qxnhxyjixom4oRCDVE",
+    authDomain: "raidforge-a5a4f.firebaseapp.com",
+    databaseURL: "https://raidforge-a5a4f-default-rtdb.firebaseio.com",
+    projectId: "raidforge-a5a4f",
+    storageBucket: "raidforge-a5a4f.firebasestorage.app",
+    messagingSenderId: "106508306536",
+    appId: "1:106508306536:web:cca3b723ac60934b4553dd"
+  };
+
+  const countEl = document.getElementById("onlineCount");
+
+  try {
+    const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+
+    // Compte uniquement les entrées marquées online=true.
+    onValue(ref(db, "presence"), (snapshot) => {
+      let count = 0;
+      snapshot.forEach((child) => {
+        if (child.val()?.online === true) count++;
+      });
+      if (countEl) countEl.textContent = String(count);
+    });
+
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) return;
+
+      const userPresence = ref(db, "presence/" + user.uid);
+
+      // Firebase supprimera automatiquement cette présence à la déconnexion.
+      await onDisconnect(userPresence).remove();
+
+      await set(userPresence, {
+        online: true,
+        lastSeen: serverTimestamp()
+      });
+    });
+
+    if (!auth.currentUser) {
+      await signInAnonymously(auth);
+    }
+  } catch (error) {
+    console.error("RAIDFORGE - compteur en ligne :", error);
+    if (countEl) countEl.textContent = "0";
+  }
 </script>
 
 </body>
