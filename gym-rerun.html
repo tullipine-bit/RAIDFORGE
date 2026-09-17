@@ -47,18 +47,7 @@ html {
 
 
 body {
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(35, 91, 155, 0.15),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(30, 100, 170, 0.10),
-      transparent 32%
-    ),
-    var(--background);
+  background: url("images/fond-gym-rerun.png") center top / cover fixed no-repeat;
 
   color: var(--text);
   font-family: "Space Grotesk", sans-serif;
@@ -1903,6 +1892,7 @@ a {
 }
 
 .gym-type {
+  display: none;
   padding: 7px 11px;
 
   background: rgba(139, 124, 255, 0.08);
@@ -2193,27 +2183,239 @@ Pour mettre une vraie image plus tard :
         flex: 1 1 100% !important;
     }
 }
+
+/* RAIDFORGE - onglets/cartes Gym Rerun retirés */
+.gym-page,
+.gym-grid,
+.gym-card {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - fond Gym Rerun mis en avant */
+body {
+  background-image: url("images/fond-gym-rerun.png") !important;
+  background-position: center top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+body::before,
+body::after {
+  opacity: 0 !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+/* Les anciens onglets Gym restent supprimés */
+.gym-page,
+.gym-grid,
+.gym-card {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - barre supérieure intégrée au fond */
+.navbar {
+  background: rgba(3, 12, 26, 0.18) !important;
+  border-bottom: 1px solid rgba(120, 220, 255, 0.18) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.logo,
+.nav-links a,
+.menu-button {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.75);
+}
+
+.nav-links a:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,.10) !important;
+}
+
+.nav-links a.active {
+  color: #ffffff !important;
+  background: rgba(0, 190, 255, .16) !important;
+  box-shadow: 0 0 18px rgba(0, 190, 255, .16) !important;
+}
+
+
+/* RAIDFORGE - image Gym Rerun finale avec navigation intégrée */
+body {
+  background: url("images/fond-gym-rerun.png") center top / cover fixed no-repeat !important;
+}
+.navbar {
+  background: rgba(3, 12, 26, 0.16) !important;
+  border-bottom: 1px solid rgba(98, 217, 255, 0.22) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.gym-page, .gym-grid, .gym-card {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - ancienne barre de navigation retirée */
+.navbar {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - afficher l'intégralité du visuel sans couper les textes */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("images/fond-gym-rerun.png") !important;
+  background-position: center top !important;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #020817 !important;
+}
+
+/* Le visuel garde son ratio 16:9 et reste entièrement visible */
+body::before,
+body::after {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - correctif plein écran */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #020817 !important;
+}
+
+body {
+  background-image: url("images/fond-gym-rerun.png") !important;
+  background-position: center top !important;
+  background-size: 100vw auto !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  min-height: 56.25vw !important; /* ratio 16:9 */
+  overflow-x: hidden !important;
+}
+
+/* Ne pas utiliser de pseudo-élément pour porter l'image */
+body::before,
+body::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ancienne interface toujours retirée */
+.navbar,
+.gym-page,
+.gym-grid,
+.gym-card {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - fond Gym Rerun final avec barre intégrée */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  background: #020817 !important;
+}
+
+body {
+  background-image: url("images/fond-gym-rerun.png") !important;
+  background-position: center top !important;
+  background-size: 100vw auto !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  min-height: 56.25vw !important;
+  overflow-x: hidden !important;
+}
+
+body::before,
+body::after {
+  content: none !important;
+  display: none !important;
+}
+
+.navbar,
+.gym-page,
+.gym-grid,
+.gym-card {
+  display: none !important;
+}
+
+
+/* RAIDFORGE - zones cliquables sur le visuel Gym Rerun */
+.rf-click-layer{position:absolute;inset:0 0 auto 0;width:100vw;height:56.25vw;z-index:50;pointer-events:none}
+.rf-hotspot{position:absolute;display:block;pointer-events:auto;cursor:pointer;background:transparent;border:0;text-indent:-9999px;overflow:hidden}
+.rf-hotspot:focus-visible{outline:2px solid #62d9ff;outline-offset:2px}
+/* Navigation haute */
+.rf-home{left:26.0%;top:1.0%;width:7.6%;height:5.7%}.rf-tools{left:34.2%;top:1.0%;width:6.3%;height:5.7%}.rf-raids{left:40.8%;top:1.0%;width:5.8%;height:5.7%}.rf-gym{left:47.0%;top:1.0%;width:7.6%;height:5.7%}.rf-events{left:55.4%;top:1.0%;width:6.5%;height:5.7%}.rf-farming{left:62.5%;top:1.0%;width:7.1%;height:5.7%}.rf-guides{left:70.0%;top:1.0%;width:6.5%;height:5.7%}
+/* Cartes rerun */
+.rf-six{left:18.1%;top:36.2%;width:12.3%;height:31.7%}.rf-seven{left:31.0%;top:36.2%;width:12.1%;height:31.7%}.rf-tempest{left:43.7%;top:36.2%;width:12.2%;height:31.7%}.rf-prehistoric{left:56.7%;top:36.2%;width:12.2%;height:31.7%}.rf-double{left:69.5%;top:36.2%;width:12.4%;height:31.7%}
+@media(max-width:700px){.rf-click-layer{height:56.25vw}}
+
+
+/* RAIDFORGE — cadre au survol des zones cliquables */
+.rf-hotspot,
+.rf-nav-hotspot,
+.rf-card-hotspot,
+a[class*="hotspot"] {
+  border: 2px solid transparent !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  transition:
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease,
+    transform .18s ease !important;
+}
+
+.rf-hotspot:hover,
+.rf-nav-hotspot:hover,
+.rf-card-hotspot:hover,
+a[class*="hotspot"]:hover {
+  border-color: #37dfff !important;
+  background: rgba(0, 200, 255, .10) !important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.22) inset,
+    0 0 12px rgba(0, 220, 255, .85),
+    0 0 28px rgba(0, 110, 255, .55) !important;
+  transform: translateY(-2px) !important;
+}
+
 </style>
 </head>
 
 <body>
+<div class="rf-click-layer" aria-label="Navigation RAIDFORGE">
+  <a class="rf-hotspot rf-home" href="index.html" aria-label="Accueil">Accueil</a>
+  <a class="rf-hotspot rf-tools" href="outils.html" aria-label="Outils">Outils</a>
+  <a class="rf-hotspot rf-raids" href="raids.html" aria-label="Raids">Raids</a>
+  <a class="rf-hotspot rf-gym" href="gym-rerun.html" aria-label="Gym Rerun">Gym Rerun</a>
+  <a class="rf-hotspot rf-events" href="events.html" aria-label="Events">Events</a>
+  <a class="rf-hotspot rf-farming" href="farming.html" aria-label="Farming">Farming</a>
+  <a class="rf-hotspot rf-guides" href="guides.html" aria-label="Guides">Guides</a>
+  <a class="rf-hotspot rf-six" href="gym-6-pillars.html" aria-label="6 Pillars">6 Pillars</a>
+  <a class="rf-hotspot rf-seven" href="gym-7-hells.html" aria-label="7 Hells">7 Hells</a>
+  <a class="rf-hotspot rf-tempest" href="gym-tempest-explosion.html" aria-label="Tempest Explosion">Tempest Explosion</a>
+  <a class="rf-hotspot rf-prehistoric" href="gym-prehistoric-5.html" aria-label="Prehistoric 5">Prehistoric 5</a>
+  <a class="rf-hotspot rf-double" href="gym-double-typhlosion.html" aria-label="Double Typhlosion">Double Typhlosion</a>
+</div>
+
 
   <!-- MENU DU SITE -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">RAIDFORGE</a>
-    </div>
-
-    <nav class="nav-links">
-      <a href="index.html">Accueil</a>
-      <a href="outils.html">Outils</a>
-      <a href="raids.html">Raids</a>
-      <a href="gym-rerun.html" class="active">Gym Rerun</a>
-      <a href="events.html">Events</a>
-      <a href="farming.html">Farming</a>
-      <a href="guides.html">Guides</a>
-    </nav>
-  </header>
+  
 
   <main class="gym-page">
 
@@ -2424,3 +2626,18 @@ Pour mettre une vraie image plus tard :
         </a>
 
       </article>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("a").forEach(a => {
+    const s = getComputedStyle(a);
+    const r = a.getBoundingClientRect();
+    if ((s.position === "absolute" || s.position === "fixed") && r.width > 45 && r.height > 24) {
+      a.classList.add("rf-hotspot");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
