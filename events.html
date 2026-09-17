@@ -162,7 +162,7 @@ a {
       90deg,
       rgba(3, 8, 20, 0.96) 0%,
       rgba(5, 17, 36, 0.78) 50%,
-      rgba(5, 17, 36, 0.58) 100%.
+      rgba(5, 17, 36, 0.58) 100%
     ),
     url("images/fond-site.png");
 
@@ -2191,6 +2191,142 @@ Pour mettre une vraie image plus tard :
     }
 }
 </style>
+
+<style id="rf-events-home-cards">
+.rf-events-page{
+  max-width:1200px;
+  margin:0 auto;
+  padding:55px 25px 90px;
+}
+.rf-events-heading span{
+  color:#36c5e8;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:2.5px;
+}
+.rf-events-heading h1{
+  margin:8px 0 35px;
+  color:#fff;
+  font-family:"Rajdhani",sans-serif;
+  font-size:2.4rem;
+}
+.rf-events-list{
+  display:flex;
+  flex-direction:column;
+}
+.rf-event-row{
+  min-height:145px;
+  padding:26px 30px;
+  display:grid;
+  grid-template-columns:65px 205px 165px minmax(280px,1fr) 90px;
+  gap:18px;
+  align-items:center;
+  background:#0e2744;
+  border:1px solid rgba(167,217,230,.08);
+  border-radius:13px;
+}
+.rf-event-row + .rf-event-row{margin-top:-1px}
+.rf-event-sprite{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rf-event-sprite img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+.rf-calendar{font-size:34px}
+.rf-event-date{
+  color:#fff;
+  font-size:.95rem;
+  line-height:1.45;
+}
+.rf-event-badge{
+  display:inline-block;
+  margin-bottom:8px;
+  padding:5px 9px;
+  border-radius:5px;
+  background:rgba(27,135,181,.24);
+  color:#21d3ff;
+  font-size:.67rem;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+.rf-event-row h2{
+  margin:0;
+  color:#fff;
+  font-family:"Rajdhani",sans-serif;
+  font-size:1.65rem;
+  line-height:1.2;
+}
+.rf-event-row p{
+  margin:0;
+  color:#6f8fb2;
+  font-size:.94rem;
+  line-height:1.45;
+}
+.rf-event-open{
+  justify-self:end;
+  color:#fff;
+  font-weight:700;
+  line-height:1.5;
+}
+.rf-event-open:hover{color:#36c5e8}
+@media(max-width:850px){
+  .rf-event-row{
+    grid-template-columns:60px 1fr 90px;
+  }
+  .rf-event-row h2,.rf-event-row p{grid-column:2/4}
+  .rf-event-open{grid-column:3;grid-row:1}
+}
+@media(max-width:560px){
+  .rf-event-row{
+    grid-template-columns:55px 1fr;
+    padding:22px 18px;
+  }
+  .rf-event-row h2,.rf-event-row p,.rf-event-open{
+    grid-column:1/-1;
+    justify-self:start;
+  }
+}
+</style>
+
+
+<style id="events-fixed-v3">
+#eventsPageFixed, #eventsPageFixed *{box-sizing:border-box}
+.eventFixed{
+  display:grid !important;
+  grid-template-columns:70px 185px 180px minmax(260px,1fr) 105px;
+  align-items:center;
+  gap:18px;
+  width:100%;
+  min-height:145px;
+  padding:26px 30px;
+  background:#0e2744 !important;
+  border:1px solid rgba(80,145,200,.14);
+  border-radius:13px;
+  color:#fff !important;
+  text-decoration:none !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.eventFixed + .eventFixed{margin-top:-1px}
+.eventFixed:hover{background:#123252 !important;border-color:rgba(54,197,232,.45)}
+.eventFixedImg{display:flex;align-items:center;justify-content:center}
+.eventFixedImg img{display:block;width:60px;height:60px;object-fit:contain;image-rendering:pixelated}
+.eventFixedDate{display:flex;flex-direction:column;gap:8px;color:#fff;font-size:14px;line-height:1.45}
+.eventFixedDate b{width:max-content;padding:5px 9px;border-radius:5px;background:rgba(24,126,174,.26);color:#24d3ff;font-size:11px}
+.eventFixed h2{margin:0;color:#fff;font-family:Rajdhani,sans-serif;font-size:25px;line-height:1.2}
+.eventFixed p{margin:0;color:#7898bb;font-size:14px;line-height:1.5}
+.eventFixed strong{justify-self:end;color:#fff;font-size:14px}
+@media(max-width:850px){
+ .eventFixed{grid-template-columns:60px 1fr}
+ .eventFixed h2,.eventFixed p,.eventFixed strong{grid-column:1/-1;justify-self:start}
+}
+</style>
+
 </head>
 <body>
 
@@ -2204,17 +2340,50 @@ Pour mettre une vraie image plus tard :
     <a href="guides.html">Guides</a>
   </nav>
 
-  <main class="page-content">
-    <h1>EVENTS</h1>
+  
+<main id="eventsPageFixed" style="display:block;visibility:visible;opacity:1;max-width:1200px;margin:0 auto;padding:55px 25px 90px;position:relative;z-index:20;">
+  <div style="margin-bottom:34px;">
+    <div style="color:#36c5e8;font-size:12px;font-weight:800;letter-spacing:2.5px;">ÉVÉNEMENTS OFFICIELS</div>
+    <h1 style="margin:8px 0 0;color:#fff;font-family:Rajdhani,sans-serif;font-size:38px;">Events</h1>
+  </div>
 
-    <div class="events-links">
-      <a href="calendrier.html">Calendrier</a>
-      <a href="halloween.html">Halloween</a>
-      <a href="noel.html">Noël</a>
-      <a href="zodiaque.html">Zodiaque</a>
-      <a href="legendaires.html">Légendaires</a>
-    </div>
-  </main>
+  <div id="eventsCardsFixed" style="display:flex;flex-direction:column;width:100%;">
+
+    <a href="halloween.html" class="eventFixed">
+      <div class="eventFixedImg"><img src="https://crescentschaos.github.io/pokemmo-resources/images/halloween/pumpking-3.gif" alt=""></div>
+      <div class="eventFixedDate"><b>🎃 À VENIR</b><span>Du 30–31 octobre au 14–15 novembre</span></div>
+      <h2>Halloween</h2>
+      <p>Préparez-vous pour l’événement d’Halloween ! Découvrez les récompenses et les activités spéciales disponibles pendant cette période.</p>
+      <strong>Consulter →</strong>
+    </a>
+
+    <a href="noel.html" class="eventFixed">
+      <div class="eventFixedImg"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/jirachi.gif" alt=""></div>
+      <div class="eventFixedDate"><b>🎄 À VENIR</b><span>Du 26 décembre au 9–10 janvier</span></div>
+      <h2>Événement Noël</h2>
+      <p>Célébrez les fêtes de fin d’année avec l’événement de Noël ! Découvrez les récompenses, les activités et les surprises disponibles pendant cette période.</p>
+      <strong>Consulter →</strong>
+    </a>
+
+    <a href="zodiaque.html" class="eventFixed">
+      <div class="eventFixedImg"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/shaymin-sky.gif" alt=""></div>
+      <div class="eventFixedDate"><b>🌙 À VENIR</b><span>Du 17 février au 3 mars</span></div>
+      <h2>Événement Lunaire / Zodiaque</h2>
+      <p>Découvrez l’événement Lunaire et Zodiaque ! Partez à la découverte des signes du zodiaque, des récompenses célestes et des activités spéciales.</p>
+      <strong>Consulter →</strong>
+    </a>
+
+    <a href="calendrier.html" class="eventFixed">
+      <div class="eventFixedImg" style="font-size:34px;">📅</div>
+      <div class="eventFixedDate"><b>RESSOURCE</b><span>Calendrier</span></div>
+      <h2>Calendrier Des Légendaires</h2>
+      <p>Consulte régulièrement le calendrier pour ne manquer aucune activité importante.</p>
+      <strong>Consulter →</strong>
+    </a>
+
+  </div>
+</main>
+
 
 </body>
 </html>
