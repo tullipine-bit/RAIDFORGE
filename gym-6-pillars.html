@@ -4633,7 +4633,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 </head>
 
-<body>
+<body class="rf-unified">
 
     <!-- =========================
          NAVIGATION
@@ -7520,6 +7520,309 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })();
     </script>
+
+
+<style id="raidforge-shared-theme">
+/* Présentation commune : Tempest Explosion, 7 Hells et 6 Pillars. */
+body.rf-unified{margin:0;color:#edf6ff;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 15% 0%,rgba(35,101,166,.35),transparent 32%),radial-gradient(circle at 90% 20%,rgba(32,64,130,.25),transparent 30%),linear-gradient(135deg,#060d1b,#0c1b33 55%,#07101f)}
+.rf-unified *{box-sizing:border-box}
+.rf-unified header{padding:22px 6%;background:rgba(5,13,27,.95);border-bottom:1px solid #29466c;gap:16px}
+.rf-unified .logo{font-size:24px;letter-spacing:3px;color:#62d5ff;font-weight:800}
+.rf-unified .header-nav-btn{padding:9px 15px!important;border:1px solid #31527e!important;border-radius:8px!important;background:#12253f!important;color:#b9c8df!important;font-size:13px!important;box-shadow:none!important;text-decoration:none}
+.rf-unified .header-nav-btn:hover{color:#62d5ff!important;border-color:#62d5ff!important}
+.rf-unified main{width:94%;max-width:1600px;padding:45px 0 80px;margin:0 auto}
+.rf-unified .hero{text-align:center;padding:10px 20px 20px;margin-bottom:30px;background:none;border:none}
+.rf-unified .hero-label{color:#62d5ff;font-size:11px;letter-spacing:4px}
+.rf-unified .hero h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(32px,5.5vw,72px);letter-spacing:3px;line-height:1.1;margin:20px 0;color:#edf6ff}
+.rf-unified .hero p{max-width:760px;margin:auto;color:#aebdd7;font-size:15px;line-height:1.8}
+.rf-unified .intro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:55px}
+.rf-unified .intro-card,.rf-unified .strategy-box,.rf-unified .info-card{background:linear-gradient(145deg,#142b4c,#0b172d);border:1px solid #31527e;border-radius:16px;padding:25px}
+.rf-unified .intro-card .small-title{color:#62d5ff;letter-spacing:2px}
+.rf-unified .intro-card h2{font-size:20px}
+.rf-unified .intro-card p{font-size:13px;line-height:1.7;color:#aebdd7}
+.rf-unified .section-heading{gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.rf-unified .section-heading h2{font-size:28px}
+.rf-unified .section-heading p{color:#aebdd7;font-size:12px}
+.rf-unified .team-section{margin:55px 0 65px}
+.rf-unified .team-section .pokemon-row.six-pokemon-row{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:14px!important;width:100%!important;align-items:stretch!important}
+.rf-unified .team-section .pokemon-row.six-pokemon-row>.pokemon-card{width:auto!important;min-width:0!important;max-width:none!important;flex:initial!important;margin:0!important;overflow:hidden!important;padding:0!important;border:1px solid #31527e!important;border-radius:15px!important;background:linear-gradient(160deg,#142849,#0d172c)!important;box-shadow:none!important;transition:transform .2s,border-color .2s,box-shadow .2s}
+.rf-unified .team-section .pokemon-row.six-pokemon-row>.pokemon-card:hover{transform:translateY(-6px);border-color:#62d5ff!important;box-shadow:0 10px 25px #32aaff33!important}
+.rf-unified .team-section .pokemon-top{padding:12px;display:flex;align-items:center;justify-content:space-between;gap:5px}
+.rf-unified .team-section .pokemon-number{font-size:12px;color:#62d5ff}
+.rf-unified .team-section .pokemon-role{font-size:10px;color:#aebdd7}
+.rf-unified .team-section .pokemon-picture{height:140px!important;min-height:0!important;aspect-ratio:auto!important;display:flex!important;align-items:center!important;justify-content:center!important;background:radial-gradient(circle,#254b78 0%,#0b1428 75%)!important}
+.rf-unified .team-section .pokemon-picture img{width:110px!important;height:110px!important;max-width:90%!important;max-height:120px!important;object-fit:contain!important;margin:0!important;transform:none!important}
+.rf-unified .team-section .pokemon-row.six-pokemon-row>.pokemon-card .pokemon-content{padding:13px!important;width:100%!important;min-width:0!important}
+.rf-unified .team-section .pokemon-content h3{font-size:19px!important;margin:2px 0 8px!important}
+.rf-unified .team-section .pokemon-details{display:block!important}
+.rf-unified .team-section .detail-block{margin:13px 0 0!important;padding:0!important;border:0!important;background:none!important}
+.rf-unified .team-section .detail-block h4{font-size:11px!important;letter-spacing:1px;text-transform:uppercase;color:#aebdd7;margin:0 0 8px!important}
+.rf-unified .team-section .attack-list{display:grid!important;grid-template-columns:1fr!important;gap:5px!important}
+.rf-unified .team-section .attack-list>span{display:block!important;font-size:11px!important;padding:6px 8px!important;border-radius:5px!important;line-height:1.4!important}
+.rf-unified .team-section .iv-grid,.rf-unified .team-section .ev-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;width:100%!important;margin:0!important}
+.rf-unified .team-section .iv-stat,.rf-unified .team-section .ev-stat{display:block!important;min-width:0!important;width:auto!important;padding:7px 1px!important;text-align:center!important;background:#06102088!important;border:1px solid #29466c!important;border-radius:5px!important}
+.rf-unified .team-section .iv-stat span,.rf-unified .team-section .ev-stat span{display:block!important;font-size:8px!important;line-height:1.3!important;color:#aebdd7!important}
+.rf-unified .team-section .iv-stat strong,.rf-unified .team-section .ev-stat strong{display:block!important;font-size:12px!important;line-height:1.3!important;margin-top:3px!important}
+.rf-unified .team-section .typhlosion-nature-badge{margin-top:14px!important;padding:8px!important;border:1px solid #486085!important;background:#233554!important;border-radius:7px!important;text-align:center}
+.rf-unified .team-section .talent-block p{font-size:12px!important}
+.rf-unified .team-section .pokemon-item-row{display:flex!important;align-items:center!important;gap:6px!important;border-top:1px solid #31527e!important;padding-top:12px!important;margin-top:15px!important;flex-wrap:wrap!important;font-size:11px!important}
+.rf-unified .team-section .pokemon-item-row strong{font-size:11px!important}
+.rf-unified .team-section .pokemon-item-row img{width:28px!important;height:28px!important;object-fit:contain!important}
+.rf-unified .team-section .move-note{font-size:10px!important;line-height:1.4!important;flex-wrap:wrap}
+.rf-unified .team-section .iv-reference-note{font-size:10px!important;line-height:1.5!important}
+.rf-unified .techrun-header{padding:26px;background:linear-gradient(145deg,#143052,#091528);border:1px solid #31527e;border-radius:18px;box-shadow:none}
+.rf-unified .techrun-header h2{font-size:28px}.rf-unified .techrun-header p{font-size:14px;color:#aebdd7;line-height:1.8}
+.rf-unified .arena-search{max-width:none;padding:0;background:none;border:0;box-shadow:none;margin:25px 0}
+.rf-unified .arena-search>label{text-align:left;font-size:11px;letter-spacing:2px;color:#62d5ff}
+.rf-unified .arena-search-box{border:1px solid #31527e;border-radius:10px;background:#08162b;padding:0 15px}
+.rf-unified #arena-search-input{padding:15px 0;font-size:14px}
+.rf-unified .route-region{margin-bottom:40px}
+.rf-unified .route-region .route-region-title{display:flex!important;justify-content:flex-start!important;gap:12px!important;width:100%!important;max-width:none!important;padding:0 0 14px!important;margin:35px 0 20px!important;background:none!important;border:0!important;border-bottom:1px solid #29466c!important;border-radius:0!important;box-shadow:none!important;color:#62d5ff!important;font-size:25px!important;text-align:left!important;letter-spacing:1px!important}
+.rf-unified .route-region-title::before,.rf-unified .route-region-title::after{content:none!important}
+.rf-unified .route-region .route-card{width:100%!important;max-width:none!important;min-width:0!important;margin:0 0 18px!important;padding:22px!important;background:linear-gradient(145deg,rgba(20,43,76,.98),rgba(9,21,40,.98))!important;border:1px solid #31527e!important;border-radius:18px!important;box-shadow:none!important}
+.rf-unified .route-region .route-card:hover{border-color:#62d5ff!important}
+.rf-unified .route-card [class$="-title"]{color:#edf6ff!important;letter-spacing:.5px!important}
+.rf-unified .route-card .route-note{border-radius:8px;background:#07132888;color:#ffde99;line-height:1.7}
+.rf-unified .route-warning{background:#10213a;border:1px solid #31527e;border-radius:12px;color:#ffde99;padding:18px;font-size:13px}
+.rf-unified a:focus-visible,.rf-unified button:focus-visible,.rf-unified input:focus-visible{outline:3px solid #62d5ff;outline-offset:4px}
+@media(max-width:1250px){.rf-unified .team-section .pokemon-row.six-pokemon-row{grid-template-columns:repeat(3,minmax(0,1fr))!important}.rf-unified .team-section .pokemon-picture{height:160px!important}}
+@media(max-width:760px){.rf-unified .team-section .pokemon-row.six-pokemon-row{grid-template-columns:repeat(2,minmax(0,1fr))!important}.rf-unified header{padding:18px 4%;flex-wrap:wrap}.rf-unified .logo{font-size:20px}.rf-unified .header-nav-actions{gap:6px}.rf-unified .header-nav-btn{padding:7px 9px!important;font-size:11px!important}.rf-unified .hero{padding:0}.rf-unified .hero h1{font-size:38px}.rf-unified .intro-grid{grid-template-columns:1fr}.rf-unified .route-region .route-card{padding:16px!important}.rf-unified .section-heading{align-items:flex-start}.rf-unified .techrun-header{padding:22px}}
+@media(max-width:440px){.rf-unified main{width:92%}.rf-unified .team-section .pokemon-row.six-pokemon-row{grid-template-columns:1fr!important}.rf-unified .team-section .pokemon-row.six-pokemon-row>.pokemon-card .pokemon-content{padding:20px!important}.rf-unified .team-section .iv-grid,.rf-unified .team-section .ev-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
+@media(prefers-reduced-motion:reduce){.rf-unified *{scroll-behavior:auto!important;transition:none!important}.rf-unified .team-section .pokemon-row.six-pokemon-row>.pokemon-card:hover{transform:none}}
+</style>
+
+
+<style id="raidforge-arena-interface">
+/* Cartes d’arènes : même interface que Tempest Explosion. */
+.rf-unified #routes-container .route-region{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.rf-unified #routes-container .route-region>.route-region-title,.rf-unified #routes-container .route-region>.between-gym-heal{grid-column:1/-1}
+.rf-unified #routes-container .route-region>.route-card{display:block!important;position:relative!important;width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:22px!important;border:1px solid #31527e!important;border-radius:18px!important;background:linear-gradient(145deg,#142b4c,#091528)!important;box-shadow:none!important;overflow-wrap:anywhere}
+.rf-unified #routes-container .route-card.arena-search-hidden,.rf-unified #routes-container .route-region.arena-search-hidden{display:none!important}
+.rf-unified #routes-container .route-card.rf-complete{border-color:#62d5ff!important;background:linear-gradient(145deg,#123343,#091c2a)!important}
+.rf-arena-header{display:flex;align-items:center;gap:12px;padding-bottom:15px;margin-bottom:18px;border-bottom:1px solid #31527e}
+.rf-arena-check{display:flex;align-items:center;gap:8px;flex-shrink:0;cursor:pointer}
+.rf-arena-check input{width:17px;height:17px;accent-color:#62d5ff}
+.rf-arena-number{display:grid;place-items:center;min-width:36px;height:36px;padding:0 5px;background:#62d5ff;color:#06101f;border-radius:9px;font-size:16px;font-weight:700}
+.rf-unified #routes-container .route-card .rf-arena-header h4{margin:0!important;padding:0!important;border:0!important;background:none!important;color:#edf6ff!important;text-align:left!important;font:700 20px/1.35 Arial,Helvetica,sans-serif!important;letter-spacing:0!important;width:auto!important}
+.rf-unified #routes-container .route-card>.route-number{display:none!important}
+.rf-unified #routes-container .route-card>.route-content{width:100%!important;min-width:0!important;padding:0!important}
+.rf-unified #routes-container .route-card .route-title-line:empty{display:none!important}
+.rf-unified #routes-container .route-card [class$="-line"]{display:none!important}
+.rf-unified #routes-container .route-card [class$="-wrap"],.rf-unified #routes-container .route-card [class$="-battle"],.rf-unified #routes-container .route-card [class$="-variant"],.rf-unified #routes-container .route-card [class$="-variants"],.rf-unified #routes-container .route-card [class$="-note"],.rf-unified #routes-container .route-card .battle-box,.rf-unified #routes-container .route-card .lavaridge-mockup{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;position:static!important;transform:none!important;float:none!important}
+.rf-unified #routes-container .route-card [class$="-wrap"]{padding:0!important;background:none!important;border:0!important;display:block!important}
+.rf-unified #routes-container .route-card [class$="-battle"]{padding:16px!important;margin:12px 0!important;background:#07132888!important;border:1px solid #29466c!important;border-radius:12px!important}
+.rf-unified #routes-container .route-card [class$="-variant"],.rf-unified #routes-container .route-card [class$="-note"],.rf-unified #routes-container .route-card .route-action,.rf-unified #routes-container .route-card .special-encounter{padding:14px!important;margin:12px 0!important;background:#07132888!important;border:1px solid #31527e!important;border-left:3px solid #d2b16d!important;border-radius:9px!important;text-align:left!important;color:#c3d1e2!important}
+.rf-unified #routes-container .route-card p{font-size:13px!important;line-height:1.75!important}
+.rf-unified #routes-container .route-card [class$="-lead"],.rf-unified #routes-container .route-card [class$="-move"]{text-align:center!important}
+.rf-unified #routes-container .route-card [class$="-sprites"]{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:18px!important;width:100%!important;max-width:100%!important;margin:16px auto!important;padding:0!important}
+.rf-unified #routes-container .route-card [class$="-sprites"] img{position:static!important;transform:none!important;object-fit:contain!important;max-width:90px!important;max-height:90px!important;width:80px!important;height:80px!important;margin:0!important}
+.rf-unified #routes-container .route-card [class$="-sprites"] img.leader,.rf-unified #routes-container .route-card [class$="-sprites"] img.trainer{width:55px!important;height:70px!important;max-width:55px!important}
+.rf-unified #routes-container .seven-hells-leader-avatar{width:65px!important;height:75px!important;background:none!important;border:0!important;box-shadow:none!important;margin:auto!important}
+.rf-unified #routes-container .seven-hells-leader-avatar img{width:100%!important;height:100%!important;object-fit:contain!important}
+.rf-unified #routes-container .route-card .battle-box{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:12px!important;padding:16px!important;background:#07132888!important;border:1px solid #29466c!important;border-radius:12px!important}
+.rf-unified #routes-container .route-card .battle-box>.battle-label,.rf-unified #routes-container .route-card .battle-box>.gym-tabs{flex-basis:100%!important;width:100%!important}
+.rf-unified #routes-container .route-card .battle-pokemon{min-width:0!important;max-width:100%!important}
+.rf-unified #routes-container .route-card .gym-visuals{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+.rf-unified #routes-container .route-card .gym-visual,.rf-unified #routes-container .route-card .gym-visual img{height:140px!important;min-height:140px!important}
+.rf-unified #routes-container .route-card .gym-tab-button{font-size:12px!important;padding:9px 12px!important}
+.rf-run-progress{padding:20px;margin:22px 0;background:#0b172d;border:1px solid #31527e;border-radius:14px}
+.rf-run-progress>div{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rf-run-progress span{color:#edf6ff;font-size:13px}
+.rf-run-progress button{background:none;border:0;color:#aebdd7;font:12px Arial,sans-serif;text-decoration:underline;cursor:pointer;padding:8px}
+.rf-run-progress progress{display:block;width:100%;height:8px;accent-color:#62d5ff;margin-top:14px}
+.rf-run-progress small{display:block;margin-top:10px;color:#aebdd7;font-size:11px}
+@media(max-width:1050px){.rf-unified #routes-container .route-region{grid-template-columns:1fr}}
+@media(max-width:600px){.rf-unified #routes-container .route-region>.route-card{padding:16px!important}.rf-unified #routes-container .route-card .rf-arena-header h4{font-size:18px!important}.rf-unified #routes-container .route-card [class$="-battle"]{padding:12px!important}}
+</style>
+<script id="raidforge-arena-interface-script">
+document.addEventListener('DOMContentLoaded', function () {
+const root = document.getElementById('routes-container');
+if (!root) return;
+const cards = [...root.querySelectorAll('.route-card')];
+if (!cards.length) return;
+const key = 'raidforge-arena-completed-' + location.pathname.split('/').pop();
+let completed = [];
+try { const value = JSON.parse(localStorage.getItem(key) || '[]'); if (Array.isArray(value)) completed = value; } catch {}
+const toolbar = document.createElement('div');
+toolbar.className = 'rf-run-progress';
+toolbar.innerHTML = '<div><span aria-live="polite"></span><button type="button">Réinitialiser la progression</button></div><progress value="0" aria-label="Arènes terminées"></progress><small>Coche les arènes terminées. Progression enregistrée dans ce navigateur si le stockage local est disponible.</small>';
+root.before(toolbar);
+const entries = [];
+cards.forEach(function (card, index) {
+const title = card.querySelector('h4');
+if (!title) return;
+const originalLabel = title.textContent.trim();
+const region = card.closest('.route-region');
+const regionTitle = region ? region.querySelector('.route-region-title') : null;
+const identity = (regionTitle ? regionTitle.textContent.trim() : '') + '|' + originalLabel + '|' + index;
+const header = document.createElement('div');
+header.className = 'rf-arena-header';
+const label = document.createElement('label');
+label.className = 'rf-arena-check';
+const input = document.createElement('input');
+input.type = 'checkbox';
+input.checked = completed.includes(identity);
+input.setAttribute('aria-label', 'Marquer ' + originalLabel + ' comme terminée');
+const number = document.createElement('span');
+number.className = 'rf-arena-number';
+number.textContent = String(index + 1).padStart(2, '0');
+label.append(input, number);
+header.append(label, title);
+card.prepend(header);
+entries.push({card, input, identity});
+input.addEventListener('change', refresh);
+});
+function refresh() {
+const selected = entries.filter(entry => entry.input.checked);
+entries.forEach(entry => entry.card.classList.toggle('rf-complete', entry.input.checked));
+toolbar.querySelector('span').textContent = selected.length + ' / ' + entries.length + ' arènes terminées';
+const progress = toolbar.querySelector('progress');
+progress.max = entries.length || 1;
+progress.value = selected.length;
+try { localStorage.setItem(key, JSON.stringify(selected.map(entry => entry.identity))); } catch {}
+}
+toolbar.querySelector('button').addEventListener('click', function () { entries.forEach(entry => { entry.input.checked = false; }); refresh(); });
+refresh();
+});
+</script>
+
+
+
+<style id="raidforge-restored-colors">
+/* Couleurs de lecture des Pokémon, attaques et consignes. */
+.rf-unified #routes-container .water,.rf-unified #routes-container .blue,.rf-unified #routes-container .blastoise{color:#4d96ff!important}
+.rf-unified #routes-container .fire{color:#ff7043!important}
+.rf-unified #routes-container .ice{color:#72e8ff!important}
+.rf-unified #routes-container .pink,.rf-unified #routes-container .support{color:#f39bd3!important}
+.rf-unified #routes-container .purple{color:#b184ff!important}
+.rf-unified #routes-container .sun{color:#ffd35b!important}
+.rf-unified #routes-container .heal{color:#36e39a!important;font-weight:800}
+.rf-unified #routes-container .rf-move-text{color:var(--rf-poke-color,#62d5ff)!important}
+.rf-unified #routes-container .rf-arena-header h4{color:#62d5ff!important}
+.rf-unified #routes-container .route-card [class$="-note"]>strong{color:#f4c95d!important}
+.rf-unified #routes-container .route-card .route-action>strong{color:#62d5ff!important}
+.rf-unified #routes-container .between-gym-heal{color:#36e39a!important;border-color:#36e39a66!important;background:#0c2925!important}
+.rf-unified .team-section .iv-stat strong{color:#62d5ff!important}
+.rf-unified .team-section .iv-stat strong.iv-zero{color:#ff8b91!important}
+.rf-unified .team-section .ev-stat strong{color:#8ee6b0!important}
+.rf-unified .team-section .attack-list [data-type="FEU"]{color:#ffad83!important;background:#ff70431a!important;border-left:3px solid #ff7043!important}
+.rf-unified .team-section .attack-list [data-type="EAU"]{color:#95c5ff!important;background:#4d96ff1a!important;border-left:3px solid #4d96ff!important}
+.rf-unified .team-section .attack-list [data-type="GLACE"]{color:#a5efff!important;background:#72e8ff1a!important;border-left:3px solid #72e8ff!important}
+.rf-unified .team-section .attack-list [data-type="NORMAL"]{color:#e0d8cd!important;background:#d3c5af1a!important;border-left:3px solid #b9ab95!important}
+.rf-unified .team-section .attack-list [data-type="VOL"]{color:#b8d6ff!important;background:#8dbfff1a!important;border-left:3px solid #8dbfff!important}
+.rf-unified .team-section .attack-list [data-type="SOL"]{color:#e5c587!important;background:#e5b45b1a!important;border-left:3px solid #e5b45b!important}
+.rf-unified .team-section .attack-list [data-type="ROCHE"]{color:#e2d2a2!important;background:#c1a8641a!important;border-left:3px solid #c1a864!important}
+.rf-unified .team-section .attack-list [data-type="DRAGON"]{color:#c9b3ff!important;background:#9870ef1a!important;border-left:3px solid #9870ef!important}
+.rf-unified .team-section .attack-list [data-type="POISON"]{color:#dda0ed!important;background:#b66bcc1a!important;border-left:3px solid #b66bcc!important}
+.rf-unified .team-section .attack-list [data-type="COMBAT"]{color:#ffa6a0!important;background:#cf66601a!important;border-left:3px solid #cf6660!important}
+.rf-unified .team-section .attack-list [data-type="PSY"]{color:#ffb5e0!important;background:#ef76be1a!important;border-left:3px solid #ef76be!important}
+.rf-unified .team-section .attack-list [data-type="TÉNÈBRES"]{color:#d5c1f3!important;background:#ad92d81a!important;border-left:3px solid #ad92d8!important}
+</style>
+
+<style id="pillars-togekiss-pink">
+/* Togekiss : rose commun aux guides RAIDFORGE. */
+body.rf-unified #routes-container .pink,
+body.rf-unified #routes-container [class$="-fairy"],
+body.rf-unified #routes-container .battle-pokemon:has(img[alt="Togekiss"]) strong,
+body.rf-unified #routes-container .battle-pokemon:has(img[alt="Togekiss"]) span,
+body.rf-unified #routes-container .battle-pokemon:has(img[alt="Togekiss"]) .pokemon-name,
+body.rf-unified .rf-togekiss-name { color:#f39bd3!important; }
+</style>
+<script id="pillars-togekiss-name-color">
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('#routes-container span, #routes-container strong, #routes-container b').forEach(function (element) {
+    if (element.textContent.trim() === 'Togekiss') element.classList.add('rf-togekiss-name');
+  });
+});
+</script>
+<style id="pillars-electric-move-color">
+body.rf-unified .team-section .attack-list span[data-type="ÉLECTRIK"]{color:#ffe477!important;background:#f4cf451a!important;border-left:3px solid #f4cf45!important}
+</style>
+<style id="vermilava-lead-colors">
+body.rf-unified #routes-container .reference-layout .battle-label.rf-vermilava-label::before,
+body.rf-unified #routes-container .reference-layout .battle-label.rf-vermilava-label::after{content:none!important}
+body.rf-unified #routes-container .reference-layout .battle-label.rf-vermilava-label{font-size:.84rem!important;font-weight:700!important;color:#c8c8c8!important}
+body.rf-unified #routes-container .rf-vermilava-label .rf-lead-tortank{color:#62a8ff!important}
+body.rf-unified #routes-container .rf-vermilava-label .rf-lead-togekiss{color:#f39bd3!important}
+</style>
+<script id="vermilava-lead-colors-script">
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('#routes-container .reference-layout').forEach(function (card) {
+    const title = card.querySelector('h4');
+    if (!title || !/Vermilava|Lavaridge/i.test(title.textContent)) return;
+    const label = card.querySelector('.battle-label');
+    if (!label) return;
+    label.classList.add('rf-vermilava-label');
+    label.innerHTML = 'Commence avec <span class="rf-lead-tortank">Tortank</span> et <span class="rf-lead-togekiss">Togekiss</span>.';
+  });
+});
+</script>
+<style id="vermilava-move-colors">
+body.rf-unified #routes-container .reference-layout .battle-box.rf-vermilava-moves::after{content:none!important}
+body.rf-unified #routes-container .rf-vermilava-move-line{flex:0 0 100%;width:100%;margin:0!important;text-align:center!important;font-weight:800!important;color:#c8c8c8!important}
+body.rf-unified #routes-container .rf-vermilava-move-line .rf-water-move{color:#62a8ff!important}
+body.rf-unified #routes-container .rf-vermilava-move-line .rf-togekiss-move{color:#f39bd3!important}
+</style>
+<script id="vermilava-move-colors-script">
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('#routes-container .reference-layout').forEach(function (card) {
+    const title = card.querySelector('h4');
+    if (!title || !/Vermilava|Lavaridge/i.test(title.textContent)) return;
+    const box = card.querySelector('.battle-box');
+    if (!box || box.querySelector('.rf-vermilava-move-line')) return;
+    box.classList.add('rf-vermilava-moves');
+    const moves = document.createElement('p');
+    moves.className = 'rf-vermilava-move-line';
+    moves.innerHTML = '<span class="rf-water-move">Giclédo</span> + <span class="rf-togekiss-move">Coup d’Main</span>';
+    box.appendChild(moves);
+  });
+});
+</script>
+
+<style id="pillars-centered-moves">
+body.rf-unified #routes-container .route-card .battle-box>.battle-pokemon{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;padding:12px!important;height:auto!important;min-height:0!important}
+body.rf-unified #routes-container .route-card .battle-pokemon-picture{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:100px!important}
+body.rf-unified #routes-container .route-card .battle-pokemon-info{width:100%!important;text-align:center!important}
+body.rf-unified #routes-container .route-card .battle-pokemon-info strong{display:block!important;text-align:center!important}
+body.rf-unified #routes-container .route-card .battle-pokemon-info span{display:block!important;text-align:center!important;margin:8px 0 0!important;line-height:1.5!important;font-size:13px!important}
+body.rf-unified #routes-container .reference-layout .battle-box::after{content:none!important}
+body.rf-unified #routes-container .reference-layout .rf-vermilava-move-line{display:none!important}
+body.rf-unified #routes-container .battle-pokemon:has(img[alt="Tortank"]) .battle-pokemon-info span{color:#62a8ff!important}
+body.rf-unified #routes-container .battle-pokemon:has(img[alt="Togekiss"]) .battle-pokemon-info span{color:#f39bd3!important}
+body.rf-unified #routes-container .route-card [class$="-sprites"]{align-items:flex-start!important;gap:18px!important}
+body.rf-unified #routes-container .route-card .rf-move-pokemon{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;width:110px!important;max-width:42%!important;margin:0!important;text-align:center!important}
+body.rf-unified #routes-container .route-card .rf-move-pokemon figcaption{display:block!important;width:100%!important;text-align:center!important;font-size:13px!important;font-weight:700!important;line-height:1.5!important;overflow-wrap:normal!important}
+body.rf-unified #routes-container .route-card [class$="-sprites"]+p,
+body.rf-unified #routes-container .route-card [class$="-move"],
+body.rf-unified #routes-container .route-card .rf-centered-move{text-align:center!important;width:100%!important;max-width:100%!important;margin:12px auto!important}
+</style>
+<script id="pillars-centered-moves-script">
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.getElementById('routes-container');
+  if (!root) return;
+  root.querySelectorAll('[class$="-sprites"]').forEach(function (row) {
+    const line = row.nextElementSibling;
+    if (!line || line.tagName !== 'P') return;
+    line.classList.add('rf-centered-move');
+    const pokemon = [...row.children].filter(el => el.tagName === 'IMG' && !el.matches('.leader,.trainer'));
+    if (pokemon.length !== 2) return;
+    const parts = [...line.children];
+    const plainText = [...line.childNodes].filter(node => node.nodeType === 3).map(node => node.textContent).join('').trim();
+    // Only pair unambiguous "move + move" rows. Keep turn numbers and variants intact.
+    if (parts.length !== 2 || plainText !== '+' || parts.some(el => !el.matches('span,strong'))) return;
+    pokemon.forEach(function (img, index) {
+      const figure = document.createElement('figure');
+      figure.className = 'rf-move-pokemon';
+      const caption = document.createElement('figcaption');
+      caption.appendChild(parts[index]);
+      img.before(figure);
+      figure.append(img, caption);
+    });
+    line.remove();
+  });
+});
+</script>
+
 
 </body>
 </html>
