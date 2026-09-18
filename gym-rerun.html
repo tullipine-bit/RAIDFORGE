@@ -2362,7 +2362,13 @@ body::after {
 /* Navigation haute */
 .rf-home{left:26.0%;top:1.0%;width:7.6%;height:5.7%}.rf-tools{left:34.2%;top:1.0%;width:6.3%;height:5.7%}.rf-raids{left:40.8%;top:1.0%;width:5.8%;height:5.7%}.rf-gym{left:47.0%;top:1.0%;width:7.6%;height:5.7%}.rf-events{left:55.4%;top:1.0%;width:6.5%;height:5.7%}.rf-farming{left:62.5%;top:1.0%;width:7.1%;height:5.7%}.rf-guides{left:70.0%;top:1.0%;width:6.5%;height:5.7%}
 /* Cartes rerun */
-.rf-six{left:18.1%;top:36.2%;width:12.3%;height:31.7%}.rf-seven{left:31.0%;top:36.2%;width:12.1%;height:31.7%}.rf-tempest{left:43.7%;top:36.2%;width:12.2%;height:31.7%}.rf-prehistoric{left:56.7%;top:36.2%;width:12.2%;height:31.7%}.rf-double{left:69.5%;top:36.2%;width:12.4%;height:31.7%}
+/* 6 zones TEAM RERUN — alignées sur le nouveau fond */
+.rf-six{left:15.9%;top:37.0%;width:11.0%;height:31.5%}
+.rf-seven{left:27.5%;top:37.0%;width:11.1%;height:31.5%}
+.rf-tempest{left:39.2%;top:37.0%;width:11.3%;height:31.5%}
+.rf-prehistoric{left:50.9%;top:37.0%;width:11.7%;height:31.5%}
+.rf-double{left:63.0%;top:37.0%;width:11.6%;height:31.5%}
+.rf-starry{left:74.9%;top:37.0%;width:12.8%;height:31.5%}
 @media(max-width:700px){.rf-click-layer{height:56.25vw}}
 
 
@@ -2394,6 +2400,21 @@ a[class*="hotspot"]:hover {
   transform: translateY(-2px) !important;
 }
 
+
+/* Encadrements propres des 6 TEAM RERUN */
+.rf-six, .rf-seven, .rf-tempest, .rf-prehistoric, .rf-double, .rf-starry {
+  border: 2px solid rgba(90, 210, 255, .28) !important;
+  border-radius: 18px !important;
+  background: rgba(2, 10, 28, .025) !important;
+  box-shadow: inset 0 0 18px rgba(35, 150, 255, .06) !important;
+}
+.rf-six:hover, .rf-seven:hover, .rf-tempest:hover,
+.rf-prehistoric:hover, .rf-double:hover, .rf-starry:hover {
+  border-color: #53e6ff !important;
+  background: rgba(0, 170, 255, .07) !important;
+  box-shadow: 0 0 10px rgba(83,230,255,.85), 0 0 24px rgba(55,110,255,.55), inset 0 0 20px rgba(70,200,255,.10) !important;
+  transform: translateY(-2px) scale(1.01) !important;
+}
 </style>
 </head>
 
@@ -2411,6 +2432,7 @@ a[class*="hotspot"]:hover {
   <a class="rf-hotspot rf-tempest" href="gym-tempest-explosion.html" aria-label="Tempest Explosion">Tempest Explosion</a>
   <a class="rf-hotspot rf-prehistoric" href="gym-prehistoric-5.html" aria-label="Prehistoric 5">Prehistoric 5</a>
   <a class="rf-hotspot rf-double" href="gym-double-typhlosion.html" aria-label="Double Typhlosion">Double Typhlosion</a>
+  <a class="rf-hotspot rf-starry" href="#" aria-label="Starry Dance">Starry Dance</a>
 </div>
 
 
@@ -2542,7 +2564,7 @@ a[class*="hotspot"]:hover {
           </p>
         </div>
 
-        <a href="#" class="gym-button">
+        <a href="gym-tempest-explosion.html" class="gym-button">
           Voir Tempest Explosion <span>↗</span>
         </a>
 
