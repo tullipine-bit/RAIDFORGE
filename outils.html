@@ -2190,23 +2190,409 @@ Pour mettre une vraie image plus tard :
         flex: 1 1 100% !important;
     }
 }
+
+/* Carte ROTATIONS illustrée */
+.rotation-image-card{
+  padding:0!important;
+  overflow:hidden!important;
+  display:block!important;
+  min-height:0!important;
+  background:#071225!important;
+  border:1px solid rgba(54,197,232,.28)!important;
+  border-radius:14px!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.28)!important;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease!important;
+}
+.rotation-image-card:hover{
+  transform:translateY(-4px)!important;
+  border-color:#36c5e8!important;
+  box-shadow:0 18px 38px rgba(0,0,0,.38),0 0 22px rgba(54,197,232,.16)!important;
+}
+.rotation-card-image{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  object-fit:cover!important;
+  border-radius:inherit!important;
+}
+
+
+/* ===== NOUVELLE INTERFACE OUTILS ===== */
+.tools-grid-premium{
+  margin-top:34px!important;
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:20px!important;
+  width:100%!important;
+}
+.tools-grid-premium .tool-card{
+  position:relative!important;
+  min-height:230px!important;
+  border-radius:16px!important;
+  overflow:hidden!important;
+  text-decoration:none!important;
+}
+.tools-grid-premium .tool-feature-card{
+  grid-column:1 / -1!important;
+  min-height:300px!important;
+}
+.tools-grid-premium .rotation-card-image{
+  width:100%!important;
+  height:300px!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  transition:transform .35s ease!important;
+}
+.tools-grid-premium .tool-feature-card:hover .rotation-card-image{
+  transform:scale(1.025)!important;
+}
+.tool-card-overlay{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  padding:52px 28px 24px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:4px!important;
+  background:linear-gradient(transparent,rgba(2,8,20,.93))!important;
+  pointer-events:none!important;
+}
+.tool-card-overlay strong{
+  color:#fff!important;
+  font-size:26px!important;
+  letter-spacing:.7px!important;
+}
+.tool-card-overlay>span:last-child{
+  color:#8da8c6!important;
+  font-size:14px!important;
+}
+.tool-kicker{
+  color:#2bdcff!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  letter-spacing:1.5px!important;
+}
+.tool-new-card{
+  display:flex!important;
+  align-items:center!important;
+  gap:24px!important;
+  padding:28px!important;
+  background:
+    radial-gradient(circle at 12% 20%,rgba(21,196,238,.13),transparent 32%),
+    linear-gradient(135deg,#102746 0%,#09172d 60%,#071224 100%)!important;
+  border:1px solid rgba(65,154,216,.32)!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.25)!important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;
+}
+.tool-new-card:hover{
+  transform:translateY(-5px)!important;
+  border-color:#25cfee!important;
+  box-shadow:0 18px 40px rgba(0,0,0,.36),0 0 24px rgba(37,207,238,.12)!important;
+}
+.tool-new-icon{
+  flex:0 0 94px!important;
+  width:94px!important;
+  height:94px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:22px!important;
+  color:#42dcff!important;
+  font-size:42px!important;
+  font-weight:800!important;
+  background:linear-gradient(145deg,rgba(24,94,140,.48),rgba(10,36,68,.72))!important;
+  border:1px solid rgba(52,199,235,.35)!important;
+  box-shadow:inset 0 0 24px rgba(24,176,220,.08),0 0 22px rgba(0,0,0,.18)!important;
+}
+.pokedex-symbol{
+  font-size:48px!important;
+}
+.tool-new-content{
+  min-width:0!important;
+}
+.tool-new-content h3{
+  margin:5px 0 8px!important;
+  color:#f5fbff!important;
+  font-size:24px!important;
+  letter-spacing:.5px!important;
+}
+.tool-new-content p{
+  margin:0 0 22px!important;
+  color:#7897b8!important;
+  font-size:14px!important;
+  line-height:1.55!important;
+}
+.tool-open{
+  color:#28d7ff!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  letter-spacing:.6px!important;
+}
+@media(max-width:760px){
+  .tools-grid-premium{
+    grid-template-columns:1fr!important;
+  }
+  .tools-grid-premium .tool-feature-card{
+    grid-column:auto!important;
+    min-height:220px!important;
+  }
+  .tools-grid-premium .rotation-card-image{
+    height:220px!important;
+  }
+  .tool-new-card{
+    min-height:190px!important;
+    padding:22px!important;
+  }
+  .tool-new-icon{
+    flex-basis:72px!important;
+    width:72px!important;
+    height:72px!important;
+    font-size:34px!important;
+  }
+}
+
+
+/* === 3 OUTILS : même taille et côte à côte comme avant === */
+.tools-grid-premium{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px!important;
+  align-items:stretch!important;
+}
+.tools-grid-premium .tool-card,
+.tools-grid-premium .tool-feature-card,
+.tools-grid-premium .tool-new-card{
+  grid-column:auto!important;
+  width:100%!important;
+  height:260px!important;
+  min-height:260px!important;
+  box-sizing:border-box!important;
+}
+.tools-grid-premium .rotation-card-image{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+.tools-grid-premium .tool-new-card{
+  padding:24px!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  gap:14px!important;
+}
+.tools-grid-premium .tool-new-icon{
+  flex:0 0 64px!important;
+  width:64px!important;
+  height:64px!important;
+  border-radius:15px!important;
+  font-size:30px!important;
+}
+.tools-grid-premium .pokedex-symbol{
+  font-size:34px!important;
+}
+.tools-grid-premium .tool-new-content h3{
+  font-size:21px!important;
+}
+.tools-grid-premium .tool-new-content p{
+  margin-bottom:14px!important;
+}
+@media(max-width:900px){
+  .tools-grid-premium{
+    grid-template-columns:1fr!important;
+  }
+  .tools-grid-premium .tool-card,
+  .tools-grid-premium .tool-feature-card,
+  .tools-grid-premium .tool-new-card{
+    height:230px!important;
+    min-height:230px!important;
+  }
+}
+
+
+/* Calculator : image intégrée dans la case, même taille que les autres */
+.tools-grid-premium .calculator-image-card{
+  padding:0!important;
+  display:block!important;
+  overflow:hidden!important;
+  background:#071225!important;
+}
+.tools-grid-premium .calculator-card-image{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:inherit!important;
+  transition:transform .3s ease!important;
+}
+.tools-grid-premium .calculator-image-card:hover .calculator-card-image{
+  transform:scale(1.025)!important;
+}
+
+
+/* POKEDEX : image directement dans la case */
+.tools-grid-premium .pokedex-card{
+  padding:0!important;
+  display:block!important;
+  overflow:hidden!important;
+  background:#071225!important;
+}
+.tools-grid-premium .pokedex-card-image{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:inherit!important;
+  transition:transform .3s ease!important;
+}
+.tools-grid-premium .pokedex-card:hover .pokedex-card-image{
+  transform:scale(1.025)!important;
+}
+
+
+/* ===== EN-TÊTE OUTILS RAIDFORGE ===== */
+.tools-hero-title{
+  position:relative;
+  overflow:hidden;
+  margin:0 0 38px;
+  padding:42px 42px 38px;
+  border:1px solid rgba(54,197,232,.22);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(54,197,232,.16),transparent 34%),
+    radial-gradient(circle at 85% 25%,rgba(113,140,255,.12),transparent 32%),
+    linear-gradient(135deg,rgba(13,35,62,.98),rgba(5,14,30,.98));
+  box-shadow:0 20px 45px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.04);
+}
+.tools-hero-title::after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:-80px;
+  top:-110px;
+  border:1px solid rgba(54,197,232,.18);
+  border-radius:50%;
+  box-shadow:0 0 50px rgba(54,197,232,.08);
+}
+.tools-hero-kicker{
+  display:block;
+  margin-bottom:9px;
+  color:#36d8ff;
+  font-family:"Rajdhani",sans-serif;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2.4px;
+}
+.tools-hero-title h1{
+  margin:0!important;
+  font-family:"Rajdhani",sans-serif!important;
+  font-size:clamp(42px,5vw,66px)!important;
+  line-height:.95!important;
+  letter-spacing:2px!important;
+  color:#fff!important;
+  text-shadow:0 0 24px rgba(54,197,232,.22);
+}
+.tools-hero-title p{
+  max-width:650px;
+  margin:15px 0 0!important;
+  color:#9eb6cf!important;
+  font-size:15px!important;
+  line-height:1.65!important;
+}
+.tools-hero-line{
+  width:110px;
+  height:3px;
+  margin-top:22px;
+  border-radius:99px;
+  background:linear-gradient(90deg,#36d8ff,#718cff,transparent);
+  box-shadow:0 0 14px rgba(54,216,255,.35);
+}
+@media(max-width:700px){
+  .tools-hero-title{
+    padding:30px 24px 28px;
+    border-radius:14px;
+  }
+}
+
+
+/* RETOUR + HOME à droite de l'en-tête OUTILS */
+.tools-nav-buttons{
+  position:absolute;
+  top:24px;
+  right:28px;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.tools-nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:92px;
+  height:36px;
+  padding:0 15px;
+  border:1px solid #7b35c9;
+  border-radius:9px;
+  background:linear-gradient(180deg,#54239a 0%,#2b0d59 100%);
+  color:#fff!important;
+  font-family:"Rajdhani",sans-serif;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-decoration:none!important;
+  box-shadow:0 0 14px rgba(123,53,201,.28),inset 0 1px 0 rgba(255,255,255,.12);
+  transition:.18s ease;
+}
+.tools-nav-btn:hover{
+  transform:translateY(-2px);
+  border-color:#a75cff;
+  box-shadow:0 0 20px rgba(139,67,224,.5),inset 0 1px 0 rgba(255,255,255,.15);
+}
+@media(max-width:700px){
+  .tools-nav-buttons{
+    position:relative;
+    top:auto;
+    right:auto;
+    justify-content:flex-end;
+    margin-bottom:22px;
+  }
+}
+
 </style>
 </head>
 <body>
 
-  <nav class="top-menu">
-    <a href="index.html">Accueil</a>
-    <a href="outils.html" class="active">Outils</a>
-    <a href="raids.html">Raids</a>
-    <a href="gym-rerun.html">Gym Rerun</a>
-    <a href="events.html">Events</a>
-    <a href="farming.html">Farming</a>
-    <a href="guides.html">Guides</a>
-  </nav>
+  
 
   <main class="page-content">
-    <h1>OUTILS</h1>
-    <p>Les outils RAIDFORGE seront bientôt disponibles.</p>
+    <section class="tools-hero-title">
+      <div class="tools-nav-buttons">
+        <a class="tools-nav-btn" href="index.html">⌂ HOME</a>
+      </div>
+      <span class="tools-hero-kicker">◆ CENTRE D'OUTILS RAIDFORGE ◆</span>
+      <h1>OUTILS</h1>
+      <p>Tout ce qu’il te faut pour préparer, analyser et optimiser ton aventure.</p>
+      <div class="tools-hero-line"></div>
+    </section>
+
+    <section class="tools-grid tools-grid-premium">
+      <a class="tool-card rotation-image-card tool-feature-card" href="rotations.html" aria-label="Consulter les rotations">
+        <img class="rotation-card-image" src="images/rotation-card.png" alt="Rotations — Altering Cave et Jardin Trophée">
+      </a>
+
+      <a class="tool-card tool-new-card calculator-card calculator-image-card" href="calculator.html" aria-label="Ouvrir Calculator">
+        <img class="calculator-card-image" src="images/calculator-card.png" alt="Calculator RAIDFORGE">
+      </a>
+
+      <a class="tool-card tool-new-card pokedex-card" href="pokedex.html">
+        <img class="pokedex-card-image" src="images/pokedex-card.jpg" alt="Pokédex RAIDFORGE">
+      </a>
+    </section>
   </main>
 
 </body>

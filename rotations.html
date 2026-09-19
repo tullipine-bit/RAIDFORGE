@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotations - RAIDFORGE</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#050914;--surface:#0b172b;--surface2:#10213a;--text:#edf6ff;--muted:#8194ad;--nav:#A7D9E6;--navtext:#14263D;--cyan:#36c5e8;--blue:#5da9ff;--border:rgba(167,217,230,.16);--gold:#f5c451}
+*{box-sizing:border-box}body{
+margin:0;
+min-height:100vh;
+color:var(--text);
+font-family:"Space Grotesk",sans-serif;
+background:
+linear-gradient(rgba(2,7,17,.34),rgba(2,7,17,.48)),
+url("images/fond-rotations.png") center top/cover fixed no-repeat;
+}a{color:inherit;text-decoration:none}
+.navbar{min-height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:var(--nav);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.logo{font:700 1.8rem "Rajdhani";letter-spacing:2px;color:var(--navtext)}.nav-links{display:flex;gap:8px;align-items:center}.nav-links a{color:var(--navtext);font-size:.9rem;font-weight:700;padding:11px 14px;border-radius:8px}.nav-links a:hover,.nav-links a.active{background:#14263D;color:#fff}
+.hero{
+padding:72px 25px 46px;
+text-align:center;
+border-bottom:1px solid var(--border);
+background:linear-gradient(180deg,rgba(3,8,20,.40),rgba(3,8,20,.12));
+}
+.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:3px;font-size:.76rem}.hero h1{font:700 clamp(3.2rem,8vw,6rem) "Rajdhani";letter-spacing:4px;margin:8px 0 10px}.hero p{color:#b8cce1;margin:0 auto;max-width:720px;line-height:1.7}
+.wrap{max-width:1180px;margin:0 auto;padding:50px 24px 80px}.status{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:18px 22px;background:rgba(6,18,36,.82);backdrop-filter:blur(7px);border:1px solid var(--border);border-radius:14px;margin-bottom:28px}.status strong{color:var(--cyan)}.countdown{font:700 1.25rem "Rajdhani";color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,rgba(9,25,48,.86),rgba(4,14,29,.90));backdrop-filter:blur(7px);border:1px solid var(--border);border-radius:15px;padding:26px;box-shadow:0 15px 35px rgba(0,0,0,.2)}.card h2{font:700 2rem "Rajdhani";margin:0}.sub{color:var(--muted);font-size:.88rem;margin:4px 0 22px}
+.live-state{display:inline-flex;align-items:center;gap:8px;margin:18px 0}.live-dot{width:8px;height:8px;border-radius:50%;background:#4ee59a;box-shadow:0 0 12px rgba(78,229,154,.8)}
+.type-badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(54,197,232,.1);border:1px solid rgba(54,197,232,.3);color:#9deaff;font-weight:800;font-size:.8rem}
+.group-title{margin:22px 0 10px;color:#b9dff2;font:700 1rem "Rajdhani";letter-spacing:1px}.pokemon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.poke{min-height:118px;padding:10px 6px;background:#071225;border:1px solid rgba(167,217,230,.12);border-radius:10px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.poke img{width:68px;height:68px;object-fit:contain;image-rendering:pixelated}.poke span{font-size:.76rem;font-weight:700;color:#d9ecfb}.rare{border-color:rgba(245,196,81,.35);box-shadow:inset 0 0 18px rgba(245,196,81,.04)}.rare span{color:#ffd978}.horde{border-color:rgba(139,124,255,.35)}
+.trophy-current{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:330px;background:radial-gradient(circle,rgba(54,197,232,.12),transparent 55%)}.trophy-current img{width:145px;height:145px;object-fit:contain;image-rendering:pixelated}.trophy-current h3{font:700 2rem "Rajdhani";margin:10px 0 4px}.notice{margin-top:18px;padding:13px 15px;border-left:3px solid var(--gold);background:rgba(245,196,81,.06);color:#c9b980;font-size:.78rem;line-height:1.55}
+.back{display:inline-flex;margin-top:28px;padding:12px 18px;border:1px solid #347ba5;border-radius:8px;color:#bdeeff;font-weight:700;background:#102944}.back:hover{border-color:var(--cyan)}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.nav-links{display:none}}@media(max-width:520px){.pokemon-grid{grid-template-columns:repeat(2,1fr)}.status{align-items:flex-start;flex-direction:column}}
+
+.wrap{padding-top:34px}
+.grid{align-items:stretch}
+.card{min-height:620px}
+@media(max-width:850px){
+  body{background-attachment:scroll;background-position:center top}
+  .card{min-height:auto}
+}
+
+
+/* === RAIDFORGE ROTATIONS — VERSION NETTOYÉE === */
+html,body{width:100%;height:100%;margin:0;overflow:hidden!important}
+body{
+  position:fixed;inset:0;
+  background:
+    linear-gradient(rgba(2,7,17,.03),rgba(2,7,17,.04)),
+    url("images/fond-rotations.png") center center/100% 100% no-repeat!important;
+}
+.navbar,.hero{display:none!important}
+.wrap{
+  position:fixed!important;inset:0!important;
+  width:100vw!important;height:100vh!important;
+  max-width:none!important;margin:0!important;padding:0!important;
+}
+.status{
+  position:absolute!important;top:22.4%!important;left:50%!important;
+  transform:translateX(-50%)!important;
+  width:45.8%!important;height:7.4%!important;
+  margin:0!important;padding:.75vh 1.4vw!important;
+  border:0!important;background:rgba(1,14,31,.42)!important;
+  box-shadow:none!important;backdrop-filter:none!important;
+}
+.grid{
+  position:absolute!important;top:31.4%!important;left:50%!important;
+  transform:translateX(-50%)!important;
+  width:56.3%!important;height:54.7%!important;
+  display:grid!important;grid-template-columns:1fr 1fr!important;
+  gap:1.55%!important;
+}
+.card{
+  width:100%!important;height:100%!important;min-height:0!important;
+  margin:0!important;padding:7.8% 6.5% 4.5%!important;
+  overflow:hidden!important;border:0!important;border-radius:0!important;
+  background:rgba(1,13,30,.18)!important;
+  box-shadow:none!important;backdrop-filter:none!important;
+}
+.card h2,.card .sub{display:none!important}
+.live-state{margin:0 .4vw .7vh 0!important}
+.type-badge{padding:.38vh .55vw!important;font-size:clamp(8px,.62vw,11px)!important}
+.group-title{margin:.72vh 0 .35vh!important;font-size:clamp(9px,.72vw,12px)!important;line-height:1!important}
+.pokemon-grid{
+  display:grid!important;grid-template-columns:repeat(3,1fr)!important;
+  gap:.42vw!important;width:100%!important;
+}
+
+/* IMPORTANT : aucune case / aucun encadré autour des Pokémon d'Altering Cave */
+.grid>.card:first-child .poke{
+  min-height:0!important;height:8.2vh!important;padding:.2vh .2vw!important;
+  display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;
+  background:transparent!important;border:none!important;
+  outline:none!important;box-shadow:none!important;border-radius:0!important;
+}
+.grid>.card:first-child .rare,
+.grid>.card:first-child .horde{
+  background:transparent!important;border:none!important;
+  outline:none!important;box-shadow:none!important;
+}
+.poke img{width:5.1vh!important;height:5.1vh!important}
+.poke span{font-size:clamp(8px,.59vw,10px)!important;line-height:1!important}
+
+.trophy-current{
+  width:100%!important;height:72%!important;min-height:0!important;
+  margin:0!important;background:none!important;
+}
+.trophy-current img{width:12vh!important;height:12vh!important}
+.trophy-current h3{margin:.5vh 0 .2vh!important;font-size:clamp(20px,1.9vw,32px)!important}
+.notice{
+  position:absolute!important;left:53.3%!important;right:3.3%!important;bottom:7%!important;
+  margin:0!important;padding:.8vh .8vw!important;
+  font-size:clamp(8px,.61vw,10px)!important;background:rgba(54,43,13,.48)!important;
+}
+.back{display:none!important}
+
+
+/* === ALTERING CAVE : centrage VISUEL des Pokémon === */
+.grid > .card:first-child .pokemon-grid{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-content:center!important;
+  column-gap:1.8vw!important;
+  row-gap:.35vh!important;
+  width:100%!important;
+  margin:0 auto!important;
+}
+
+.grid > .card:first-child .poke{
+  flex:0 0 24%!important;
+  width:24%!important;
+  max-width:24%!important;
+  height:8.2vh!important;
+  margin:0!important;
+  padding:.2vh 0!important;
+  background:transparent!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+
+.grid > .card:first-child .group-title{
+  width:100%!important;
+  text-align:center!important;
+  margin:.72vh auto .35vh!important;
+}
+
+/* EN DIRECT + TYPE centrés au-dessus */
+.grid > .card:first-child .live-state{
+  display:flex!important;
+  width:max-content!important;
+  margin:0 auto .7vh!important;
+}
+.grid > .card:first-child #typeBadge{
+  display:flex!important;
+  width:max-content!important;
+  margin:0 auto!important;
+  left:auto!important;
+}
+
+
+/* Altering Cave : centre le bloc Pokémon dans SA case */
+.grid > .card:first-child{
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+
+.grid > .card:first-child .live-state,
+.grid > .card:first-child #typeBadge,
+.grid > .card:first-child .group-title,
+.grid > .card:first-child .pokemon-grid{
+  position:relative!important;
+  left:0!important;
+  right:auto!important;
+  transform:none!important;
+}
+
+.grid > .card:first-child .pokemon-grid{
+  width:88%!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  justify-content:center!important;
+}
+
+.grid > .card:first-child .group-title{
+  width:88%!important;
+  text-align:left!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+
+/* VRAI CENTRAGE : tout le contenu Altering Cave devient un seul bloc centré */
+.grid > .card:first-child{
+  position:relative!important;
+  display:block!important;
+}
+.grid > .card:first-child .altering-content{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  width:86%!important;
+  margin:0!important;
+  padding:0!important;
+}
+.grid > .card:first-child .altering-status{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.55vw!important;
+  width:100%!important;
+  margin:0 auto .8vh!important;
+}
+.grid > .card:first-child .altering-status .live-state,
+.grid > .card:first-child .altering-status #typeBadge{
+  position:static!important;
+  left:auto!important;
+  right:auto!important;
+  transform:none!important;
+  margin:0!important;
+}
+.grid > .card:first-child .pokemon-grid{
+  width:100%!important;
+  margin:0 auto!important;
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  gap:.35vh 1.6vw!important;
+}
+.grid > .card:first-child .group-title{
+  width:100%!important;
+  margin:.7vh 0 .3vh!important;
+  text-align:center!important;
+}
+
+
+/* Altering Cave : décalage vers le centre du cadre SANS masquer de Pokémon */
+.grid > .card:first-child{
+  overflow:visible!important;
+}
+.grid > .card:first-child .altering-content{
+  left:42%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  width:86%!important;
+}
+
+
+/* Jardin Trophée : même principe pour Mélo, recentré sans le masquer */
+.grid > .card:nth-child(2){
+  position:relative!important;
+  overflow:visible!important;
+}
+.grid > .card:nth-child(2) .trophy-current{
+  position:absolute!important;
+  left:58%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  width:86%!important;
+  margin:0!important;
+}
+
+
+/* Retire le message "Données synchronisées..." */
+#liveNotice{
+  display:none!important;
+}
+
+
+/* Retire l'apparence des deux grands cadres HTML, sans déplacer le contenu */
+.grid > .card{
+  background:transparent!important;
+  border:none!important;
+  outline:none!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+}
+
+
+/* Bouton HOME en haut à droite */
+.rotation-home-btn{
+  position:fixed!important;
+  top:16px!important;
+  right:24px!important;
+  z-index:999!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:76px!important;
+  height:34px!important;
+  padding:0 14px!important;
+  border:1px solid #7b35c9!important;
+  border-radius:9px!important;
+  background:linear-gradient(180deg,#54239a 0%,#2b0d59 100%)!important;
+  color:#fff!important;
+  font:700 12px "Rajdhani",sans-serif!important;
+  letter-spacing:.35px!important;
+  text-decoration:none!important;
+  box-shadow:0 0 14px rgba(123,53,201,.28), inset 0 1px 0 rgba(255,255,255,.12)!important;
+  transition:.18s ease!important;
+}
+.rotation-home-btn:hover{
+  transform:translateY(-1px)!important;
+  border-color:#a75cff!important;
+  box-shadow:0 0 18px rgba(139,67,224,.48), inset 0 1px 0 rgba(255,255,255,.15)!important;
+}
+
+
+/* RETOUR + HOME : déplacés vers la gauche de la zone en haut à droite */
+.rotation-home-btn{display:none!important}
+.rotation-nav-buttons{
+  position:fixed!important;
+  top:16px!important;
+  right:155px!important;
+  z-index:999!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+}
+.rotation-nav-btn{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:34px!important;
+  padding:0 14px!important;
+  border:1px solid #7b35c9!important;
+  border-radius:9px!important;
+  background:linear-gradient(180deg,#54239a 0%,#2b0d59 100%)!important;
+  color:#fff!important;
+  font:700 12px "Rajdhani",sans-serif!important;
+  letter-spacing:.35px!important;
+  text-decoration:none!important;
+  box-shadow:0 0 14px rgba(123,53,201,.28),inset 0 1px 0 rgba(255,255,255,.12)!important;
+  transition:.18s ease!important;
+}
+.rotation-nav-btn:hover{
+  transform:translateY(-1px)!important;
+  border-color:#a75cff!important;
+  box-shadow:0 0 18px rgba(139,67,224,.48),inset 0 1px 0 rgba(255,255,255,.15)!important;
+}
+
+
+/* Boutons encore plus vers la gauche */
+.rotation-nav-buttons{
+  right:260px!important;
+}
+
+
+/* Boutons encore davantage vers la gauche */
+.rotation-nav-buttons{
+  right:370px!important;
+}
+
+</style>
+</head>
+<body>
+<header class="navbar">
+<a class="logo" href="index.html">RAIDFORGE</a>
+<nav class="nav-links"><a href="index.html">Accueil</a><a class="active" href="outils.html">Outils</a><a href="calendrier.html">Calendrier</a></nav>
+</header>
+<section class="hero"><div class="eyebrow">OUTILS POKÉMMO</div><h1>ROTATIONS</h1><p>Consulte les rotations d'Altering Cave et du Jardin Trophée dans l'interface RAIDFORGE.</p></section>
+<div class="rotation-nav-buttons">
+  <a class="rotation-nav-btn" href="outils.html">← RETOUR</a>
+  <a class="rotation-nav-btn" href="index.html">⌂ HOME</a>
+</div>
+<main class="wrap">
+<div class="status"><div><strong>ROTATION 6 HEURES</strong><div style="color:var(--muted);font-size:.8rem;margin-top:4px">Prochaine fenêtre de rotation</div></div><div id="countdown" class="countdown">--:--:--</div></div>
+<div class="grid">
+<section class="card">
+<h2>Altering Cave</h2><p class="sub">Rotation actuelle récupérée automatiquement.</p>
+<div class="altering-content">
+<div class="altering-status"><div class="live-state"><span class="live-dot"></span><span class="type-badge">EN DIRECT</span></div>
+<div id="typeBadge" class="type-badge">CHARGEMENT...</div></div>
+<div class="group-title">POKÉMON</div><div id="normalGrid" class="pokemon-grid"></div>
+<div class="group-title">RARES</div><div id="rareGrid" class="pokemon-grid"></div>
+<div class="group-title">HORDES ×3</div><div id="hordeGrid" class="pokemon-grid"></div>
+</div>
+</section>
+<section class="card">
+<h2>Jardin Trophée</h2><p class="sub">Rotation actuelle récupérée automatiquement.</p>
+<div class="trophy-current"><span class="type-badge">EN DIRECT</span><img id="trophySprite" src="" alt=""><h3 id="trophyName">Chargement...</h3><div style="color:var(--muted);font-size:.82rem">Trophy Garden</div></div>
+<div id="liveNotice" class="notice">Connexion aux rotations en cours...</div>
+</section>
+</div>
+<a class="back" href="outils.html">← Retour aux outils</a>
+</main>
+<script>
+const WORKER_URL = "https://raidforge-rotations.tullipine.workers.dev/";
+
+const nomsFR = {
+  "Buneary":"Laporeille",
+  "Machoke":"Machopeur",
+  "Snorlax":"Ronflex",
+  "Slakoth":"Parecool",
+  "Sneasel":"Farfuret",
+  "Pidgeot":"Roucarnage",
+  "Slugma":"Limagma",
+  "Throh":"Judokrak",
+  "Granbull":"Granbull",
+  "Cleffa":"Mélo",
+  "Chatot":"Pijako",
+  "Dunsparce":"Insolourdo",
+  "Charizard":"Dracaufeu",
+  "Scyther":"Insécateur",
+  "Vullaby":"Vostourno",
+  "Mandibuzz":"Vaututrice",
+  "Poliwag":"Ptitard",
+  "Golduck":"Akwakwak",
+  "Axew":"Coupenotte",
+  "Chansey":"Leveinard"
+};
+const nomFR = n => nomsFR[n] || n;
+
+const sprite = n => `https://play.pokemonshowdown.com/sprites/gen5ani/${String(n).toLowerCase().replaceAll(".","").replaceAll("♀","-f").replaceAll("♂","-m").replaceAll(" ","-")}.gif`;
+
+function cards(id, arr, cls=""){
+  document.getElementById(id).innerHTML = (arr || []).map(name =>
+    `<div class="poke ${cls}"><img src="${sprite(name)}" alt="${name}" onerror="this.style.display='none'"><span>${nomFR(name)}</span></div>`
+  ).join("");
+}
+
+async function loadLiveRotation(){
+  const notice = document.getElementById("liveNotice");
+  try {
+    const response = await fetch(WORKER_URL, { cache: "no-store" });
+    if(!response.ok) throw new Error(`HTTP ${response.status}`);
+    const live = await response.json();
+    if(!live.success) throw new Error(live.error || "Données indisponibles");
+
+    const cave = live.altering_cave || {};
+    document.getElementById("typeBadge").textContent = cave.gem_type ? `TYPE : ${cave.gem_type}` : "TYPE INCONNU";
+    cards("normalGrid", cave.singles || []);
+    cards("rareGrid", cave.rare_singles || [], "rare");
+    cards("hordeGrid", cave.hordes || [], "horde");
+
+    const trophy = live.trophy_garden?.singles?.[0];
+    const trophyImg = document.getElementById("trophySprite");
+    const trophyName = document.getElementById("trophyName");
+    if(trophy){
+      trophyName.textContent = nomFR(trophy);
+      trophyImg.src = sprite(trophy);
+      trophyImg.alt = trophy;
+      trophyImg.style.display = "";
+    } else {
+      trophyName.textContent = "Indisponible";
+      trophyImg.style.display = "none";
+    }
+
+    notice.textContent = "Données synchronisées automatiquement avec la rotation actuelle.";
+  } catch(err) {
+    notice.textContent = "Impossible de récupérer la rotation pour le moment. Nouvelle tentative automatique bientôt.";
+    console.error("RAIDFORGE rotations:", err);
+  }
+}
+
+// Refresh regularly; the Worker itself caches upstream briefly.
+loadLiveRotation();
+setInterval(loadLiveRotation, 5 * 60 * 1000);
+
+let lastWindow = null;
+function tick(){
+  const d = new Date(), u = d.getTime();
+  const six = 6 * 60 * 60 * 1000;
+  const windowId = Math.floor(u / six);
+  const next = (windowId + 1) * six;
+  let s = Math.max(0, Math.floor((next-u)/1000));
+  const h = String(Math.floor(s/3600)).padStart(2,"0");
+  s %= 3600;
+  const m = String(Math.floor(s/60)).padStart(2,"0");
+  const sec = String(s%60).padStart(2,"0");
+  document.getElementById("countdown").textContent = `${h}:${m}:${sec}`;
+
+  if(lastWindow !== null && windowId !== lastWindow) loadLiveRotation();
+  lastWindow = windowId;
+}
+tick();
+setInterval(tick,1000);
+</script>
+</body></html>
