@@ -9584,6 +9584,60 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 }
 </style>
 
+<style id="raidforge-mobile-adaptation">
+/* RAIDFORGE — adaptation mobile globale (PC inchangé) */
+@media (max-width: 768px) {
+  html,body{max-width:100%;overflow-x:hidden!important}
+  body{min-width:0!important;background-attachment:scroll!important}
+  *,*::before,*::after{box-sizing:border-box}
+  img,video,canvas,svg{max-width:100%;height:auto}
+  .container,.wrap,.page-content,.section,.hero,.calendar-page,.event-detail-page{width:100%!important;max-width:100%!important;padding-left:14px!important;padding-right:14px!important;margin-left:auto!important;margin-right:auto!important}
+  h1{font-size:clamp(28px,9vw,46px)!important;line-height:1.05!important}
+  h2{font-size:clamp(22px,7vw,34px)!important}
+  h3{font-size:clamp(18px,5.5vw,26px)!important}
+  p,li,.note,.muted{overflow-wrap:anywhere}
+  .navbar,.site-header,.header-inner{min-height:auto!important;height:auto!important}
+  .navbar,.header-inner{padding:10px 14px!important;gap:10px!important;flex-wrap:wrap!important}
+  .logo{font-size:clamp(20px,7vw,30px)!important;max-width:70vw}
+  .nav-links,.main-nav,.top-menu{display:none!important}
+  .menu-button{display:flex!important}
+  .header-nav-actions,.actions,.page-navigation,.event-buttons,.rotation-nav-buttons,.tools-nav-buttons{display:flex!important;flex-wrap:wrap!important;gap:8px!important;justify-content:center!important;position:static!important;transform:none!important;margin-left:auto!important;margin-right:auto!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{min-height:44px!important;max-width:100%!important;white-space:normal!important;text-align:center!important}
+  .hero{padding-top:28px!important;padding-bottom:28px!important;min-height:0!important;height:auto!important}
+  .hero p{max-width:100%!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.six-pokemon-row,.pokemon-grid,.team-grid,.route-grid,.iv-grid,.ev-grid{grid-template-columns:1fr!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.pokemon-grid,.team-grid{gap:14px!important}
+  .tool-card,.tool-feature-card,.tool-new-card,.event-card,.intro-card,.stat,.raid-page-card{width:100%!important;max-width:100%!important;min-width:0!important}
+  .tools-grid-premium .tool-card,.tools-grid-premium .tool-feature-card,.tools-grid-premium .tool-new-card{height:auto!important;min-height:190px!important}
+  .tools-hero-title{padding:22px 14px!important;margin-left:0!important;margin-right:0!important}
+  .tools-hero-kicker{font-size:11px!important;letter-spacing:1.5px!important}
+  .pokemon-card,.stop,.route-card,.battle-card,.strategy-card,.possibility-card,.case-card{width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important}
+  .pokemon-card{height:auto!important}
+  .pokemon-content,.pokemon-details{min-width:0!important}
+  .pokemon-picture img,.pokemon-sprite,.battle-pokemon img{max-width:min(180px,55vw)!important;height:auto!important}
+  .iv-grid,.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .attack-list,.moves,.move-grid{grid-template-columns:1fr!important}
+  .stop,.route-card{padding:14px!important}
+  .battle-row,.battle-team,.battle-pokemon-row,.pokemon-pair,.strategy-row,.case-content{flex-wrap:wrap!important;justify-content:center!important;gap:10px!important}
+  .battle-pokemon{min-width:0!important;max-width:45%!important}
+  table{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  iframe{max-width:100%!important}
+  .event-detail-card{width:100%!important;max-width:100%!important;padding:16px!important}
+  .event-detail-gif{max-width:min(280px,80vw)!important;height:auto!important}
+  .section-heading{flex-wrap:wrap!important;gap:10px!important;text-align:center!important;justify-content:center!important}
+  .section-heading>*{max-width:100%!important}
+  .rotation-card,.rotation-panel,.panel{max-width:100%!important;min-width:0!important}
+  .rotation-nav-buttons{top:auto!important;right:auto!important;left:auto!important}
+  .rf-online-counter,.online-counter{position:static!important;transform:none!important;margin:8px auto!important}
+}
+@media (max-width: 480px) {
+  .container,.wrap,.page-content,.section,.hero{padding-left:10px!important;padding-right:10px!important}
+  .iv-grid,.ev-grid{gap:6px!important}
+  .battle-pokemon{max-width:100%!important;width:100%!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{width:100%!important}
+}
+</style>
+
 </head><body class="rf-unified">
 <a class="skip" href="#contenu">Aller au contenu</a><header>
 <a class="logo" href="index.html">RAIDFORGE</a>
@@ -9697,7 +9751,19 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 <section class="section" id="parcours"><div class="heading"><h2>Route des arènes</h2><span class="pill">Coche les combats terminés</span></div>
 <div class="arena-search"><label for="arena-search">RECHERCHE ARÈNE / RÉGION</label><div class="search-box"><input id="arena-search" type="search" placeholder="Rechercher une arène…" autocomplete="off"><button id="clear-search" type="button">×</button></div><p id="empty-search" hidden>Aucune arène trouvée.</p></div>
 <div class="route-tools"><div class="filters"><button type="button" data-filter="Toutes" aria-pressed="true">Toutes</button><button type="button" data-filter="Hoenn" aria-pressed="false">Hoenn</button><button type="button" data-filter="Kanto" aria-pressed="false">Kanto</button><button type="button" data-filter="Sinnoh" aria-pressed="false">Sinnoh</button><button type="button" data-filter="Johto" aria-pressed="false">Johto</button><button type="button" data-filter="Unys" aria-pressed="false">Unys</button></div><div class="progress-row"><span id="progress-label">0 / 30 étapes terminées</span><noscript><span class="muted"> · La route reste utilisable sans JavaScript.</span></noscript><button class="reset" id="reset" type="button">Réinitialiser la progression</button></div><progress id="progress" value="0" max="30"></progress></div>
-<div class="route"><section class="region" data-region="Hoenn" aria-labelledby="region-Hoenn"><div class="region-heading"><h3 id="region-Hoenn">Hoenn</h3><span>5 étapes</span></div><article class="stop" data-stop="1"><div class="stop-top"><label class="check"><input type="checkbox" value="1" aria-label="Marquer Vermilava comme terminée"><span>01</span></label><h4>1. Vermilava</h4><span class="pill">Feu</span></div>
+<div class="route"><section class="region" data-region="Hoenn" aria-labelledby="region-Hoenn"><div class="region-heading"><h3 id="region-Hoenn">Hoenn</h3><span>5 étapes</span></div><div class="celadopole-tortank-item-change" id="meloetta-start-item" style="grid-column:1 / -1;">
+  <div class="item-change-title">AVANT DE COMMENCER : <span style="color:#ff9bd1;">MELOETTA</span></div>
+  <div class="item-change-subtitle">Meloetta commence le circuit avec le Mouchoir Choix.</div>
+  <div class="item-change-row" style="flex-wrap:wrap;gap:20px;">
+    <div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/meloetta.gif" alt="Meloetta" loading="lazy"></div>
+    <div class="item-change-arrow purple" aria-hidden="true">→</div>
+    <div class="item-change-item">
+      <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy">
+      <strong>Mouchoir Choix</strong>
+    </div>
+  </div>
+</div>
+<article class="stop" data-stop="1"><div class="stop-top"><label class="check"><input type="checkbox" value="1" aria-label="Marquer Vermilava comme terminée"><span>01</span></label><h4>1. Vermilava</h4><span class="pill">Feu</span></div>
 <div class="vermilava-scenarios">
 
   <div class="vermilava-case vermilava-main">
@@ -9889,8 +9955,9 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
       </div>
     </div>
   </div>
-</article><article class="stop" data-stop="5"><div class="stop-top"><label class="check"><input type="checkbox" value="5" aria-label="Marquer Mérouville comme terminée"><span>05</span></label><h4>5. Mérouville</h4><span class="pill">Roche</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#73b9ff !important">Tortank</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/roxanne.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#62a8ff">Giclédo</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#c4a9e8">Assurance</strong></div></div><p class="duo"><span class="route-move" style="color:#68a9ff!important;">Giclédo</span> + <span class="route-move" style="color:#c4a9e8">Assurance</span></p></article>
-<div class="between-gym-heal">HEAL</div>
+</article><div class="between-gym-heal">HEAL</div>
+<article class="stop" data-stop="5"><div class="stop-top"><label class="check"><input type="checkbox" value="5" aria-label="Marquer Mérouville comme terminée"><span>05</span></label><h4>5. Mérouville</h4><span class="pill">Roche</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#73b9ff !important">Tortank</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/roxanne.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#62a8ff">Giclédo</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#c4a9e8">Assurance</strong></div></div><p class="duo"><span class="route-move" style="color:#68a9ff!important;">Giclédo</span> + <span class="route-move" style="color:#c4a9e8">Assurance</span></p></article>
+
 </section><section class="region" data-region="Kanto" aria-labelledby="region-Kanto"><div class="region-heading"><h3 id="region-Kanto">Kanto</h3><span>6 étapes</span></div><article class="stop" data-stop="6"><div class="stop-top"><label class="check"><input type="checkbox" value="6" aria-label="Marquer Carmin sur Mer comme terminée"><span>06</span></label><h4>6. Carmin sur Mer</h4><span class="pill">Électrik</span></div>
 <div class="battle-duo">
 <div class="route-start-line carmin-start-line">
@@ -10042,24 +10109,20 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
   </div>
 
   <div class="cramois-after-content">
-    <img class="cramois-after-weezing"
-         src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
-         alt="Smogogo">
-
-    <span class="cramois-after-arrow">→</span>
-
-    <div class="cramois-after-item">
+<div class="cramois-after-item">
       <img class="cramois-real-item" src="https://play.pokemonshowdown.com/sprites/itemicons/choice-band.png" alt="Bandeau Choix">
       <strong>Bandeau Choix</strong>
     </div>
-
-    <span class="cramois-after-arrow small">→</span>
-
-    <div class="cramois-after-item">
+<span class="cramois-after-arrow">→</span>
+<img class="cramois-after-weezing"
+         src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
+         alt="Smogogo">
+<span class="cramois-after-arrow small">→</span>
+<div class="cramois-after-item">
       <img class="cramois-real-item" src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
       <strong>Mouchoir Choix</strong>
     </div>
-  </div>
+</div>
 </div>
 
 <article class="stop" data-stop="8"><div class="stop-top"><label class="check"><input type="checkbox" value="8" aria-label="Marquer Parmanie comme terminée"><span>08</span></label><h4>8. Parmanie</h4><span class="pill">Poison</span></div><div class="battle-duo">
@@ -10087,39 +10150,39 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
     <div class="parmanie-change">
       <div class="parmanie-pokemon-name" style="color:#d6a8ff">MELOETTA</div>
       <div class="parmanie-change-line">
-        <img class="parmanie-pokemon-img"
-             src="https://play.pokemonshowdown.com/sprites/gen5ani/meloetta.gif"
-             alt="Smogogo">
-        <span class="parmanie-arrow">→</span>
-        <div class="parmanie-item">
+<div class="parmanie-item">
           <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
           <strong>Mouchoir Choix</strong>
         </div>
-        <span class="parmanie-arrow blue">→</span>
-        <div class="parmanie-item">
+<span class="parmanie-arrow">→</span>
+<img class="parmanie-pokemon-img"
+             src="https://play.pokemonshowdown.com/sprites/gen5ani/meloetta.gif"
+             alt="Smogogo">
+<span class="parmanie-arrow blue">→</span>
+<div class="parmanie-item">
           <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix">
           <strong>Lunettes Choix</strong>
         </div>
-      </div>
+</div>
     </div>
 
     <div class="parmanie-change">
       <div class="parmanie-pokemon-name" style="color:#d6a8ff">SMOGOGO</div>
       <div class="parmanie-change-line">
-        <img class="parmanie-pokemon-img"
-             src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
-             alt="Smogogo">
-        <span class="parmanie-arrow">→</span>
-        <div class="parmanie-item">
+<div class="parmanie-item">
           <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
           <strong>Mouchoir Choix</strong>
         </div>
-        <span class="parmanie-arrow blue">→</span>
-        <div class="parmanie-item">
+<span class="parmanie-arrow">→</span>
+<img class="parmanie-pokemon-img"
+             src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif"
+             alt="Smogogo">
+<span class="parmanie-arrow blue">→</span>
+<div class="parmanie-item">
           <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-band.png" alt="Bandeau Choix">
           <strong>Bandeau Choix</strong>
         </div>
-      </div>
+</div>
     </div>
   </div>
 </div>
@@ -10158,24 +10221,20 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
   <div class="item-change-subtitle">Mouchoir Choix → Lunettes Choix.</div>
 
   <div class="item-change-row">
-    <div class="item-change-pokemon">
-      <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
-    </div>
-
-    <div class="item-change-arrow purple">→</div>
-
-    <div class="item-change-item">
+<div class="item-change-item">
       <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
       <strong>Mouchoir Choix</strong>
     </div>
-
-    <div class="item-change-arrow cyan">→</div>
-
-    <div class="item-change-item">
+<div class="item-change-arrow purple">→</div>
+<div class="item-change-pokemon">
+      <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+    </div>
+<div class="item-change-arrow cyan">→</div>
+<div class="item-change-item">
       <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix">
       <strong>Lunettes Choix</strong>
     </div>
-  </div>
+</div>
 </div>
 
 <div class="between-gym-heal">HEAL</div>
@@ -10242,24 +10301,20 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
   <div class="safrania-after-subtitle">Lunettes Choix → Mouchoir Choix.</div>
 
   <div class="safrania-after-row">
-    <div class="safrania-after-pokemon">
-      <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
-    </div>
-
-    <div class="safrania-after-arrow purple">→</div>
-
-    <div class="safrania-after-item">
+<div class="safrania-after-item">
       <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix">
       <strong>Lunettes Choix</strong>
     </div>
-
-    <div class="safrania-after-arrow cyan">→</div>
-
-    <div class="safrania-after-item">
+<div class="safrania-after-arrow purple">→</div>
+<div class="safrania-after-pokemon">
+      <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+    </div>
+<div class="safrania-after-arrow cyan">→</div>
+<div class="safrania-after-item">
       <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
       <strong>Mouchoir Choix</strong>
     </div>
-  </div>
+</div>
 </div>
 
 </article><article class="stop" data-stop="11"><div class="stop-top"><label class="check"><input type="checkbox" value="11" aria-label="Marquer Argenta comme terminée"><span>11</span></label><h4>11. Argenta</h4><span class="pill">Roche</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span> + <span class="route-start-pokemon" style="color:#73b9ff !important">Tortank</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/brock.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#c4a9e8">Assurance</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#62a8ff">Giclédo</strong></div></div><p class="duo"><span class="route-move" style="color:#c4a9e8">Assurance</span> + <span class="route-move" style="color:#68a9ff!important;">Giclédo</span></p><div class="starry-turn-cases"></div>
@@ -10300,6 +10355,7 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 
 </article>
 
+<div class="region-heading"><h3 id="region-Sinnoh">SINNOH</h3></div>
 <article class="stop" data-stop="12"><div class="stop-top"><label class="check"><input type="checkbox" value="12" aria-label="Marquer Voilaroc comme terminée"><span>12</span></label><h4>12. Voilaroc</h4><span class="pill">Combat</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#ff9b62 !important">Typhlosion</span> + <span class="route-start-pokemon" style="color:#ff9bd1 !important">Meloetta</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/maylene.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#73b9ff">Éruption</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/meloetta.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#d8d8d8" style="color:#d6a8ff!important;">Coup de Main</strong></div></div><p class="duo"><span class="route-move" style="color:#ff7043">Éruption</span> + <span class="route-move meloetta-move">Coup de Main</span></p>
 
 <div class="voilaroc-two-cases">
@@ -10409,6 +10465,8 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 </div>
 
 </article>
+<div class="between-gym-heal">HEAL</div>
+
 
 <article class="stop" data-stop="14"><div class="stop-top"><label class="check"><input type="checkbox" value="14" aria-label="Marquer Charbourg comme terminée"><span>14</span></label><h4>14. Charbourg</h4><span class="pill">Roche</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#73b9ff !important">Tortank</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/roark.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#68a9ff">Giclédo</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#d6a8ff">Assurance</strong></div></div><p class="duo"><span class="route-move" style="color:#68a9ff!important;">Giclédo</span> + <span class="route-move" style="color:#d6a8ff!important;">Assurance</span></p><div class="starry-turn-cases"></div>
 
@@ -10551,6 +10609,23 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 
 </article>
 
+<div class="celadopole-tortank-item-change" id="unionpolis-start-items" style="grid-column:1 / -1;">
+  <div class="item-change-title">AVANT L’ARÈNE 17 : COMMENCE AVEC</div>
+  <div class="item-change-subtitle"><span style="color:#d6a8ff;">Smogogo</span> avec le Mouchoir Choix + <span style="color:#ff9b62;">Typhlosion</span> avec les Lunettes Choix.</div>
+  <div class="item-change-row" style="flex-wrap:wrap;gap:24px;">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;">
+      <div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo" loading="lazy"><div style="color:#d6a8ff;font-weight:900;">Smogogo</div></div>
+      <div class="item-change-arrow purple" aria-hidden="true">→</div>
+      <div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy"><strong>Mouchoir Choix</strong></div>
+    </div>
+    <div class="item-change-arrow cyan" aria-hidden="true">+</div>
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;">
+      <div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion" loading="lazy"><div style="color:#ff9b62;font-weight:900;">Typhlosion</div></div>
+      <div class="item-change-arrow purple" aria-hidden="true">→</div>
+      <div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix" loading="lazy"><strong>Lunettes Choix</strong></div>
+    </div>
+  </div>
+</div>
 <article class="stop" data-stop="17"><div class="stop-top"><label class="check"><input type="checkbox" value="17" aria-label="Marquer Unionpolis comme terminée"><span>17</span></label><h4>17. Unionpolis</h4><span class="pill">Spectre</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#ff9b62 !important">Typhlosion</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/fantina.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#ff9b62">Typhlosion</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#d6a8ff">Smogogo</strong></div></div><p class="duo"><span class="route-name" style="color:#ff9b62">Éruption</span> + <span class="route-name" style="color:#d6a8ff">Attaque Spé. +</span></p>
 <div class="unionpolis-cards">
 
@@ -10596,34 +10671,24 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 </div>
 </article>
 
-<div class="unionpolis-item-change">
-  <div class="unionpolis-item-title">APRÈS : <span>TYPHLOSION</span></div>
-  <div class="unionpolis-item-subtitle">Mouchoir Choix → Lunettes Choix.</div>
-
-  <div class="unionpolis-item-flow">
-    <div class="unionpolis-item-pokemon">
-      <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
+<div class="celadopole-tortank-item-change" id="frimapic-start-items" style="grid-column:1 / -1;">
+  <div class="item-change-title">AVANT L’ARÈNE 18 : COMMENCE AVEC</div>
+  <div class="item-change-subtitle"><span style="color:#d6a8ff;">Smogogo</span> avec le Mouchoir Choix + <span style="color:#ff9b62;">Typhlosion</span> avec le Mouchoir Choix.</div>
+  <div class="item-change-row" style="flex-wrap:wrap;gap:24px;">
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;">
+      <div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo" loading="lazy"><div style="color:#d6a8ff;font-weight:900;">Smogogo</div></div>
+      <div class="item-change-arrow purple" aria-hidden="true">→</div>
+      <div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy"><strong>Mouchoir Choix</strong></div>
     </div>
-
-    <div class="unionpolis-item-arrow">→</div>
-
-    <div class="unionpolis-item-object">
-      <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
-      <strong>Mouchoir Choix</strong>
-    </div>
-
-    <div class="unionpolis-item-arrow blue">→</div>
-
-    <div class="unionpolis-item-object">
-      <img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix">
-      <strong>Lunettes Choix</strong>
+    <div class="item-change-arrow cyan" aria-hidden="true">+</div>
+    <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;">
+      <div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion" loading="lazy"><div style="color:#ff9b62;font-weight:900;">Typhlosion</div></div>
+      <div class="item-change-arrow purple" aria-hidden="true">→</div>
+      <div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy"><strong>Mouchoir Choix</strong></div>
     </div>
   </div>
 </div>
-
-
-
-<article class="stop" data-stop="18"><div class="stop-top"><label class="check"><input type="checkbox" value="18" aria-label="Marquer Frimapic comme terminée"><span>18</span></label><h4>18. Frimapic</h4><span class="pill">Glace</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#ff9b62 !important">Typhlosion</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/candice.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion" width="90" height="90" loading="lazy"><strong style="color:#ff9b62">Typhlosion</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#d6a8ff">Smogogo</strong></div></div>
+<article class="stop" data-stop="18"><div class="stop-top"><label class="check"><input type="checkbox" value="18" aria-label="Marquer Frimapic comme terminée"><span>18</span></label><h4>18. Frimapic (Optionnel)</h4><span class="pill">Glace</span></div><div class="route-start-line">Commence avec <span class="route-start-pokemon" style="color:#ff9b62 !important">Typhlosion</span> + <span class="route-start-pokemon" style="color:#d6a8ff !important">Smogogo</span>.</div><div class="battle-duo"><div class="starry-trainer-sprite"><img src="https://play.pokemonshowdown.com/sprites/trainers/candice.png" alt="Trainer" loading="lazy"></div><span class="starry-trainer-arrow" aria-hidden="true">→</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif" alt="Typhlosion" width="90" height="90" loading="lazy"><strong style="color:#ff9b62">Typhlosion</strong></div><span class="duo-plus" aria-hidden="true">+</span><div class="battle-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="" width="90" height="90" loading="lazy"><strong style="color:#d6a8ff">Smogogo</strong></div></div>
 <div class="frimapic-layout">
   <div class="frimapic-cases">
     <div class="frimapic-case">
@@ -10749,6 +10814,7 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 
 </div>
 
+<div class="region-heading"><h3 id="region-Johto">JOHTO</h3></div>
 <article class="stop" data-stop="20">
 <h4 class="restored-arena-title">20. Irisia</h4>
 <div class="stop-top"><label class="check"><input type="checkbox" value="20" aria-label="Marquer Irisia comme terminée"><span>20</span></label>
@@ -10791,6 +10857,7 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 
 </article>
 
+<div class="between-gym-heal">HEAL</div>
 <article class="stop" data-stop="21">
 <h4 class="restored-arena-title">21. Oliville</h4>
 
@@ -10818,7 +10885,7 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 </div>
 
 </article>
-<div class="between-gym-heal">HEAL</div>
+
 
 
 <article class="stop" data-stop="22">
@@ -10903,18 +10970,23 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 
 <section class="ebenelle-choice-specs-change">
   <div class="ecs-title">APRÈS : <span>TORTANK</span></div>
-  <div class="ecs-subtitle"><span>Tortank</span> : Lunettes Choix</div>
-  <div class="ecs-flow">
-    <div class="ecs-side">
+  <div class="ecs-subtitle"><span>Tortank</span> : Mouchoir Choix → Lunettes Choix</div>
+  <div class="ecs-flow" style="flex-wrap:wrap;gap:24px;">
+<div class="ecs-side">
+      <img class="ecs-item" src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix">
+      <strong>Mouchoir Choix</strong>
+    </div>
+<div class="ecs-arrow" aria-hidden="true">→</div>
+<div class="ecs-side">
       <img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank">
       <strong class="ecs-tortank">Tortank</strong>
     </div>
-    <div class="ecs-arrow">→</div>
-    <div class="ecs-side">
+<div class="ecs-arrow">→</div>
+<div class="ecs-side">
       <img class="ecs-item" src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix">
       <strong>Lunettes Choix</strong>
     </div>
-  </div>
+</div>
 </section>
 
 
@@ -10959,6 +11031,31 @@ article.stop[data-stop="17"] .unionpolis-actions small{color:#f4c95d!important;f
 </div>
 
 </article>
+<div id="ecorcia-item-changes" style="grid-column:1 / -1;width:100%;">
+<section class="celadopole-tortank-item-change">
+  <div class="item-change-title">APRÈS ÉCORCIA : <span style="color:#73b9ff;">TORTANK</span></div>
+  <div class="item-change-subtitle">Lunettes Choix → Mouchoir Choix.</div>
+  <div class="item-change-row" style="flex-wrap:wrap;gap:24px;">
+<div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-specs.png" alt="Lunettes Choix" loading="lazy"><strong>Lunettes Choix</strong></div>
+<div class="item-change-arrow purple" aria-hidden="true">→</div>
+<div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif" alt="Tortank" loading="lazy"></div>
+<div class="item-change-arrow cyan" aria-hidden="true">→</div>
+<div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy"><strong>Mouchoir Choix</strong></div>
+</div>
+</section>
+<section class="celadopole-tortank-item-change">
+  <div class="item-change-title">APRÈS ÉCORCIA : <span style="color:#d6a8ff;">SMOGOGO</span></div>
+  <div class="item-change-subtitle">Bandeau Choix → Mouchoir Choix.</div>
+  <div class="item-change-row" style="flex-wrap:wrap;gap:24px;">
+<div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-band.png" alt="Bandeau Choix" loading="lazy"><strong>Bandeau Choix</strong></div>
+<div class="item-change-arrow purple" aria-hidden="true">→</div>
+<div class="item-change-pokemon"><img src="https://play.pokemonshowdown.com/sprites/gen5ani/weezing.gif" alt="Smogogo" loading="lazy"></div>
+<div class="item-change-arrow cyan" aria-hidden="true">→</div>
+<div class="item-change-item"><img src="https://play.pokemonshowdown.com/sprites/itemicons/choice-scarf.png" alt="Mouchoir Choix" loading="lazy"><strong>Mouchoir Choix</strong></div>
+</div>
+</section>
+</div>
+
 <article class="stop" data-stop="25">
 <h4>25. Acajou</h4>
 
