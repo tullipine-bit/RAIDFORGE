@@ -3156,6 +3156,55 @@ section.hero#home::before {
  .parmanie-after-grid{grid-template-columns:minmax(0,1fr)!important}
 }
 
+
+/* RAIDFORGE — compteur en ligne toujours visible */
+.online-counter {
+  display: inline-flex !important;
+  position: fixed !important;
+  top: 14px !important;
+  right: 24px !important;
+  z-index: 100000 !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-height: 38px !important;
+  margin: 0 !important;
+  padding: 0 15px !important;
+  border: 1px solid rgba(0, 200, 255, .55) !important;
+  border-radius: 999px !important;
+  background: rgba(3, 15, 34, .92) !important;
+  color: #eaf8ff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: .6px !important;
+  white-space: nowrap !important;
+  box-shadow: 0 0 18px rgba(0, 200, 255, .18) !important;
+  backdrop-filter: blur(8px);
+}
+.online-counter .online-dot {
+  display: inline-block !important;
+  width: 9px !important;
+  height: 9px !important;
+  flex: 0 0 9px !important;
+  border-radius: 50% !important;
+  background: #16c784 !important;
+  box-shadow: 0 0 10px rgba(22,199,132,.9) !important;
+}
+.online-counter #onlineCount {
+  display: inline-block !important;
+  min-width: 1ch !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+@media (max-width: 700px) {
+  .online-counter {
+    top: 12px !important;
+    right: 58px !important;
+    min-height: 34px !important;
+    padding: 0 11px !important;
+    font-size: 10px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -3185,7 +3234,7 @@ section.hero#home::before {
 
     <div class="online-counter" title="Visiteurs actuellement connectés">
       <span class="online-dot"></span>
-      <span id="onlineCount">--</span> EN LIGNE
+      <span id="onlineCount">0</span> EN LIGNE
     </div>
 
     <button class="menu-button" id="menuButton">
