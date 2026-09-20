@@ -3162,12 +3162,6 @@ section.hero#home::before {
 <body>
 <details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html" aria-current="page">Accueil</a><a href="outils.html">Outils</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav></details>
 
-<div class="rf-online-counter" id="rfOnlineCounter" title="Joueurs actuellement connectés">
-  <span class="rf-online-dot" aria-hidden="true"></span>
-  <span id="onlineCount">0</span>
-  <span>EN LIGNE</span>
-</div>
-
   <nav class="top-menu">
   
 </nav>
@@ -3533,63 +3527,6 @@ if (searchInput) {
 </footer>
 
 <!-- COMPTEUR DE PRESENCE FIREBASE -->
-
-
-<!-- RAIDFORGE — compteur de présence Firebase sécurisé -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-  import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
-  import { getDatabase, ref, set, onValue, onDisconnect, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDOEDkQt8RkLmUo_qxnhxyjixom4oRCDVE",
-    authDomain: "raidforge-a5a4f.firebaseapp.com",
-    databaseURL: "https://raidforge-a5a4f-default-rtdb.firebaseio.com",
-    projectId: "raidforge-a5a4f",
-    storageBucket: "raidforge-a5a4f.firebasestorage.app",
-    messagingSenderId: "106508306536",
-    appId: "1:106508306536:web:cca3b723ac60934b4553dd",
-    measurementId: "G-8CKNTF7ZE5"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getDatabase(app);
-  const counter = document.getElementById("onlineCount");
-
-  const presenceRoot = ref(db, "presence");
-  const connectedRef = ref(db, ".info/connected");
-
-  onValue(presenceRoot, (snapshot) => {
-    if (counter) counter.textContent = snapshot.exists() ? snapshot.size : 0;
-  });
-
-  onAuthStateChanged(auth, (user) => {
-    if (!user) return;
-    const myPresenceRef = ref(db, `presence/${user.uid}`);
-
-    onValue(connectedRef, async (snapshot) => {
-      if (snapshot.val() !== true) return;
-      try {
-        await onDisconnect(myPresenceRef).remove();
-        await set(myPresenceRef, {
-          online: true,
-          lastSeen: serverTimestamp()
-        });
-      } catch (error) {
-        console.error("RAIDFORGE présence Firebase :", error);
-      }
-    });
-  });
-
-  signInAnonymously(auth).catch((error) => {
-    console.error("RAIDFORGE connexion anonyme :", error);
-    if (counter) counter.textContent = "--";
-  });
-</script>
-
-
-
 
 
 <script>
