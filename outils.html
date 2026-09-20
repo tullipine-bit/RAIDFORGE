@@ -2564,8 +2564,115 @@ Pour mettre une vraie image plus tard :
 }
 
 </style>
+<style id="raidforge-mobile-adaptation">
+/* RAIDFORGE — adaptation mobile globale (PC inchangé) */
+@media (max-width: 768px) {
+  html,body{max-width:100%;overflow-x:hidden!important}
+  body{min-width:0!important;background-attachment:scroll!important}
+  *,*::before,*::after{box-sizing:border-box}
+  img,video,canvas,svg{max-width:100%;height:auto}
+  .container,.wrap,.page-content,.section,.hero,.calendar-page,.event-detail-page{width:100%!important;max-width:100%!important;padding-left:14px!important;padding-right:14px!important;margin-left:auto!important;margin-right:auto!important}
+  h1{font-size:clamp(28px,9vw,46px)!important;line-height:1.05!important}
+  h2{font-size:clamp(22px,7vw,34px)!important}
+  h3{font-size:clamp(18px,5.5vw,26px)!important}
+  p,li,.note,.muted{overflow-wrap:anywhere}
+  .navbar,.site-header,.header-inner{min-height:auto!important;height:auto!important}
+  .navbar,.header-inner{padding:10px 14px!important;gap:10px!important;flex-wrap:wrap!important}
+  .logo{font-size:clamp(20px,7vw,30px)!important;max-width:70vw}
+  .nav-links,.main-nav,.top-menu{display:none!important}
+  .menu-button{display:flex!important}
+  .header-nav-actions,.actions,.page-navigation,.event-buttons,.rotation-nav-buttons,.tools-nav-buttons{display:flex!important;flex-wrap:wrap!important;gap:8px!important;justify-content:center!important;position:static!important;transform:none!important;margin-left:auto!important;margin-right:auto!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{min-height:44px!important;max-width:100%!important;white-space:normal!important;text-align:center!important}
+  .hero{padding-top:28px!important;padding-bottom:28px!important;min-height:0!important;height:auto!important}
+  .hero p{max-width:100%!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.six-pokemon-row,.pokemon-grid,.team-grid,.route-grid,.iv-grid,.ev-grid{grid-template-columns:1fr!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.pokemon-grid,.team-grid{gap:14px!important}
+  .tool-card,.tool-feature-card,.tool-new-card,.event-card,.intro-card,.stat,.raid-page-card{width:100%!important;max-width:100%!important;min-width:0!important}
+  .tools-grid-premium .tool-card,.tools-grid-premium .tool-feature-card,.tools-grid-premium .tool-new-card{height:auto!important;min-height:190px!important}
+  .tools-hero-title{padding:22px 14px!important;margin-left:0!important;margin-right:0!important}
+  .tools-hero-kicker{font-size:11px!important;letter-spacing:1.5px!important}
+  .pokemon-card,.stop,.route-card,.battle-card,.strategy-card,.possibility-card,.case-card{width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important}
+  .pokemon-card{height:auto!important}
+  .pokemon-content,.pokemon-details{min-width:0!important}
+  .pokemon-picture img,.pokemon-sprite,.battle-pokemon img{max-width:min(180px,55vw)!important;height:auto!important}
+  .iv-grid,.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .attack-list,.moves,.move-grid{grid-template-columns:1fr!important}
+  .stop,.route-card{padding:14px!important}
+  .battle-row,.battle-team,.battle-pokemon-row,.pokemon-pair,.strategy-row,.case-content{flex-wrap:wrap!important;justify-content:center!important;gap:10px!important}
+  .battle-pokemon{min-width:0!important;max-width:45%!important}
+  table{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  iframe{max-width:100%!important}
+  .event-detail-card{width:100%!important;max-width:100%!important;padding:16px!important}
+  .event-detail-gif{max-width:min(280px,80vw)!important;height:auto!important}
+  .section-heading{flex-wrap:wrap!important;gap:10px!important;text-align:center!important;justify-content:center!important}
+  .section-heading>*{max-width:100%!important}
+  .rotation-card,.rotation-panel,.panel{max-width:100%!important;min-width:0!important}
+  .rotation-nav-buttons{top:auto!important;right:auto!important;left:auto!important}
+  .rf-online-counter,.online-counter{position:static!important;transform:none!important;margin:8px auto!important}
+}
+@media (max-width: 480px) {
+  .container,.wrap,.page-content,.section,.hero{padding-left:10px!important;padding-right:10px!important}
+  .iv-grid,.ev-grid{gap:6px!important}
+  .battle-pokemon{max-width:100%!important;width:100%!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{width:100%!important}
+}
+</style>
+
+<style id="rf-phone-layout">
+/* RAIDFORGE: phone layout, shared across every page. */
+.rf-phone-nav{display:none}
+@media screen and (max-width:768px){
+ html body{min-width:0!important;width:100%!important;margin:0!important}
+ html body main{width:100%!important;min-width:0!important;max-width:100%!important;padding:16px 12px!important;margin:0 auto!important}
+ .rf-phone-nav{display:block;position:relative;z-index:1000;background:#081528;color:#ecf7ff;padding:12px 16px;border-bottom:1px solid #2cc9eb;font-family:Arial,sans-serif}
+ .rf-phone-nav summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;cursor:pointer;list-style:none;font-weight:800;font-size:20px}
+ .rf-phone-nav summary::-webkit-details-marker{display:none}
+ .rf-phone-nav summary span{font-size:14px;color:#72e6ff;border:1px solid #315574;border-radius:8px;padding:10px}
+ .rf-phone-nav nav{display:grid!important;grid-template-columns:1fr 1fr;gap:8px;padding:12px 0 4px}
+ .rf-phone-nav nav a{display:flex;align-items:center;min-height:46px;padding:10px 12px;border-radius:8px;background:#142c45;color:#fff;text-decoration:none;font-size:14px}
+ .rf-phone-nav nav a[aria-current=page]{background:#2cc9eb;color:#051526;font-weight:bold}
+ .rf-phone-nav a:focus-visible,.rf-phone-nav summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+ body>.navbar,body>.site-header,#rfTopMenuLinks,#rfDiscordLink{display:none!important}
+ body>header:not(.navbar):not(.site-header){flex-wrap:wrap!important;gap:10px!important;padding:12px!important}
+ body>header nav{flex-wrap:wrap!important;gap:12px!important}
+ main .hero{margin-top:12px!important;margin-bottom:24px!important}
+ main .heading,main .section-heading{flex-wrap:wrap!important;gap:12px!important}
+ main .region,main .team,main .prep,main .starry-build-grid,main .six-pokemon-row,main .starry-intro{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;min-width:0!important}
+ main .six-pokemon-row{overflow:visible!important}
+ body .team-section .pokemon-row{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important}
+ body .team-section .pokemon-row>.pokemon-card{width:100%!important;min-width:0!important;max-width:100%!important}
+ main .pokemon-card{flex:none!important;width:100%!important;min-width:0!important;max-width:100%!important}
+ main .pokemon-content,main .pokemon-info,main .pokemon-details{width:100%!important;min-width:0!important}
+ main input:not([type=checkbox]):not([type=radio]),main select{max-width:100%;min-height:44px;font-size:16px!important}
+ main button,main .filters button{min-height:44px}
+ main .filters,main .progress-row{flex-wrap:wrap!important;gap:8px!important}
+ main .stop-top{flex-wrap:wrap!important}
+ main .stop h4{font-size:clamp(20px,6vw,27px)!important;overflow-wrap:anywhere}
+ #parcours .stop [class*="-cases"],#parcours .stop [class*="-layout"],#parcours .stop [class*="-cards"],#parcours .stop .starry-turn-cases{grid-template-columns:minmax(0,1fr)!important;min-width:0!important;max-width:100%!important}
+ #parcours .stop [class*="-row"],#parcours .stop .battle-duo{flex-wrap:wrap!important;gap:12px!important;max-width:100%!important}
+ #parcours .stop img{max-width:100%!important;object-fit:contain}
+ #parcours .stop div{min-width:0!important;max-width:100%!important}
+ #parcours .vermilava-scenarios{grid-template-columns:minmax(0,1fr)!important}
+ #parcours .cime-main{flex-wrap:wrap!important;gap:10px!important}
+ #parcours .post-joliberges-items{grid-template-columns:minmax(0,1fr)!important}
+ #parcours .post-joliberges-item-card{min-width:0!important;max-width:100%!important;padding:16px 10px!important}
+ #parcours .vermilava-duo,#parcours .vermilava-action,.preh-route-duo,.preh-route-team,.preh-case-team{flex-wrap:wrap!important;gap:8px!important}
+ .celadopole-tortank-item-change,.ebenelle-choice-specs-change,.cramois-after-big,.parmanie-after-big,.safrania-after-item-change{padding:18px 10px!important;min-width:0!important;max-width:100%!important}
+ .item-change-row,.ecs-flow,.cramois-after-content,.parmanie-change-line,.safrania-after-row,.post-item-flow{display:flex!important;flex-wrap:nowrap!important;gap:6px!important;justify-content:center!important;align-items:center!important;width:100%!important}
+ .item-change-row>div,.ecs-flow>div,.cramois-after-content>div,.parmanie-change-line>div,.safrania-after-row>div,.post-item-flow>div{min-width:0!important;flex-shrink:1!important}
+ .item-change-item,.item-change-pokemon,.ecs-side,.cramois-after-item,.parmanie-item,.safrania-after-item,.safrania-after-pokemon,.post-object,.post-pokemon{flex:1 1 0!important;min-width:0!important;overflow-wrap:anywhere}
+ .item-change-row img,.ecs-flow img,.cramois-after-content img,.parmanie-change-line img,.safrania-after-row img,.post-item-flow img{max-width:68px!important;width:100%!important;height:68px!important;object-fit:contain!important}
+ .item-change-row strong,.ecs-flow strong,.cramois-after-content strong,.parmanie-change-line strong,.safrania-after-row strong,.post-item-flow strong{font-size:12px!important;white-space:normal!important;line-height:1.4}
+ .item-change-arrow,.ecs-arrow,.cramois-after-arrow,.parmanie-arrow,.safrania-after-arrow,.post-arrow{flex:0 0 14px!important;font-size:18px!important}
+ #unionpolis-start-items>.item-change-row,#frimapic-start-items>.item-change-row{flex-direction:column!important;gap:16px!important}
+ #unionpolis-start-items>.item-change-row>div,#frimapic-start-items>.item-change-row>div{width:100%;justify-content:center}
+ .parmanie-after-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+
+</style>
 </head>
 <body>
+<details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html">Accueil</a><a href="outils.html" aria-current="page">Outils</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav></details>
 
   
 
