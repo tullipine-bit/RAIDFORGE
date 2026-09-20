@@ -3642,27 +3642,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getDatabase(app);
-
-    // Compte uniquement les entrées marquées online=true.
-    onValue(ref(db, "presence"), (snapshot) => {
-      let count = 0;
-      snapshot.forEach((child) => {
-        if (child.val()?.online === true) count++;
-      });
-      if (countEl) countEl.textContent = String(count);
-    });
+    let presenceListenerStarted = false;
 
     onAuthStateChanged(auth, async (user) => {
       if (!user) return;
 
+      // IMPORTANT : les règles Firebase exigent auth != null pour lire presence.
+      // On démarre donc le compteur seulement APRÈS l'authentification anonyme.
+      if (!presenceListenerStarted) {
+        presenceListenerStarted = true;
+        onValue(ref(db, "presence"), (snapshot) => {
+          let count = 0;
+          snapshot.forEach((child) => {
+            if (child.val()?.online === true) count++;
+          });
+          if (countEl) countEl.textContent = String(count);
+        }, (error) => {
+          console.error("RAIDFORGE - lecture presence :", error);
+          if (countEl) countEl.textContent = "0";
+        });
+      }
+
       const userPresence = ref(db, "presence/" + user.uid);
+      const connectedRef = ref(db, ".info/connected");
 
-      // Firebase supprimera automatiquement cette présence à la déconnexion.
-      await onDisconnect(userPresence).remove();
-
-      await set(userPresence, {
-        online: true,
-        lastSeen: serverTimestamp()
+      onValue(connectedRef, async (snapshot) => {
+        if (snapshot.val() !== true) return;
+        try {
+          await onDisconnect(userPresence).remove();
+          await set(userPresence, {
+            online: true,
+            lastSeen: serverTimestamp()
+          });
+        } catch (error) {
+          console.error("RAIDFORGE - écriture presence :", error);
+        }
       });
     });
 
