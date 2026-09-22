@@ -2239,6 +2239,70 @@ Pour mettre une vraie image plus tard :
   }
 }
 
+
+/* ===== ALERTE GIVEAWAY RAIDFORGE ===== */
+.giveaway-alert{
+  position:relative;
+  z-index:6;
+  width:min(1100px,92%);
+  margin:24px auto 0;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  overflow:hidden;
+  background:linear-gradient(135deg,rgba(54,28,10,.96),rgba(20,14,28,.97));
+  border:1px solid rgba(255,184,77,.75);
+  border-radius:14px;
+  box-shadow:0 0 25px rgba(255,145,0,.16),inset 0 0 24px rgba(255,174,0,.04);
+}
+.giveaway-alert::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,200,87,.08),transparent);
+  transform:translateX(-100%);
+  animation:giveawaySweep 4s linear infinite;
+}
+.giveaway-alert-icon{font-size:34px;animation:giveawayPulse 1.4s ease-in-out infinite}
+.giveaway-alert-content{flex:1;position:relative}
+.giveaway-alert-title{
+  color:#ffc857;
+  font-family:"Rajdhani",sans-serif;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.giveaway-alert-text{margin-top:3px;color:#d9e7f4;font-size:14px}
+.giveaway-alert-text strong{color:#fff1bd}
+.giveaway-alert-button{
+  position:relative;
+  flex-shrink:0;
+  padding:12px 20px;
+  border:1px solid #ffd27a;
+  border-radius:9px;
+  background:linear-gradient(135deg,#f59e0b,#ea580c);
+  color:#fff!important;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.6px;
+  box-shadow:0 0 18px rgba(245,158,11,.25);
+  transition:.25s ease;
+}
+.giveaway-alert-button:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 0 28px rgba(245,158,11,.45);
+}
+@keyframes giveawayPulse{50%{transform:scale(1.14);filter:drop-shadow(0 0 8px #ffb020)}}
+@keyframes giveawaySweep{to{transform:translateX(100%)}}
+@media(max-width:700px){
+  .giveaway-alert{flex-direction:column;text-align:center;padding:16px;margin-top:16px}
+  .giveaway-alert-button{width:100%}
+  .giveaway-alert-icon{font-size:30px}
+}
+
 </style>
 
 <style>
@@ -3428,7 +3492,18 @@ section.hero#home > #rf-pokemon-cards{top:63%;height:17.2%;gap:1%;background:#08
 </style></head>
 
 <body>
-<details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html" aria-current="page">Accueil</a><a href="outils.html">Outils</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav></details>
+<details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html" aria-current="page">Accueil</a><a href="outils.html">Outils</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav>
+
+<!-- ALERTE GIVEAWAY -->
+<div class="giveaway-alert">
+  <div class="giveaway-alert-icon">⚠️</div>
+  <div class="giveaway-alert-content">
+    <div class="giveaway-alert-title">GIVEAWAY EN COURS !</div>
+    <div class="giveaway-alert-text">🎁 <strong>2 000 000 PokéYens</strong> à gagner • Fin le <strong>30 septembre 2026 à 20h00</strong></div>
+  </div>
+  <a class="giveaway-alert-button" href="giveaway.html">PARTICIPER AU GIVEAWAY →</a>
+</div>
+</details>
 
   <nav class="top-menu">
   
