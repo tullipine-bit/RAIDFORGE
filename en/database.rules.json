@@ -1,0 +1,1 @@
+{"rules":{"giveaway":{"config":{".read":true,".write":false},"participantCount":{".read":true,".write":false},"participants":{"$uid":{".read":"auth != null && auth.uid === $uid",".write":false}}}}}

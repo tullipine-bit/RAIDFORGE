@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Prehistoric 5 — Team and Route | RAIDFORGE</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{color-scheme:dark;--bg:#050914;--panel:#0b172b;--text:#edf6ff;--muted:#a2b5ca;--cyan:#36c5e8;--line:#a7d9e62a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:radial-gradient(ellipse at 80% 5%,#173b6680,transparent 35%),var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}.skip{position:fixed;top:-100px;z-index:5;background:var(--bg);padding:12px}.skip:focus{top:5px}header{background:#a7d9e6;color:#14263d;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px}.logo,h1,h2,h3,h4{font-family:Rajdhani,sans-serif}.logo{font-size:28px;font-weight:700;letter-spacing:2px}header nav{display:flex;gap:22px;font-size:13px;font-weight:700}a:hover{color:var(--cyan)}header a:hover{color:#14263d;text-decoration:underline}main{max-width:1200px;padding:30px 24px 60px;margin:auto}.breadcrumb{font-size:12px;color:var(--muted)}.hero{isolation:isolate;position:relative;overflow:hidden;margin:24px 0;padding:50px 40px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(115deg,#10213a,#081225)}.hero:after{content:'';position:absolute;width:430px;height:430px;border:1px solid #36c5e83a;border-radius:50%;right:-90px;top:-100px;box-shadow:0 0 0 55px #36c5e807,0 0 0 110px #36c5e805;z-index:-1}.eyebrow{color:var(--cyan);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase}h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-2px;margin:22px 0}h1 span{color:var(--cyan)}.hero p{max-width:600px;color:#c2d1e2}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{border:1px solid var(--line);border-radius:8px;padding:11px 17px;background:#12253f;color:var(--text);font-size:13px;font-weight:700;cursor:pointer}.primary{background:var(--cyan);color:#061421}.primary:hover{color:#061421;filter:brightness(1.1)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat,.panel,.pokemon{padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.stat strong{display:block;font-size:25px}.stat small,.muted{color:var(--muted);font-size:12px}.section{margin-top:44px}.heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}h2{font-size:32px;line-height:1.2;margin:0}h3{font-size:28px;line-height:1.2;margin:12px 0 6px}h4{font-size:24px;margin:0}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 10px;font-size:11px;color:#bed5ee;white-space:nowrap}.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.number{font-family:Rajdhani,sans-serif;font-size:25px;color:var(--cyan)}.english{color:var(--muted);font-size:12px;margin:8px 0 20px}dl{font-size:12px;margin:0}dt{font-weight:700;color:var(--cyan);margin-top:10px}dd{margin:3px 0 16px;color:#c3d1e2}.moves{display:flex;flex-wrap:wrap;gap:6px}.moves span{font-size:12px;background:#132842;padding:5px 9px;border-radius:6px}.prep{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.panel h3{font-size:24px;margin-top:0}.panel p,.panel li{font-size:13px;color:#c3d1e2}.panel ul{padding-left:20px}.notice{border-left:3px solid var(--cyan);padding:14px 18px;background:#10213a;margin:18px 0;font-size:13px;color:#c3d1e2}.route-tools{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:20px}.filters{display:flex;flex-wrap:wrap;gap:8px}.filters button{border:1px solid var(--line);border-radius:7px;background:transparent;color:var(--text);padding:8px 14px;font-size:13px;cursor:pointer}.filters button[aria-pressed=true]{background:var(--cyan);color:#061421}.progress-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;font-size:13px}.reset{border:0;background:transparent;color:var(--muted);text-decoration:underline;cursor:pointer;padding:8px}progress{width:100%;height:8px;accent-color:var(--cyan)}.route{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.region-heading{display:flex;align-items:center;justify-content:space-between;margin:28px 0 14px}.region-heading h3{margin:0}.region-heading span{color:var(--muted);font-size:12px}.stop{padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:12px}.stop-top{display:flex;align-items:center;gap:12px}.stop-top .pill{margin-left:auto}.check{display:flex;align-items:center;gap:9px;cursor:pointer}.check span{font-family:Rajdhani,sans-serif;font-size:21px;color:var(--cyan)}input[type=checkbox]{width:17px;height:17px;accent-color:var(--cyan)}.stop p{font-size:13px;color:#b9cbe0;margin:12px 0 0}.stop .duo{color:var(--text);font-weight:600}.stop .instruction{border-top:1px solid var(--line);padding-top:12px;color:#84dced}.stop.done{border-color:#36c5e87a;background:#0d2330}.stop.done h4:after{content:' ✓';color:var(--cyan)}[hidden]{display:none!important}.source a{color:var(--cyan);text-decoration:underline}.source p{font-size:13px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px;text-align:center;font-size:12px;color:var(--muted)}@media(max-width:950px){.team{grid-template-columns:1fr 1fr}.route{grid-template-columns:1fr}}@media(max-width:600px){main{padding:22px 16px 40px}header{padding:14px 18px}.logo{font-size:22px}header nav{gap:12px;font-size:11px}.hero{padding:34px 24px}.stats,.team,.prep{grid-template-columns:1fr}.stat{padding:16px 22px}.heading{align-items:flex-start}.heading .pill{white-space:normal}h2{font-size:28px}.stop{padding:16px}.stop-top{flex-wrap:wrap}.stop-top h4{font-size:23px}.progress-row{flex-wrap:wrap}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,.actions,.filters,.reset,.skip{display:none}.route,.team{display:block}.pokemon,.stop{break-inside:avoid;margin-bottom:12px}body{background:white;color:black}.region[hidden]{display:block!important}}
+
+/* Présentation harmonisée avec gym-7-hells.html */
+:root{--cyan:#62d5ff;--line:#31527e;--muted:#aebdd7}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 15% 0%,rgba(35,101,166,.35),transparent 32%),radial-gradient(circle at 90% 20%,rgba(32,64,130,.25),transparent 30%),linear-gradient(135deg,#060d1b,#0c1b33 55%,#07101f)}
+.logo,h1,h2,h3,h4,.number,.check span{font-family:Arial,Helvetica,sans-serif}
+header{padding:22px 6%;background:rgba(5,13,27,.95);border-bottom:1px solid #29466c;color:#b9c8df}
+.logo{font-size:24px;letter-spacing:3px;color:#62d5ff;font-weight:800}header a:hover{color:#62d5ff}
+header nav a{padding:9px 15px;border:1px solid #31527e;border-radius:8px}
+main{width:94%;max-width:1600px;padding:45px 0 80px}.breadcrumb{margin-bottom:30px}
+.hero{text-align:center;background:none;border:none;border-radius:0;padding:10px 20px 20px;margin:0 0 30px}.hero:after{display:none}.hero h1{font-size:clamp(32px,5.5vw,72px);letter-spacing:3px;line-height:1.1;margin:20px 0}.hero p{max-width:760px;margin:auto;line-height:1.8}.hero .actions{justify-content:center}.eyebrow{letter-spacing:4px}
+.stats{gap:18px}.stat,.panel{background:linear-gradient(145deg,#142b4c,#0b172d);border:1px solid #31527e;border-radius:16px;padding:25px}.stat small:first-child{color:#62d5ff;text-transform:uppercase;letter-spacing:1px}.stat strong{margin:10px 0;font-size:24px}
+.section{margin-top:55px}.heading{margin-bottom:22px}h2{font-size:28px}
+.team{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:stretch}
+.pokemon{padding:0;overflow:hidden;min-width:0;background:linear-gradient(160deg,#142849,#0d172c);border:1px solid #31527e;border-radius:15px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.pokemon:hover{transform:translateY(-6px);border-color:#62d5ff;box-shadow:0 10px 25px #32aaff33}
+.pokemon-top{display:flex;justify-content:space-between;align-items:center;padding:12px;gap:5px;font-size:12px;color:#62d5ff;font-weight:700}.pokemon-top small{font-size:10px;color:#aebdd7;text-align:right;font-weight:400}
+.pokemon-picture{height:140px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#254b78 0%,#0b1428 75%)}.pokemon-picture img{max-width:90%;object-fit:contain;image-rendering:auto}
+.pokemon-content{padding:13px}.pokemon-content h3{font-size:19px;margin:2px 0 5px}.english{font-size:11px;margin:0 0 12px;color:#62d5ff}
+.detail{margin-top:13px}.detail h4{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#aebdd7;margin:0 0 8px}.detail p{font-size:12px;margin:0}.moves{display:grid;grid-template-columns:1fr;gap:5px;min-height:132px;align-content:start}.moves span{font-size:11px;padding:5px 8px;border-radius:5px;border-left:3px solid #aaa;background:#ffffff0b}.moves .move-fire{border-color:#ff7043;color:#ffb38f}.moves .move-water{border-color:#4d96ff;color:#95c5ff}.moves .move-ice{border-color:#72e8ff;color:#a5efff}.moves .move-psychic{border-color:#ef76be;color:#ffb5e0}.moves .move-dark{border-color:#ad92d8;color:#d5c1f3}.moves .move-flying{border-color:#8dbfff;color:#b8d6ff}.moves .move-bug{border-color:#a9c844;color:#cde79a}.moves .move-steel{border-color:#a9b8c8}
+.stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.stat-grid>div{background:#06102088;border:1px solid #29466c;border-radius:5px;text-align:center;padding:7px 1px;min-width:0}.stat-grid span{display:block;font-size:8px;color:#aebdd7;white-space:nowrap}.stat-grid strong{display:block;font-size:12px;color:#fff;margin-top:3px}
+.nature{margin-top:14px;border:1px solid #486085;background:#233554;border-radius:7px;text-align:center;padding:8px}.nature span{display:block;font-size:10px;color:#b9c8df}.nature strong{font-size:12px}
+.held-item{display:flex;align-items:center;gap:6px;border-top:1px solid #31527e;margin-top:15px;padding-top:12px;font-size:11px;font-weight:700;min-height:45px}.held-item img{flex-shrink:0}.detail .pp-note{font-size:10px;color:#ffe49a;margin-top:6px}
+#parcours>.heading{padding:26px;background:linear-gradient(145deg,#143052,#091528);border:1px solid #31527e;border-radius:18px}
+.arena-search{margin:25px 0}.arena-search label{display:block;color:#62d5ff;font-weight:700;letter-spacing:2px;font-size:11px;margin-bottom:10px}.search-box{display:flex;border:1px solid #31527e;border-radius:10px;overflow:hidden;background:#08162b}.search-box input{width:100%;min-width:0;background:transparent;color:white;border:none;padding:15px 18px;font-size:14px}.search-box button{width:45px;border:none;background:transparent;color:#62d5ff;font-size:25px;cursor:pointer}.arena-search>p{color:#ffcf92;font-size:13px}
+.route-tools{background:#0b172d}.route{display:block}.region-heading{color:#62d5ff;border-bottom:1px solid #29466c;padding-bottom:14px;margin:40px 0 20px}.region-heading h3{font-size:25px}
+.region{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.region-heading{grid-column:1/-1;margin-bottom:0}
+.stop{background:linear-gradient(145deg,rgba(20,43,76,.98),rgba(9,21,40,.98));border:1px solid #31527e;border-radius:18px;padding:22px;margin:0}.stop:hover{border-color:#62d5ff;box-shadow:0 8px 25px #0003}.stop-top{padding-bottom:15px;border-bottom:1px solid #31527e}.stop-top h4{font-size:20px}.check span{display:grid;place-items:center;background:#62d5ff;color:#06101f;border-radius:9px;min-width:36px;height:36px;font-size:16px;font-weight:700}
+.battle-duo{display:flex;align-items:center;justify-content:center;gap:24px;padding:20px 0 12px}.battle-pokemon{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:100px}.battle-pokemon img{object-fit:contain}.battle-pokemon strong{font-size:13px;color:#92dfff}.duo-plus{color:#62d5ff;font-size:22px}.stop .duo{text-align:center;background:#07132888;padding:12px;border-radius:8px;font-size:12px}.stop .instruction{color:#ffde99}
+@media(max-width:1250px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}.pokemon-picture{height:160px}}
+@media(max-width:760px){.region{grid-template-columns:1fr}.team{grid-template-columns:repeat(2,minmax(0,1fr))}.heading{flex-wrap:wrap}header{padding:18px 4%}header nav{gap:6px}header nav a{padding:7px 9px}.logo{font-size:20px}.hero{padding:0}.hero h1{font-size:38px}}
+@media(max-width:440px){.team{grid-template-columns:1fr}.pokemon-picture{height:150px}.pokemon-content{padding:20px}.stat-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.battle-duo{gap:12px}.battle-pokemon{min-width:85px}.stop-top{gap:8px}.stop-top h4{font-size:18px}main{width:92%}}
+@media(prefers-reduced-motion:reduce){.pokemon{transition:none}.pokemon:hover{transform:none}}
+
+
+/* Pages générées RAIDFORGE — couleurs uniquement sur noms Pokémon et attaques */
+.route-name{font-weight:800}
+.route-move{font-weight:800}
+.move-normal{border-color:#bfc5cf!important;color:#e1e5eb!important}
+.move-grass{border-color:#69c75a!important;color:#aee6a4!important}
+.move-electric{border-color:#f3d64e!important;color:#ffe982!important}
+.move-ground{border-color:#d2ad64!important;color:#efd19b!important}
+.move-rock{border-color:#c9b65c!important;color:#e8d88d!important}
+.move-fighting{border-color:#df6b58!important;color:#ffab9e!important}
+.move-poison{border-color:#b878d0!important;color:#dda8ee!important}
+.move-dragon{border-color:#7c73e6!important;color:#aaa4ff!important}
+.move-fairy{border-color:#ef9fc7!important;color:#ffc8e3!important}
+.move-ghost{border-color:#8774bd!important;color:#c0b3e5!important}
+.team-note{padding:18px;border:1px dashed #486085;border-radius:12px;color:#c3d1e2;font-size:13px}
+</style>
+<style id="prehistoric-unified-gym-style">
+/* =========================================================
+   PREHISTORIC 5 — STRUCTURE VISUELLE UNIFIÉE AUX AUTRES GYMS
+   ========================================================= */
+:root{
+  --rf-bg:#050b16;--rf-panel:#0b172a;--rf-panel2:#0d203b;
+  --rf-line:#27496f;--rf-cyan:#62d5ff;--rf-text:#edf6ff;--rf-muted:#91a7c2;
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 50% -10%,rgba(40,103,162,.17),transparent 35%),
+    linear-gradient(180deg,#050b16 0%,#07101e 100%) !important;
+  color:var(--rf-text);
+}
+main{max-width:1500px !important}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  padding:44px 38px !important;
+  border:1px solid #25486f !important;border-radius:20px !important;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(98,213,255,.12),transparent 28%),
+    linear-gradient(145deg,#0d203b,#081426 62%,#07101e) !important;
+  box-shadow:0 24px 60px rgba(0,0,0,.28);
+}
+.hero:after{
+  content:"";position:absolute;inset:auto -90px -130px auto;width:330px;height:330px;
+  border-radius:50%;background:rgba(98,213,255,.05);filter:blur(4px);pointer-events:none
+}
+.hero .eyebrow{color:#62d5ff !important;letter-spacing:.16em;font-weight:900}
+.hero h1{font-size:clamp(2.4rem,6vw,5rem) !important;letter-spacing:.035em}
+.hero p{max-width:820px;color:#a9bdd5 !important}
+.actions .button{border-radius:10px !important;font-weight:900 !important}
+.actions .primary{box-shadow:0 0 18px rgba(98,213,255,.16)}
+
+/* STATS */
+.stats{gap:12px !important}
+.stat{
+  background:linear-gradient(145deg,#0c1c33,#081426) !important;
+  border:1px solid #27496f !important;border-radius:13px !important;
+}
+.stat strong{color:#fff !important}
+.stat small:first-child{color:#62d5ff !important;font-weight:900;letter-spacing:.08em}
+
+/* TITRES DE SECTION */
+.section{margin-top:34px !important}
+.heading{
+  padding-bottom:12px;border-bottom:1px solid rgba(98,213,255,.18);
+  align-items:end !important
+}
+.heading h2{font-size:1.5rem !important;letter-spacing:.025em}
+.heading .pill{background:#0b1d35 !important;border-color:#31527e !important;color:#9bdfff !important}
+
+/* ÉQUIPE : même lecture compacte que les autres gyms */
+#equipe .team{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:13px !important;
+}
+#equipe .pokemon{
+  overflow:hidden;background:linear-gradient(180deg,#102b50 0%,#08182f 100%) !important;
+  border:1px solid #31527e !important;border-radius:14px !important;
+  box-shadow:0 8px 22px rgba(0,0,0,.2);transition:.22s ease;
+}
+#equipe .pokemon:hover{
+  transform:translateY(-6px);border-color:#62d5ff !important;
+  box-shadow:0 12px 30px rgba(35,170,230,.16)
+}
+#equipe .pokemon-top{padding:11px 13px !important;background:rgba(4,15,30,.36)}
+#equipe .pokemon-top span{color:#62d5ff !important;font-weight:1000}
+#equipe .pokemon-picture{
+  height:170px !important;margin:0 10px;
+  background:radial-gradient(circle at 50% 55%,#183d66 0%,#071427 60%) !important;
+}
+#equipe .pokemon-picture img{
+  width:145px !important;height:145px !important;object-fit:contain;
+  filter:drop-shadow(0 8px 9px rgba(0,0,0,.4))
+}
+#equipe .pokemon-content{padding:15px 13px 17px !important}
+#equipe .pokemon-content h3{font-size:1.08rem !important;margin-bottom:2px !important}
+#equipe .english{color:#718aa8 !important;font-size:.68rem !important;margin-top:0}
+#equipe .detail{
+  margin-top:10px !important;padding:10px !important;border-radius:8px !important;
+  background:rgba(4,14,28,.55) !important;border:1px solid rgba(98,213,255,.12)
+}
+#equipe .detail h4{
+  margin:0 0 7px !important;color:#62d5ff !important;
+  font-size:.62rem !important;letter-spacing:.09em;text-transform:uppercase
+}
+#equipe .moves{grid-template-columns:1fr !important;gap:5px !important}
+#equipe .moves span{
+  position:relative;min-height:30px;padding:6px 8px 6px 21px !important;
+  border-radius:6px !important;background:#071426 !important;font-size:.64rem !important
+}
+#equipe .moves span:before{
+  content:"✦";position:absolute;left:7px;color:currentColor;font-size:.62rem
+}
+#equipe .detail p{font-size:.66rem !important;line-height:1.5;color:#9fb2ca !important}
+
+/* RECHERCHE */
+#parcours .arena-search{
+  margin:20px 0 18px !important;padding:14px !important;
+  border:1px solid #27496f;border-radius:12px;background:#09182c
+}
+#parcours .arena-search label{color:#62d5ff !important}
+#parcours .search-box{
+  border-color:#31527e !important;border-radius:9px !important;background:#061326 !important
+}
+#parcours .search-box input{font-weight:700}
+#parcours .search-box input:focus{outline:none}
+#parcours .search-box button:hover{background:rgba(98,213,255,.08)}
+
+/* RÉGIONS */
+#parcours .region{
+  margin:18px 0 26px !important;padding:15px !important;
+  background:linear-gradient(145deg,rgba(11,28,51,.68),rgba(6,17,32,.76)) !important;
+  border:1px solid #223e60 !important;border-radius:15px !important
+}
+#parcours .region-heading{
+  margin-bottom:12px !important;padding:0 2px 10px !important;
+  border-bottom:1px solid rgba(98,213,255,.16)
+}
+#parcours .region-heading h3{
+  color:#fff !important;font-size:1.18rem !important;text-transform:uppercase;letter-spacing:.08em
+}
+#parcours .region-heading span{color:#62d5ff !important;font-weight:800}
+
+/* ARÈNES */
+#parcours .stop{
+  position:relative;margin:10px 0 !important;padding:15px !important;
+  background:linear-gradient(145deg,#0d1d34,#091629) !important;
+  border:1px solid #294767 !important;border-radius:12px !important;
+  box-shadow:0 5px 15px rgba(0,0,0,.14);transition:.2s ease
+}
+#parcours .stop:hover{border-color:#3e6d98 !important;transform:translateY(-1px)}
+#parcours .stop-top{
+  display:grid !important;grid-template-columns:auto 1fr auto !important;
+  align-items:center !important;gap:11px !important;margin-bottom:12px !important
+}
+#parcours .stop-top h4{font-size:1.05rem !important;color:#fff !important}
+#parcours .check span{
+  display:grid;place-items:center;width:34px;height:34px;
+  background:#07182c;border:1px solid #31527e;border-radius:8px;color:#62d5ff;font-weight:1000
+}
+#parcours .check input:checked + span{
+  background:#123e50;border-color:#53d7d1;color:#8ffff1
+}
+#parcours .stop-top>.pill{
+  padding:5px 9px !important;border-radius:999px !important;
+  background:#0b2038 !important;border:1px solid #31527e !important;color:#b7dfff !important
+}
+
+/* DUO POKÉMON */
+#parcours .battle-duo{
+  width:max-content;max-width:100%;margin:4px 0 11px !important;padding:9px 12px !important;
+  background:#071426 !important;border:1px solid #223d5e;border-radius:10px !important
+}
+#parcours .battle-pokemon{
+  min-width:92px !important;padding:5px 7px !important;background:transparent !important;border:0 !important
+}
+#parcours .battle-pokemon img{
+  width:84px !important;height:84px !important;object-fit:contain;
+  filter:drop-shadow(0 5px 6px rgba(0,0,0,.42))
+}
+#parcours .battle-pokemon strong{font-size:.7rem !important}
+#parcours .duo-plus{color:#62d5ff !important;font-weight:1000}
+#parcours p.duo{
+  margin:8px 0 !important;padding:8px 10px !important;
+  background:rgba(98,213,255,.045);border-left:2px solid #31527e;border-radius:5px
+}
+#parcours .instruction{
+  margin:6px 0 !important;padding:9px 10px !important;
+  color:#c6d3e3 !important;background:rgba(255,255,255,.025);
+  border:1px solid rgba(77,109,145,.28);border-radius:7px
+}
+
+/* reset / notes déjà présentes */
+#parcours .pc-reset,#parcours .route-note,#parcours .special-note{
+  border-radius:10px !important
+}
+
+/* Responsive identique dans l'esprit aux autres pages */
+@media(max-width:1180px){
+  #equipe .team{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+}
+@media(max-width:760px){
+  .hero{padding:30px 20px !important}
+  #equipe .team{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  #parcours .region{padding:10px !important}
+}
+@media(max-width:480px){
+  #equipe .team{grid-template-columns:1fr !important}
+  #parcours .stop-top{grid-template-columns:auto 1fr !important}
+  #parcours .stop-top>.pill{grid-column:2}
+  #parcours .battle-duo{width:100%;justify-content:center}
+}
+</style>
+<style id="prehistoric-route-like-6pillars">
+/* ==========================================================
+   PREHISTORIC 5 — RORTE VISUELLE TYPE 6 PILLARS
+   ========================================================== */
+
+#parcours{
+  margin-top:70px !important;
+}
+
+/* En-tête route */
+#parcours > .heading{
+  margin-bottom:28px !important;
+  padding:30px !important;
+  background:linear-gradient(145deg,rgba(20,48,82,.95),rgba(9,21,40,.98)) !important;
+  border:1px solid #31527e !important;
+  border-radius:18px !important;
+}
+#parcours > .heading h2{
+  margin:0 0 8px !important;
+  font-size:1.8rem !important;
+}
+#parcours > .heading p{
+  color:#b9c8e1 !important;
+}
+
+/* Recherche dans le même univers que 6 Pillars */
+#parcours .arena-search{
+  margin:0 0 35px !important;
+  padding:16px 18px !important;
+  background:rgba(5,15,31,.55) !important;
+  border:1px solid #31527e !important;
+  border-radius:12px !important;
+}
+#parcours .arena-search label{
+  color:#62d5ff !important;
+  font-size:.7rem !important;
+  font-weight:800 !important;
+  letter-spacing:1px !important;
+}
+#parcours .search-box{
+  margin-top:8px !important;
+  background:#071426 !important;
+  border:1px solid #31527e !important;
+  border-radius:10px !important;
+}
+
+/* Région = titre simple avec ligne, comme 6 Pillars */
+#parcours .region{
+  margin:0 0 45px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+}
+#parcours .region-heading{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  margin:0 0 20px !important;
+  padding:0 0 14px !important;
+  border-bottom:1px solid #29466c !important;
+}
+#parcours .region-heading h3{
+  margin:0 !important;
+  color:#62d5ff !important;
+  font-size:1.5rem !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+#parcours .region-heading span{
+  color:#8096b6 !important;
+  font-size:.75rem !important;
+}
+
+/* Carte arène : grand bloc arrondi type 6 Pillars */
+#parcours .stop{
+  display:grid !important;
+  grid-template-columns:65px minmax(0,1fr) !important;
+  gap:20px !important;
+  margin:0 0 18px !important;
+  padding:22px !important;
+  background:linear-gradient(145deg,rgba(20,43,76,.98),rgba(9,21,40,.98)) !important;
+  border:1px solid #31527e !important;
+  border-radius:18px !important;
+  box-shadow:none !important;
+  transition:.25s ease !important;
+}
+#parcours .stop:hover{
+  transform:none !important;
+  border-color:#62d5ff !important;
+  box-shadow:0 8px 25px rgba(0,0,0,.20) !important;
+}
+
+/* Colonne numéro : checkbox transformée visuellement en numéro cyan */
+#parcours .stop-top{
+  display:contents !important;
+}
+#parcours .stop-top .check{
+  grid-column:1 !important;
+  grid-row:1 / span 10 !important;
+  align-self:start !important;
+  width:55px !important;
+  height:55px !important;
+  margin:0 !important;
+}
+#parcours .stop-top .check span{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:55px !important;
+  height:55px !important;
+  color:#06101f !important;
+  background:#62d5ff !important;
+  border:0 !important;
+  border-radius:14px !important;
+  font-size:0 !important;
+  font-weight:800 !important;
+}
+#parcours .stop[data-stop] .stop-top .check span::after{
+  content:attr(data-route-num);
+  font-size:1.2rem;
+}
+/* Le numéro est aussi écrit par JS pour compatibilité attr */
+
+/* Titre / badge */
+#parcours .stop-top h4{
+  grid-column:2 !important;
+  margin:0 !important;
+  color:#fff !important;
+  font-size:1.25rem !important;
+  line-height:1.25 !important;
+}
+#parcours .stop-top > .pill{
+  grid-column:2 !important;
+  width:max-content !important;
+  margin-top:5px !important;
+  padding:0 !important;
+  color:#62d5ff !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  font-size:.78rem !important;
+  font-weight:800 !important;
+}
+
+/* Tout le contenu de l'arène dans la colonne droite */
+#parcours .stop > :not(.stop-top){
+  grid-column:2 !important;
+}
+
+/* Duo : reprend la présentation large de 6 Pillars */
+#parcours .battle-duo{
+  display:flex !important;
+  align-items:center !important;
+  width:100% !important;
+  max-width:100% !important;
+  margin:15px 0 0 !important;
+  padding:18px 0 0 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-top:1px solid #29466c !important;
+  border-radius:0 !important;
+  gap:15px !important;
+}
+#parcours .battle-pokemon{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:auto !important;
+  min-width:180px !important;
+  height:auto !important;
+  min-height:82px !important;
+  padding:8px 12px 8px 8px !important;
+  background:rgba(5,15,31,.65) !important;
+  border:1px solid #31527e !important;
+  border-radius:12px !important;
+  overflow:visible !important;
+}
+#parcours .battle-pokemon img{
+  width:68px !important;
+  height:68px !important;
+  max-width:68px !important;
+  max-height:68px !important;
+  flex:0 0 68px !important;
+  object-fit:contain !important;
+  filter:none !important;
+}
+#parcours .battle-pokemon strong{
+  color:#fff !important;
+  font-size:.85rem !important;
+}
+#parcours .battle-pokemon span{
+  color:#62d5ff;
+  font-size:.7rem !important;
+}
+#parcours .duo-plus{
+  color:#62d5ff !important;
+  font-size:1.3rem !important;
+  font-weight:800 !important;
+}
+
+/* Ligne d'action = bloc cyan à gauche, comme .route-action de 6 Pillars */
+#parcours p.duo,
+#parcours .instruction{
+  margin:18px 0 0 !important;
+  padding:15px 18px !important;
+  color:#d1e1f5 !important;
+  background:rgba(98,213,255,.06) !important;
+  border:0 !important;
+  border-left:3px solid #62d5ff !important;
+  border-radius:0 10px 10px 0 !important;
+  font-size:.85rem !important;
+  line-height:1.7 !important;
+}
+
+/* Notes / conditions */
+#parcours .route-note,
+#parcours .special-note{
+  margin-top:15px !important;
+  padding:13px 16px !important;
+  color:#aebdd7 !important;
+  background:rgba(5,15,31,.5) !important;
+  border:1px dashed #31527e !important;
+  border-radius:10px !important;
+  font-size:.78rem !important;
+  line-height:1.6 !important;
+}
+#parcours .route-note strong,
+#parcours .special-note strong{
+  color:#f4c95d !important;
+}
+
+/* PC reset / avertissements */
+#parcours .pc-reset{
+  margin:20px 0 !important;
+  padding:16px 18px !important;
+  color:#f5d98b !important;
+  background:rgba(116,84,20,.20) !important;
+  border:1px solid rgba(202,157,52,.5) !important;
+  border-radius:14px !important;
+}
+
+/* Mobile, calqué sur la logique 6 Pillars */
+@media(max-width:750px){
+  #parcours .stop{
+    grid-template-columns:1fr !important;
+    gap:15px !important;
+    padding:18px !important;
+  }
+  #parcours .stop-top{display:block !important}
+  #parcours .stop-top .check{
+    width:45px !important;height:45px !important;margin-bottom:12px !important;
+  }
+  #parcours .stop-top .check span{
+    width:45px !important;height:45px !important;
+  }
+  #parcours .stop[data-stop] .stop-top .check span::after{font-size:1rem}
+  #parcours .stop > :not(.stop-top){grid-column:1 !important}
+  #parcours .battle-duo{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+  }
+  #parcours .duo-plus{display:none !important}
+  #parcours .battle-pokemon{
+    display:block !important;
+    min-width:0 !important;
+    text-align:center !important;
+  }
+  #parcours .battle-pokemon img{
+    width:100px !important;height:100px !important;max-width:100% !important;
+    margin:auto !important;
+  }
+}
+</style>
+<style id="prehistoric-exact-6pillars-route-interface">
+.techrun-section{margin-top:70px;margin-bottom:70px}
+.techrun-header{margin-bottom:35px;padding:30px;background:linear-gradient(145deg,rgba(20,48,82,.95),rgba(9,21,40,.98));border:1px solid #31527e;border-radius:18px}
+.techrun-header h2{margin:0 0 12px;font-size:1.8rem}
+.techrun-header p{max-width:850px;margin:0;color:#b9c8e1;line-height:1.8}
+.route-region{margin-bottom:45px}
+.route-region-title{display:flex;align-items:center;gap:12px;margin:0 0 20px;padding-bottom:14px;color:#62d5ff;font-size:1.5rem;border-bottom:1px solid #29466c}
+.route-card{display:grid;grid-template-columns:65px 1fr;gap:20px;margin-bottom:18px;padding:22px;background:linear-gradient(145deg,rgba(20,43,76,.98),rgba(9,21,40,.98));border:1px solid #31527e;border-radius:18px;transition:.25s ease}
+.route-card:hover{border-color:#62d5ff;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.route-number{display:flex;align-items:center;justify-content:center;width:55px;height:55px;color:#06101f;background:#62d5ff;border-radius:14px;font-size:1.2rem;font-weight:bold}
+.route-content{min-width:0}
+.route-title-line{display:flex;justify-content:space-between;align-items:start;gap:15px;margin-bottom:8px}
+.route-content h4{margin:0;color:#fff;font-size:1.25rem}
+.route-location{display:inline-block;margin-bottom:15px;color:#62d5ff;font-size:.78rem;font-weight:bold}
+.route-description{margin:0 0 20px;color:#aebdd7;font-size:.85rem;line-height:1.7}
+.battle-box{display:flex;align-items:center;gap:15px;margin-top:15px;padding-top:18px;border-top:1px solid #29466c}
+.battle-label{align-self:flex-start;min-width:90px;padding-top:12px;color:#8096b6;font-size:.7rem;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
+.battle-pokemon{display:flex;align-items:center;gap:10px;min-width:0;padding:8px 12px 8px 8px;background:rgba(5,15,31,.65);border:1px solid #31527e;border-radius:12px}
+.battle-pokemon-picture{display:flex;align-items:center;justify-content:center;width:62px;height:62px;flex-shrink:0;background:radial-gradient(circle,#254b78 0%,#0b1428 75%);border-radius:10px}
+.battle-pokemon-picture img{width:90%;height:90%;object-fit:contain}
+.battle-pokemon-info{min-width:0}
+.battle-pokemon-info strong{display:block;margin-bottom:5px;color:#fff;font-size:.85rem}
+.battle-pokemon-info span{color:#62d5ff;font-size:.7rem}
+.battle-plus{color:#62d5ff;font-size:1.3rem;font-weight:bold}
+.route-action{margin-top:18px;padding:15px 18px;background:rgba(98,213,255,.06);border-left:3px solid #62d5ff;border-radius:0 10px 10px 0}
+.route-action strong{display:block;margin-bottom:7px;color:#62d5ff;font-size:.75rem;letter-spacing:1px;text-transform:uppercase}
+.route-action p{margin:0;color:#d1e1f5;font-size:.85rem;line-height:1.7}
+.route-note{margin-top:15px;padding:13px 16px;color:#aebdd7;background:rgba(5,15,31,.5);border:1px dashed #31527e;border-radius:10px;font-size:.78rem;line-height:1.6}
+.route-note strong{color:#f4c95d}
+.route-warning{margin-top:35px;padding:20px;color:#f5d98b;background:rgba(116,84,20,.2);border:1px solid rgba(202,157,52,.5);border-radius:14px;font-size:.85rem;line-height:1.7}
+.arena-search{max-width:760px;margin:0 auto 28px;padding:16px 18px;background:linear-gradient(145deg,rgba(13,31,57,.96),rgba(6,17,33,.98));border:1px solid rgba(67,198,255,.38);border-radius:14px;box-shadow:0 0 24px rgba(67,198,255,.08)}
+.arena-search>label{display:block;margin-bottom:9px;color:#62d5ff;font-size:.72rem;font-weight:900;letter-spacing:2px;text-align:center}
+.arena-search-box{display:flex;align-items:center;gap:10px;padding:0 12px;background:rgba(3,10,22,.78);border:1px solid #31527e;border-radius:10px;transition:.2s ease}
+.arena-search-box:focus-within{border-color:#62d5ff;box-shadow:0 0 18px rgba(98,213,255,.16)}
+.arena-search-icon{color:#62d5ff;font-size:1.25rem;font-weight:900}
+#arena-search-input{width:100%;padding:12px 0;color:#fff;background:transparent;border:0;outline:0;font:700 .9rem Arial,Helvetica,sans-serif}
+#arena-search-input::placeholder{color:#7187a6;font-weight:600}
+#arena-search-clear{display:none;padding:2px 7px;color:#9fb7d7;background:transparent;border:0;border-radius:6px;cursor:pointer;font-size:1.35rem;line-height:1}
+#arena-search-clear:hover{color:#fff;background:rgba(98,213,255,.1)}
+.arena-search-empty{margin:12px 0 0;color:#ffcf66;font-size:.8rem;font-weight:700;text-align:center}
+.route-card.arena-search-hidden{display:none!important}.route-region.arena-search-hidden{display:none!important}
+@media(max-width:750px){
+.route-card{grid-template-columns:1fr;gap:15px;padding:18px}.route-number{width:45px;height:45px;font-size:1rem}
+.route-title-line{display:block}.battle-box{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.battle-label{grid-column:1/-1;padding-top:0}.battle-plus{display:none}.battle-pokemon{display:block;padding:8px;text-align:center}
+.battle-pokemon-picture{width:100%;height:auto;aspect-ratio:1/1;margin-bottom:8px}
+.arena-search{padding:13px 14px}.arena-search>label{font-size:.65rem}#arena-search-input{font-size:.82rem}
+}
+</style>
+<style id="prehistoric-route-screenshot-structure">
+/* ===== STRUCTURE RORTE COMME LA CAPTURE ===== */
+
+#parcours #routes-container{
+  width:100%;
+}
+
+/* Bandeau de région large et centré */
+#parcours .route-region{
+  margin:34px 0 54px !important;
+}
+#parcours .route-region-title{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:min(790px,82%) !important;
+  min-height:108px !important;
+  margin:0 auto 18px !important;
+  padding:18px 30px !important;
+  color:#fff !important;
+  background:linear-gradient(145deg,#071b38,#06142c) !important;
+  border:1px solid #17618d !important;
+  border-radius:15px !important;
+  box-shadow:0 0 20px rgba(53,194,255,.20) !important;
+  font-size:3rem !important;
+  font-weight:1000 !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+  text-shadow:0 0 12px rgba(255,255,255,.42) !important;
+}
+#parcours .route-region-title::before,
+#parcours .route-region-title::after{
+  content:"◆";
+  margin:0 28px;
+  color:#45c9ff;
+  font-size:1.75rem;
+  text-shadow:0 0 13px #45c9ff;
+}
+
+/* Grande carte arène */
+#parcours .route-card{
+  position:relative !important;
+  display:block !important;
+  min-height:520px !important;
+  margin:0 0 24px !important;
+  padding:18px 28px 28px 86px !important;
+  background:#0d2748 !important;
+  border:1px solid #1b5973 !important;
+  border-radius:15px !important;
+  box-shadow:none !important;
+}
+
+/* Numéro cyan à gauche */
+#parcours .route-number{
+  position:absolute !important;
+  top:18px !important;
+  left:18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:44px !important;
+  height:44px !important;
+  color:#fff !important;
+  background:#55c9f5 !important;
+  border-radius:11px !important;
+  font-size:1rem !important;
+  font-weight:900 !important;
+}
+
+/* Titre en haut à gauche */
+#parcours .route-title-line{
+  display:block !important;
+  margin:0 !important;
+}
+#parcours .route-content h4{
+  margin:2px 0 0 !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  font-weight:900 !important;
+}
+#parcours .route-location{
+  display:none !important;
+}
+
+/* Phrase courte au centre au-dessus */
+#parcours .route-intro{
+  max-width:700px !important;
+  margin:8px auto 10px !important;
+  color:#d7e7ff !important;
+  font-size:.72rem !important;
+  line-height:1.4 !important;
+  text-align:center !important;
+}
+
+/* CASE CENTRALE */
+#parcours .battle-box{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px 22px !important;
+  width:min(490px,90%) !important;
+  min-height:220px !important;
+  margin:10px auto 28px !important;
+  padding:22px 24px 18px !important;
+  background:#07131f !important;
+  border:1px solid #334353 !important;
+  border-radius:13px !important;
+}
+
+/* "Commence avec ..." sur toute la largeur */
+#parcours .battle-case-title{
+  flex:0 0 100% !important;
+  margin-bottom:2px !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  font-weight:1000 !important;
+  text-align:center !important;
+}
+#parcours .battle-case-title strong{
+  font-size:inherit !important;
+}
+
+/* Pokémon sans petites cartes individuelles */
+#parcours .battle-pokemon{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:125px !important;
+  min-width:125px !important;
+  min-height:100px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+}
+#parcours .battle-pokemon-picture{
+  width:105px !important;
+  height:92px !important;
+  background:transparent !important;
+  border-radius:0 !important;
+}
+#parcours .battle-pokemon-picture img{
+  width:105px !important;
+  height:92px !important;
+  object-fit:contain !important;
+  image-rendering:auto;
+}
+#parcours .battle-pokemon-info{
+  width:100% !important;
+  text-align:center !important;
+}
+#parcours .battle-pokemon-info strong{
+  display:none !important;
+}
+#parcours .battle-plus{
+  color:#fff !important;
+  font-size:1.05rem !important;
+}
+
+/* Attaque sous les sprites */
+#parcours .battle-case-action{
+  flex:0 0 100% !important;
+  margin-top:0 !important;
+  color:#fff !important;
+  font-size:.95rem !important;
+  font-weight:900 !important;
+  text-align:center !important;
+}
+
+/* Notes comme la capture, sous les cases */
+#parcours .route-note{
+  width:min(490px,90%) !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  color:#ffc400 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  font-size:.78rem !important;
+  font-weight:800 !important;
+  line-height:1.45 !important;
+}
+#parcours .route-note strong{
+  color:#ffc400 !important;
+  text-decoration:underline !important;
+}
+
+/* Plusieurs cases/conditions éventuelles restent centrées */
+#parcours .route-content > .battle-box + .battle-box{
+  margin-top:28px !important;
+}
+
+/* Mobile */
+@media(max-width:700px){
+  #parcours .route-region-title{
+    width:100% !important;
+    min-height:78px !important;
+    font-size:1.8rem !important;
+  }
+  #parcours .route-region-title::before,
+  #parcours .route-region-title::after{
+    margin:0 12px !important;
+    font-size:1rem !important;
+  }
+  #parcours .route-card{
+    min-height:0 !important;
+    padding:72px 14px 24px !important;
+  }
+  #parcours .route-number{top:15px;left:15px}
+  #parcours .route-title-line{
+    position:absolute;top:26px;left:72px;right:12px;
+  }
+  #parcours .battle-box{width:100% !important;padding:18px 10px !important}
+  #parcours .route-note{width:100% !important}
+}
+</style>
+<style id="prehistoric-route-boxes-final">
+/* ==========================================================
+   PREHISTORIC 5 — RORTE AVEC CASES COMME LA CAPTURE FORRNIE
+   ========================================================== */
+
+#parcours .route-region{
+  margin:40px 0 60px !important;
+}
+
+/* Bandeau région */
+#parcours .route-region-title{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:min(790px,82%) !important;
+  min-height:105px !important;
+  margin:0 auto 18px !important;
+  padding:16px 25px !important;
+  color:#fff !important;
+  background:linear-gradient(145deg,#071d3b,#06152e) !important;
+  border:1px solid #17658f !important;
+  border-radius:15px !important;
+  box-shadow:0 0 22px rgba(45,190,255,.18) !important;
+  font-size:3rem !important;
+  font-weight:1000 !important;
+  letter-spacing:.09em !important;
+  text-transform:uppercase !important;
+  text-shadow:0 0 10px rgba(255,255,255,.35) !important;
+}
+#parcours .route-region-title::before,
+#parcours .route-region-title::after{
+  content:"◆" !important;
+  margin:0 27px !important;
+  color:#48caff !important;
+  font-size:1.65rem !important;
+  text-shadow:0 0 13px #48caff !important;
+}
+
+/* Grande zone d'une arène */
+#parcours .route-card{
+  position:relative !important;
+  display:block !important;
+  min-height:460px !important;
+  margin:0 0 28px !important;
+  padding:18px 28px 32px 86px !important;
+  background:#0d294c !important;
+  border:1px solid #1c5a72 !important;
+  border-radius:15px !important;
+  box-shadow:none !important;
+  overflow:hidden !important;
+}
+
+/* Numéro */
+#parcours .route-number{
+  position:absolute !important;
+  top:18px !important;
+  left:18px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:44px !important;
+  height:44px !important;
+  padding:0 !important;
+  color:#fff !important;
+  background:#55c9f5 !important;
+  border:0 !important;
+  border-radius:11px !important;
+  font-size:1rem !important;
+  font-weight:900 !important;
+}
+
+/* Nom arène */
+#parcours .route-title-line{
+  display:block !important;
+  margin:0 !important;
+}
+#parcours .route-title-line h4{
+  margin:0 !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  font-weight:1000 !important;
+}
+#parcours .route-location{display:none !important}
+
+/* Petite phrase centrée */
+#parcours .route-intro{
+  width:min(650px,90%) !important;
+  margin:7px auto 10px !important;
+  color:#d8e8ff !important;
+  font-size:.7rem !important;
+  text-align:center !important;
+}
+
+/* ===== CASE STRATÉGIE ===== */
+#parcours .strategy-case{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:5px 20px !important;
+  width:min(490px,92%) !important;
+  min-height:215px !important;
+  margin:10px auto 28px !important;
+  padding:22px 25px 18px !important;
+  background:#07131f !important;
+  border:1px solid #344352 !important;
+  border-radius:13px !important;
+  box-shadow:0 7px 16px rgba(0,0,0,.14) !important;
+}
+
+/* Titre de case */
+#parcours .strategy-case .battle-case-title{
+  flex:0 0 100% !important;
+  margin:0 0 6px !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  font-weight:1000 !important;
+  line-height:1.4 !important;
+  text-align:center !important;
+}
+#parcours .strategy-case .battle-case-title strong{
+  font-size:inherit !important;
+  font-weight:1000 !important;
+}
+
+/* Pokémon libres dans la case */
+#parcours .strategy-case .battle-pokemon{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:125px !important;
+  min-width:125px !important;
+  min-height:100px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+#parcours .strategy-case .battle-pokemon-picture{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:115px !important;
+  height:100px !important;
+  margin:0 !important;
+  background:transparent !important;
+  border:0 !important;
+}
+#parcours .strategy-case .battle-pokemon-picture img{
+  width:110px !important;
+  height:95px !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.25)) !important;
+}
+#parcours .strategy-case .battle-pokemon-info{
+  display:none !important;
+}
+#parcours .strategy-case .battle-plus{
+  margin:0 -5px !important;
+  color:#fff !important;
+  font-size:1.05rem !important;
+  font-weight:900 !important;
+}
+
+/* Attaques sous les Pokémon */
+#parcours .strategy-case .battle-case-action{
+  flex:0 0 100% !important;
+  margin-top:5px !important;
+  color:#fff !important;
+  font-size:.98rem !important;
+  font-weight:1000 !important;
+  line-height:1.45 !important;
+  text-align:center !important;
+}
+
+/* Une éventuelle deuxième case est espacée comme sur l'exemple */
+#parcours .strategy-case + .strategy-case{
+  margin-top:28px !important;
+}
+
+/* Notes jaunes en dessous */
+#parcours .strategy-note{
+  width:min(490px,92%) !important;
+  margin:0 auto 6px !important;
+  padding:0 !important;
+  color:#ffc400 !important;
+  background:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  font-size:.78rem !important;
+  font-weight:800 !important;
+  line-height:1.5 !important;
+  text-align:left !important;
+}
+#parcours .strategy-note strong{
+  color:#ffc400 !important;
+  text-decoration:underline !important;
+}
+
+/* Les anciens styles "action principale" ne doivent plus créer une autre interface */
+#parcours .route-action{display:none !important}
+
+/* Responsive */
+@media(max-width:700px){
+  #parcours .route-region-title{
+    width:100% !important;
+    min-height:76px !important;
+    font-size:1.65rem !important;
+  }
+  #parcours .route-region-title::before,
+  #parcours .route-region-title::after{
+    margin:0 10px !important;
+    font-size:.9rem !important;
+  }
+  #parcours .route-card{
+    min-height:0 !important;
+    padding:72px 12px 24px !important;
+  }
+  #parcours .route-title-line{
+    position:absolute !important;
+    top:27px !important;
+    left:76px !important;
+    right:10px !important;
+  }
+  #parcours .strategy-case,
+  #parcours .strategy-note{
+    width:100% !important;
+  }
+  #parcours .strategy-case{
+    gap:5px 4px !important;
+    padding:18px 8px !important;
+  }
+  #parcours .strategy-case .battle-pokemon{
+    width:42% !important;
+    min-width:0 !important;
+  }
+  #parcours .strategy-case .battle-pokemon-picture{
+    width:100% !important;
+  }
+}
+</style>
+<style id="prehistoric-arena1-example-cases">
+#parcours .route-card[data-stop="1"]{
+  min-height:560px !important;
+}
+#parcours .route-card[data-stop="1"] .gym-example-layout{
+  display:grid;
+  grid-template-columns:170px minmax(0,1fr);
+  gap:24px;
+  margin-top:18px;
+}
+#parcours .route-card[data-stop="1"] .gym-leader-panel{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  align-self:start;min-height:220px;padding:15px;
+  background:#07131f;border:1px solid #31527e;border-radius:13px;text-align:center;
+}
+#parcours .route-card[data-stop="1"] .gym-panel-label{
+  margin-bottom:8px;color:#62d5ff;font-size:.58rem;font-weight:1000;letter-spacing:.12em;
+}
+#parcours .route-card[data-stop="1"] .gym-leader-panel img{
+  width:105px;height:105px;object-fit:contain;image-rendering:auto;
+}
+#parcours .route-card[data-stop="1"] .gym-leader-panel strong{
+  margin-top:5px;color:#fff;font-size:.88rem;
+}
+#parcours .route-card[data-stop="1"] .gym-leader-panel small{
+  margin-top:3px;color:#ff805d;font-size:.65rem;font-weight:800;
+}
+#parcours .route-card[data-stop="1"] .gym-possibilities{
+  min-width:0;
+}
+#parcours .route-card[data-stop="1"] .possibility-title{
+  margin-bottom:9px;color:#62d5ff;font-size:.63rem;font-weight:1000;letter-spacing:.12em;
+}
+#parcours .route-card[data-stop="1"] .fight-case{
+  margin-bottom:14px;padding:17px 20px;
+  background:#07131f;border:1px solid #344352;border-radius:13px;
+}
+#parcours .route-card[data-stop="1"] .fight-case-head{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-bottom:10px;color:#fff;font-size:.85rem;
+}
+#parcours .route-card[data-stop="1"] .fight-case-badge{
+  padding:4px 8px;color:#07131f;background:#62d5ff;border-radius:999px;
+  font-size:.55rem;font-weight:1000;
+}
+#parcours .route-card[data-stop="1"] .fight-team{
+  display:flex;align-items:center;justify-content:center;gap:15px;
+}
+#parcours .route-card[data-stop="1"] .fight-pokemon{
+  display:flex;flex-direction:column;align-items:center;width:135px;
+}
+#parcours .route-card[data-stop="1"] .fight-pokemon img{
+  width:115px;height:100px;object-fit:contain;
+}
+#parcours .route-card[data-stop="1"] .fight-pokemon strong{
+  margin-top:3px;font-size:.72rem;
+}
+#parcours .route-card[data-stop="1"] .arch strong,
+#parcours .route-card[data-stop="1"] .arch-text{color:#38d5d7}
+#parcours .route-card[data-stop="1"] .blast strong,
+#parcours .route-card[data-stop="1"] .blast-text{color:#67a8ff}
+#parcours .route-card[data-stop="1"] .fight-plus{color:#fff;font-weight:1000}
+#parcours .route-card[data-stop="1"] .fight-instruction{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:10px;padding-top:11px;border-top:1px solid #26394c;
+}
+#parcours .route-card[data-stop="1"] .fight-instruction span{
+  color:#8096b6;font-size:.55rem;font-weight:1000;letter-spacing:.08em;
+}
+#parcours .route-card[data-stop="1"] .fight-instruction strong{
+  color:#fff;font-size:.83rem;
+}
+#parcours .route-card[data-stop="1"] .fight-case-locked{
+  border-style:dashed;opacity:.72;
+}
+#parcours .route-card[data-stop="1"] .fight-case-locked p{
+  margin:0;color:#91a7c2;font-size:.7rem;line-height:1.55;text-align:center;
+}
+@media(max-width:700px){
+ #parcours .route-card[data-stop="1"] .gym-example-layout{grid-template-columns:1fr}
+ #parcours .route-card[data-stop="1"] .gym-leader-panel{min-height:0}
+}
+</style>
+<style id="prehistoric-build-cards-from-source">
+#equipe .prehistoric-build-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+#equipe .prehistoric-build-card{--accent:#62d5ff;overflow:hidden;background:linear-gradient(180deg,#102b50,#08182f);border:1px solid var(--accent);border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+#equipe .prehistoric-build-card.fire{--accent:#ff653b} #equipe .prehistoric-build-card.steel{--accent:#f0a53a}
+#equipe .prehistoric-build-card.water{--accent:#4da8ff} #equipe .prehistoric-build-card.rock{--accent:#43d4d2}
+#equipe .prehistoric-build-card.ground{--accent:#ff8151}
+#equipe .build-number{display:flex;justify-content:space-between;padding:11px 13px;color:var(--accent);font-size:.72rem;font-weight:1000}
+#equipe .build-number small{color:#b7c8dc}
+#equipe .build-picture{height:165px;margin:0 10px;display:grid;place-items:center;background:#061225}
+#equipe .build-picture img{width:145px;height:145px;object-fit:contain}
+#equipe .build-body{padding:14px 13px 17px} #equipe .build-body h3{margin:0 0 10px;font-size:1rem}
+#equipe .build-body h3 em{display:block;width:max-content;margin-top:6px;padding:3px 9px;color:#fff;background:var(--accent);border-radius:999px;font-size:.53rem;font-style:normal}
+#equipe .build-meta{display:flex;justify-content:space-between;gap:8px;margin:6px 0;padding:7px 8px;background:#071426;border:1px solid #29486c;border-radius:7px;font-size:.61rem}
+#equipe .build-meta b{color:#91a8c5} #equipe .build-meta.item b{color:#ffc94d} #equipe .build-meta.talent b{color:#e3a0ff} #equipe .build-meta.nature b{color:#ff9a38}
+#equipe .move-title,#equipe .iv-title,#equipe .ev-title{margin:12px 0 6px;font-size:.61rem;letter-spacing:.08em}
+#equipe .move-title{color:var(--accent)} #equipe .iv-title{color:#54f3a6} #equipe .ev-title{color:#67b8ff}
+#equipe .moves{display:grid;gap:5px} #equipe .moves span{padding:7px 8px;color:#fff;background:#071426;border-left:3px solid var(--accent);border-radius:6px;font-size:.62rem;font-weight:800}
+#equipe .moves i{float:right;color:var(--accent);font-size:.52rem;font-style:normal}
+#equipe .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:5px}
+#equipe .stats span{display:flex;flex-direction:column;align-items:center;padding:6px;border-radius:6px;font-size:.64rem}
+#equipe .stats span b{font-size:.51rem}
+#equipe .stats.iv span{color:#54f3a6;background:rgba(40,200,130,.08);border:1px solid rgba(84,243,166,.35)}
+#equipe .stats.ev span{color:#67b8ff;background:rgba(50,120,220,.09);border:1px solid rgba(103,184,255,.35)}
+#equipe .optional{margin-top:7px;padding:7px 8px;background:rgba(255,255,255,.035);border:1px dashed #395474;border-radius:7px;color:#9fb2ca;font-size:.55rem;line-height:1.45}
+#equipe .optional b{color:#f4c95d} #equipe .optional p{margin:3px 0}
+@media(max-width:1150px){#equipe .prehistoric-build-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){#equipe .prehistoric-build-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){#equipe .prehistoric-build-grid{grid-template-columns:1fr}}
+</style>
+<style id="prehistoric-filled-route-cases">
+#parcours .route-card{min-height:0!important;padding-bottom:30px!important}
+#parcours .preh-route-arena-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+#parcours .preh-route-leader{display:grid;place-items:center;width:64px;height:64px;background:#07131f;border:1px solid #31527e;border-radius:11px}
+#parcours .preh-route-leader img{width:58px;height:58px;object-fit:contain}
+#parcours .preh-route-arena-head h4{margin:0!important;color:#fff!important;font-size:1.05rem!important}
+#parcours .preh-route-arena-head span{color:#62d5ff;font-size:.65rem;font-weight:800}
+#parcours .preh-route-case{width:min(500px,94%);margin:12px auto;padding:18px 20px;background:#07131f;border:1px solid #344352;border-radius:13px;text-align:center}
+#parcours .preh-route-case.special{border-color:#7a4d58;background:linear-gradient(145deg,#10131d,#0a121c)}
+#parcours .preh-case-label{display:inline-block;margin-bottom:8px;padding:4px 10px;color:#06101f;background:#62d5ff;border-radius:999px;font-size:.55rem;font-weight:1000;letter-spacing:.06em}
+#parcours .special .preh-case-label{color:#fff;background:#c74455}
+#parcours .preh-case-title{margin-bottom:7px;color:#fff;font-size:.9rem;font-weight:1000}
+#parcours .preh-case-team{display:flex;align-items:center;justify-content:center;gap:13px}
+#parcours .preh-route-poke{display:flex;flex-direction:column;align-items:center;width:125px}
+#parcours .preh-route-poke img{width:110px;height:95px;object-fit:contain}
+#parcours .preh-route-poke strong{font-size:.7rem}
+#parcours .preh-plus,#parcours .preh-route-or{color:#fff;font-size:.85rem;font-weight:1000}
+#parcours .preh-route-or{margin:0 4px;color:#f4c95d;font-size:.55rem}
+#parcours .preh-special-text{margin:3px 0 8px;color:#fff;font-size:.78rem;font-weight:900}
+#parcours .preh-special-action{margin-top:7px;color:#f0b25d;font-size:.72rem;font-weight:900}
+#parcours .preh-route-notes{width:min(500px,94%);margin:12px auto 0;padding:12px 14px;color:#e7c45c;background:rgba(95,68,13,.14);border:1px solid rgba(231,196,92,.34);border-radius:9px;font-size:.66rem;line-height:1.45}
+#parcours .preh-route-notes strong{display:block;margin-bottom:5px;color:#ffd44f;font-size:.6rem;letter-spacing:.08em}
+#parcours .preh-route-notes p{margin:3px 0}
+@media(max-width:650px){
+ #parcours .preh-route-case,#parcours .preh-route-notes{width:100%}
+ #parcours .preh-route-poke{width:42%}
+ #parcours .preh-route-poke img{width:95px;height:85px}
+}
+</style>
+<style id="prehistoric-route-attacks-box">
+#parcours .preh-attacks-box{
+  margin-top:14px;
+  padding:12px 13px;
+  background:#06101d;
+  border:1px solid #29435f;
+  border-radius:9px;
+}
+#parcours .preh-attacks-title{
+  margin-bottom:8px;
+  color:#62d5ff;
+  font-size:.57rem;
+  font-weight:1000;
+  letter-spacing:.12em;
+}
+#parcours .preh-attacks-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+}
+#parcours .preh-attack-pokemon{
+  display:grid;
+  gap:5px;
+}
+#parcours .preh-attack-pokemon>strong{
+  color:#fff;
+  font-size:.63rem;
+}
+#parcours .preh-move{
+  display:block;
+  padding:6px 8px;
+  color:#fff;
+  background:#0b1b2c;
+  border-left:3px solid #8096b6;
+  border-radius:5px;
+  font-size:.61rem;
+  font-weight:900;
+}
+#parcours .preh-move.fire{border-left-color:#ff5a3c;color:#ff8068}
+#parcours .preh-move.water{border-left-color:#4da8ff;color:#70baff}
+#parcours .preh-move.rock{border-left-color:#d5b45b;color:#e8ce80}
+#parcours .preh-move.flying{border-left-color:#78d7e8;color:#9ce9f4}
+#parcours .preh-move.ground{border-left-color:#d79a58;color:#edb779}
+#parcours .preh-move.normal{border-left-color:#c9c9c9;color:#ededed}
+@media(max-width:600px){
+ #parcours .preh-attacks-grid{grid-template-columns:1fr}
+}
+</style>
+<style id="raidforge-mobile-adaptation">
+/* RAIDFORGE — adaptation mobile globale (PC inchangé) */
+@media (max-width: 768px) {
+  html,body{max-width:100%;overflow-x:hidden!important}
+  body{min-width:0!important;background-attachment:scroll!important}
+  *,*::before,*::after{box-sizing:border-box}
+  img,video,canvas,svg{max-width:100%;height:auto}
+  .container,.wrap,.page-content,.section,.hero,.calendar-page,.event-detail-page{width:100%!important;max-width:100%!important;padding-left:14px!important;padding-right:14px!important;margin-left:auto!important;margin-right:auto!important}
+  h1{font-size:clamp(28px,9vw,46px)!important;line-height:1.05!important}
+  h2{font-size:clamp(22px,7vw,34px)!important}
+  h3{font-size:clamp(18px,5.5vw,26px)!important}
+  p,li,.note,.muted{overflow-wrap:anywhere}
+  .navbar,.site-header,.header-inner{min-height:auto!important;height:auto!important}
+  .navbar,.header-inner{padding:10px 14px!important;gap:10px!important;flex-wrap:wrap!important}
+  .logo{font-size:clamp(20px,7vw,30px)!important;max-width:70vw}
+  .nav-links,.main-nav,.top-menu{display:none!important}
+  .menu-button{display:flex!important}
+  .header-nav-actions,.actions,.page-navigation,.event-buttons,.rotation-nav-buttons,.tools-nav-buttons{display:flex!important;flex-wrap:wrap!important;gap:8px!important;justify-content:center!important;position:static!important;transform:none!important;margin-left:auto!important;margin-right:auto!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{min-height:44px!important;max-width:100%!important;white-space:normal!important;text-align:center!important}
+  .hero{padding-top:28px!important;padding-bottom:28px!important;min-height:0!important;height:auto!important}
+  .hero p{max-width:100%!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.six-pokemon-row,.pokemon-grid,.team-grid,.route-grid,.iv-grid,.ev-grid{grid-template-columns:1fr!important}
+  .intro-grid,.stats,.event-grid,.tools-grid,.tools-grid-premium,.pokemon-grid,.team-grid{gap:14px!important}
+  .tool-card,.tool-feature-card,.tool-new-card,.event-card,.intro-card,.stat,.raid-page-card{width:100%!important;max-width:100%!important;min-width:0!important}
+  .tools-grid-premium .tool-card,.tools-grid-premium .tool-feature-card,.tools-grid-premium .tool-new-card{height:auto!important;min-height:190px!important}
+  .tools-hero-title{padding:22px 14px!important;margin-left:0!important;margin-right:0!important}
+  .tools-hero-kicker{font-size:11px!important;letter-spacing:1.5px!important}
+  .pokemon-card,.stop,.route-card,.battle-card,.strategy-card,.possibility-card,.case-card{width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important}
+  .pokemon-card{height:auto!important}
+  .pokemon-content,.pokemon-details{min-width:0!important}
+  .pokemon-picture img,.pokemon-sprite,.battle-pokemon img{max-width:min(180px,55vw)!important;height:auto!important}
+  .iv-grid,.ev-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .attack-list,.moves,.move-grid{grid-template-columns:1fr!important}
+  .stop,.route-card{padding:14px!important}
+  .battle-row,.battle-team,.battle-pokemon-row,.pokemon-pair,.strategy-row,.case-content{flex-wrap:wrap!important;justify-content:center!important;gap:10px!important}
+  .battle-pokemon{min-width:0!important;max-width:45%!important}
+  table{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  iframe{max-width:100%!important}
+  .event-detail-card{width:100%!important;max-width:100%!important;padding:16px!important}
+  .event-detail-gif{max-width:min(280px,80vw)!important;height:auto!important}
+  .section-heading{flex-wrap:wrap!important;gap:10px!important;text-align:center!important;justify-content:center!important}
+  .section-heading>*{max-width:100%!important}
+  .rotation-card,.rotation-panel,.panel{max-width:100%!important;min-width:0!important}
+  .rotation-nav-buttons{top:auto!important;right:auto!important;left:auto!important}
+  .rf-online-counter,.online-counter{position:static!important;transform:none!important;margin:8px auto!important}
+}
+@media (max-width: 480px) {
+  .container,.wrap,.page-content,.section,.hero{padding-left:10px!important;padding-right:10px!important}
+  .iv-grid,.ev-grid{gap:6px!important}
+  .battle-pokemon{max-width:100%!important;width:100%!important}
+  .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{width:100%!important}
+}
+</style>
+<style id="rf-phone-layout">
+/* RAIDFORGE: phone layout, shared across every page. */
+.rf-phone-nav{display:none}
+@media screen and (max-width:768px){
+ html body{min-width:0!important;width:100%!important;margin:0!important}
+ html body main{width:100%!important;min-width:0!important;max-width:100%!important;padding:16px 12px!important;margin:0 auto!important}
+ .rf-phone-nav{display:block;position:relative;z-index:1000;background:#081528;color:#ecf7ff;padding:12px 16px;border-bottom:1px solid #2cc9eb;font-family:Arial,sans-serif}
+ .rf-phone-nav summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;cursor:pointer;list-style:none;font-weight:800;font-size:20px}
+ .rf-phone-nav summary::-webkit-details-marker{display:none}
+ .rf-phone-nav summary span{font-size:14px;color:#72e6ff;border:1px solid #315574;border-radius:8px;padding:10px}
+ .rf-phone-nav nav{display:grid!important;grid-template-columns:1fr 1fr;gap:8px;padding:12px 0 4px}
+ .rf-phone-nav nav a{display:flex;align-items:center;min-height:46px;padding:10px 12px;border-radius:8px;background:#142c45;color:#fff;text-decoration:none;font-size:14px}
+ .rf-phone-nav nav a[aria-current=page]{background:#2cc9eb;color:#051526;font-weight:bold}
+ .rf-phone-nav a:focus-visible,.rf-phone-nav summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+ body>.navbar,body>.site-header,#rfTopMenuLinks,#rfDiscordLink{display:none!important}
+ body>header:not(.navbar):not(.site-header){flex-wrap:wrap!important;gap:10px!important;padding:12px!important}
+ body>header nav{flex-wrap:wrap!important;gap:12px!important}
+ main .hero{margin-top:12px!important;margin-bottom:24px!important}
+ main .heading,main .section-heading{flex-wrap:wrap!important;gap:12px!important}
+ main .region,main .team,main .prep,main .starry-build-grid,main .six-pokemon-row,main .starry-intro{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;min-width:0!important}
+ main .six-pokemon-row{overflow:visible!important}
+ body .team-section .pokemon-row{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important}
+ body .team-section .pokemon-row>.pokemon-card{width:100%!important;min-width:0!important;max-width:100%!important}
+ main .pokemon-card{flex:none!important;width:100%!important;min-width:0!important;max-width:100%!important}
+ main .pokemon-content,main .pokemon-info,main .pokemon-details{width:100%!important;min-width:0!important}
+ main input:not([type=checkbox]):not([type=radio]),main select{max-width:100%;min-height:44px;font-size:16px!important}
+ main button,main .filters button{min-height:44px}
+ main .filters,main .progress-row{flex-wrap:wrap!important;gap:8px!important}
+ main .stop-top{flex-wrap:wrap!important}
+ main .stop h4{font-size:clamp(20px,6vw,27px)!important;overflow-wrap:anywhere}
+ #parcours .stop [class*="-cases"],#parcours .stop [class*="-layout"],#parcours .stop [class*="-cards"],#parcours .stop .starry-turn-cases{grid-template-columns:minmax(0,1fr)!important;min-width:0!important;max-width:100%!important}
+ #parcours .stop [class*="-row"],#parcours .stop .battle-duo{flex-wrap:wrap!important;gap:12px!important;max-width:100%!important}
+ #parcours .stop img{max-width:100%!important;object-fit:contain}
+ #parcours .stop div{min-width:0!important;max-width:100%!important}
+ #parcours .vermilava-scenarios{grid-template-columns:minmax(0,1fr)!important}
+ #parcours .cime-main{flex-wrap:wrap!important;gap:10px!important}
+ #parcours .post-joliberges-items{grid-template-columns:minmax(0,1fr)!important}
+ #parcours .post-joliberges-item-card{min-width:0!important;max-width:100%!important;padding:16px 10px!important}
+ #parcours .vermilava-duo,#parcours .vermilava-action,.preh-route-duo,.preh-route-team,.preh-case-team{flex-wrap:wrap!important;gap:8px!important}
+ .celadopole-tortank-item-change,.ebenelle-choice-specs-change,.cramois-after-big,.parmanie-after-big,.safrania-after-item-change{padding:18px 10px!important;min-width:0!important;max-width:100%!important}
+ .item-change-row,.ecs-flow,.cramois-after-content,.parmanie-change-line,.safrania-after-row,.post-item-flow{display:flex!important;flex-wrap:nowrap!important;gap:6px!important;justify-content:center!important;align-items:center!important;width:100%!important}
+ .item-change-row>div,.ecs-flow>div,.cramois-after-content>div,.parmanie-change-line>div,.safrania-after-row>div,.post-item-flow>div{min-width:0!important;flex-shrink:1!important}
+ .item-change-item,.item-change-pokemon,.ecs-side,.cramois-after-item,.parmanie-item,.safrania-after-item,.safrania-after-pokemon,.post-object,.post-pokemon{flex:1 1 0!important;min-width:0!important;overflow-wrap:anywhere}
+ .item-change-row img,.ecs-flow img,.cramois-after-content img,.parmanie-change-line img,.safrania-after-row img,.post-item-flow img{max-width:68px!important;width:100%!important;height:68px!important;object-fit:contain!important}
+ .item-change-row strong,.ecs-flow strong,.cramois-after-content strong,.parmanie-change-line strong,.safrania-after-row strong,.post-item-flow strong{font-size:12px!important;white-space:normal!important;line-height:1.4}
+ .item-change-arrow,.ecs-arrow,.cramois-after-arrow,.parmanie-arrow,.safrania-after-arrow,.post-arrow{flex:0 0 14px!important;font-size:18px!important}
+ #unionpolis-start-items>.item-change-row,#frimapic-start-items>.item-change-row{flex-direction:column!important;gap:16px!important}
+ #unionpolis-start-items>.item-change-row>div,#frimapic-start-items>.item-change-row>div{width:100%;justify-content:center}
+ .parmanie-after-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+
+</style>
+<style id="rf-language-style">
+.rf-language-switch{position:fixed;left:18px;bottom:18px;z-index:100000;display:flex;gap:4px;padding:5px;background:rgba(5,9,20,.94);border:1px solid rgba(255,255,255,.2);border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.4);backdrop-filter:blur(10px)}
+.rf-language-switch a{display:flex;align-items:center;justify-content:center;min-width:50px;height:36px;padding:0 10px;border-radius:999px;color:#dbeafe!important;text-decoration:none!important;font:800 12px/1 Arial,sans-serif;letter-spacing:.4px}
+.rf-language-switch a.active{background:#fff;color:#081225!important}
+@media(max-width:600px){.rf-language-switch{left:10px;bottom:10px}.rf-language-switch a{min-width:46px;height:34px}}
+</style></head><body>
+<details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html">Home</a><a href="outils.html">Tools</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav></details>
+<a class="skip" href="#contenu">Skip to content</a><header><a class="logo" href="index.html">RAIDFORGE</a><nav><a href="gym-rerun.html">← Gym Rerun</a><a href="index.html">Home</a></nav></header>
+<main id="contenu"><nav class="breadcrumb"><a href="index.html">Home</a> / <a href="gym-rerun.html">Gym Rerun</a> / Prehistoric 5</nav>
+<section class="hero"><div class="eyebrow">PokéMMO · Gym Rerun · Prehistoric 5 Gym Rerun Route</div><h1>PREHISTORIC 5</h1><p>Complete Prehistoric 5 route across five regions, including Pokémon switches, PC heals/resets, and weather variations from the guide.</p><div class="actions"><a class="button primary" href="#equipe">View the team ↓</a><a class="button" href="#parcours">Follow the route ↗</a></div></section>
+<div class="stats"><div class="stat"><small>Route</small><strong>28 steps</strong><small>Hoenn → Unova → Johto → Sinnoh → Kanto</small></div><div class="stat"><small>Documented team</small><strong>5 Pokémon</strong><small>The document calls the team “Prehistoric 5”.</small></div><div class="stat"><small>Source</small><strong>Original guide</strong><small>Content preserved without inventing missing data.</small></div></div>
+<section class="section" id="equipe">
+<div class="heading">
+<div>
+<h2>The Prehistoric 5 Team</h2>
+<p>Team builds: moves, IVs, EVs, nature, ability, and held item.</p>
+</div>
+<span class="pill">MOVES • IV • EV</span>
+</div>
+<div class="prehistoric-build-grid">
+<article class="prehistoric-build-card fire">
+<div class="build-number">#1 <small>Special</small></div>
+<div class="build-picture"><img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/></div>
+<div class="build-body">
+<h3>Typhlosion <em>FIRE</em></h3>
+<div class="build-meta item"><b>ITEM</b><span>Choice Specs</span></div>
+<div class="build-meta talent"><b>ABILITY</b><span>Blaze</span></div>
+<div class="build-meta nature"><b>NATURE</b><span>Modest / Mild / Lonely</span></div>
+<h4 class="move-title">MOVES</h4>
+<div class="moves">
+<span>Eruption <i>PP Max</i></span>
+<span>Lava Plume</span>
+<span>Cut <i>if no Ocarina</i></span>
+</div>
+<h4 class="iv-title">● IV</h4>
+<div class="stats iv"><span><b>SP. ATK</b>31</span><span><b>SPEED</b>31</span></div>
+<h4 class="ev-title">● EV</h4>
+<div class="stats ev"><span><b>SP. ATK</b>252</span><span><b>SPEED</b>252</span></div>
+</div>
+</article>
+<article class="prehistoric-build-card steel">
+<div class="build-number">#2 <small>Special</small></div>
+<div class="build-picture"><img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/></div>
+<div class="build-body">
+<h3>Heatran <em>FIRE / STEEL</em></h3>
+<div class="build-meta item"><b>ITEM</b><span>Choice Scarf</span></div>
+<div class="build-meta talent"><b>ABILITY</b><span>Flash Fire</span></div>
+<div class="build-meta nature"><b>NATURE</b><span>Modest</span></div>
+<h4 class="move-title">MOVES</h4>
+<div class="moves">
+<span>Eruption <i>PP Max</i></span>
+<span>Lava Plume</span>
+<span>Earth Power</span>
+</div>
+<h4 class="iv-title">● IV</h4>
+<div class="stats iv five">
+<span><b>HP</b>31</span><span><b>DEF</b>31</span><span><b>SP. ATK</b>31</span><span><b>SP. DEF</b>31</span><span><b>SPEED</b>31</span>
+</div>
+<h4 class="ev-title">● EV</h4>
+<div class="stats ev"><span><b>SP. ATK</b>252</span><span><b>SPEED</b>252</span></div>
+</div>
+</article>
+<article class="prehistoric-build-card water">
+<div class="build-number">#3 <small>Special</small></div>
+<div class="build-picture"><img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/></div>
+<div class="build-body">
+<h3>Blastoise <em>WATER</em></h3>
+<div class="build-meta item"><b>ITEM</b><span>Choice Scarf</span></div>
+<div class="build-meta nature"><b>NATURE</b><span>Mild / Modest</span></div>
+<h4 class="move-title">MOVES</h4>
+<div class="moves"><span>Water Spout <i>PP Max</i></span></div>
+<h4 class="iv-title">● IV</h4>
+<div class="stats iv"><span><b>SP. ATK</b>31</span><span><b>SPEED</b>31</span></div>
+<div class="optional">
+<b>Optional IVs</b>
+<p><strong>Mild :</strong> 31 Atk Spé / 31 Vit / 10–22 HP / 10–22 Def</p>
+<p><strong>Modest :</strong> 31 Atk Spé / 31 Vit / 0–9 HP / 0–9 Def</p>
+</div>
+<h4 class="ev-title">● EV</h4>
+<div class="stats ev"><span><b>SP. ATK</b>252</span><span><b>SPEED</b>252</span></div>
+</div>
+</article>
+<article class="prehistoric-build-card rock">
+<div class="build-number">#4 <small>Physical</small></div>
+<div class="build-picture"><img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/></div>
+<div class="build-body">
+<h3>Archeops <em>ROCK / FLYING</em></h3>
+<div class="build-meta item"><b>ITEM</b><span>Scope Lens</span></div>
+<div class="build-meta nature"><b>NATURE</b><span>Lonely / Adamant</span></div>
+<h4 class="move-title">MOVES</h4>
+<div class="moves">
+<span>Rock Slide <i>PP Max</i></span>
+<span>Tailwind</span>
+<span>Flying <i>if no Ocarina</i></span>
+</div>
+<h4 class="iv-title">● IV</h4>
+<div class="stats iv"><span><b>ATK</b>31</span><span><b>SPEED</b>31</span></div>
+<div class="optional">
+<b>Optional IVs — Lonely</b>
+<p>31 Atk / 31 Vit / 0–4 HP / 0–4 Def</p>
+</div>
+<h4 class="ev-title">● EV</h4>
+<div class="stats ev"><span><b>ATK</b>252</span><span><b>SPEED</b>252</span></div>
+</div>
+</article>
+<article class="prehistoric-build-card ground">
+<div class="build-number">#5 <small>Physical</small></div>
+<div class="build-picture"><img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/></div>
+<div class="build-body">
+<h3>Torkoal <em>FIRE</em></h3>
+<div class="build-meta item"><b>ITEM</b><span>Choice Band</span></div>
+<div class="build-meta talent"><b>ABILITY</b><span>Drought</span></div>
+<div class="build-meta nature"><b>NATURE</b><span>Brave / Adamant</span></div>
+<h4 class="move-title">MOVES</h4>
+<div class="moves"><span>Explosion</span></div>
+<h4 class="iv-title">● IV</h4>
+<div class="stats iv"><span><b>ATK</b>31</span></div>
+<div class="optional">
+<b>Optional IVs</b>
+<p>31 Atk / 15+ Def / 20+ Def Spé / 15+ HP</p>
+</div>
+<h4 class="ev-title">● EV</h4>
+<div class="stats ev"><span><b>ATK</b>252</span><span><b>SP. DEF</b>252</span></div>
+</div>
+</article>
+</div>
+</section>
+<section class="techrun-section" id="parcours">
+<div class="techrun-header">
+<h2>TechRun Route</h2>
+<p>
+<strong>⚔️ Ready for the Gym Rerun?</strong><br/>
+            Route les régions, enchaîne les arènes et suis chaque stratégie étape par étape.
+            Utilise la recherche pour retrouver rapidement une région ou une arène.
+            <strong>Have a good run, Trainer! 🔥</strong>
+</p>
+</div>
+<div aria-label="Recherche des arènes et régions" class="arena-search" role="search">
+<label for="arena-search-input">SEARCH GYM / REGION</label>
+<div class="arena-search-box">
+<span aria-hidden="true" class="arena-search-icon">⌕</span>
+<input autocomplete="off" id="arena-search-input" placeholder="Ex. Mauville City, Hoenn, Sinnoh..." type="search"/>
+<button aria-label="Effacer la recherche" id="arena-search-clear" type="button">×</button>
+</div>
+<p class="arena-search-empty" hidden="" id="arena-search-empty">No gym or region found.</p>
+</div>
+<div id="routes-container">
+<section class="route-region" data-region="Hoenn">
+<h3 class="route-region-title">Hoenn</h3>
+<article class="route-card" data-stop="1">
+<div class="route-number">01</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Lavaridge Town" src="https://play.pokemonshowdown.com/sprites/trainers/flannery.png"/>
+</div>
+<div><h4>Lavaridge Town</h4><span>Fire</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="2">
+<div class="route-number">02</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Mauville City" src="https://play.pokemonshowdown.com/sprites/trainers/wattson.png"/>
+</div>
+<div><h4>Mauville City</h4><span>Electric</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="3">
+<div class="route-number">03</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Fortree City" src="https://play.pokemonshowdown.com/sprites/trainers/winona.png"/>
+</div>
+<div><h4>Fortree City</h4><span>Flying</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF RAIN</div>
+<div class="preh-special-text">Switch Archeops → Torkoal</div>
+<div class="preh-special-action">Helping Hand</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Archeops may be KO’d: replace it with Heatran and continue without healing at the PC.</p><p>• If Torkoal is paralyzed by Thunderbolt: use a Paralyze Heal after the gym or heal at the PC.</p></div></div>
+</article>
+<article class="route-card" data-stop="4">
+<div class="route-number">04</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Dewford Town" src="https://play.pokemonshowdown.com/sprites/trainers/brawly.png"/>
+</div>
+<div><h4>Dewford Town</h4><span>Fighting</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="5">
+<div class="route-number">05</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Petalburg City" src="https://play.pokemonshowdown.com/sprites/trainers/norman.png"/>
+</div>
+<div><h4>Petalburg City</h4><span>Normal</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+</section>
+<section class="route-region" data-region="Unova">
+<h3 class="route-region-title">Unova</h3>
+<article class="route-card" data-stop="6">
+<div class="route-number">06</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Castelia City" src="https://play.pokemonshowdown.com/sprites/trainers/burgh.png"/>
+</div>
+<div><h4>Castelia City</h4><span>Bug</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• If Accelgor’s team damaged you, heal here.</p></div></div>
+</article>
+<article class="route-card" data-stop="7">
+<div class="route-number">07</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Nimbasa City" src="https://play.pokemonshowdown.com/sprites/trainers/elesa.png"/>
+</div>
+<div><h4>Nimbasa City</h4><span>Electric</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran may be damaged. Continue if that happens.</p></div></div>
+</article>
+<article class="route-card" data-stop="8">
+<div class="route-number">08</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Driftveil City" src="https://play.pokemonshowdown.com/sprites/trainers/clay.png"/>
+</div>
+<div><h4>Driftveil City</h4><span>Ground</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="9">
+<div class="route-number">09</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Striaton City — Fire" src="https://play.pokemonshowdown.com/sprites/trainers/chili.png"/>
+</div>
+<div><h4>Striaton City — Fire</h4><span>Fire</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="10">
+<div class="route-number">10</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Striaton City — Grass" src="https://play.pokemonshowdown.com/sprites/trainers/cilan.png"/>
+</div>
+<div><h4>Striaton City — Grass</h4><span>Grass</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="11">
+<div class="route-number">11</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Striaton City — Water" src="https://play.pokemonshowdown.com/sprites/trainers/cress.png"/>
+</div>
+<div><h4>Striaton City — Water</h4><span>Water</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Torkoal uses Helping Hand.</p><p>• If Blastoise is damaged after the Fire leader: heal at the PC.</p></div></div>
+</article>
+<article class="route-card" data-stop="12">
+<div class="route-number">12</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Mistralton City" src="https://play.pokemonshowdown.com/sprites/trainers/skyla.png"/>
+</div>
+<div><h4>Mistralton City</h4><span>Flying</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• If Emergency Exit activates, keep attacking. If Heatran or Typhlosion is KO’d, heal at the PC, continue, and skip the next PC heal.</p></div></div>
+</article>
+<article class="route-card" data-stop="13">
+<div class="route-number">13</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Icirrus City" src="https://play.pokemonshowdown.com/sprites/trainers/brycen.png"/>
+</div>
+<div><h4>Icirrus City</h4><span>Ice</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Typhlosion and Heatran use Lava Plume.</p><p>• If frozen by Blizzard: use an Ice Heal during the frozen Pokémon’s turn.</p></div></div>
+</article>
+<article class="route-card" data-stop="14">
+<div class="route-number">14</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Opelucid City" src="https://play.pokemonshowdown.com/sprites/trainers/drayden.png"/>
+</div>
+<div><h4>Opelucid City</h4><span>Dragon</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Typhlosion</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div></div>
+<div class="preh-special-action">Heatran</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Archeops uses Tailwind; Heatran then uses Lava Plume.</p></div></div>
+</article>
+</section>
+<section class="route-region" data-region="Johto">
+<h3 class="route-region-title">Johto</h3>
+<article class="route-card" data-stop="15">
+<div class="route-number">15</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Violet City — Johto" src="https://play.pokemonshowdown.com/sprites/trainers/falkner.png"/>
+</div>
+<div><h4>Violet City — Johto</h4><span>Flying</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran and Blastoise may be damaged. Continue if that happens.</p></div></div>
+</article>
+<article class="route-card" data-stop="16">
+<div class="route-number">16</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Mahogany Town" src="https://play.pokemonshowdown.com/sprites/trainers/pryce.png"/>
+</div>
+<div><h4>Mahogany Town</h4><span>Ice</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran uses Lava Plume.</p><p>• If frozen by Blizzard: use an Ice Heal during the frozen Pokémon’s turn.</p></div></div>
+</article>
+<article class="route-card" data-stop="17">
+<div class="route-number">17</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Goldenrod City" src="https://play.pokemonshowdown.com/sprites/trainers/whitney.png"/>
+</div>
+<div><h4>Goldenrod City</h4><span>Normal</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Place Heatran on the left, above Blastoise in the team order.</p><p>• Heatran may be damaged. Continue if that happens.</p></div></div>
+</article>
+<article class="route-card" data-stop="18">
+<div class="route-number">18</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Azalea Town" src="https://play.pokemonshowdown.com/sprites/trainers/bugsy.png"/>
+</div>
+<div><h4>Azalea Town</h4><span>Bug</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF SANDSTORM</div>
+<div class="preh-special-text">Switch Typhlosion → Torkoal</div>
+<div class="preh-special-action">Helping Hand</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran may be damaged. Continue if that happens.</p></div></div>
+</article>
+<article class="route-card" data-stop="19">
+<div class="route-number">19</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Olivine City" src="https://play.pokemonshowdown.com/sprites/trainers/jasmine.png"/>
+</div>
+<div><h4>Olivine City</h4><span>Steel</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF THE OPPOSING BLASTOISE COMES IN</div>
+<div class="preh-special-text">Switch Heatran → Torkoal</div>
+<div class="preh-special-action">Helping Hand</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF RAPIDASH COMES IN</div>
+<div class="preh-special-text">Switch Heatran → Torkoal</div>
+<div class="preh-special-action">Explosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran uses Lava Plume.</p><p>• If you use Explosion, heal before the next gym or skip it.</p></div></div>
+</article>
+<article class="route-card" data-stop="20">
+<div class="route-number">20</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Cianwood City" src="https://play.pokemonshowdown.com/sprites/trainers/chuck.png"/>
+</div>
+<div><h4>Cianwood City</h4><span>Fighting</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Rock Slide flinches on turn 1 can cause problems.</p></div></div>
+</article>
+</section>
+<section class="route-region" data-region="Sinnoh">
+<h3 class="route-region-title">Sinnoh</h3>
+<article class="route-card" data-stop="21">
+<div class="route-number">21</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Veilstone City" src="https://play.pokemonshowdown.com/sprites/trainers/maylene.png"/>
+</div>
+<div><h4>Veilstone City</h4><span>Fighting</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Archeops may be damaged. Continue; heal if you want to play it safe or if it is KO’d.</p></div></div>
+</article>
+<article class="route-card" data-stop="22">
+<div class="route-number">22</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Eterna City" src="https://play.pokemonshowdown.com/sprites/trainers/gardenia.png"/>
+</div>
+<div><h4>Eterna City</h4><span>Grass</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• If Archeops has less than 50% HP, heal afterward.</p><p>• Replace Typhlosion if necessary.</p></div></div>
+</article>
+<article class="route-card" data-stop="23">
+<div class="route-number">23</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Sunyshore City" src="https://play.pokemonshowdown.com/sprites/trainers/volkner.png"/>
+</div>
+<div><h4>Sunyshore City</h4><span>Electric</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF LANTURN LEADS</div>
+<div class="preh-special-text">Switch Blastoise → Torkoal</div>
+<div class="preh-special-action">Helping Hand</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Replace Typhlosion as soon as possible.</p><p>• Use Explosion with Torkoal when Galvantula comes in.</p><p>• If that happens, skip the next gym or heal and do it if you have time.</p></div></div>
+</article>
+<article class="route-card" data-stop="24">
+<div class="route-number">24</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Pastoria City" src="https://play.pokemonshowdown.com/sprites/trainers/crasherwake.png"/>
+</div>
+<div><h4>Pastoria City</h4><span>Water</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+</section>
+<section class="route-region" data-region="Kanto">
+<h3 class="route-region-title">Kanto</h3>
+<article class="route-card" data-stop="25">
+<div class="route-number">25</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Vermilion City" src="https://play.pokemonshowdown.com/sprites/trainers/ltsurge.png"/>
+</div>
+<div><h4>Vermilion City</h4><span>Electric</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF RAIN LEAD</div>
+<div class="preh-special-text">Switch Heatran → Torkoal</div>
+<div class="preh-special-action">Helping Hand</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF ELECTRODE LEADS</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion — Lava Plume</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="26">
+<div class="route-number">26</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Pewter City" src="https://play.pokemonshowdown.com/sprites/trainers/brock.png"/>
+</div>
+<div><h4>Pewter City</h4><span>Rock</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">IF TOXICROAK</div>
+<div class="preh-special-text">T1: Blastoise → Heatran</div>
+<div class="preh-special-action">Lava Plume; Archeops may faint</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">TURN 2</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion — Lava Plume</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• If Archeops is KO’d, replace it with Heatran.</p></div></div>
+</article>
+<article class="route-card" data-stop="27">
+<div class="route-number">27</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Cerulean City" src="https://play.pokemonshowdown.com/sprites/trainers/misty.png"/>
+</div>
+<div><h4>Cerulean City</h4><span>Water</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Torkoal" src="https://play.pokemonshowdown.com/sprites/gen5ani/torkoal.gif"/>
+<strong style="color:#6fbe63">Torkoal</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Archeops" src="https://play.pokemonshowdown.com/sprites/gen5ani/archeops.gif"/>
+<strong style="color:#35d4d2">Archeops</strong>
+</div><span class="preh-route-or">OR</span><div class="preh-route-poke">
+<img alt="Blastoise" src="https://play.pokemonshowdown.com/sprites/gen5ani/blastoise.gif"/>
+<strong style="color:#58a9ff">Blastoise</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Torkoal</strong><span class="preh-move normal">Explosion</span></div><div class="preh-attack-pokemon"><strong>Archeops</strong><span class="preh-move rock">Rock Slide</span><span class="preh-move flying">Tailwind</span><span class="preh-move flying">Flying</span></div><div class="preh-attack-pokemon"><strong>Blastoise</strong><span class="preh-move water">Water Spout</span></div></div></div></div>
+<div class="preh-route-case special">
+<div class="preh-case-label">NEXT PART OF THE BATTLE</div>
+<div class="preh-special-text">Heatran</div>
+<div class="preh-case-team"><div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div><span class="preh-plus">+</span><div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div></div>
+<div class="preh-special-action">Typhlosion</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div></div>
+</article>
+<article class="route-card" data-stop="28">
+<div class="route-number">28</div>
+<div class="route-content"><div class="preh-route-arena-head"><div class="preh-route-leader">
+<img alt="Leader Celadon City" src="https://play.pokemonshowdown.com/sprites/trainers/erika.png"/>
+</div>
+<div><h4>Celadon City</h4><span>Grass</span></div></div>
+<div class="preh-route-case normal">
+<div class="preh-case-label">NORMAL CASE</div>
+<div class="preh-case-title">Start with:</div>
+<div class="preh-case-team">
+<div class="preh-route-poke">
+<img alt="Heatran" src="https://play.pokemonshowdown.com/sprites/gen5ani/heatran.gif"/>
+<strong style="color:#ff9c35">Heatran</strong>
+</div>
+<span class="preh-plus">+</span>
+<div class="preh-route-poke">
+<img alt="Typhlosion" src="https://play.pokemonshowdown.com/sprites/gen5ani/typhlosion.gif"/>
+<strong style="color:#ff5757">Typhlosion</strong>
+</div>
+</div>
+<div class="preh-attacks-box"><div class="preh-attacks-title">MOVES</div><div class="preh-attacks-grid"><div class="preh-attack-pokemon"><strong>Heatran</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move ground">Earth Power</span></div><div class="preh-attack-pokemon"><strong>Typhlosion</strong><span class="preh-move fire">Eruption</span><span class="preh-move fire">Lava Plume</span><span class="preh-move normal">Cut</span></div></div></div></div><div class="preh-route-notes"><strong>NOTE</strong><p>• Heatran uses Lava Plume.</p></div></div>
+</article>
+</section>
+</div>
+<div class="route-warning">
+        ⚠️ Always check your team’s moves, PP, held items, and HP before moving on to the next gym.
+    </div>
+</section>
+<section class="section source"><h2>Sources and credits</h2><p>English adaptation of the document <strong>Prehistoric 5 Gym Rerun Route</strong>. The route, resets, and variations follow the supplied document.</p><p><a href="https://pokepast.es/61837e2f18d99656" rel="noopener noreferrer" target="_blank">PokéPaste cited in the document ↗</a></p></section></main>
+<footer>RAIDFORGE · Prehistoric 5 · <a href="gym-rerun.html">Back to Gym Rerun routes</a></footer>
+<script>
+(()=>{const key='raidforge-prehistoric5-progress-v1-en',boxes=[...document.querySelectorAll('.check input')];let saved=[];try{let v=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(v))saved=v}catch{}
+boxes.forEach(b=>b.checked=saved.includes(b.value));function refresh(){let s=boxes.filter(b=>b.checked).map(b=>b.value);boxes.forEach(b=>b.closest('.stop').classList.toggle('done',b.checked));document.getElementById('progress-label').textContent=s.length+' / 28 steps completed';document.getElementById('progress').value=s.length;try{localStorage.setItem(key,JSON.stringify(s))}catch{}}
+boxes.forEach(b=>b.addEventListener('change',refresh));document.getElementById('reset').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);refresh()});
+let active='All',search=document.getElementById('arena-search'),norm=v=>v.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function filter(){let q=norm(search.value.trim()),visible=0;document.querySelectorAll('[data-region]').forEach(sec=>{let rv=0;sec.querySelectorAll('[data-stop]').forEach(card=>{let ok=(active==='All'||active===sec.dataset.region)&&norm(sec.dataset.region+' '+card.querySelector('h4').textContent).includes(q);card.hidden=!ok;if(ok){rv++;visible++}});sec.hidden=rv===0});document.getElementById('empty-search').hidden=visible!==0}
+document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{active=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(o=>o.setAttribute('aria-pressed',String(o===btn)));filter()}));
+search.addEventListener('input',filter);document.getElementById('clear-search').addEventListener('click',()=>{search.value='';filter();search.focus()});refresh()})();
+</script>
+<script id="prehistoric-route-number-sync">
+document.querySelectorAll('#parcours .stop[data-stop]').forEach(function(card){
+  var box = card.querySelector('.check span');
+  if(box) box.setAttribute('data-route-num', card.getAttribute('data-stop'));
+});
+</script>
+<script id="prehistoric-exact-route-search">
+(function(){
+ const input=document.getElementById("arena-search-input"),
+       clear=document.getElementById("arena-search-clear"),
+       empty=document.getElementById("arena-search-empty"),
+       container=document.getElementById("routes-container");
+ if(!input||!container)return;
+ const norm=v=>(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+ function filter(){
+   const q=norm(input.value); let visible=0;
+   clear.style.display=q?"block":"none";
+   container.querySelectorAll(".route-region").forEach(region=>{
+     const rq=norm(region.querySelector(".route-region-title")?.textContent);
+     let regionVisible=0;
+     region.querySelectorAll(":scope > .route-card").forEach(card=>{
+       const show=!q||rq.includes(q)||norm(card.textContent).includes(q);
+       card.classList.toggle("arena-search-hidden",!show);
+       if(show){visible++;regionVisible++}
+     });
+     region.classList.toggle("arena-search-hidden",regionVisible===0);
+   });
+   empty.hidden=visible!==0;
+ }
+ input.addEventListener("input",filter);
+ clear.addEventListener("click",()=>{input.value="";filter();input.focus()});
+ filter();
+})();
+</script>
+<div aria-label="Language" class="rf-language-switch"><a href="../gym-prehistoric-5.html">🇫🇷 FR</a><a class="active" href="gym-prehistoric-5.html">🇬🇧 EN</a></div></body></html>
