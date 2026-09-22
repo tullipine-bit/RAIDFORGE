@@ -27,9 +27,15 @@ const firebaseConfig = {
   messagingSenderId: "230161190966",
   appId: "1:230161190966:web:2fdbee2a602b3b9e5f4897"
 };
-const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);const $=id=>document.getElementById(id);let user=null,joined=false;const referrer=new URLSearchParams(location.search).get("ref");
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
+const $=id=>document.getElementById(id);
+let user=null,joined=false;
+const referrer=new URLSearchParams(location.search).get("ref");
+
+function msg(t){$("status").textContent=t;}
+function myLink(){return location.origin+location.pathname+"?ref="+user.uid;}
 onValue(ref(db,"giveaway/config"),s=>{const c=s.val()||{};if(c.prize)$("prize").textContent=c.prize;if(c.endsAt)startClock(c.endsAt)});onValue(ref(db,"giveaway/participantCount"),s=>$("participants").textContent=s.val()||0);
-onAuthStateChanged(auth,u=>{if(!u)return;user=u;onValue(ref(db,"giveaway/participants/"+u.uid),s=>{const p=s.val();joined=!!p;$("tickets").textContent=p?.tickets||0;$("referrals").textContent=p?.referrals||0;$("join").textContent=joined?"✓ PARTICIPATION VALIDÉE":"PARTICIPER AU GIVEAWAY";$("join").disabled=joined;if(joined)$("refLink").value=myLink()})});signInAnonymously(auth).catch(()=>msg("Impossible de se connecter au giveaway."));
+onAuthStateChanged(auth,u=>{if(!u)return;user=u;onValue(ref(db,"giveaway/participants/"+u.uid),s=>{const p=s.val();joined=!!p;$("tickets").textContent=p?.tickets||0;$("referrals").textContent=p?.referrals||0;$("join").textContent=joined?"✓ PARTICIPATION VALIDÉE":"PARTICIPER AU GIVEAWAY";$("join").disabled=joined;if(joined)$("refLink").value=myLink()})});signInAnonymously(auth).catch((e)=>{console.error("Firebase Auth:",e);msg("Impossible de se connecter au giveaway : "+(e.code||e.message));});
 $("join").onclick = async () => {
   if (!user) return;
 
