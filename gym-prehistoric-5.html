@@ -1182,7 +1182,6 @@ main{max-width:1500px !important}
  #parcours .preh-route-poke img{width:95px;height:85px}
 }
 </style>
-
 <style id="prehistoric-route-attacks-box">
 #parcours .preh-attacks-box{
   margin-top:14px;
@@ -1231,7 +1230,6 @@ main{max-width:1500px !important}
  #parcours .preh-attacks-grid{grid-template-columns:1fr}
 }
 </style>
-
 <style id="raidforge-mobile-adaptation">
 /* RAIDFORGE — adaptation mobile globale (PC inchangé) */
 @media (max-width: 768px) {
@@ -1285,7 +1283,6 @@ main{max-width:1500px !important}
   .button,.back-link,.header-nav-btn,.home-button,.tools-nav-btn,.rotation-nav-btn{width:100%!important}
 }
 </style>
-
 <style id="rf-phone-layout">
 /* RAIDFORGE: phone layout, shared across every page. */
 .rf-phone-nav{display:none}
@@ -1338,7 +1335,12 @@ main{max-width:1500px !important}
 }
 
 </style>
-</head><body>
+<style id="rf-language-style">
+.rf-language-switch{position:fixed;left:18px;bottom:18px;z-index:100000;display:flex;gap:4px;padding:5px;background:rgba(5,9,20,.94);border:1px solid rgba(255,255,255,.2);border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.4);backdrop-filter:blur(10px)}
+.rf-language-switch a{display:flex;align-items:center;justify-content:center;min-width:50px;height:36px;padding:0 10px;border-radius:999px;color:#dbeafe!important;text-decoration:none!important;font:800 12px/1 Arial,sans-serif;letter-spacing:.4px}
+.rf-language-switch a.active{background:#fff;color:#081225!important}
+@media(max-width:600px){.rf-language-switch{left:10px;bottom:10px}.rf-language-switch a{min-width:46px;height:34px}}
+</style></head><body>
 <details class="rf-phone-nav"><summary>RAIDFORGE <span>☰ Menu</span></summary><nav aria-label="Navigation mobile"><a href="index.html">Accueil</a><a href="outils.html">Outils</a><a href="raids.html">Raids</a><a href="gym-rerun.html">Gym Rerun</a><a href="events.html">Events</a><a href="farming.html">Farming</a><a href="guides.html">Guides</a></nav></details>
 <a class="skip" href="#contenu">Aller au contenu</a><header><a class="logo" href="index.html">RAIDFORGE</a><nav><a href="gym-rerun.html">← Gym Rerun</a><a href="index.html">Accueil</a></nav></header>
 <main id="contenu"><nav class="breadcrumb"><a href="index.html">Accueil</a> / <a href="gym-rerun.html">Gym Rerun</a> / Prehistoric 5</nav>
@@ -2295,4 +2297,4 @@ document.querySelectorAll('#parcours .stop[data-stop]').forEach(function(card){
  filter();
 })();
 </script>
-</body></html>
+<div aria-label="Langue / Language" class="rf-language-switch"><a class="active" href="gym-prehistoric-5.html">🇫🇷 FR</a><a href="en/gym-prehistoric-5.html">🇬🇧 EN</a></div></body></html>

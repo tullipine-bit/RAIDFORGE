@@ -1,0 +1,492 @@
+RAIDFORGE English translation audit
+===================================
+This build translates visible HTML text, labels/attributes, core JavaScript-generated UI,
+months, event wording, giveaway UI, Gym Rerun terminology, and common official move names.
+
+Potential French-marker strings remaining for manual review: 485
+
+calendrier.html: Électhor & Entei
+calendrier.html: ⚡ Électhor
+calendrier.html: 🎄 DÉCEMBRE 2026
+calendrier.html: Électhor & Entei
+calendrier.html: ⚡Électhor
+calendrier.html: 💜 FÉVRIER 2027
+calendrier.html: Électhor & Entei
+calendrier.html: ⚡Électhor
+calendrier.html: Électhor & Entei
+calendrier.html: ⚡Électhor
+calendrier.html: 🌞 AOÛT 2027
+calendrier.html: Préparez-vous for l’event d’Halloween ! Découvrez les rewards et les activities spéciales available pendant cette période.
+calendrier.html: Célébrez les fêtes de end d’année with l’event de Noël ! Découvrez les rewards, les activities et les surprises available pendant cette période.
+calendrier.html: Découvrez l’event Lunaire et Zodiaque ! Partez à la découverte des signes du zodiaque, des rewards célestes et des activities spéciales.
+calendrier.html: © 2026 RAIDFORGE — PokéMMO Resources
+giveaway.html: enter au giveaway RAIDFORGE et partage ton lien personnel. each referral validée te donne un ticket supplémentaire for le tirage.
+giveaway.html: 2 000 000 PokéYens
+giveaway.html: 🎮 PokéMMO username
+giveaway.html: Une referral is comptée lorsque la nouvelle personne ouvre ton lien et valide sa entry. Un participant ne can avoir qu'un seul parrain.
+giveaway.html: par referral validée, jusqu’à
+giveaway.html: between ton pseudo PokéMMO for participer. Une seule entry is autorisée par session Firebase.
+giveaway.html: Le tirage is pondéré par le nombre de tickets.
+giveaway.html: Les participations frauduleuses can être annulées.
+giveaway.html: RAIDFORGE • Giveaway communautaire PokéMMO
+giveaway.html: import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";import{getAuth,signInAnonymously,onAuthStateChanged}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";import{getDataba
+gym-6-pillars.html: PokéMMO Strategy guide
+gym-6-pillars.html: Prepare your team and start your Gym Rerun! Find the six essential Pokémon, their roles and the complete gym route for an efficient run.
+gym-6-pillars.html: six Pokémon, six precise roles. Every member has a purpose to keep the route fast, stable and efficient.
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Pokémon utilisant Blizzard et profitant de la neige.
+gym-6-pillars.html: Éclat Magique
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Incinération
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Gaz Réactif
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Spé
+gym-6-pillars.html: Sérénité
+gym-6-pillars.html: route les regions, enchaîne les gyms et suis each strategy étape par étape. use la search for retrouver rapidement une region ou une gym.
+gym-6-pillars.html: ⚠️ Vérifie toudays les moves, les PP, les items et les PV de ton team before de passer à l'gym next.
+gym-6-pillars.html: Une bonne team ne repose pas only on la power individuelle de ses Pokémon. Elle doit également pouvoir répondre aux différentes menaces rencontrées en battle. Les 6 Pillars s'appuient donc on la complémentarité des types
+gym-6-pillars.html: use des Pokémon capables d'infliger rapidement des damage importants.
+gym-6-pillars.html: Préserver des Pokémon résistants for encaisser les moves adverses.
+gym-6-pillars.html: Profiter de Pokémon fast for prendre l'initiative pendant le battle.
+gym-6-pillars.html: Complémentarité
+gym-6-pillars.html: Les différents types permettent de varier les moves et de mieux répondre aux Pokémon adverses.
+gym-6-pillars.html: before each battle, identifie les menaces principales de l'opponent. choose le Pokémon adapté à la situation et évite de garder toudays le même Pokémon actif. Les changements bien anticipés can faire la différence.
+gym-6-pillars.html: — PokéMMO Strategy guide
+gym-6-pillars.html: /* ======================================== CONFIGURATION DES IMAGES ======================================== */ const arenaImages = { "Vermilava": "images/arenas/lavaridge.jpg", "Myokara": "images/arenas/dewford.jpg", "
+gym-7-hells.html: PokéMMO Strategy guide
+gym-7-hells.html: Prepare your team and start your Gym Rerun! Find the six essential Pokémon, their roles and the complete gym route for an efficient run.
+gym-7-hells.html: six Pokémon, six precise roles. Every member has a purpose to keep the route fast, stable and efficient.
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Tête de Roc
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Sérénité
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: Spé
+gym-7-hells.html: route les regions, enchaîne les gyms et suis each strategy étape par étape. use la search for retrouver rapidement une region ou une gym.
+gym-7-hells.html: ⚠️ Vérifie toudays les moves, les PP, les items et les PV de ton team before de passer à l'gym next.
+gym-7-hells.html: Une bonne team ne repose pas only on la power individuelle de ses Pokémon. Elle doit également pouvoir répondre aux différentes menaces rencontrées en battle. Les 7 Hells s'appuient donc on la complémentarité des types, 
+gym-7-hells.html: use des Pokémon capables d'infliger rapidement des damage importants.
+gym-7-hells.html: Préserver des Pokémon résistants for encaisser les moves adverses.
+gym-7-hells.html: Profiter de Pokémon fast for prendre l'initiative pendant le battle.
+gym-7-hells.html: Complémentarité
+gym-7-hells.html: Les différents types permettent de varier les moves et de mieux répondre aux Pokémon adverses.
+gym-7-hells.html: before each battle, identifie les menaces principales de l'opponent. choose le Pokémon adapté à la situation et évite de garder toudays le même Pokémon actif. Les changements bien anticipés can faire la différence.
+gym-7-hells.html: — PokéMMO Strategy guide
+gym-7-hells.html: /* ======================================== CONFIGURATION DES IMAGES ======================================== */ const arenaImages = { "Vermilava": "images/arenas/lavaridge.jpg", "Myokara": "images/arenas/dewford.jpg", "
+gym-7-hells.html: (() => { const searchInput = document.querySelector('.rf-gym-search'); if (!searchInput) return; const normalize = value => (value || '') .toLowerCase() .normalize('NFD') .replace(/[\u0300-\u036f]/g, '') .trim(); functio
+gym-7-hells.html: document.addEventListener("DOMContentLoaded", function () { document.querySelectorAll(".route-card").forEach(function(card) { const title = card.querySelector(".dewford-title"); if (!title) return; const txt = title.text
+gym-7-hells.html: document.addEventListener("DOMContentLoaded", function () { const wanted = "https://www.pokepedia.fr/Special:Redirect/file/Sprite_L%C3%A9vy_%26_Tatia_RS.png"; document.querySelectorAll("img").forEach(function(img) { cons
+gym-double-typhlosion.html: PokéMMO · Gym Rerun · Route TTET PokéMMO
+gym-double-typhlosion.html: Original guide
+gym-double-typhlosion.html: Drought sets the sun; the guide recommends an item that reduces encounters on the lead.
+gym-double-typhlosion.html: Two Typhlosion with Choice Specs; avoid Blaze? The guide mainly specifies not to use Flash Fire.
+gym-double-typhlosion.html: . Qulbutoké can use Destiny Bond ; send
+gym-double-typhlosion.html: TTET ; Close Fighting / Tout ou Rien can gêner, send un other Pokémon If necessary.
+gym-double-typhlosion.html: Clémenti-Ville
+gym-double-typhlosion.html: Mérouville
+gym-double-typhlosion.html: , then Téléport.
+gym-double-typhlosion.html: TTET ; la source indique que cette gym can être faite without healing.
+gym-double-typhlosion.html: Écorcia
+gym-double-typhlosion.html: TTET. La source recommande de heal before à cause d’un possible Tarpaud lead.
+gym-double-typhlosion.html: Céladopole
+gym-double-typhlosion.html: TTET. La source recommande de heal before à cause d’un possible Dracolosse lead.
+gym-double-typhlosion.html: on all les Pokémon.
+gym-double-typhlosion.html: on all les Pokémon.
+gym-double-typhlosion.html: English adaptation based on ChihuahuanRaven's PokéMMO guide, used as an accessible source for the standard Double Typhlosion / TTET strategy.
+gym-double-typhlosion.html: source PokéMMO guide ↗
+gym-double-typhlosion.html: The “Simple Typhlosion Gym Rerun guide” link provided by the user could not be fully retrieved; this page therefore does not invent its specific details and relies on the accessible TTET guide.
+gym-prehistoric-5.html: PokéMMO · Gym Rerun · Prehistoric 5 Gym Rerun Route
+gym-prehistoric-5.html: Route complète Prehistoric 5 organisée on cinq regions, with les changements de Pokémon, resets PC et variants météo du guide.
+gym-prehistoric-5.html: 5 Pokémon
+gym-prehistoric-5.html: Original guide
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: DEF SPÉ
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: 31 Atk Spé / 31 Vit / 10–22 PV / 10–22 Def
+gym-prehistoric-5.html: 31 Atk Spé / 31 Vit / 0–9 PV / 0–9 Def
+gym-prehistoric-5.html: ATK SPÉ
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: 31 Atk / 15+ Def / 20+ Def Spé / 15+ PV
+gym-prehistoric-5.html: DEF SPÉ
+gym-prehistoric-5.html: route les regions, enchaîne les gyms et suis each strategy étape par étape. use la search for retrouver rapidement une region ou une gym.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Remplace Aéroptéryx → Chartor
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: • Aéroptéryx can tomber K.O. : remplace-le par Heatran et continue without healing PC.
+gym-prehistoric-5.html: • If Chartor is paralysé par Tonnerre : use un Anti-Para after l'gym ou fais un healing PC.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Clémenti-Ville
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Flyingucité
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • If l'team d'Accelgor t'a blessé, soigne ici.
+gym-prehistoric-5.html: Méanville
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran can être blessé. Continue If c'is le cas.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • If Tortank is blessé after le leader Fire : healing PC.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Typhlosion et Heatran utilisent Ébullilave.
+gym-prehistoric-5.html: • If gelé par Blizzard : use un Antigel pendant le turn du Pokémon gelé.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Aéroptéryx use Tailwind ; Heatran use Ébullilave ensuite.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran et Tortank can être blessés. Continue If c'is le cas.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran use Ébullilave.
+gym-prehistoric-5.html: • If gelé par Blizzard : use un Antigel pendant le turn du Pokémon gelé.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Place Heatran à gauche, au-dessus de Tortank in l'ordre de l'team.
+gym-prehistoric-5.html: • Heatran can être blessé. Continue If c'is le cas.
+gym-prehistoric-5.html: Écorcia
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: If TEMPÊTE DE SABLE
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran can être blessé. Continue If c'is le cas.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran use Ébullilave.
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Les flinchs d'Rock Slide au turn 1 can gêner.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Aéroptéryx can être blessé. Continue, soigne If tu veux sécuriser ou s'il is K.O.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • If Aéroptéryx a less de 50 % de PV, soigne after.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: • Remplace Typhlosion dès que possible.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: If ÉLECTRODE is LEAD
+gym-prehistoric-5.html: Typhlosion — Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave ; Aéroptéryx can tomber
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Typhlosion — Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • If Aéroptéryx tombe K.O., remplace-le par Heatran.
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Aéroptéryx
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Céladopole
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: Ébullilave
+gym-prehistoric-5.html: • Heatran use Ébullilave.
+gym-prehistoric-5.html: PokéPaste cité in le document ↗
+gym-prehistoric-5.html: document.querySelectorAll('#parcours .stop[data-stop]').forEach(function(card){ var box = card.querySelector('.check span'); if(box) box.setAttribute('data-route-num', card.getAttribute('data-stop')); });
+gym-starry-dance.html: PokéMMO Strategy guide
+gym-starry-dance.html: Circuit multi-regions basé on le document V9 fourni, with variants de tours, changements d’items et soins indiqués in la source.
+gym-starry-dance.html: 5 Pokémon
+gym-starry-dance.html: Original guide
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Déf. Spé.
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Déf. Spé.
+gym-starry-dance.html: Déf. Spé. : min./max. non necessary
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Déf. Spé.
+gym-starry-dance.html: Sérénité
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Déf. Spé.
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Déf. Spé.
+gym-starry-dance.html: Att. Spé.
+gym-starry-dance.html: Pense à prévoir suffisamment d'items before de commencer le Gym Rerun.
+gym-starry-dance.html: Nombre d'items nécessaires
+gym-starry-dance.html: Précision +
+gym-starry-dance.html: Nombre d'items nécessaires
+gym-starry-dance.html: Nombre d'items nécessaires
+gym-starry-dance.html: Vs. Démolosse
+gym-starry-dance.html: Démolosse
+gym-starry-dance.html: VS. ÉLECTRODE
+gym-starry-dance.html: Électrode
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. HÉLÉDELLE
+gym-starry-dance.html: Hélédelle
+gym-starry-dance.html: [Cibler Hélédelle]
+gym-starry-dance.html: 5. Mérouville
+gym-starry-dance.html: Tarpaud / Électrode : T1
+gym-starry-dance.html: VS. TARPAUD / ÉLECTRODE
+gym-starry-dance.html: Électrode
+gym-starry-dance.html: 7. Cramois’Île
+gym-starry-dance.html: other POSSIBILITÉS
+gym-starry-dance.html: 9. Céladopole
+gym-starry-dance.html: ciblé on Leuphorie
+gym-starry-dance.html: VS. MÉTALOSSE
+gym-starry-dance.html: VS. RHINOLOVE / CRYPTÉRO
+gym-starry-dance.html: ⚠ Fouinar vous forcera à faire un battle en
+gym-starry-dance.html: VS. QULBUTOKÉ & RONFLEX
+gym-starry-dance.html: Précision +
+gym-starry-dance.html: VS. PTÉRA / LAGGRON
+gym-starry-dance.html: Ptéra
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. CIZAYOX / PINGOLÉON
+gym-starry-dance.html: Pingoléon
+gym-starry-dance.html: VS. OSSATUEUR / FEUFORÊVE / SPECTRUM
+gym-starry-dance.html: Qulbutoké
+gym-starry-dance.html: Fireforêve
+gym-starry-dance.html: Sidérella
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. FEUFORÊVE & QULBUTOKÉ
+gym-starry-dance.html: Fireforêve
+gym-starry-dance.html: Qulbutoké
+gym-starry-dance.html: [Cibler Fireforêve — JAMAIS Qulbutoké]
+gym-starry-dance.html: VS. ECTOPLASMA & QULBUTOKÉ
+gym-starry-dance.html: Qulbutoké
+gym-starry-dance.html: [Cibler Ectoplasma — JAMAIS Qulbutoké]
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. MÉTALOSSE
+gym-starry-dance.html: VS. BÉKIPAN
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. MÉTALOSSE
+gym-starry-dance.html: VS. ÉLECTHOR
+gym-starry-dance.html: 23. Ébènelle
+gym-starry-dance.html: SOLUTION PTÉRA
+gym-starry-dance.html: Ptéra
+gym-starry-dance.html: 24. Écorcia
+gym-starry-dance.html: VS. INSÉCATEUR
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: after ÉCORCIA :
+gym-starry-dance.html: after ÉCORCIA :
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: VS. FEUFORÊVE / TÉNÉFIX
+gym-starry-dance.html: [Cibler Démanta et Lugulabre]
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: 27. Flyingucité
+gym-starry-dance.html: If Momartik était en lead, cibler Hexagel.
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: If PINGOLÉON is on LE TERRAIN
+gym-starry-dance.html: 35. Méanville
+gym-starry-dance.html: Incinération
+gym-starry-dance.html: (()=>{ const key='raidforge-starry-progress-v1'; const boxes=[...document.querySelectorAll('.check input')]; let saved=[]; try{ if(window.localStorage){ let v=JSON.parse(localStorage.getItem(key)||'[]'); if(Array.isArray
+gym-tempest-explosion.html: PokéMMO · Gym Rerun · guide de Xanarchy
+gym-tempest-explosion.html: six Pokémon, cinq regions et une route de 33 gyms. prepare ton team, suis les variants et retrouve les soins et changements d’items à each étape.
+gym-tempest-explosion.html: Revenu annoncé par l’auteur
+gym-tempest-explosion.html: Chiffre du titre du guide, pas un gain garanti par hour.
+gym-tempest-explosion.html: 6 Pokémon
+gym-tempest-explosion.html: Items à modifier pendant le circuit.
+gym-tempest-explosion.html: Adaptation French du guide publié le 28 avril 2024. Les valeurs et variants ci-dessous viennent de cette version ; elles n’ont pas été retestées en jeu. Les actions non précisées par l’auteur are signalées.
+gym-tempest-explosion.html: Items affichés : départ à Johto
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: Lévitation
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: Sérénité
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: Élevé
+gym-tempest-explosion.html: DÉF
+gym-tempest-explosion.html: ATQ SPÉ
+gym-tempest-explosion.html: DÉF SPÉ
+gym-tempest-explosion.html: Stock conseillé : 5 Choice Specs, 5 Mouchoirs Choix et 1 Choice Band.
+gym-tempest-explosion.html: : elles are utilisées à Oliville.
+gym-tempest-explosion.html: Départ : Choice Band on Smogogo ; Mouchoir Choix on Trioxhydre, Tortank et Sorbouboul ; Choice Specs on les two other.
+gym-tempest-explosion.html: Les faibles IV de PV et Defense de Trioxhydre permettent à Explosion de Smogogo with Choice Band de le mettre K.O. Son investissement spécial limite les damage de Surf on Smogogo, même en cas de critique, according to l’
+gym-tempest-explosion.html: Smogogo bénéficie d’au less 25 IV en Defense for la variant Ténéfix + Crapustule de Port Yoneuve. Sorbouboul use 248 EV en Speed for dépasser le Ptéra de Mauville with le Mouchoir Choix.
+gym-tempest-explosion.html: EV reproduits tels qu’affichés in le PokéPaste, y compris les valeurs 6 et 10. Les IV non mentionnés ne are pas imposés par cette fiche. Le PokéPaste indique explicitement le niveau 100 for Sorbouboul et ne renseigne que
+gym-tempest-explosion.html: « A + B → C + D » indique le duo d’ouverture then le relais. Le guide repose on
+gym-tempest-explosion.html: , mais ne répète pas toudays son utilisation : les notes ci-dessous conservent les actions explicitement décrites. Quand seule une composition is fournie, no séquence de tours n’is ajoutée.
+gym-tempest-explosion.html: progress enregistrée in ce navigateur lorsque le stockage local is available.
+gym-tempest-explosion.html: Ébènelle
+gym-tempest-explosion.html: Place Typhlosion à droite, in le second emplacement.
+gym-tempest-explosion.html: Écorcia
+gym-tempest-explosion.html: in les other cas. Le guide indique un changement de canal for sortir.
+gym-tempest-explosion.html: against Métalosse :
+gym-tempest-explosion.html: Le guide ne donne pas de variant supplémentaire for cette gym.
+gym-tempest-explosion.html: Le guide indique ce duo without détail supplémentaire.
+gym-tempest-explosion.html: Mérouville
+gym-tempest-explosion.html: Le guide indique ce duo without détail supplémentaire.
+gym-tempest-explosion.html: Clémenti-Ville
+gym-tempest-explosion.html: on Leuphorie. variant Spinda en quatre tours : Sorbouboul + Togekiss. Le guide signale 10,5 % de survie de Monaflèmit in la variant Cerfrousse.
+gym-tempest-explosion.html: Le guide indique ce duo without détail supplémentaire.
+gym-tempest-explosion.html: Hélédelle + Tropius :
+gym-tempest-explosion.html: . Altaria + Hélédelle :
+gym-tempest-explosion.html: before : healing. after : Tortank → Mouchoir Choix ; healing à Poivressel ; direction Sinnoh.
+gym-tempest-explosion.html: Surf against Lucario ou Qulbutoké ;
+gym-tempest-explosion.html: for l’other branche du guide. L’action précise de Smogogo is not détaillée.
+gym-tempest-explosion.html: Tailwind against Ludicolo, Démanta ou Tartard. otherwise :
+gym-tempest-explosion.html: Cramois’Île
+gym-tempest-explosion.html: Sunny Day against Mégapagos ;
+gym-tempest-explosion.html: Céladopole
+gym-tempest-explosion.html: Place Typhlosion à gauche, in le first emplacement. Togekiss :
+gym-tempest-explosion.html: after : healing à Carmin on Mer ; Typhlosion → Mouchoir Choix ; direction Unys.
+gym-tempest-explosion.html: Flyingucité
+gym-tempest-explosion.html: Le guide indique ce duo without détail supplémentaire.
+gym-tempest-explosion.html: Méanville
+gym-tempest-explosion.html: Le guide indique ce duo without détail supplémentaire.
+gym-tempest-explosion.html: against Déflaisan : remplace Tortank par Smogogo au turn 1, then use
+gym-tempest-explosion.html: first des three battles d’Ogoesse, in l’ordre du tableau du guide.
+gym-tempest-explosion.html: before la série d’Ogoesse : healing.
+gym-tempest-explosion.html: . Attention à la variant with Leuphorie en réserve et Miradar muni d’une Focus Sash.
+gym-tempest-explosion.html: Original guide on le forum PokéMMO ↗
+gym-tempest-explosion.html: PokéPaste de l’team ↗
+gym-tempest-explosion.html: Vidéo d’une run de 33 gyms ↗
+gym-tempest-explosion.html: Les variants du guide ne détaillent pas each turn de each battle. La vidéo complète ces indications. Le titre « Rock » de Port Yoneuve in le message original a été corrigé en « Ground » in cette présentation.
+gym-tempest-explosion.html: (() => { const key = 'raidforge-tempest-progress-v1'; const boxes = [...document.querySelectorAll('.check input')]; let saved = []; try { const value = JSON.parse(localStorage.getItem(key) || '[]'); if (Array.isArray(val
+halloween.html: L’event d’Halloween revient in PokéMMO with son ambiance mystérieuse, ses activities spéciales et ses rewards exclusives.
+halloween.html: © 2026 RAIDFORGE — PokéMMO Resources
+index.html: 🎁 2 000 000 PokéYens
+index.html: Ton portal communautaire dédié aux raids, au Gym Rerun, au farming, aux events et aux outils indispensables for ton aventure.
+index.html: // ========================= // MENU MOBILE // ========================= const menuButton = document.getElementById("menuButton"); const navLinks = document.querySelector(".nav-links"); if (menuButton) { menuButton.addEv
+index.html: document.addEventListener("DOMContentLoaded", function () { const menuLinks = { accueil: "index.html", outils: "outils.html", raids: "raids.html", gym: "gym-rerun.html", events: "events.html", farming: "farming.html", gu
+index.html: import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"; import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/fire
+legendaires.html: Find the legendary Pokémon available month by month.
+legendaires.html: Legendary Pokémon from the Kanto region.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: Legendary Pokémon available this month.
+legendaires.html: © 2026 RAIDFORGE — PokéMMO Resources
+noel.html: Célébrez les fêtes de end d’année with l’event de Noël. Profitez des activities spéciales, des rewards et de l’ambiance festive in PokéMMO.
+noel.html: © 2026 RAIDFORGE — PokéMMO Resources
+outils.html: Pokédex
+outils.html: An encyclopedia for exploring Pokémon and their characteristics.
+outils.html: (()=>{const lab=document.getElementById('lab');const boost=document.getElementById('boost');const fx=document.getElementById('lab-charge-fx');let chargeTimer;function stopCharge(){clearTimeout(chargeTimer);fx.classList.r
+raids.html: Full Pokédex
+raids.html: Full Pokédex
+raids.html: Full Pokédex
+raids.html: guide Area
+raids.html: Full Pokédex
+raids.html: Full Pokédex
+raids.html: Full Pokédex
+raids.html: (() => { const particles = document.getElementById('particles'); for (let i = 0; i < 28; i++) { const spark = document.createElement('i'); spark.className = 'spark'; spark.style.cssText = `--x:${15 + (i * 37 % 75)}%;--y:
+rotations.html: Awaken its energy to discover the Pokémon of Altering Cave and Trophy Garden.
+rotations.html: Pokémon in the current rotation.
+rotations.html: POKÉMON
+rotations.html: Pokémon in the current rotation
+rotations.html: const WORKER_URL = "https://raidforge-rotations.tullipine.workers.dev/"; const nomsFR = { "Buneary":"Laporeille", "Machoke":"Machopeur", "Snorlax":"Ronflex", "Slakoth":"Parecool", "Sneasel":"Farfuret", "Pidgeot":"Roucarn
+zodiaque.html: Découvrez l’event Lunaire et Zodiaque, placé sous le signe des astres, de la lune et des constellations.
+zodiaque.html: © 2026 RAIDFORGE — PokéMMO Resources
