@@ -1,0 +1,24 @@
+RAIDFORGE — ACTIVATION DU GIVEAWAY
+
+Les fichiers sont déjà prêts : giveaway.html, functions/, database.rules.json et firebase.json.
+
+1. Dans Firebase Console > Authentication > Sign-in method, active "Anonymous".
+2. Installe Firebase CLI : npm install -g firebase-tools
+3. Dans PowerShell, depuis le dossier RAIDFORGE :
+   firebase login
+   firebase use raidforge-a5a4f
+   cd functions
+   npm install
+   cd ..
+   firebase deploy --only functions,database
+
+4. Dans Firebase Realtime Database, crée :
+   giveaway/config/prize = "3 000 000 PokéYens"
+   giveaway/config/endsAt = timestamp en millisecondes de la date de fin
+
+5. Ajoute giveaway.html à Git puis pousse :
+   git add .
+   git commit -m "Ajout du système Giveaway"
+   git push origin main
+
+IMPORTANT : la logique qui attribue les tickets est dans une Cloud Function afin qu'un visiteur ne puisse pas simplement modifier ses tickets depuis le navigateur. Firebase peut demander d'activer un plan permettant le déploiement de Cloud Functions.
